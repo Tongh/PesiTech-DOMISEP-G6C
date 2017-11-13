@@ -3,13 +3,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link href="logo-EZ-Home.png" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <title> EZ-home - Connexion</title>
   </head>
   <body>
     <header class="logo">
-	<img src="logo_EZ-Home.png" alt="Logo">
-	<img src="" alt="account">
+		<img src="logo_ez-home-moitie.png" alt="Logo">
     </header>
 	<section class="qsn">
 		<a href="https://EZ-Home.fr/qui_sommes_nous">Qui sommes-nous?</a>	
@@ -17,19 +16,30 @@
 	<section class="ns">
 		<a href="https://EZ-Home.fr/nos_services">Nos services</a>
 	</section>
-	<section class="a">
+	<section class="ach">
 		<a href="https://EZ-Home.fr/acheter">Acheter</a>
 	</section>
+	<figure>
+		<img src="bureau.jpg" alt="Bureau">
+	</figure>
 	<div class="cnxn">
     		<h1> Accéder à mon espace personnel </h1><br/>
-    		<p> Mon identifiant </p><br/>
-   		<p> Mon mot de passe </p><br/>
+    		<form method="post" action="traitement.php">
+   			<p>
+   			<label>Mon identifiant</label> :<input type="text"/>
+   			</p>
+   			<p>
+   			<label>Mon mot de passe</label> :<input type="text"/>
+   			</p>
+			</form>
     		<a href="">Mot de passe oublié ? </a><br/>
     		<a href="">J'ai perdu mon identifiant</a><br/>
 		<a href="">Première connexion!</a><br/>
     	</div>
     <footer>
-	 <a href=""> Interface administrateur </a>
+	 <section class= "adm">
+	 	<a href=""> Interface administrateur </a>
+	 </section>
     </footer>
   </body>
 </html>
