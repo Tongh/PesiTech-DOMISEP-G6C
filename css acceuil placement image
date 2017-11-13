@@ -1,0 +1,73 @@
+// tester les positions background-position
+// trouver les images
+
+.icone1 {
+	background-image: url('');
+	background-position: bottom 10px right 30px;
+	background-size: cover;
+	padding: 250px 0;
+	margin: 30px;
+	text-shadow: 0 2px #000000;
+	font-family: 'Trebuchet MS', 'Helvetica';
+}
+
+.icone2 {
+	background-image: url('');
+	background-position: bottom 10px right 30px;
+	background-size: cover;
+	padding: 250px 0;
+	margin: 30px;
+	text-shadow: 0 2px #000000;
+	font-family: 'Trebuchet MS', 'Helvetica';
+}
+
+.icone3 {
+	background-image: url('');
+	background-position: bottom 10px right 30px;
+	background-size: cover;
+	padding: 250px 0;
+	margin: 30px;
+	text-shadow: 0 2px #000000;
+	font-family: 'Trebuchet MS', 'Helvetica';
+}
+
+.icone4 {
+	background-image: url('');
+	background-position: bottom 10px right 30px;
+	background-size: cover;
+	padding: 250px 0;
+	margin: 30px;
+	text-shadow: 0 2px #000000;
+	font-family: 'Trebuchet MS', 'Helvetica';
+}
+
+.logo {
+	background-image: url('');
+	background-position: top;
+	background-size: cover;
+	padding: 250px 0;
+	margin: 30px;
+	text-shadow: 0 2px #000000;
+	font-family: 'Trebuchet MS', 'Helvetica';
+}
+
+.imagecenter {
+	background-image: url('');
+	background-position: center ;
+	background-size: cover;
+	padding: 250px 0;
+	margin: 30px;
+	text-shadow: 0 2px #000000;
+	font-family: 'Trebuchet MS', 'Helvetica';
+}
+
+.accountlogo {
+	background-image: url('');
+	background-position: top right ;
+	background-size: cover;
+	padding: 250px 0;
+	margin: 30px;
+	text-shadow: 0 2px #000000;
+	font-family: 'Trebuchet MS', 'Helvetica';
+}
+
