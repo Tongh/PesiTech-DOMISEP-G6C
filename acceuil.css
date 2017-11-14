@@ -3,15 +3,15 @@
 
 
 #nav p {
-			background-image: url(nav_bgImage.jpg);
-			padding: 10px;
-			padding-left: 20px;
-			margin: 0px;
-		}
+	background-image: url(./Image/nav_bgImage.jpg);
+	padding: 10px;
+	padding-left: 20px;
+	margin: 0px;
+}
 
 #nav a {
-			float: right;
-		}
+	float: right;
+}
 
 .icone1 {
 	background-image: url('');
