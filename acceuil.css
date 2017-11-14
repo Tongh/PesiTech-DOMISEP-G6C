@@ -2,17 +2,6 @@
 // trouver les images
 
 
-#nav p {
-	background-image: url(./Image/nav_bgImage.jpg);
-	padding: 10px;
-	padding-left: 20px;
-	margin: 0px;
-}
-
-#nav a {
-	float: right;
-}
-
 .icone1 {
 	background-image: url('');
 	background-position: bottom 10px right 30px;
