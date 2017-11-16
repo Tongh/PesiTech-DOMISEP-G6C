@@ -3,44 +3,83 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link href="style.css" rel="stylesheet">
+    <link href="STYLE5OC.css" rel="stylesheet">
     <title> EZ-home - Connexion</title>
   </head>
+
   <body>
-    <header class="logo">
-		<img src="logo_ez-home-moitie.png" alt="Logo">
+    <header class="tete">
+		  <img src="logo_ez-home-moitie.png" alt="Logo">
+      <a href="Page_de_connexion.html" > <img src="profil.png" alt="Se Connecter" id="imgcn"/></a>
     </header>
-	<section class="qsn">
-		<a href="https://EZ-Home.fr/qui_sommes_nous">Qui sommes-nous?</a>	
-	</section>
-	<section class="ns">
-		<a href="https://EZ-Home.fr/nos_services">Nos services</a>
-	</section>
-	<section class="ach">
-		<a href="https://EZ-Home.fr/acheter">Acheter</a>
-	</section>
-	<figure>
-		<img src="bureau.jpg" alt="Bureau">
-	</figure>
-	<div class="cnxn">
-    		<h1> Accéder à mon espace personnel </h1><br/>
-    		<form method="post" action="traitement.php">
-   			<p>
-   			<label>Mon identifiant</label> :<input type="text"/>
-   			</p>
-   			<p>
-   			<label>Mon mot de passe</label> :<input type="text"/>
-   			</p>
-			</form>
-    		<a href="">Mot de passe oublié ? </a><br/>
-    		<a href="">J'ai perdu mon identifiant</a><br/>
-		<a href="">Première connexion!</a><br/>
-    	</div>
+
+    <nav id="barre">
+        <ul>
+          <div id="barre">
+            <li class="qsn">
+             <a href="https://EZ-Home.fr/qui_sommes_nous"> Qui sommes-nous? </a> 
+            </li>
+
+            <li class="ns">
+              <a href="https://EZ-Home.fr/nos_services"> Nos services </a>
+            </li>
+
+            <li class="ach">
+              <a href="https://EZ-Home.fr/acheter"> Acheter </a>
+            </li>
+          </div>
+        </ul>
+
+      </nav>
+    <div id="imgcnx">
+  	  <figure>
+  		  <img src="bureau.png" alt="Bureau">
+  	  </figure>
+
+
+  	  <div class="cnxn">
+      		<h1> Accéder à mon espace personnel </h1><br/>
+
+      		<form method="post" action="traitement.php">
+
+     			  <p>
+       			  <label>Mon identifiant:</label>
+              </br> 
+              </br> 
+              <input type="text"/>
+       			</p>
+
+       			<p>
+       			  <label>Mon mot de passe:</label>
+              </br> 
+              </br> 
+              <input type="text"/>
+            </p>
+
+  			  </form>
+    
+      		<p>
+            <a href="">Mot de passe oublié ? </a>
+            <br/>
+      		  <a href="">J'ai perdu mon identifiant</a>
+            <br/>
+  		      <a href="">Première connexion!</a>
+          </p>
+
+       </div>
+
+    </div>
+
     <footer>
-	 <section class= "adm">
-	 	<a href=""> Interface administrateur </a>
-	 </section>
+	   <div class= "pied">
+	 	   <a href="" id="admin"> Interface administrateur </a>
+       <a href=""> Nous contacter </a>
+       <a href=""> DOMISEP </a>
+       Developed by PESITech © 
+	   </div>
     </footer>
+
+
+
   </body>
 </html>
-
