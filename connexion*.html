@@ -5,31 +5,50 @@
     <meta charset="utf-8" />
     <link href="STYLE5OC.css" rel="stylesheet">
     <title> EZ-home - Connexion</title>
+    <style type="text/css">
+	body {
+		margin: 0px;
+	}
+	#nav p {
+		background-image: url(./Image/nav_bgImage.jpg);
+		padding: 10px;
+		padding-left: 20px;
+		margin: 0px;
+	}
+	#nav a {
+		float: right;
+	}
+	#sousNavBar table {
+		border-collapse: collapse;
+		background-color: #eeeeee;
+	}
+	#sousNavBar table, th, td {
+		border: 1px solid black;
+	}
+    </style>
   </head>
 
   <body>
-    <header class="tete">
-		  <img src="logo_ez-home-moitie.png" alt="Logo">
-      <a href="Page_de_connexion.html" > <img src="profil.png" alt="Se Connecter" id="imgcn"/></a>
+    <header class="tete"><div id='nav'>
+	<div id='nav'>
+		<p><img src="./Image/logo_ezHome.png" width="250" height="100" alt="Logo_EZHome.png">
+			<a href="espaceclient.html" >
+				<img src="./Image/boutonEspaceClient.png" width="200" height="100" />
+			</a>
+		</p>
+	</div>
     </header>
 
     <nav id="barre">
-        <ul>
-          <div id="barre">
-            <li class="qsn">
-             <a href="https://EZ-Home.fr/qui_sommes_nous"> Qui sommes-nous? </a> 
-            </li>
-
-            <li class="ns">
-              <a href="https://EZ-Home.fr/nos_services"> Nos services </a>
-            </li>
-
-            <li class="ach">
-              <a href="https://EZ-Home.fr/acheter"> Acheter </a>
-            </li>
-          </div>
-        </ul>
-
+        <div id='sousNavBar'>
+		<table width="100%" border="1" style="margin: 0em">
+			<tr style="font-size: 30px">
+				<th width="45%"><b>Qui sommes nous?</b></th>
+				<th width="30%"><b>Nos services</b></th>
+				<th width="25%"><b>Acheter</b></th>
+			</tr>
+		</table>
+	</div>
       </nav>
     <div id="imgcnx">
   	  <figure>
