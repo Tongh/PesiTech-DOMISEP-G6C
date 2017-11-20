@@ -18,13 +18,29 @@
 	#nav a {
 		float: right;
 	}
-	#sousNavBar table {
-		border-collapse: collapse;
-		background-color: #eeeeee;
-	}
-	#sousNavBar table, th, td {
-		border: 1px solid black;
-	}
+	#barre ul {
+        	list-style-type: none;
+        	margin:0;
+        	padding: 0;
+        	overflow: hidden;
+        	width: 100%;
+      	}
+      	#barre li {
+        	float: left;
+        	width: 33.333%;
+      	}
+      	#barre a:link,a:visited {
+        	display: block;
+        	font-weight: bold;
+        	color:#FFFFFF;
+        	background-color:#bebebe;
+        	text-align: center;
+        	padding: 4px;
+        	text-decoration:none;
+      	}
+      	#barre a: hover, a: active {
+        	background-color: #cc0000;
+      	}
     </style>
   </head>
 
@@ -40,15 +56,11 @@
     </header>
 
     <nav id="barre">
-        <div id='sousNavBar'>
-		<table width="100%" border="1" style="margin: 0em">
-			<tr style="font-size: 30px">
-				<th width="45%"><b>Qui sommes nous?</b></th>
-				<th width="30%"><b>Nos services</b></th>
-				<th width="25%"><b>Acheter</b></th>
-			</tr>
-		</table>
-	</div>
+       <ul>
+        	<li><a href="#QUISOMMESNOUS">Qui sommes nous ?</a></li>
+        	<li><a href="#NOSSERVICES">Nos services</a></li>
+        	<li><a href="#ACHETER">Acheter</a></li>
+      </ul>
       </nav>
     <div id="imgcnx">
   	  <figure>
