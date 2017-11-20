@@ -17,6 +17,29 @@
 				#nav a {
 					float: right;
 				}
+				#barre ul {
+        			list-style-type: none;
+        			margin:0;
+       			 	padding: 0;
+        			overflow: hidden;
+        			width: 100%;
+      			}
+      			#barre li {
+        			float: left;
+        			width: 33.333%;
+      			}
+      			#barre a:link,a:visited {
+        			display: block;
+        			font-weight: bold;
+        			color:#FFFFFF;
+        			background-color:#bebebe;
+        			text-align: center;
+        			padding: 4px;
+        			text-decoration:none;
+      			}
+      			#barre a:hover, a:active {
+      			  	background-color: #cc0000;
+      			}
 			</style>
 		</head>
 		<link rel="stylesheet" type="text/css" href="main.css"/>
@@ -30,15 +53,13 @@
 					</p>
 				</div>
 			</header>
-			<section class="qsn">
-				<a href="https://EZ-Home.fr/qui_sommes_nous">Qui sommes-nous?</a>	
-			</section>
-			<section class="ns">
-				<a href="https://EZ-Home.fr/nos_services">Nos services</a>
-			</section>
-			<section class="a">
-				<a href="https://EZ-Home.fr/acheter">Acheter</a>
-			</section>
+			<nav id="barre">
+      			 <ul>
+        			<li><a href="#QUISOMMESNOUS">Qui sommes nous ?</a></li>
+        			<li><a href="#NOSSERVICES">Nos services</a></li>
+        			<li><a href="#ACHETER">Acheter</a></li>
+      			</ul>
+      		</nav>
 			<footer>
 				<div class="icone1">
 					<h4>Assure la sécurité de votre maison</h4>
