@@ -1,3 +1,233 @@
-.logo {
-	background-position: middle top;
+html /* Pas de marges pour la page entière+couleur*/
+{
+  padding:0;
+  margin:0;
+  background-color: #E0E0E0;
+}
+
+
+body /* marge nul pour le corps de page */ 
+{
+	margin: 0px;
+}
+
+#nav p 
+{
+		background-image: url(Image/nav_bgImage.jpg);
+		padding: 10px;
+		padding-left: 20px;
+		margin: 0px;
+}
+
+#nav a 
+	{
+		float: right;
+	}
+	
+#barre ul 
+{	
+
+	   	list-style-type: none;
+        	margin:0;
+       	padding: 0;
+        	overflow: hidden;
+        	width: 100%;
+        			}
+   #barre li 
+   {
+        float: left;
+        width: 33.333%;
+        	
+      	}
+    #barre a:link,a:visited 
+    {
+        	
+        	font-weight: bold;
+        	color:#FFFFFF;
+        	background-color:#bebebe; 
+        	padding: 4px;
+        	text-decoration:none;
+      	}
+     #barre a:hover, a:active {
+        	background-color: #cc0000;
+      	}
+
+.ns,.ach,.qsn
+{
+	padding: 0px 0px 0px 0px;
+
+	color:#FEFEFE;
+	width: 33.333%
+}
+
+
+header
+{
+	width: auto;
+	max-height:100px;
+	background-color: #9B002F;
+
+}
+
+.tete
+{
+	display: flex;
+    justify-content: space-between;
+}
+
+#barre
+{
+	display: flex;
+    justify-content: center;
+    flex-wrap: no-wrap;
+    
+}
+
+
+
+
+
+.tst
+{
+	padding: 0px 10px 0px 10px;
+}
+ 
+
+
+
+.cnxn /* Carré de connexion placé et encadré*/
+{
+	border:2px solid black;
+	margin-top: 15px;
+	padding: 20px 50px 50px 50px;
+	width: 500px;
+	height:500px;
+	display: flex;
+	flex-direction: column;
+   justify-content: center;
+
+}
+
+
+#imgcnx
+{
+	margin-top:50px;
+	display: flex;
+    justify-content: space-around;
+}
+	
+#imgcn
+{
+	margin: 15px 15px 0px 0px;
+
+}
+
+label
+{
+	font-size: 25px;
+	margin: 10;
+
+}
+
+
+a /*On change la couleur bleue des liens et on ne les souligne plus  */
+{
+	color: #FEFEFE;
+	text-decoration: none;
+}
+
+a:hover
+{
+	color: black;
+}
+
+#admin
+{
+	color:black;
+}
+
+footer
+{
+	background-color: #9B002F;
+	opacity: 0.5;
+}
+.pied
+{
+	margin:0;
+   padding:0;
+   background:#929292 0 0;
+   float:left;
+   width:100%;
+   border:1px solid #42432d;
+   border-width:1px 0;
+   display: flex;
+   justify-content: space-around;
+}
+
+#pied p 
+{
+		background-image: url(Image/nav_bgImage.jpg);
+		padding: 10px;
+		padding-left: 20px;
+		margin: 0px;
+}
+
+#pied a 
+	{
+		float: right;
+	}
+
+	
+#footer ul 
+{	
+
+	   	list-style-type: none;
+        	margin:0;
+       	padding: 0;
+        	overflow: hidden;
+        	width: 100%;
+        			}
+   #footer li 
+   {
+        float: left;
+        width: 33.333%;
+        	
+      	}
+    #footer a:link,a:visited 
+    {
+        	
+        	font-weight: bold;
+        	color:#FFFFFF;
+        	background-color:#bebebe; 
+        	padding: 4px;
+        	text-decoration:none;
+      	}
+#footer a:hover, a:active
+ {      	 	
+ background-color: #cc0000;  	
+ }
+.icone
+{
+	display: flex;
+	flex-wrap: nowrap;
+    justify-content: center;
+    margin:100px 0px 100px 0px;
+}
+
+.imgac
+{
+	margin-left: 10px
+}
+
+h4
+{
+	display: flex;
+  	justify-content: space-around;
+}
+
+#logo
+{
+	margin: 5px 0px 5px 0px;
+	width: 200px
+
 }
