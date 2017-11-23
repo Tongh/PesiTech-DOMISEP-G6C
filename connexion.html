@@ -1,123 +1,88 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <link href="inter.css" rel="stylesheet">
-    <title> EZ-home - Connexion</title>
-    <style type="text/css">
-	body {
-		margin: 0px;
-	}
-	#nav p {
-		background-image: url(Image/nav_bgImage.jpg);
-		padding: 10px;
-		padding-left: 20px;
-		margin: 0px;
-	}
-	#nav a {
-		float: right;
-	}
-	#barre ul {
-        	list-style-type: none;
-        	margin:0;
-        	padding: 0;
-        	overflow: hidden;
-        	width: 100%;
-      	}
-      	#barre li {
-        	float: left;
-        	width: 33.333%;
-      	}
-      	#barre a:link,a:visited {
-        	display: block;
-        	font-weight: bold;
-        	color:#FFFFFF;
-        	background-color:#bebebe;
-        	text-align: center;
-        	padding: 4px;
-        	text-decoration:none;
-      	}
-      	#barre a:hover, a:active {
-        	background-color: #cc0000;
-      	}
-    </style>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <link href="inter.css" rel="stylesheet">
+  <title> EZ-home - Connexion</title>
+</head>
 
-  <body>
+<body>
+  <div class='content'>
     <header class="tete">
-		  <img src="logo_ez-home-moitie.png" alt="Logo" id="logo">
-      <a href="Page_de_connexion.html" > <img src="profil.png" alt="Se Connecter" id="imgcn"/></a>
+      <img src="Image/logo_ez-home-moitie.png" alt="Logo" id="logo">
+      <a href="connexion.html" > <img src="Image/profil.png" alt="Se Connecter" id="imgcn"/></a>
     </header>
 
     <nav id="barre">
-        <ul>
-          <div id="barre">
-            <li class="qsn">
-             <a href="https://EZ-Home.fr/qui_sommes_nous"> Qui sommes-nous? </a> 
-            </li>
+      <ul>
+        <div>
+          <li class="qsn">
+           <a href="https://EZ-Home.fr/qui_sommes_nous"> Qui sommes-nous? </a> 
+         </li>
 
-            <li class="ns">
-              <a href="https://EZ-Home.fr/nos_services"> Nos services </a>
-            </li>
+         <li class="ns">
+          <a href="https://EZ-Home.fr/nos_services"> Nos services </a>
+        </li>
 
-            <li class="ach">
-              <a href="https://EZ-Home.fr/acheter"> Acheter </a>
-            </li>
-          </div>
-        </ul>
+        <li class="ach">
+          <a href="https://EZ-Home.fr/acheter"> Acheter </a>
+        </li>
+      </div>
+    </ul>
 
-    </nav>
-    <div id="imgcnx">
-  	   <figure>
-  		    <img src="bureau.png" alt="Bureau">
-  	   </figure>
-     
-
-
-  	  <div class="cnxn">
-      		<h1> Accéder à mon espace personnel </h1><br/>
-
-      		<form method="post" action="traitement.php">
-
-     			  <p>
-       			  <label>Mon identifiant:</label>
-              </br> 
-              </br> 
-              <input type="text"/>
-       			</p>
-
-       			<p>
-       			  <label>Mon mot de passe:</label>
-              </br> 
-              </br> 
-              <input type="password"/>
-            </p>
-
-  			  </form>
-    
-      		<p>
-            <a href="">Mot de passe oublié ? </a>
-            <br/>
-      		  <a href="">J'ai perdu mon identifiant</a>
-            <br/>
-  		      <a href="">Première connexion!</a>
-          </p>
-
-       </div>
-
-    </div>
-
-    <footer>
-	   <div class= "pied">
-	 	   <a href="" id="admin"> Interface administrateur </a>
-       <a href=""> Nous contacter </a>
-       <a href=""> DOMISEP </a>
-       Developed by PESITech © 
-	   </div>
-    </footer>
+  </nav>
+  <div id="imgcnx">
+    <figure>
+      <img src="Image/bureau.png" alt="Bureau">
+    </figure>
 
 
 
-  </body>
+    <div class="cnxn">
+      <h1> Accéder à mon espace personnel </h1><br/>
+
+      <form method="post" action="traitement.php">
+
+        <p>
+          <label>Mon identifiant:</label>
+        </br> 
+      </br> 
+      <input type="text"/>
+    </p>
+
+    <p>
+      <label>Mon mot de passe:</label>
+    </br> 
+  </br> 
+  <input type="password"/>
+</p>
+
+</form>
+
+<p>
+  <a href="">Mot de passe oublié ? </a>
+  <br/>
+  <a href="">J'ai perdu mon identifiant</a>
+  <br/>
+  <a href="">Première connexion!</a>
+</p>
+
+</div>
+
+</div>
+</div>
+
+<footer>
+  <div class= "pied">
+    <a href="" id="admin"> Interface administrateur </a>
+    <a href=""> Nous contacter </a>
+    <a href=""> DOMISEP </a>
+    Developed by PESITech © 
+  </div>
+</footer>
+
+
+
+</body>
 </html>
