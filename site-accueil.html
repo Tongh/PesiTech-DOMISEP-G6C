@@ -1,112 +1,125 @@
 <!DOCTYPE html>
 
 <htlm>
-	<meta charset="utf-8" />
-	  <link rel="stylesheet" type="text/css" href="inter.css"/>
-		<head>
-			<title>EZ-Home</title>
-		 <style type="text/css">
-	body {
-		margin: 0px;
-	}
-	#nav p {
-		background-image: url(Image/nav_bgImage.jpg);
-		padding: 10px;
-		padding-left: 20px;
-		margin: 0px;
-	}
-	#nav a {
-		float: right;
-	}
-	#barre ul {
-        	list-style-type: none;
-        	margin:0;
-        	padding: 0;
-        	overflow: hidden;
-        	width: 100%;
-      	}
-      	#barre li {
-        	float: left;
-        	width: 33.333%;
-      	}
-      	#barre a:link,a:visited {
-        	display: block;
-        	font-weight: bold;
-        	color:#FFFFFF;
-        	background-color:#bebebe;
-        	text-align: center;
-        	padding: 4px;
-        	text-decoration:none;
-      	}
-      	#barre a:hover, a:active {
-        	background-color: #cc0000;
-      	}
-    </style>
-  </head>
-		<body>
-			<header class="tete">
-		  		<img src="logo_ez-home-moitie.png" alt="Logo" id="logo">
-      			<a href="Page_de_connexion.html" > <img src="profil.png" alt="Se Connecter" id="imgcn"/></a>
-    			
-    		</header>
+	<head>
+		<title>EZ-Home</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="inter.css"/>
+		<link rel="stylesheet" type="text/css" href="swiper.min.css">
+		<script type="text/javascript" src="swiper.min.js"></script>
+	</head>
+	<body>
+		<header class="DIYheader">
+			<a href="site-accueil.html"><img src="Image/logo_ez-home-moitie.png" alt="Logo" id="logo"></a>
+			<a href="connexion.html" class='connecterboutton'> <img src="Image/profil.png" alt="Se Connecter" id="imgcn"/></a>
 
-		    <nav id="barre">
-		        <ul>
-		        	<div id="barre">
-		            	<li class="qsn">
-		              		<a href="https://EZ-Home.fr/qui_sommes_nous"> Qui sommes-nous? </a> 
-		            	</li>
 
-		            	<li class="ns">
-		              		<a href="https://EZ-Home.fr/nos_services"> Nos services </a>
-		            	</li>
+			<nav id="barre">
+				<ul>
+					<div>
+						<li class="qsn">
+							<a href="https://EZ-Home.fr/qui_sommes_nous"> Qui sommes-nous? </a> 
+						</li>
 
-		            	<li class="ach">
-		              		<a href="https://EZ-Home.fr/acheter"> Acheter </a>
-		            	</li>
-		          	</div>
-		        </ul>
-		    </nav>
+						<li class="ns">
+							<a href="https://EZ-Home.fr/nos_services"> Nos services </a>
+						</li>
 
-		    <figure class="imgac">
-		    	<img src="img-accueil.jpg" alt="Domotique"/>
-		    </figure>
-			
-			<div class="icone">
-				<p>
-					<img src="lock.png" alt="Secu">
+						<li class="ach">
+							<a href="https://EZ-Home.fr/acheter"> Acheter </a>
+						</li>
+					</div>
+				</ul>
+			</nav>
+		</header>
+		<div id='DIYbody'>
+			<div class='content'>
+				<div class='mainImg'>
+					<div class="swiper-container swiper-container-horizontal">
+						<div class="swiper-wrapper" style="transform: translate3d(-7680px, 0px, 0px); transition-duration: 0ms;">
+							<div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="2"">
+								<a href="javascript:;">
+									<img style="width: 100%; height: 720px" src="Image/swiper_3D_maison.jpg" alt="Image_3D_maison">
+								</a>
+							</div>
+							<div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0">
+								<a href="javascript:;">
+									<img style="width: 100%; height: 720px" src="Image/img-accueil.jpg" alt="Domotique"/>
+								</a>
+							</div>
+							<div class="swiper-slide" data-swiper-slide-index="1">
+								<a href="javascript:;">
+									<img style="width: 100%; height: 720px" src="Image/swiper_maison.jpg" alt="Image_maison">
+								</a>
+							</div>
+							<div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="2">
+								<a href="javascript:;">
+									<img style="width: 100%; height: 720px" src="Image/swiper_3D_maison.jpg" alt="Image_3D_maison">
+								</a>
+							</div>
+							<div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0">
+								<a href="javascript:;">
+									<img style="width: 100%; height: 720px" src="Image/img-accueil.jpg" alt="Domotique"/>
+								</a>
+							</div>
+						</div>
+						<a href="javascript:;" class="swiper-button-prev"></a>
+						<a href="javascript:;" class="swiper-button-next"></a>
+						<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+							<span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+							<span class="swiper-pagination-bullet"></span>
+							<span class="swiper-pagination-bullet"></span></div>
+						</div>
+						<script> 
+							var mySwiper = new Swiper('.swiper-container', {
+							autoplay: 4000,//option sélectionné, peut swiper automatiquement
+							loop : true,
+							prevButton:'.swiper-button-prev',
+							nextButton:'.swiper-button-next',
+							pagination : '.swiper-pagination',
+							autoplayDisableOnInteraction : false,
+							paginationClickable :true,
+							autoplayDisableOnInteraction : false,
+						})
+					</script>
+				</div>
+
+				<div class="icone">
+					<p>
+						<img src="Image/lock.png" alt="Secu">
 					</br>
 					<h4>Assure la sécurité de votre maison</h4>
 				</p>
-			
-				<p>
-					<img src="extincteur.png" alt="warning">
-					</br>
-					<h4>Vous alerte en cas d'incident</h4>
-				</p>
-				
-				
-				<p>
-			        <img src="thermometer.png" alt="temperature">
-			        </br>
-			        <h4>Contrôle de la température à n'importe quel moment</h4>
-			    </p>
-					
-				<p>
-					<img src="laptop.png" alt="info">
-					</br>
-					<h4>Accès à vos informations en ligne</h4>
-				</p>
 
-			</div>
+				<p>
+					<img src="Image/extincteur.png" alt="warning">
+				</br>
+				<h4>Vous alerte en cas d'incident</h4>
+			</p>
 
-			<footer>
-	   			<div class= "pied">
-	 	   			<a href="" id="admin"> Interface administrateur </a>
-       				<a href=""> Nous contacter </a>
-       				<a href=""> DOMISEP </a>
-       				Developed by PESITech © 
-	   			</div>
-    		</footer>
-		</body>
+
+			<p>
+				<img src="Image/thermometer.png" alt="temperature">
+			</br>
+			<h4>Contrôle de la température à n'importe quel moment</h4>
+		</p>
+
+		<p>
+			<img src="Image/laptop.png" alt="info">
+		</br>
+		<h4>Accès à vos informations en ligne</h4>
+	</p>
+
+</div>
+</div>
+</div>
+<footer class="DIYfooter">
+	<div class= "pied">
+		<a href="" id="admin"> Interface administrateur </a>
+		<a href=""> Nous contacter </a>
+		<a href=""> DOMISEP </a>
+		Developed by PESITech © 
+	</div>
+</footer>
+</body>
 </htlm>
