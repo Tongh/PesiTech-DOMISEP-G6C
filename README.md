@@ -1,4 +1,4 @@
-# PesiTech-DOMISEP-G6C
+PesiTech-DOMISEP-G6C
 
 Les gars, chaque fois vous voulez modifier le code, vous le télécharger et modifiez juste la partie vous voulez modifier. 
 Quand vous mise à jour votre code, mise à jour juste la partie que vous avez modifié. Et faites attention à la différence entre 
