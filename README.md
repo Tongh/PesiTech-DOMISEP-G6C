@@ -16,4 +16,4 @@
 
 
 ### IMPORTANT
-* Pour ne pas faire confusion notre travail, quand on a modifié un peu le code, même si le code n'ai pas marché ( ou juste un petit peu les codes ) dans un premier instant, merci d'encore de ajouter les codes dans notre Github, sinon les autres ne savent pas qu'est-ce que on a fait, et c'est pas pratique pour notre travail.
+* Pour ne pas faire confusion notre travail, quand on a modifié `un peu` le code, même si le code n'ai pas marché ( ou juste `un petit peu les codes` ) dans un premier instant, merci d'encore de `mise à jour` les codes dans notre Github, sinon les autres ne savent pas qu'est-ce que on a fait, et c'est pas pratique pour notre travail.
