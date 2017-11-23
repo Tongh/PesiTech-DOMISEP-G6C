@@ -3,54 +3,62 @@ html /* Pas de marges pour la page entière+couleur*/
   padding:0;
   margin:0;
   background-color: #E0E0E0;
+  height: 100%;
 }
 
 
-body /* marge nul pour le corps de page */ 
+body 
 {
-	margin: 0px;
+	margin: 0px; /* marge nul pour le corps de page */ 
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
 }
 
 #nav p 
 {
-		background-image: url(Image/nav_bgImage.jpg);
-		padding: 10px;
-		padding-left: 20px;
-		margin: 0px;
+  background-image: url(Image/nav_bgImage.jpg);
+  padding: 10px;
+  padding-left: 20px;
+  margin: 0px;
 }
 
 #nav a 
-	{
-		float: right;
-	}
-	
+{
+  float: right;
+}
+
 #barre ul 
 {	
+ list-style-type: none;
+ margin:0;
+ padding: 0;
+ overflow: hidden;
+ width: 100%;
+}
+#barre li 
+{
+  float: left;
+  width: 33.333%;
 
-	   	list-style-type: none;
-        	margin:0;
-       	padding: 0;
-        	overflow: hidden;
-        	width: 100%;
-        			}
-   #barre li 
-   {
-        float: left;
-        width: 33.333%;
-        	
-      	}
-    #barre a:link,a:visited 
-    {
-        	
-        	font-weight: bold;
-        	color:#FFFFFF;
-        	background-color:#bebebe; 
-        	padding: 4px;
-        	text-decoration:none;
-      	}
-     #barre a:hover, a:active {
-        	background-color: #cc0000;
-      	}
+}
+#barre a:link,a:visited 
+{
+ display: block;
+ font-weight: bold;
+ color:#FFFFFF;
+ background-color:#bebebe; 
+ text-align: center;
+ padding: 4px;
+ text-decoration:none;
+}
+#barre a:hover, a:active {
+ background-color: #cc0000;
+}
 
 .ns,.ach,.qsn
 {
@@ -72,15 +80,15 @@ header
 .tete
 {
 	display: flex;
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 #barre
 {
 	display: flex;
-    justify-content: center;
-    flex-wrap: no-wrap;
-    
+  justify-content: center;
+  flex-wrap: no-wrap;
+
 }
 
 
@@ -91,7 +99,7 @@ header
 {
 	padding: 0px 10px 0px 10px;
 }
- 
+
 
 
 
@@ -104,7 +112,7 @@ header
 	height:500px;
 	display: flex;
 	flex-direction: column;
-   justify-content: center;
+ justify-content: center;
 
 }
 
@@ -113,9 +121,9 @@ header
 {
 	margin-top:50px;
 	display: flex;
-    justify-content: space-around;
+  justify-content: space-around;
 }
-	
+
 #imgcn
 {
 	margin: 15px 15px 0px 0px;
@@ -154,64 +162,64 @@ footer
 .pied
 {
 	margin:0;
-   padding:0;
-   background:#929292 0 0;
-   float:left;
-   width:100%;
-   border:1px solid #42432d;
-   border-width:1px 0;
-   display: flex;
-   justify-content: space-around;
+ padding:0;
+ background:#929292 0 0;
+ float:left;
+ width:100%;
+ border:1px solid #42432d;
+ border-width:1px 0;
+ display: flex;
+ justify-content: space-around;
 }
 
 #pied p 
 {
-		background-image: url(Image/nav_bgImage.jpg);
-		padding: 10px;
-		padding-left: 20px;
-		margin: 0px;
+  background-image: url(Image/nav_bgImage.jpg);
+  padding: 10px;
+  padding-left: 20px;
+  margin: 0px;
 }
 
 #pied a 
-	{
-		float: right;
-	}
+{
+  float: right;
+}
 
-	
+
 #footer ul 
 {	
 
-	   	list-style-type: none;
-        	margin:0;
-       	padding: 0;
-        	overflow: hidden;
-        	width: 100%;
-        			}
-   #footer li 
-   {
-        float: left;
-        width: 33.333%;
-        	
-      	}
-    #footer a:link,a:visited 
-    {
-        	
-        	font-weight: bold;
-        	color:#FFFFFF;
-        	background-color:#bebebe; 
-        	padding: 4px;
-        	text-decoration:none;
-      	}
+ list-style-type: none;
+ margin:0;
+ padding: 0;
+ overflow: hidden;
+ width: 100%;
+}
+#footer li 
+{
+  float: left;
+  width: 33.333%;
+
+}
+#footer a:link,a:visited 
+{
+
+ font-weight: bold;
+ color:#FFFFFF;
+ background-color:#bebebe; 
+ padding: 4px;
+ text-decoration:none;
+}
 #footer a:hover, a:active
- {      	 	
+{      	 	
  background-color: #cc0000;  	
- }
+}
 .icone
 {
 	display: flex;
 	flex-wrap: nowrap;
-    justify-content: center;
-    margin:100px 0px 100px 0px;
+  justify-content: center;
+  margin:100px 0px 100px 0px;
 }
 
 .imgac
@@ -222,7 +230,7 @@ footer
 h4
 {
 	display: flex;
-  	justify-content: space-around;
+ justify-content: space-around;
 }
 
 #logo
