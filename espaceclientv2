@@ -1,0 +1,51 @@
+<!DOCTYPE htlm>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,300,300italic%7CRoboto+Condensed:400,700" rel="stylesheet">
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <link href="inter.css" rel="stylesheet">
+  </head>
+  <img src="C:\Users\DUC\Desktop\PesiTech-DOMISEP-G6C-master\PesiTech-DOMISEP-G6C-master\Image\logo_ez-home-moitie.png" style="position:absolute; width: 170px; height: 70px; left:40%;" alt="Logo" id="logo">
+  <body style=" width: 350px;"><htlm>
+      <table style="width: 159px; height: 350px;" class="tableau" cellspacing="3"
+
+        border="1">
+        <tbody class="case">
+          <tr align="center">
+            <td style="background-color: rgba(153, 153, 153, 0.7);"><span style="color: white;"><a href="monprofil.html">Mon
+                    profil</a></span></td>
+          </tr>
+          <tr align="center">
+            <td style="background-color: rgba(153, 153, 153, 0.7);"><span style="color: white;"><a href="install.html">Mon
+                    installation</a></span></td>
+          </tr>
+          <tr align="center">
+            <td style="background-color: rgba(153, 153, 153, 0.7);"><span style="color: white;"><a href="stats.html">Relevés
+                    &amp; Stats</a></span></td>
+          </tr>
+          <tr align="center">
+            <td style="width: 30px; background-color: rgba(153, 153, 153, 0.7);"><span
+
+                style="color: white;"><a href="catalog.html">Catalogue</a></span></td>
+          </tr>
+          <tr align="center">
+            <td style="height: 50px; background-color: rgba(153, 153, 153, 0.7);"><span
+
+                style="color: white;"><a href="panne.html">Panne
+ et Résolution</a></span></td>
+          </tr>
+          <tr align="center">
+            <td style="background-color: rgba(153, 153, 153, 0.7);"><span style="color: white;"><a href="forum.html">Forum</a></span></td>
+          </tr>
+          <tr align="center">
+            <td style="background-color: rgba(153, 153, 153, 0.7);"><span style="color: white;"><a href="mess.html">Messagerie</a></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="linear-gradient"> </div>
+    </htlm><htlm>
+      <title>EZ-Home</title>
+    </htlm>
+  </body>
+</html>
