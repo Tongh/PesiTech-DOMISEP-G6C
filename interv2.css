@@ -1,8 +1,8 @@
-tr {
+th {
   font-family: 'Roboto';
   font-weight: normal;
   font-style: normal;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1;
   letter-spacing: normal;
   text-transform: none;
@@ -24,6 +24,8 @@ background: -ms-linear-gradient(left, rgba(143,2,34,1) 0%, rgba(109,0,25,0.77) 4
 background: linear-gradient(to right, rgba(143,2,34,1) 0%, rgba(109,0,25,0.77) 46%, rgba(109,0,25,0.5) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f0222', endColorstr='#6d0019', GradientType=1 );
 background-repeat:repeat;
+height:100%;
+margin:0;
 }
 
 
@@ -36,10 +38,17 @@ a
 
 .tableau {
 
- border-top-left-radius: 14px;
  border-radius: 5px;
- cell-spacing:3px;
- border-spacing:2px;
+ border-spacing:1px;
  border:none;
  text-decoration:none; 
+ position:absolute;
+ top:10%;
 }
+
+.fleche {
+ position:absolute; 
+ top:15%;
+ left:20%;
+}
+
