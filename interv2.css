@@ -1,3 +1,5 @@
+/* Police dans tableau */ 
+
 th {
   font-family: 'Roboto';
   font-weight: normal;
@@ -11,7 +13,7 @@ th {
 }
 
 
-
+/* Degrade */
 
 body {
 color:black;
@@ -28,6 +30,7 @@ height:100%;
 margin:0;
 }
 
+/* Pas de supertexte */
 
 a
 {
@@ -35,7 +38,7 @@ a
  text-decoration: none;
 }
 
-
+/* Mise en page tableau */ 
 .tableau {
 
  border-radius: 5px;
@@ -46,9 +49,4 @@ a
  top:10%;
 }
 
-.fleche {
- position:absolute; 
- top:15%;
- left:20%;
-}
 
