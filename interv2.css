@@ -23,7 +23,7 @@ background: -o-linear-gradient(left, rgba(143,2,34,1) 0%, rgba(109,0,25,0.77) 46
 background: -ms-linear-gradient(left, rgba(143,2,34,1) 0%, rgba(109,0,25,0.77) 46%, rgba(109,0,25,0.5) 100%);
 background: linear-gradient(to right, rgba(143,2,34,1) 0%, rgba(109,0,25,0.77) 46%, rgba(109,0,25,0.5) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f0222', endColorstr='#6d0019', GradientType=1 );
-background-repeat:no-repeat;
+background-repeat:repeat;
 }
 
 
