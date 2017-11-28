@@ -8,7 +8,7 @@ html /* Pas de marges pour la page entière+couleur*/
 
 .DIYheader
 {
-  background-image: url(Image/nav_bgImage.jpg);
+  background-image: url(../Image/nav_bgImage.jpg);
   /*background-color: #9B002F;*/
   margin: 0px;
   z-index: 5;
