@@ -21,7 +21,7 @@ body
   top:125px;
   position: absolute;
   z-index: 10;
-  bottom: 50px;
+  bottom: 80px;
 }
 
 .content {
@@ -51,7 +51,7 @@ body
 }
 
 .DIYfooter {
-  height: 50px;
+  height: 80px;
   /*line-height: 100px;*/
   width: 100%;
   position: absolute;
