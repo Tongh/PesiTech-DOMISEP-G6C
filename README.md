@@ -14,6 +14,7 @@
 
         src='image.jpg'
 
+> les css scripts sont dans le fichier css maintenant, faites attention de l'utiliser.
 
 ## IMPORTANT
 * Pour ne pas  avoir des confusions dans notre travail, quand on a modifié `un peu` le code, même si ce code ne fonctionne pas (ou juste `un petit peu` ) dans un premier instant, merci encore de `mettre à jour` les codes dans notre Github, sinon les autres ne savent pas ce qu'on a fait, et c'est pas pratique pour notre travail.
