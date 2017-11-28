@@ -17,3 +17,5 @@
 
 ## IMPORTANT
 * Pour ne pas  avoir des confusions dans notre travail, quand on a modifié `un peu` le code, même si ce code ne fonctionne pas (ou juste `un petit peu` ) dans un premier instant, merci encore de `mettre à jour` les codes dans notre Github, sinon les autres ne savent pas ce qu'on a fait, et c'est pas pratique pour notre travail.
+
+* Si vous mettez à jour directement le fichier à jour sur Github, merci d'expliquer les modifications dans la zone de commentaire lorsqu'un changement est soumis.
