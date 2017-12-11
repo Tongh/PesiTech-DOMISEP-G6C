@@ -3,6 +3,8 @@
 
 > les css scripts sont dans le fichier css maintenant, faites attention de l'utiliser.
 
+> Après chaque mise à jour, télécharger tout le projet pour vérifier si ça va ou pas.
+
 > Si vous mettez à jour directement le fichier à jour sur Github, merci d'expliquer les modifications dans la zone de commentaire lorsqu'un changement est soumis.
 
 * Les gars, chaque fois que vous voulez modifier le code, téléchargez-le et modifiez juste la partie que vous voulez modifier. 
