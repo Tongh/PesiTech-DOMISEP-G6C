@@ -61,7 +61,7 @@
 				}
 
 			if ($allValider == 4) {
-				header("Location:http://www.google.fr");
+				header("Location:traitementNewCompte.php");
 			}
 		}
 
