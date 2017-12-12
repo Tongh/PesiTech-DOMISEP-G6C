@@ -16,6 +16,7 @@
 
 		$nomErr = $prenomErr = $genderErr = $emailErr = "";
 		$nom = $prenom = $email = $gender = "";
+		$allValider = 0;
 
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			if (empty($_POST["nom"])) {
@@ -24,6 +25,8 @@
 				$nom = test_input($_POST["nom"]);
 				if (!preg_match("/^[-a-zA-Z ]*$/", $nom)) {
 					$nomErr = "Autorisé seulement les lettres et l'espace!";
+				} else {
+					$allValider++;
 				}
 			}
 
@@ -33,6 +36,8 @@
 				$prenom = test_input($_POST["prenom"]);	
 				if (!preg_match("/^[-a-zA-Z ]*$/", $prenom)) {
 					$prenomErr = "Autorisé seulement les lettres et l'espace!";
+				} else {
+					$allValider++;
 				}
 			}		
 
@@ -43,12 +48,20 @@
 				if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email)) {
 					$emailErr = "Le format de courriel est invalide";
 				}
+				 else {
+					$allValider++;
+				}
 			}	
 
 			if (empty($_POST["gender"])) {
 				$genderErr = "Gender est requis";
 			} else {
 				$gender = test_input($_POST["gender"]);	
+				$allValider++;
+				}
+
+			if ($allValider == 4) {
+				header("Location:http://www.google.fr");
 			}
 		}
 
