@@ -188,8 +188,11 @@
 		</form>
 	</div>
 
-	<form action="connexion.php" method="GET">
-		<input type="submit" value="Retournez vers mon espace client"> 
-	</form>
+	<div id="boutonretour">
+		<form action="connexion.php" method="GET">
+			<input type="submit" value="Retournez vers mon espace client"> 
+		</form>
+	</div>
+
 </body>
 </html>
