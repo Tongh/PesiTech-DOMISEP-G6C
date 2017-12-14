@@ -37,6 +37,9 @@
       <th>
         <a href="messagerie.html">Messagerie</a>
       </th>
+      <th>
+        <a href="connexion.php">Déconnexion</a>
+      </th>
     </tbody>
   </table>
 </header>
