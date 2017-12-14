@@ -104,7 +104,10 @@ h4
 
 #qui
 {
-  width: 50%;
+  width: 40%;
+  padding-right: 50px;
+  margin-bottom:- 550px;
+
 }
 
 #info_contact
@@ -146,3 +149,30 @@ textarea
   justify-content: space-around;
 
 }
+
+i
+{
+  
+  margin-right: 10px;
+  text-align: justify;
+}
+
+#txtreseau
+{
+  margin-left: 15px;
+  margin-bottom: 5px;
+
+}
+
+#reseau
+{
+  display:flex;
+  justify-content: space-around;
+  
+}
+
+#europe
+{
+  margin-left: -100px
+}
+
