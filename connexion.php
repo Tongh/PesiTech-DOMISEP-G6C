@@ -2,7 +2,7 @@
 // Connexion base de données
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=mydb', 'root', '');
+    $bdd = new PDO('http://localhost/phpmyadmin/db_structure.php?server=1&db=mydb', 'root', '');
 }
 catch (Exception $e) // Si erreur
 {
@@ -31,7 +31,8 @@ else { //Login existant
     if ($password == $donnees['password'])
     {
         // Si aucune erreur
-        echo "Ouais!!!!!! J'ai plus d'érreur!!!! ( C'EST BEAU LES REVES !)" ;
+        echo "Bienvenu" ;
+        include("espaceclientv2.html");
     }
     $reponse_login->closeCursor(); // Termine le traitement de la requête
 }
