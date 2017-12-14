@@ -10,7 +10,7 @@
 
 <body>
 
-  <?php 
+  <?php
     require("db_config.php");
 
     $Err = "";
@@ -126,7 +126,7 @@
           <a href="connexion.php"> Interface administrateur </a>
         </li>
         <li class='nouscontacterfooter'>
-          <a href="nous_contacter.html"> Nous contacter </a>
+          <a href="nous_contacter.php"> Nous contacter </a>
         </li>
         <li class='DOMISEPfooter'>
           <a href="quoi.html"> DOMISEP </a>
@@ -146,4 +146,3 @@
 
   </body>
   </html>
-
