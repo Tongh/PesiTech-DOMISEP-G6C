@@ -25,9 +25,9 @@
       <th>
         <a href="stats.html">Relevés et Statistiques</a>
       </th>
-      <th>
+      <!-- <th>
         <a href="catalogue.html">Catalogue</a>
-      </th>
+      </th> -->
       <th>
         <a href="panne.html">Panne et Résolution</a>
       </th>
@@ -53,7 +53,7 @@
             Code Postal : <input type="text" name="codepostal" size="3" />
             <br/>
             <input type="submit" value="Valider" />
-       </form> 
+       </form>
     </div>
 
 </body>
@@ -105,11 +105,11 @@ $conn = mysqli_connect($mysql_server_name, $mysql_username, $mysql_password, $my
       }
  if (isset($_POST['ville']))
  {
-   if (isset($_POST['adresse'])) 
+   if (isset($_POST['adresse']))
    {
        if (isset($_POST['codepostal']))
        {
-        $req='UPDATE utilisateur set ville ='.$_POST['ville'].' and adresse = '.$_POST['adresse'].' and codePostal  = ' . $_POST['codepostal'].'where id utilisateur =';  
+        $req='UPDATE utilisateur set ville ='.$_POST['ville'].' and adresse = '.$_POST['adresse'].' and codePostal  = ' . $_POST['codepostal'].'where id utilisateur =';
        }
    }
  }
