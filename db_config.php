@@ -7,6 +7,6 @@
 	*/
 	$mysql_server_name = "localhost"; 	// Changer à votre nom de serveur
 	$mysql_username = "root"; 			// Changer à votre nom de utilisateur
-	$mysql_password = "";			// Changer à votre mot de pass
+	$mysql_password = "123456";			// Changer à votre mot de pass
 	$mysql_database = "Mydb";			// Changer à votre nom de database données
  ?>

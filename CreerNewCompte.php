@@ -130,14 +130,14 @@
 				}
 				//echo "Success..." . mysqli_get_host_info($conn) . "<br>";
 				mysqli_set_charset($conn, "utf8");
-				$sql = "SELECT Login FROM Utilisateur WHERE Login = '$login'";
+				$sql = "SELECT Login FROM utilisateur WHERE Login = '$login'";
 				if ($result = mysqli_query($conn, $sql)) {
 					if (mysqli_num_rows($result) == 1) {
 						$loginErr = "Votre login est déjà existé.";
 					} else {
-						$sql = "INSERT INTO Utilisateur (Nom, Prenom, Login, Mdp, Mail, Telephone, TypeUtilisateur) VALUES ('$nom', '$prenom', '$login', '$mdpMD5', '$email', '$tele', '$typeU')";
+						$sql = "INSERT INTO utilisateur (nom, prenom, login, password, email, telephone, typeUtilisateur) VALUES ('$nom', '$prenom', '$login', '$mdpMD5', '$email', '$tele', '$typeU')";
 						if (mysqli_query($conn, $sql)) {
-							echo "Success insert to table";
+							echo "Success insert to table !";
 						} else {
 							echo "something wrong <br>";
 							echo mysqli_error($conn);
