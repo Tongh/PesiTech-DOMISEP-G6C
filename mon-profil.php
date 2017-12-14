@@ -7,16 +7,17 @@
   <meta charset="utf-8"/>
   <!--dossier css-->
   <link href="css/interv2.css" rel="stylesheet">
+  <link href="css/profil.css" rel="stylesheet">
   <script src="https://use.fontawesome.com/e3c7c95da8.js"></script>
 </head>
 <!-- Header (tableau + image) -->
 <header>
-  <a href="espaceclientv2.html"><img src="Image\logo_ez-home-moitie.png" class="logo">
+    <a href="espaceclientv2.html"><img src="Image\logo_ez-home-moitie.png" class="logo"></a>
   <!-- Debut tableau -->
   <table class="tableau">
     <tbody class="case">
       <th>
-        <a href="mon-profil.html">Mon profil</a>
+        <a href="mon-profil.php">Mon profil</a>
       </th>
       <th>
         <a href="mon-installation.html">Mon installation</a>
@@ -39,7 +40,23 @@
     </tbody>
   </table>
 </header>
+<body>
+    <div class="profil">
+        <form action="mon-profil.php" method="post">
+            <p>Veuillez saisir vos coordonnées :</p>
+            Ville : <input type="text" name="ville" size="20" />
+            <br/>
+            Adresse : <input type="text" name="adresse" />
+            <br/>
+            Complément d'adresse : <input type="text" name="cptadresse" />
+            <br/>
+            Code Postal : <input type="text" name="codepostal" size="3" />
+            <br/>
+            <input type="submit" value="Valider" />
+       </form> 
+    </div>
 
+</body>
 
 <footer>
 	<div class="block1">
@@ -79,3 +96,22 @@
 	</div>
 </footer>
 </html>
+
+<?php
+require("db_config.php");
+$conn = mysqli_connect($mysql_server_name, $mysql_username, $mysql_password, $mysql_database);
+      if (!$conn) {
+        die('Connet Error (' . mysqli_connect_errno() . ')' . mysqli_connect_error());
+      }
+ if (isset($_POST['ville']))
+ {
+   if (isset($_POST['adresse'])) 
+   {
+       if (isset($_POST['codepostal']))
+       {
+        $req='UPDATE utilisateur set ville ='.$_POST['ville'].' and adresse = '.$_POST['adresse'].' and codePostal  = ' . $_POST['codepostal'].'where id utilisateur =';  
+       }
+   }
+ }
+
+?>
