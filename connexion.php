@@ -49,21 +49,21 @@
 
   <header class="DIYheader">
     <a href="site-accueil.html"><img src="Image/logo_ez-home-moitie.png" alt="Logo" id="logo"></a>
-    <a href="connexion.html" class='connecterboutton'> <img src="Image/profil.png" alt="Se Connecter" id="imgcn"/></a>
+    <a href="connexion.php" class='connecterboutton'> <img src="Image/profil.png" alt="Se Connecter" id="imgcn"/></a>
 
     <nav id="barre">
       <ul>
         <div>
           <li class="qsn">
-            <a href="site-accueil.html#qui_sommes_nous"> Qui sommes-nous? </a>
+            <a href="qui_sommes_nous.html"> Qui sommes-nous? </a>
           </li>
 
           <li class="ns">
-            <a href="site-accueil.html#nos_services"> Nos services </a>
+            <a href="nos_services.html"> Nos services </a>
           </li>
 
           <li class="ach">
-            <a href="site-accueil.html#acheter"> Acheter </a>
+            <a href="acheter.html"> Acheter </a>
           </li>
         </div>
       </ul>
@@ -123,7 +123,7 @@
     <div id="barre">
       <ul>
         <li class='adminfooter'>
-          <a href="connexion.html"> Interface administrateur </a>
+          <a href="connexion.php"> Interface administrateur </a>
         </li>
         <li class='nouscontacterfooter'>
           <a href="nous_contacter.html"> Nous contacter </a>
@@ -146,3 +146,4 @@
 
   </body>
   </html>
+
