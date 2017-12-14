@@ -8,6 +8,29 @@
 </head>
 
 <body>
+	<?php 
+		require("db_config.php");
+
+		function test_input($data) {
+			$data = trim($data);
+			$data = stripslashes($data);
+			$data = htmlspecialchars($data);
+			return $data;
+		}
+
+		$ameliorer = $nom = $prenom = $email = $categorie = $ameliorer2 = $message = "";
+
+		if ($_SERVER["REQUEST_METHOD"] == "POST") {
+			$ameliorer = "Question: " . test_input($_POST["ameliorer"]) . "\n";
+			$nom = "Nom: " . test_input($_POST["nom"]) . "\n";
+			$prenom = "Prénom" . test_input($_POST["prenom"]) . "\n";
+			$email = "Email" . test_input($_POST["email"]) . "\n";
+			$categorie = "Catégorie" . test_input($_POST["categorie"]) . "\n";
+			$ameliorer2 = "Détail" . test_input($_POST["ameliorer2"]) . "\n";
+
+
+		}
+	 ?>
 		<header class="DIYheader">
 			<a href="site-accueil.html"><img src="Image/logo_ez-home-moitie.png" alt="Logo" id="logo"></a>
 			<a href="connexion.php" class='connecterboutton'> <img src="Image/profil.png" alt="Se Connecter" id="imgcn"/></a>
@@ -99,7 +122,7 @@
 
 		       <p>
 				 <label for="ameliorer"> <span class="txtq"> Détaillez ici votre problème en quelques lignes </span></label><br />
-				 <textarea name="ameliorer" id="ameliorer"></textarea>
+				 <textarea name="ameliorer2" id="ameliorer"></textarea>
 			   </p>
 			   <input type ="submit" value="Envoyer">
 		   </fieldset>
