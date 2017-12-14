@@ -122,13 +122,19 @@ h4
 
 }
 
+#nos_services_page
+{
+  text-align: justify;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  margin-top: 50px;
+}
 #nos_services
 {
-  width: 45%;
-  margin-left: 25px;
-  text-align: justify;
+  width: 50%;
+  margin-left: 45px;
 }
-
 .txtq
 { font-size: 0.6em;
   font-weight: none;
@@ -179,4 +185,3 @@ i
 {
   margin-left: -100px
 }
-
