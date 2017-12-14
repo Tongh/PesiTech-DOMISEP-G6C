@@ -13,6 +13,7 @@
   <?php 
     require("db_config.php");
 
+    $Err = "";
     $login = $mdp = $mdpMD5 = "";
 
     function test_input($data) {
@@ -37,7 +38,7 @@
         if (mysqli_num_rows($result) == 1) {
           header("Location:espaceclientv2.html");
         } else {
-          echo "mot de pass incorrect";
+          $Err = "Votre mot de passe ou identifiant est incorrect! ";
         }
       }
 
@@ -94,6 +95,8 @@
               </br>
               </br>
               <input type="password" name="mdp" id="mdp"  required />
+              <br><br>
+              <span class="error"> <?php echo $Err;?></span>
             </p>
 
             <p>
