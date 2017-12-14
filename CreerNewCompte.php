@@ -2,8 +2,9 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Page de créer nouveau compte</title>
+	<title>Créer un compte</title>
 	<link rel="stylesheet" type="text/css" href="css/headerBodyFooterFixed.css">
+	<link  rel="stylesheet" type="text/css" href="css/creercompte.css">
 	<style type="text/css">
 		.error {
   			color: red;
@@ -148,8 +149,14 @@
 			}
 		}
  	?>
+	<header>
+	  <a href="espaceclientv2.html"><img src="Image\logo_ez-home-moitie.png" class="logo"> </a>
+	</header>
 
 	<div class="partieInfo">
+		<fieldset>
+			<legend> <strong>  Pour vous inscrire, renseignez les coordonnées suivantes:  </strong> </legend>
+		
 		<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
 			Nom   : <input type="text" name="nom" value="<?php echo $nom;?>"> 
 			<span class="error"> *<?php echo $nomErr;?></span>
@@ -177,7 +184,12 @@
 					<span class="error"> *<?php echo $typeUErr;?></span>
 			<br><br>
 			<input type="submit" name="submit" value="Envoyer">
+		</fieldset>
 		</form>
 	</div>
+
+	<form action="connexion.php" method="GET">
+		<input type="submit" value="Retournez vers mon espace client"> 
+	</form>
 </body>
 </html>
