@@ -189,7 +189,7 @@
 	</div>
 
 	<div id="boutonretour">
-		<form action="connexion.php" method="GET">
+		<form action="connexion.php">
 			<input type="submit" value="Retournez vers mon espace client"> 
 		</form>
 	</div>
