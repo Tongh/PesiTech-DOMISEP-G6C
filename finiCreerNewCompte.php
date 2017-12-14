@@ -19,19 +19,19 @@
 <div class="partieInfo">
 		<fieldset>
 			<legend> <strong>  Votre inscription a bien été prise en compte.  </strong> </legend>
-			<?php 
-				echo "Vous recevrez sous peu une demande de confirmation de votre compte par mail 
+			<?php
+				echo "Vous recevrez sous peu une demande de confirmation de votre compte par mail
 				</br></br>
-				Si vous ne trouvez pas l'email, </br> 
+				Si vous ne trouvez pas l'email, </br>
 				 Vérifiez que l'email de confirmation n'a pas été classé dans le dossier Courrier indésirable ou Spam de votre messagerie.
 				</br>
 				</br>  Si vous ne trouvez toujours pas l'email, demandez-nous de vous le renvoyer.";
 			 ?>
 			<br/>
-			</br> 
+			</br>
 			<div id="boutonretour_milieu">
-			<form action="connexion.php">
-						<input type="submit" value="Retournez vers mon espace client"> 
+			<form action="espaceclientv2.html">
+						<input type="submit" value="Retournez vers mon espace client">
 			</form>
 			</div>
 		</fieldset>
