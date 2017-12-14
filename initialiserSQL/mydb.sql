@@ -200,8 +200,8 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 -- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`id utilisateur`, `nom`, `prenom`, `login`, `password`, `email`, `telephone`) VALUES
-(2, 'Max', 'Vassal', 'maxvassal', 'isep', 'max.vassal', 606060606);
+/*INSERT INTO `utilisateur` (`id utilisateur`, `nom`, `prenom`, `login`, `password`, `email`, `telephone`) VALUES
+(2, 'Max', 'Vassal', 'maxvassal', 'isep', 'max.vassal', 606060606);*/
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
