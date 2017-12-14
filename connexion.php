@@ -10,6 +10,42 @@
 
 <body>
 
+  <?php 
+    require("db_config.php");
+
+    $login = $mdp = $mdpMD5 = "";
+
+    function test_input($data) {
+      $data = trim($data);
+      $data = stripslashes($data);
+      $data = htmlspecialchars($data);
+      return $data;
+    }
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      $login = test_input($_POST["login"]);
+      $mdp = test_input($_POST["mdp"]);
+      $mdpMD5 = md5($mdp);
+      $conn = mysqli_connect($mysql_server_name, $mysql_username, $mysql_password, $mysql_database);
+      if (!$conn) {
+        die('Connet Error (' . mysqli_connect_errno() . ')' . mysqli_connect_error());
+      }
+      //echo "Success..." . mysqli_get_host_info($conn) . "<br>";
+      mysqli_set_charset($conn, "utf8");
+      $sql = "SELECT login FROM utilisateur WHERE login = '$login' and password = '$mdpMD5'";
+      if ($result = mysqli_query($conn, $sql)) {
+        if (mysqli_num_rows($result) == 1) {
+          header("Location:espaceclientv2.html");
+        } else {
+          echo "mot de pass incorrect";
+        }
+      }
+
+    }
+
+
+   ?>
+
   <header class="DIYheader">
     <a href="site-accueil.html"><img src="Image/logo_ez-home-moitie.png" alt="Logo" id="logo"></a>
     <a href="connexion.html" class='connecterboutton'> <img src="Image/profil.png" alt="Se Connecter" id="imgcn"/></a>
@@ -44,13 +80,13 @@
         <div class="cnxn">
           <h1> Accéder à mon espace personnel </h1><br/>
 
-          <form method="post" action="connexion.php">
+          <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
 
           <p>
        			  <label for="pseudo">Mon identifiant:</label>
               </br>
               </br>
-              <input type="text" name="pseudo" id="pseudo"  autofocus/>
+              <input type="text" name="login" id="pseudo"  autofocus/>
        			</p>
 
        			<p>

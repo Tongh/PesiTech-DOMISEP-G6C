@@ -14,10 +14,6 @@
 	<?php 
 		require("db_config.php");
 
-		function test_utilisateur_existe($data) {
-
-		}
-		
 		function test_input($data) {
 			$data = trim($data);
 			$data = stripslashes($data);
@@ -130,7 +126,7 @@
 				}
 				//echo "Success..." . mysqli_get_host_info($conn) . "<br>";
 				mysqli_set_charset($conn, "utf8");
-				$sql = "SELECT Login FROM utilisateur WHERE Login = '$login'";
+				$sql = "SELECT login FROM utilisateur WHERE login = '$login'";
 				if ($result = mysqli_query($conn, $sql)) {
 					if (mysqli_num_rows($result) == 1) {
 						$loginErr = "Votre login est déjà existé.";
@@ -138,6 +134,7 @@
 						$sql = "INSERT INTO utilisateur (nom, prenom, login, password, email, telephone, typeUtilisateur) VALUES ('$nom', '$prenom', '$login', '$mdpMD5', '$email', '$tele', '$typeU')";
 						if (mysqli_query($conn, $sql)) {
 							echo "Success insert to table !";
+							header("Location:finiCreerNewCompte.php");
 						} else {
 							echo "something wrong <br>";
 							echo mysqli_error($conn);
@@ -147,7 +144,7 @@
 					echo "someting wrong comparer login <br>";
 					echo mysqli_error($conn);
 				}
-				//header("Location:finiCreerNewCompte.php");
+				
 			}
 		}
  	?>
