@@ -61,3 +61,16 @@ a
   left:40%;
 
 }
+
+.pieces {
+
+  border:none;
+  text-decoration:none;
+  position:absolute;
+  top:35%;
+  height: 300px;}
+
+  caption {
+    color: white;
+  }
+
