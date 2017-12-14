@@ -73,12 +73,14 @@ a:hover
   margin:20px 20px 20px 20px;
 }
 
-.sectionIcone img {
+.sectionIcone img
+{
   width: 80px;
   height: 80px;
 }
 
-.sectionIcone {
+.sectionIcone 
+{
   width:150px;
   margin:0 30px 0 30px;
   padding: 15px;
@@ -92,3 +94,55 @@ h4
   justify-content: space-around;
 }
 
+#qui_sommes_nous
+{
+  display: flex;
+  justify-content: space-around;
+  margin: 25px 25px 25px 25px;
+  text-align: justify;
+}
+
+#qui
+{
+  width: 50%;
+}
+
+#info_contact
+{
+  width: 50%;
+  margin-top: 50px;
+  margin-left: 50px;
+
+}
+
+#nos_services
+{
+  width: 45%;
+  margin-left: 25px;
+  text-align: justify;
+}
+
+.txtq  
+{ font-size: 0.6em;
+  font-weight: none;
+}
+
+figure
+{
+  width: 45%
+  margin-bottom: 50 px;
+
+}
+
+textarea
+{
+  width: 400px;
+  height: 100px;
+}
+
+#page_contact
+{
+  display: flex;
+  justify-content: space-around;
+
+}
