@@ -4,10 +4,19 @@
 	<meta charset="utf-8">
 	<title>Page de créer nouveau compte</title>
 	<link rel="stylesheet" type="text/css" href="css/headerBodyFooterFixed.css">
+	<style type="text/css">
+		.error {
+  			color: red;
+		}
+	</style>
 </head>
 <body>
 	<?php 
-		require("../db_config.php");
+		require("db_config.php");
+
+		function test_utilisateur_existe($data) {
+
+		}
 		
 		function test_input($data) {
 			$data = trim($data);
@@ -113,19 +122,31 @@
 
 
 			if ($allValider == 8) {
-				echo $allValider . "<br>";
-				echo $nom . "<br>";
-				echo $prenom . "<br>";
-				echo $login . "<br>";
-				echo $mdp . "<br>";
-				echo $mdpC . "<br>";
-				echo $email . "<br>";
-				echo $tele . "<br>";
-				echo $typeU . "<br>";
 				$mdpMD5 = md5($mdp);
-				echo $mdpMD5 . "<br>";
-				$mdpCMD5 = md5($mdpC);
-				echo $mdpCMD5 . "<br>";
+				$conn = mysqli_connect($mysql_server_name, $mysql_username, $mysql_password, $mysql_database);
+
+				if (!$conn) {
+					die('Connet Error (' . mysqli_connect_errno() . ')' . mysqli_connect_error());
+				}
+				//echo "Success..." . mysqli_get_host_info($conn) . "<br>";
+				mysqli_set_charset($conn, "utf8");
+				$sql = "SELECT Login FROM Utilisateur WHERE Login = '$login'";
+				if ($result = mysqli_query($conn, $sql)) {
+					if (mysqli_num_rows($result) == 1) {
+						$loginErr = "Votre login est déjà existé.";
+					} else {
+						$sql = "INSERT INTO Utilisateur (Nom, Prenom, Login, Mdp, Mail, Telephone, TypeUtilisateur) VALUES ('$nom', '$prenom', '$login', '$mdpMD5', '$email', '$tele', '$typeU')";
+						if (mysqli_query($conn, $sql)) {
+							echo "Success insert to table";
+						} else {
+							echo "something wrong <br>";
+							echo mysqli_error($conn);
+						}
+					}
+				} else {
+					echo "someting wrong comparer login <br>";
+					echo mysqli_error($conn);
+				}
 				//header("Location:finiCreerNewCompte.php");
 			}
 		}
