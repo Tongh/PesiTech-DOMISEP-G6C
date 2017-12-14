@@ -6,8 +6,8 @@
   top: 0;
   height: 118px;
   width: 100%;
-  font-family: "trebuchet MS"; 
- 
+  font-family: "trebuchet MS";
+
 }
 .Footer_accueil
 {
@@ -15,8 +15,8 @@
   margin: 0px;
   height: 80px;
   width: 100%;
-  font-family: "trebuchet MS"; 
- 
+  font-family: "trebuchet MS";
+
 }
 
 
@@ -45,8 +45,8 @@
    flex-wrap: no-wrap;
  }
 
- #menu ul 
-{ 
+ #menu ul
+{
  list-style-type: none;
  margin:0;
  padding: 0;
@@ -60,12 +60,12 @@
   width: 33.333%;
 }
 
-#menu a:link,a:visited 
+#menu a:link,a:visited
 {
  display: block;
  font-weight: bold;
  color:#CC0000;
- background-color:#BEBEBE; 
+ background-color:#BEBEBE;
  text-align: center;
  padding: 4px;
  text-decoration:none;
@@ -76,6 +76,6 @@
  background-color: #FFFFFF;
 }
 
-#license { 
+#license {
 text-align:center;
 color: white }
