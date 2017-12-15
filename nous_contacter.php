@@ -5,10 +5,17 @@
 	<meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="css/inter.css"/>
 	<link rel="stylesheet" type="text/css" href="css/headerBodyFooterFixed.css"/>
+	<script type="text/javascript">
+		function mail_sent() {
+			alert("Votre Conseil a bien evoyé à PESITech!!")
+		}
+	</script>
 </head>
 
 <body style="margin-top: -25px">
 	<?php
+	mail("wenxiao0015@icloud.com", "test", "hihihi");
+	echo "mail sent";
 	require("db_config.php");
 
 	function test_input($data) {
@@ -28,7 +35,14 @@
 		$categorie = "Catégorie" . test_input($_POST["categorie"]) . "\n";
 		$ameliorer2 = "Détail" . test_input($_POST["ameliorer2"]) . "\n";
 
+		$to = "wenxiao0015@icloud.com";
+		$subject = "Les Conseil des clients (PESITech)";
+		$message = "Merci de ne pas répondre ce message. \n" . $nom . $prenom . $email . $ameliorer . $email . $categorie . $ameliorer2;
+		$from = "PESITech@DOMISEP.g6c";
 
+		if (mail($to, $sub, $message, "From: $from")) {
+			echo "mail sent!";
+		}
 	}
 	?>
 	<header class="DIYheader">
@@ -99,7 +113,7 @@
 						<input type="text" name="prenom" id="prenom" />
 						<br/>
 						<label for="email"><span class="txtq">Quel est votre pseudo ?</span></label>
-						<input type="email" name="email" id="email" />
+						<input type="text" name="email" id="email" />
 
 
 					</fieldset>
@@ -112,53 +126,53 @@
 							<br/>
 							<input type="radio" name="categorie" value="infos" id="infos" /> <label for="infos">
 								<span class="txtq"> Informations sur nos services  </span> </label>
-									<br/>
-									<input type="radio" name="categorie" value="technique" id="technique" /> <label for="technique">  <span class="txtq"> Assistance technique </span></label>
-									<br/>
-									<input type="radio" name="categorie" value="depannage" id="depannage" /> <label for="depannage">  <span class="txtq">Dépannage </span></label>
-									<br/>
-									<input type="radio" name="categorie" value="autre" id="autre" /> <label for="autre"> <span class="txtq">Autre... </span></label>
-								</p>
+								<br/>
+								<input type="radio" name="categorie" value="technique" id="technique" /> <label for="technique">  <span class="txtq"> Assistance technique </span></label>
+								<br/>
+								<input type="radio" name="categorie" value="depannage" id="depannage" /> <label for="depannage">  <span class="txtq">Dépannage </span></label>
+								<br/>
+								<input type="radio" name="categorie" value="autre" id="autre" /> <label for="autre"> <span class="txtq">Autre... </span></label>
+							</p>
 
-								<p>
-									<label for="ameliorer"> <span class="txtq"> Détaillez ici votre problème en quelques lignes </span></label><br />
-									<textarea name="ameliorer2" id="ameliorer"></textarea>
-								</p>
-								<input type ="submit" value="Envoyer">
-							</fieldset>
+							<p>
+								<label for="ameliorer"> <span class="txtq"> Détaillez ici votre problème en quelques lignes </span></label><br />
+								<textarea name="ameliorer2" id="ameliorer"></textarea>
+							</p>
+							<input type ="submit" value="Envoyer">
+						</fieldset>
 
 
-						</form>
-					</figure>
-				</div>
+					</form>
+				</figure>
 			</div>
+		</div>
 		
 
-			<footer class="DIYfooter">
-				<nav>
-					<div id="barre">
-						<ul>
-							<li class='adminfooter'>
-								<a href="connexion.php"> Interface administrateur </a>
-							</li>
-							<li class='nouscontacterfooter'>
-								<a href="nous_contacter.php"> Nous contacter </a>
-							</li>
-							<li class='DOMISEPfooter'>
-								<a href="domisep.html"> DOMISEP </a>
-							</li>
-						</ul>
-					</div>
+		<footer class="DIYfooter">
+			<nav>
+				<div id="barre">
+					<ul>
+						<li class='adminfooter'>
+							<a href="connexion.php"> Interface administrateur </a>
+						</li>
+						<li class='nouscontacterfooter'>
+							<a href="nous_contacter.php"> Nous contacter </a>
+						</li>
+						<li class='DOMISEPfooter'>
+							<a href="domisep.html"> DOMISEP </a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<p>
+						Developed by PESITech ©
+					</p>
 					<div>
-						<p>
-							Developed by PESITech ©
-						</p>
-						<div>
-						</nav>
+					</nav>
 
-					</footer>
+				</footer>
 
 
 
-				</body>
-				</html>
+			</body>
+			</html>
