@@ -1,0 +1,92 @@
+a {
+  font-family: 'trebuchet ms';
+
+}
+
+.DIYheader
+{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,d3d1d6+18,6d0019+78 */
+background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(211,209,214,1) 18%, rgba(109,0,25,1) 78%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%,rgba(211,209,214,1) 18%,rgba(109,0,25,1) 78%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, rgba(255,255,255,1) 0%,rgba(211,209,214,1) 18%,rgba(109,0,25,1) 78%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#6d0019',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  margin: 0px;
+  z-index: 5;
+  top: 0;
+  height: 250px;
+  width: 100%;
+
+  /*
+  text-align: center;
+  line-height: 100px;
+  */
+}
+
+
+#logo
+{
+  margin: 5px 0px 5px 0px;
+  width: 200px
+}
+
+body
+{
+  margin: 0px; /* marge nul pour le corps de page */
+  padding: 0px;
+  height: 100%;
+}
+
+
+.connecterboutton
+{
+  float: right;
+}
+
+#barre ul
+{
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+#barre li
+{
+  float: left;
+  width: 33.333%;
+
+}
+
+#barre a:link,a:visited
+{
+  display: block;
+  font-weight: bold;
+  color:#FFFFFF;
+  background-color:rgba(153, 153, 153, 0.7);
+  text-align: center;
+  padding: 20px;
+  text-decoration:none;
+}
+
+
+
+#barre a:hover, a:active {
+  background-color: #6D071A;
+}
+
+.ns,.ach,.qsn,.nouscontatcterfooter,.adminfooter,.DOMISEPfooter
+{
+  padding: 0px 0px 0px 0px;
+
+  color:#FEFEFE;
+  width: 33.333%
+}
+
+
+
+
+
+
