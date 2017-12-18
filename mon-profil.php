@@ -31,12 +31,12 @@
       <th>
         <a href="panne.html">Panne et Résolution</a>
       </th>
-      <th>
+      <!-- <th>
         <a href="forum.html">Forum</a>
-      </th>
-      <th>
+      </th> -->
+      <!-- <th>
         <a href="messagerie.html">Messagerie</a>
-      </th>
+      </th> -->
       <th>
         <a href="connexion.php">Déconnexion</a>
       </th>
