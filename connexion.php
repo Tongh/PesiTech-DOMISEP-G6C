@@ -8,7 +8,7 @@
   <title> EZ-home - Connexion</title>
 </head>
 
-<body style="margin-top: -25px">
+<body style="margin-top: -18px">
 
   <?php
     require("db_config.php");
