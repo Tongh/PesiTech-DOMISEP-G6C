@@ -88,6 +88,9 @@
 					<p>
 						<label for="ameliorer"> <span class="txtq"> <strong>Vous avez une question ?</strong></span></label><br />
 						<textarea name="ameliorer" id="ameliorer"></textarea>
+						</br>
+						<label><span class="txtq"> Renseignez votre email: <span class="txtq"> </label> <input type="text" name="email_client" />
+						<input type="submit" value="Envoyer" />
 					</p>
 					<input type ="submit" value="Envoyer">
 
@@ -149,7 +152,7 @@
 
 =======
 		</div>
-		
+
 >>>>>>> ca704e0784c0e4d10d926da645b272230d0d043c
 
 		<footer class="DIYfooter">
