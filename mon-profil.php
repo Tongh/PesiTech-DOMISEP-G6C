@@ -46,6 +46,7 @@
 <body>
     <div class="profil">
         <form action="mon-profil.php" method="post">
+            <p>Première Connexion !</p>
             <p>Veuillez saisir vos coordonnées :</p>
             Ville : <input type="text" name="ville" size="20" />
             <br/>

@@ -64,8 +64,8 @@
 					<ul>
 						<li> par mail à l'adresse: contact@domisep.fr </li>
 						<li> par courrier à l'adresse: 75011, Paris </li>
-						<li> au travers de notre service après-vente & assistance au: +331-47-54-87-88-21</li></ul>
-					</ul>
+						<li> au travers de notre service après-vente & assistance au: +331·47·54·87·88</li></ul>
+					</ul>·
 				</p>
 
 				<br/>
@@ -132,7 +132,7 @@
 					</figure>
 				</div>
 			</div>
-		
+
 
 			<footer class="DIYfooter">
 				<nav>
