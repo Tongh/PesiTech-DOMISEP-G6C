@@ -1,5 +1,3 @@
-//TRASH
-
 <!DOCTYPE htlm>
 <html>
 <title>

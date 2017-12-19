@@ -36,7 +36,7 @@
       $sql = "SELECT login FROM utilisateur WHERE login = '$login' and password = '$mdpMD5'";
       if ($result = mysqli_query($conn, $sql)) {
         if (mysqli_num_rows($result) == 1) {
-          header("Location:espaceclientv2.html");
+          header("Location:espaceclient.php");
         } else {
           $Err = "Votre mot de passe ou identifiant est incorrect! ";
         }
