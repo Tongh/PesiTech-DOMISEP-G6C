@@ -196,7 +196,8 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `ville` varchar(255),
   `codePostal` varchar(255),
   `adresse` varchar(255),
-  `complementAdresse` varchar(255),  
+  `complementAdresse` varchar(255),
+  `typeUtilisateur`  varchar(255),
   PRIMARY KEY (`id utilisateur`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
