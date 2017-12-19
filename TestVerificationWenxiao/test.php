@@ -34,9 +34,11 @@
 			Confirmation mot de passe : <input type="password" id="mdpC" name="mdpC" onchange="checkmdpC()">
 			<span id="mdpCErr" class="error"></span><span id="mdpCNP" class="NP"></span>
 			<br><br>
-			E-mail: <input type="text" name="email">
+			E-mail: <input type="text" id="mail" name="email" onchange="checkMail()">
+			<span id="mailErr" class="error"></span><span id="mailNP" class="NP"></span>
 			<br><br>
-			Téléphone: <input type="text" name="tele">
+			Téléphone: <input type="text" id="tele" name="tele" onchange="checkTele()">
+			<span id="teleErr" class="error"></span><span id="teleNP" class="NP"></span>
 			<br><br>
 			Type: <input type="radio" name="typeU" value="client"> Client
 					<input type="radio" name="typeU" value="admin"> Administrateur

@@ -1,5 +1,5 @@
 function validerForm() {
-	var check = checkNom() && checkPrenom() && checkPseudo();
+	var check = checkNom() && checkPrenom() && checkPseudo() && checkmdp() && checkmdpC() && checkMail() && checkTele();
 	return check;
 }
 
@@ -109,10 +109,40 @@ function checkmdpC() {
 	} else {
 		document.getElementById("mdpCErr").innerHTML = "";
 		document.getElementById("mdpCNp").innerHTML = " √ ";
-		check = false;
+		check = true;
 	}
 	return check;
 }
 
+function checkMail() {
+	var check = false;
+	var mail = document.getElementById("mail").value;
+	var regle = /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/; 
+	if (mail != "" && !regle.test(mail)) {
+		document.getElementById("mailErr").innerHTML = " × Le format de votre Email est invalide!";
+		document.getElementById("mailNP").innerHTML = "";
+		check = false;
+	} else {
+		document.getElementById("mailErr").innerHTML = "";
+		document.getElementById("mailNP").innerHTML = " √ ";
+		check = true;
+	}
+	return check;
+}
 
+function checkTele() {
+	var check = false;
+	var tele = document.getElementById("tele").value;
+	var regle = /^(0[1-68])(?:[ _.-]?(\d{2})){4}$/;
+	if (tele != "" && !regle.test(tele)) {
+		document.getElementById("teleErr").innerHTML = " × Le format de votre numéro téléphone est invalide!";
+		document.getElementById("teleNP").innerHTML = "";
+		check = false;
+	} else {
+		document.getElementById("teleErr").innerHTML = "";
+		document.getElementById("teleNP").innerHTML = " √ ";
+		check = true;
+	}
+	return check;
+}
 
