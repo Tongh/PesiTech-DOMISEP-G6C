@@ -19,13 +19,19 @@
 <body>
   <table class='pieces'>
    <caption> Mes pièces   </caption>
-      <th> + Ajouter une pièce </th>
-   </table>
+   <form action="ajoutpiece.php">
+      <th>
+        <input type="submit" value="+ Ajouter une pièce" /> 
+      </th>
+    </form>
+  </table>
+
+     <!-- Pour animer la page et ajouter des blocks quand on ajoute une pièce, il faut utiliser JS -->
 
   </body>
 
   <?php
   include 'footer_client.php';
   ?>
-  
+
 </html>
