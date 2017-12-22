@@ -79,9 +79,7 @@
 			
 		}
  	?>
-	<header>
-	  <a href="espaceclientv2.html"><img src="Image\logo_ez-home-moitie.png" class="logo"> </a>
-	</header>
+	<?php include("header/headerv2.html"); ?>
 
 	<div class="partieInfo">
 		<fieldset>
