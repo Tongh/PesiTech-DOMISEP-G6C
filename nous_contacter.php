@@ -45,29 +45,10 @@
 		}
 	}
 	?>
-	<header class="DIYheader">
-		<a href="site-accueil.html"><img src="Image/logo_ez-home-moitie.png" alt="Logo" id="logo"></a>
-		<a href="connexion.php" class='connecterboutton'> <img src="Image/profil.png" alt="Se Connecter" id="imgcn"/></a>
-
-
-		<nav id="barre">
-			<ul>
-				<div id="barre">
-					<li class="qsn">
-						<a href="qui_sommes_nous.html"> Qui sommes-nous? </a>
-					</li>
-
-					<li class="ns">
-						<a href="nos_services.html"> Nos services </a>
-					</li>
-
-					<li class="ach">
-						<a href="acheter.html"> Acheter </a>
-					</li>
-				</div>
-			</ul>
-		</nav>
-	</header>
+	<!-- Header -->
+	<?php
+	include 'Header_accueil.html';
+	?>
 
 	<div id="DIYbody">
 		<div id="page_contact">
