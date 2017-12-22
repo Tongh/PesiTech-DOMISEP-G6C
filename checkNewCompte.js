@@ -104,11 +104,11 @@ function checkmdpC() {
 	var mdpC = document.getElementById("mdpC").value;
 	if (mdp != mdpC) {
 		document.getElementById("mdpCErr").innerHTML = " × Les deux mots de passe ne sont pas le même!";
-		document.getElementById("mdpCNp").innerHTML = "";
+		document.getElementById("mdpCNP").innerHTML = "";
 		check = false;
 	} else {
 		document.getElementById("mdpCErr").innerHTML = "";
-		document.getElementById("mdpCNp").innerHTML = " √ ";
+		document.getElementById("mdpCNP").innerHTML = " √ ";
 		check = true;
 	}
 	return check;

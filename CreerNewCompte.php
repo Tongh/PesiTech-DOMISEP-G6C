@@ -7,6 +7,10 @@
 	<link  rel="stylesheet" type="text/css" href="css/creercompte.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<script type="text/javascript" src="checkNewCompte.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	<style type="text/css">
 		.error {
   			color: #FF0000;
@@ -108,6 +112,7 @@
 			Type: <input type="radio" id="typeU" name="typeU" value="client"> Client
 					<input type="radio" name="typeU" value="admin"> Administrateur
 					<input type="text" id="codeV" name="codeV">
+					<span><a tabindex="0" class="btn btn-xs btn-info" role="button" data-toggle="popover" data-trigger="focus" data-content="le code vous avez obtenu quand vous aviez acheté notre produit."><i class="fa fa-question"></i></a></span>
 			<br><br>
 			<input type="submit" name="submit" value="Envoyer">
 		</fieldset>
@@ -120,5 +125,8 @@
 		</form>
 	</div>
 
+	<script type="text/javascript">
+		$(function () { $("[data-toggle='popover']").popover(); }); 
+	</script>
 </body>
 </html>
