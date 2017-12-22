@@ -40,7 +40,7 @@
 			Téléphone: <input type="text" id="tele" name="tele" onchange="checkTele()">
 			<span id="teleErr" class="error"></span><span id="teleNP" class="NP"></span>
 			<br><br>
-			Type: <input type="radio" name="typeU" value="client"> Client
+			Type: <input type="radio" id="typeU" name="typeU" value="client"> Client
 					<input type="radio" name="typeU" value="admin"> Administrateur
 			<br><br>
 			<input type="submit" name="submit" value="Envoyer">
