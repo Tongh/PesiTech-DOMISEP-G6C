@@ -1,12 +1,12 @@
+<!DOCTYPE html>
+
 <htlm>
 	<head>
 		<title>EZ-Home</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="css/inter.css"/>
 		<link rel="stylesheet" type="text/css" href="css/headerBodyFooterFixed.css"/>
-
 	</head>
-
 	<body>
 
 		<!-- Header -->
