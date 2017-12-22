@@ -1,22 +1,21 @@
 .Header_accueil
 {
-  background-image: url(nav_bgImage.jpg);
+  background-color: #6D071A;
   margin: 0px;
   z-index: 5;
   top: 0;
   height: 118px;
   width: 100%;
   font-family: "trebuchet MS";
-
 }
+
 .Footer_accueil
 {
-  background-image: url(nav_bgImage.jpg);
+  background-image: #6D071A;
   margin: 0px;
   height: 80px;
   width: 100%;
   font-family: "trebuchet MS";
-
 }
 
 
@@ -31,11 +30,11 @@
   width: 200px
 }
 
-.services,.acheter,.qsn /*Qui sommes-nous,Nos services,Acheter*/
+.services,.acheter,.qsn,.contact /*Qui sommes-nous,Nos services,Acheter,Contact*/
 {
   padding: 0px 0px 0px 0px;
   color:#BEBEBE;
-  width: 33.333%
+  width: 25%
 }
 
  #menu
@@ -54,10 +53,10 @@
  width: 100%;
 }
 
-#menu li /*définit l'ordre d'affichage de la liste*/
+#menu li /*défini l'ordre d'affichage de la liste*/
 {
   float: left;
-  width: 33.333%;
+  width: 25%;
 }
 
 #menu a:link,a:visited
@@ -71,11 +70,13 @@
  text-decoration:none;
 }
 
-#menu a:hover, a:active /*la case devient blanche lorsque la souris est dessus*/
+#menu a:hover, a:active /*case devient blanche lorsque la souris est dessus*/
 {
  background-color: #FFFFFF;
 }
 
-#license {
+#license /*copyright centré en blanc*/
+{
 text-align:center;
-color: white }
+color: white
+}
