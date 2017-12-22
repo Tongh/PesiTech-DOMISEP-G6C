@@ -19,7 +19,7 @@
 }
 
 
-.connecterboutton
+.connecterboutton,.deconnecterboutton
 {
   float: right;
 }
