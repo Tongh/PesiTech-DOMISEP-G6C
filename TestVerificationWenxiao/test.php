@@ -3,7 +3,12 @@
 <head>
 	<title></title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
 	<script type="text/javascript" src="test.js"></script>
+	<script type="text/javascript" src="../jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../css/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	<style type="text/css">
 		.error {
 			color: #FF0000;
@@ -42,6 +47,7 @@
 			<br><br>
 			Type: <input type="radio" id="typeU" name="typeU" value="client"> Client
 					<input type="radio" name="typeU" value="admin"> Administrateur
+					<span><a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">可消失的弹出框</a></span>
 			<br><br>
 			<input type="submit" name="submit" value="Envoyer">
 		</fieldset>
