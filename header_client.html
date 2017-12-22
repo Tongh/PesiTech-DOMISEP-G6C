@@ -1,58 +1,45 @@
 <!DOCTYPE html>
 <html>
-<!-- Header (tableau + image) -->
-
 <head>
-	<link rel="stylesheet" type="text/css" href="css/header_accueil.css">
-	</head>
+	<link rel="stylesheet" type="text/css" href="css/header.css"> <!-- renvoi au fichier css header_accueil -->
+</head>
+
 <header class="Header_accueil">
- 	<a href="site-accueil.html"><img src="Image/logo_ez-home-moitie.png" alt="Logo" id="logo"></a>
-	<a href="connexion.php" class='connecterboutton'> <img src="Image/profil.png" alt="Se Connecter" id="imgcn"/> </a>
-		<nav id="menu">
+ 	<a href="espaceclient.php"><img src="Image/logo_ez-home-moitie.png" alt="Logo" id="logo"></a> <!-- logo qui renvoi à la page d'accueil client-->
+	<a href="site-accueil.html" class='deconnecterboutton'><img src="Image/Logout.png" alt="Se Deconnecter" id="imgdecn"/></a> <!--bouton deconnexion renvoi à la page d'accueil -->
+
+		<nav id="menu"> <!--menu navigationel -->
 			<ul>
-				<li id="qsn">
-					<a href="qui_sommes_nous.html"> Qui sommes-nous ? </a>
-          		</li>
-				<li id="services">
-					<a href="nos_services.html"> Nos services </a>
+				<li id="profil">
+					<a href="mon-profil.php">Mon profil</a>
 				</li>
 
-				<li id="acheter">
-					<a href="acheter.html"> Acheter </a>
-          		</li>
+				<li id="instal">
+					<a href="mon-installation.php">Mon installation</a>
+				</li>
+
+				<li id="stat">
+					<a href="stats.php">Relevés et Statistiques</a>
+				</li>
+
+				<li id="catalog">
+					<a href="catalogue.html">Catalogue</a>
+				</li>
+
+				<li id="panne">
+					<a href="panne.php">Panne et Résolution</a>
+				</li>
+
+				<li id="forum">
+					<a href="forum.html">Forum</a>
+				</li>
+
+				<li id="chat">
+					<a href="messagerie.html">Messagerie</a>
+				</li>
+
 			</ul>
 		</nav>
-</header>
 
-<body>
-  <!-- Debut tableau -->
-  <table class="tableau">
-    <tbody class="case">
-      <th>
-        <a href="mon-profil.php">Mon profil</a>
-      </th>
-      <th>
-        <a href="mon-installation.php">Mon installation</a>
-      </th>
-      <th>
-        <a href="stats.php">Relevés et Statistiques</a>
-      </th>
-      <!-- <th>
-        <a href="catalogue.html">Catalogue</a>
-      </th> -->
-      <th>
-        <a href="panne.php">Panne et Résolution</a>
-      </th>
-      <!-- <th> -->
-        <!-- <a href="forum.html">Forum</a>
-      </th>
-      <th>
-        <a href="messagerie.html">Messagerie</a>
-      </th> -->
-      <th>
-        <a href="connexion.php">Déconnexion</a>
-      </th>
-    </tbody>
-  </table>
-</body>
+</header>
 </html>
