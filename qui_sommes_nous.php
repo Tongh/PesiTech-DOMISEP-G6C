@@ -12,7 +12,7 @@
 
 		<!-- Header -->
 		<?php
-		include 'Header_accueil.html';
+		include 'header_accueil.html';
 		?>
 
 <div id="DIYbody">

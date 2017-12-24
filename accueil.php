@@ -7,7 +7,6 @@
 		<link rel="stylesheet" type="text/css" href="css/inter.css"/>
 		<link rel="stylesheet" type="text/css" href="css/headerBodyFooterFixed.css"/>
 		<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
-		<link rel="stylesheet" type="text/css" href="css/header_accueil.css">
 		<script type="text/javascript" src="swiper.min.js"></script>
 		<script src="https://use.fontawesome.com/e3c7c95da8.js"></script>
 	</head>
@@ -15,7 +14,7 @@
 
 		<!-- Header -->
 		<?php
-		include 'Header_accueil.html';
+		include 'header_accueil.html';
 		?>
 
 		<div id='DIYbody' style="top: 125px">
