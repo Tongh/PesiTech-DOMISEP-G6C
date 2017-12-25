@@ -79,7 +79,7 @@
 			
 		}
  	?>
-	<?php include("header/headerv2.html"); ?>
+	<?php include("Header_accueil.html"); ?>
 
 	<div class="partieInfo">
 		<fieldset>
