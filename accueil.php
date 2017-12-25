@@ -71,26 +71,26 @@
 
 					<div class="icone">
 						<div class="sectionIcone">
-							<i class="fa fa-lock fa-5x" aria-hidden="true"></i>
+							<i class="fa fa-lock fa-5x fa-fw" aria-hidden="true"></i>
 						</br>
 						<h4>Assure la sécurité de votre maison</h4>
 					</div>
 
 					<div class="sectionIcone">
-						<i class="fa fa-fire-extinguisher fa-5x" aria-hidden="true"></i>
+						<i class="fa fa-fire-extinguisher fa-5x fa-fw" aria-hidden="true"></i>
 					</br>
 					<h4>Vous alerte en cas d'incident</h4>
 				</div>
 
 
 				<div class="sectionIcone">
-					<i class="fa fa-thermometer-three-quarters fa-5x" aria-hidden="true"></i>
+					<i class="fa fa-thermometer-three-quarters fa-5x fa-fw" aria-hidden="true"></i>
 				</br>
 				<h4>Contrôle de la température à n'importe quel moment</h4>
 			</div>
 
 			<div class="sectionIcone">
-				<i class="fa fa-laptop fa-5x" aria-hidden="true"></i>
+				<i class="fa fa-laptop fa-5x fa-fw" aria-hidden="true"></i>
 			</br>
 			<h4>Accès à vos informations en ligne</h4>
 		</div>

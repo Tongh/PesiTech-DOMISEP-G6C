@@ -118,10 +118,11 @@
 						Téléphone: <input type="text" id="tele" placeholder="06 00 00 00 00" name="tele" onchange="checkTele()">
 						<span id="teleErr" class="error"></span><span id="teleNP" class="NP"></span>
 						<br><br>
-						Type: <input type="radio" id="typeU" name="typeU" value="client"> Client
-						<input type="radio" name="typeU" value="admin"> Administrateur
-						<input type="text" id="codeV" placeholder="XXXXXXXX" name="codeV">
+						Type: <input type="radio" name="typeU" value="client" onclick="checkTypeU()"> Client
+						<input type="radio" name="typeU" value="admin" onclick="checkTypeU()"> Administrateur
+						<input type="text" id="codeV" placeholder="XXXXXXXX" name="codeV" onchange="checkCodeV()">
 						<span><a tabindex="0" class="btn btn-xs btn-info" role="button" data-toggle="popover" data-trigger="focus" data-content="le code que vous avez obtenu quand vous aviez acheté notre produit."><i class="fa fa-question"></i></a></span>
+						<span id="codeVErr" class="error"></span><span id="codeVNP" class="NP"></span>
 						<br><br>
 						<input type="submit" name="submit" value="Envoyer">
 					</fieldset>
