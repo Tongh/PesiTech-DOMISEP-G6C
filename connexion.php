@@ -8,9 +8,9 @@
   <title> EZ-home - Connexion</title>
 </head>
 
-<body style="margin-top: -18px">
+<body>
 
-  <?php
+  <!--<?php
     require("db_config.php");
 
     $Err = "";
@@ -45,7 +45,7 @@
     }
 
 
-   ?>
+   ?>-->
 
    <!-- Header -->
  	<?php
@@ -101,29 +101,7 @@
 </div>
 </div>
 </div>
-<footer class="DIYfooter">
-  <nav>
-    <div id="barre">
-      <ul>
-        <li class='adminfooter'>
-          <a href="connexion.php"> Interface administrateur </a>
-        </li>
-        <li class='nouscontacterfooter'>
-          <a href="nous_contacter.php"> Nous contacter </a>
-        </li>
-        <li class='DOMISEPfooter'>
-          <a href="quoi.html"> DOMISEP </a>
-        </li>
-      </ul>
-    </div>
-    <div>
-      <p>
-        Developed by PESITech ©
-      </p>
-      <div>
-      </nav>
-
-    </footer>
+<?php include "footer.html"; ?>
 
 
 

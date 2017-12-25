@@ -12,10 +12,11 @@
 	</script>
 </head>
 
-<body style="margin-top: -25px">
-	<?php
-	mail("wenxiao0015@icloud.com", "test", "hihihi");
-	echo "mail sent";
+<body>
+	<!--<?php
+	if (mail("wenxiao0015@icloud.com", "test", "hihihi")) {
+		echo "mail sent";
+	}
 	require("db_config.php");
 
 	function test_input($data) {
@@ -44,10 +45,10 @@
 			echo "mail sent!";
 		}
 	}
-	?>
+	?>-->
 	<!-- Header -->
 	<?php
-	include 'Header_accueil.html';
+	include 'header_accueil.html';
 	?>
 
 	<div id="DIYbody">
@@ -69,8 +70,8 @@
 					<p>
 						<label for="ameliorer"> <span class="txtq"> <strong>Vous avez une question ?</strong></span></label><br />
 						<textarea name="ameliorer" id="ameliorer"></textarea>
-						</br>
-						<label><span class="txtq"> Renseignez votre email: <span class="txtq"> </label> <input type="email" name="email_client" required />
+					</br>
+					<label><span class="txtq"> Renseignez votre email: <span class="txtq"> </label> <input type="email" name="email_client" required />
 						<input type="submit" value="Envoyer" />
 					</p>
 					<input type ="submit" value="Envoyer">
@@ -129,38 +130,14 @@
 					</form>
 				</figure>
 			</div>
-<<<<<<< HEAD
 
-=======
 		</div>
 
->>>>>>> ca704e0784c0e4d10d926da645b272230d0d043c
 
-		<footer class="DIYfooter">
-			<nav>
-				<div id="barre">
-					<ul>
-						<li class='adminfooter'>
-							<a href="connexion.php"> Interface administrateur </a>
-						</li>
-						<li class='nouscontacterfooter'>
-							<a href="nous_contacter.php"> Nous contacter </a>
-						</li>
-						<li class='DOMISEPfooter'>
-							<a href="domisep.html"> DOMISEP </a>
-						</li>
-					</ul>
-				</div>
-				<div>
-					<p>
-						Developed by PESITech ©
-					</p>
-					<div>
-					</nav>
-
-				</footer>
+		
+		<?php include "footer.html"; ?>
 
 
 
-			</body>
-			</html>
+	</body>
+	</html>

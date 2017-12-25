@@ -3,8 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<title>Créer un compte</title>
-	<link rel="stylesheet" type="text/css" href="css/headerBodyFooterFixed.css">
-	<link  rel="stylesheet" type="text/css" href="css/creercompte.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<script type="text/javascript" src="checkNewCompte.js"></script>
 	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
@@ -21,7 +19,8 @@
 	</style>
 </head>
 <body>
-	<?php
+	<?php include("header_accueil.html"); ?>
+	<!--<?php
 		require("db_config.php");
 
 		function test_input($data) {
@@ -78,14 +77,18 @@
 			}
 			
 		}
- 	?>
-	<?php include("Header_accueil.html"); ?>
+ 	?>-->
 
-	<div class="partieInfo">
-		<fieldset>
-			<legend> <strong>  Pour vous inscrire, renseignez les coordonnées suivantes:  </strong> </legend>
+
+	
+
+	<div class="DIYBody" style="text-align: center;">
+		
+			
 
 		<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" onsubmit="return validerForm()">
+			<fieldset>
+				<legend> <strong>  Pour vous inscrire, renseignez les coordonnées suivantes:  </strong> </legend>
 			Nom   : <input type="text" id="nom" name="nom" onchange="checkNom()">
 			<span id="NomErr" class="error"></span><span id="NomNP" class="NP"></span>
 			<br><br>
@@ -113,7 +116,7 @@
 					<span><a tabindex="0" class="btn btn-xs btn-info" role="button" data-toggle="popover" data-trigger="focus" data-content="le code vous avez obtenu quand vous aviez acheté notre produit."><i class="fa fa-question"></i></a></span>
 			<br><br>
 			<input type="submit" name="submit" value="Envoyer">
-		</fieldset>
+			</fieldset>
 		</form>
 	</div>
 
@@ -126,5 +129,6 @@
 	<script type="text/javascript">
 		$(function () { $("[data-toggle='popover']").popover(); }); 
 	</script>
+	<?php include "footer.html"; ?>
 </body>
 </html>
