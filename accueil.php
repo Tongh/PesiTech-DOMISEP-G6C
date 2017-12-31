@@ -7,7 +7,6 @@
 		<link rel="stylesheet" type="text/css" href="css/inter.css"/>
 		<link rel="stylesheet" type="text/css" href="css/headerBodyFooterFixed.css"/>
 		<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
-		<link rel="stylesheet" type="text/css" href="css/header_accueil.css">
 		<script type="text/javascript" src="swiper.min.js"></script>
 		<script src="https://use.fontawesome.com/e3c7c95da8.js"></script>
 	</head>
@@ -15,7 +14,7 @@
 
 		<!-- Header -->
 		<?php
-		include 'Header_accueil.html';
+		include 'header_accueil.html';
 		?>
 
 		<div id='DIYbody' style="top: 125px">
@@ -72,26 +71,26 @@
 
 					<div class="icone">
 						<div class="sectionIcone">
-							<i class="fa fa-lock fa-5x" aria-hidden="true"></i>
+							<i class="fa fa-lock fa-5x fa-fw" aria-hidden="true"></i>
 						</br>
 						<h4>Assure la sécurité de votre maison</h4>
 					</div>
 
 					<div class="sectionIcone">
-						<i class="fa fa-fire-extinguisher fa-5x" aria-hidden="true"></i>
+						<i class="fa fa-fire-extinguisher fa-5x fa-fw" aria-hidden="true"></i>
 					</br>
 					<h4>Vous alerte en cas d'incident</h4>
 				</div>
 
 
 				<div class="sectionIcone">
-					<i class="fa fa-thermometer-three-quarters fa-5x" aria-hidden="true"></i>
+					<i class="fa fa-thermometer-three-quarters fa-5x fa-fw" aria-hidden="true"></i>
 				</br>
 				<h4>Contrôle de la température à n'importe quel moment</h4>
 			</div>
 
 			<div class="sectionIcone">
-				<i class="fa fa-laptop fa-5x" aria-hidden="true"></i>
+				<i class="fa fa-laptop fa-5x fa-fw" aria-hidden="true"></i>
 			</br>
 			<h4>Accès à vos informations en ligne</h4>
 		</div>
@@ -99,32 +98,11 @@
 	</div>
 </div>
 </div>
+<?php include "footer.html"; ?>
 
 
 </div>
-<footer class="DIYfooter">
-	<nav>
-		<div id="barre">
-			<ul>
-				<li class='adminfooter'>
-					<a href="connexion.php"> Interface administrateur </a>
-				</li>
-				<li class='nouscontacterfooter'>
-					<a href="nous_contacter.php"> Nous contacter </a>
-				</li>
-				<li class='DOMISEPfooter'>
-					<a href="domisep.html"> DOMISEP </a>
-				</li>
-			</ul>
-		</div>
-		<div>
-			<p>
-				Developed by PESITech ©
-			</p>
-			<div>
-			</nav>
 
-		</footer>
 	</body>
 </htlm>
 </body>

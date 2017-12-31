@@ -13,7 +13,7 @@ html /* Pas de marges pour la page entière+couleur*/
   margin: 0px;
   z-index: 5;
   top: 0;
-  height: 125px;
+  height: 116px;
   width: 100%;
   /*
   text-align: center;
@@ -32,7 +32,7 @@ body
   background: #FEFEFE;
   width:100%;
   overflow: auto;
-  top:125px;
+  top:130px;
   position: absolute;
   z-index: 10;
   bottom: 80px;

@@ -1,5 +1,5 @@
 function validerForm() {
-	var check = checkNom() && checkPrenom() && checkPseudo() && checkmdp() && checkmdpC() && checkMail() && checkTele();
+	var check = checkNom() && checkPrenom() && checkPseudo() && checkmdp() && checkmdpC() && checkMail() && checkTele() && checkCodeV() && checkTypeU();
 	return check;
 }
 
@@ -104,11 +104,11 @@ function checkmdpC() {
 	var mdpC = document.getElementById("mdpC").value;
 	if (mdp != mdpC) {
 		document.getElementById("mdpCErr").innerHTML = " × Les deux mots de passe ne sont pas le même!";
-		document.getElementById("mdpCNp").innerHTML = "";
+		document.getElementById("mdpCNP").innerHTML = "";
 		check = false;
 	} else {
 		document.getElementById("mdpCErr").innerHTML = "";
-		document.getElementById("mdpCNp").innerHTML = " √ ";
+		document.getElementById("mdpCNP").innerHTML = " √ ";
 		check = true;
 	}
 	return check;
@@ -141,6 +141,50 @@ function checkTele() {
 	} else {
 		document.getElementById("teleErr").innerHTML = "";
 		document.getElementById("teleNP").innerHTML = " √ ";
+		check = true;
+	}
+	return check;
+}
+
+function checkCodeV() {
+	var check = false;
+	var codeV = document.getElementById("codeV").value;
+	var radioList = document.getElementsByName("typeU");
+	var radiocheck = 0;
+	for (i=0; i<radioList.length; i++) {
+		if (radioList[i].checked) {
+			radiocheck = radioList[i].value;
+		}
+	}
+	var regle = /^([0-9A-Z]{8})$/; 
+	if (codeV != "" && !regle.test(codeV)) {
+		document.getElementById("codeVErr").innerHTML = " × Le format de Code de DOMISEP est incorrect!";
+		document.getElementById("codeVNP").innerHTML = "";
+		check = false;
+	} else if (radiocheck == 0) {
+		document.getElementById("codeVErr").innerHTML = " × Il faut choisir votre type de Compte!";
+		document.getElementById("codeVNP").innerHTML = "";
+		check = false;
+	} else {
+		document.getElementById("codeVErr").innerHTML = "";
+		document.getElementById("codeVNP").innerHTML = " √ ";
+		check = true;
+	}
+	return check;
+}
+
+function checkTypeU() {
+	var check = false;
+	var codeV = document.getElementById("codeV").value;
+	alert(codeV);
+	var regle = /^([0-9A-Z]{8})$/; 
+	if (codeV != "" && !regle.test(codeV)) {
+		document.getElementById("codeVErr").innerHTML = " × Il faut saisir le Code de DOMISEP!";
+		document.getElementById("codeVNP").innerHTML = "";
+		check = false;
+	} else {
+		document.getElementById("codeVErr").innerHTML = "";
+		document.getElementById("codeVNP").innerHTML = " √ ";
 		check = true;
 	}
 	return check;
