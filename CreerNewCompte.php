@@ -58,7 +58,7 @@
 			if (!$conn) {
 				die('Connet Error (' . mysqli_connect_errno() . ')' . mysqli_connect_error());
 			}
-			echo "Success..." . mysqli_get_host_info($conn) . "<br>";
+			//echo "Success..." . mysqli_get_host_info($conn) . "<br>";
 			mysqli_set_charset($conn, "utf8");
 			$sql = "SELECT login FROM utilisateur WHERE login = '$login'";
 			if ($result = mysqli_query($conn, $sql)) {
@@ -75,39 +75,44 @@
 						if (mysqli_num_rows($result) == 0) {
 							$codeVErr = "Votre Code est incorrect, merci de le vérifier!";
 						} else {
-							$sql = "INSERT INTO utilisateur (nom, prenom, login, password, email, telephone, typeUtilisateur) VALUES ('$nom', '$prenom', '$login', '$mdpMD5', '$email', '$tele', '$typeU')";
-							if (mysqli_query($conn, $sql)) {
-								echo "Success insert to table !<br>";
-								$id_User = mysqli_insert_id($conn);
+							$sql = "SELECT utilise FROM $tblname WHERE code = '$codeV'";
+							if ($result = mysqli_query($conn, $sql)) {
+								$fetchRes = mysqli_fetch_array($result, MYSQLI_NUM);
+								if ($fetchRes[0] == 1) {
+									$codeVErr = "Votre Code est déjà utilisé!";
+								} else {
+									$sql = "INSERT INTO utilisateur (nom, prenom, login, password, email, telephone, typeUtilisateur) VALUES ('$nom', '$prenom', '$login', '$mdpMD5', '$email', '$tele', '$typeU')";
+									if (mysqli_query($conn, $sql)) {
+										echo "Success insert to table !<br>";
+										$id_User = mysqli_insert_id($conn);
+									} else {
+										echo mysqli_error($conn);
+									}
+									$sql = "UPDATE $tblname SET utilise = 1 WHERE code = '$codeV'";
+									if (mysqli_query($conn, $sql)) {
+										echo "Success update to table utlise!<br>";
+									} else {								echo mysqli_error($conn);
+									}
+									$sql = "UPDATE $tblname SET id_client = '$id_User' WHERE code = '$codeV'";
+									if (mysqli_query($conn, $sql)) {
+										echo "Success update to table id utlisatuer!";
+										header("Location:finiCreerNewCompte.php");
+									} else {
+										echo mysqli_error($conn);
+									}
+								}
 							} else {
 								echo mysqli_error($conn);
 							}
-							$sql = "UPDATE $tblname SET utilise = 1 WHERE code = '$codeV'";
-							if (mysqli_query($conn, $sql)) {
-								echo "Success update to table utlise!<br>";
-							} else {								echo mysqli_error($conn);
-							}
-							$sql = "UPDATE $tblname SET id_client = '$id_User' WHERE code = '$codeV'";
-							if (mysqli_query($conn, $sql)) {
-								echo "Success update to table id utlisatuer!";
-								header("Location:finiCreerNewCompte.php");
-							} else {
-								echo mysqli_error($conn);
-							}
-
 						}
 					}
 					else {
-						echo "someting wrong comparer code <br>";
 						echo mysqli_error($conn);
 					}
-
 				}
 			} else {
-				echo "someting wrong comparer login <br>";
 				echo mysqli_error($conn);
-			}
-			
+			}	
 		}
 		?>
 
