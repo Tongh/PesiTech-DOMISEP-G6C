@@ -12,9 +12,9 @@
 	</style>
 </head>
 
-<header>
-	  <a href="espaceclientv2.html"><img src="Image\logo_ez-home-moitie.png" class="logo"> </a>
-	</header>
+<?php
+include 'header_client.php';
+?>
 
 <div class="partieInfo">
 		<fieldset>
