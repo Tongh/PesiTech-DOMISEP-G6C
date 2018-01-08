@@ -12,7 +12,7 @@
 
 <!-- Header (tableau + image) -->
 <?php
-    include 'header_client.html';
+    include 'header_client.php';
 ?>
 
 <body>
