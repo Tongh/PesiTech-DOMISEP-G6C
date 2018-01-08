@@ -7,7 +7,7 @@
     font-style: normal;
     font-size: 15px;
     line-height: 1;
-    color:white;
+    color:black;
     background-color: rgba(153, 153, 153, 0.7);
     background-size:;
     letter-spacing: normal;
@@ -19,4 +19,3 @@
     -webkit-border-radius: 10px;
     border-radius: 10px;
 }
-

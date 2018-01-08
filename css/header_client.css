@@ -63,7 +63,7 @@
 {
  display: block;
  font-weight: bold;
- color:#CC0000;
+ color:#FFFFFF;
  background-color:#BEBEBE;
  text-align: center;
  padding: 4px;
@@ -72,7 +72,7 @@
 
 #menu a:hover, a:active /*case devient blanche lorsque la souris est dessus*/
 {
- background-color: #FFFFFF;
+ background-color: #cc0000;
 }
 
 #license /*copyright centré en blanc*/

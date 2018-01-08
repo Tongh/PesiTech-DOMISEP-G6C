@@ -12,7 +12,7 @@ th {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Police dans tableau */ 
+/* Police dans tableau */
 
 th,h1,h2,a {
   font-family:'Trebuchet MS';
@@ -91,13 +91,13 @@ a
  text-decoration: none;
 }
 
-/* Mise en page tableau */ 
+/* Mise en page tableau */
 .tableau {
 
  border-radius: 5px;
  border-spacing:1px;
  border:none;
- text-decoration:none; 
+ text-decoration:none;
  position:absolute;
  top:15%;
  width: 100%;
@@ -125,10 +125,9 @@ a
 
 caption
 {
- color: white;
+ color: black;
 }
 
-i
 {
-  margin: 25px 10px 5px 10px; 
+  margin: 25px 10px 5px 10px;
 }

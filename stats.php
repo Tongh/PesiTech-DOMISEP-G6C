@@ -17,8 +17,8 @@ include 'header_client.php';
 ?>
 
 <body>
-
-
+  <div id="DIYbody">
+  </div>
 </body>
 
 <footer>

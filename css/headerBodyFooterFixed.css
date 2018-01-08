@@ -8,8 +8,7 @@ html /* Pas de marges pour la page entière+couleur*/
 
 .DIYheader
 {
-  background-image: url(../Image/nav_bgImage.jpg);
-  /*background-color: #9B002F;*/
+  background-color: #6D071A;
   margin: 0px;
   z-index: 5;
   top: 0;
@@ -20,6 +19,9 @@ html /* Pas de marges pour la page entière+couleur*/
   line-height: 100px;
   */
 }
+
+/* CSS Header client*/
+
 
 body
 {
