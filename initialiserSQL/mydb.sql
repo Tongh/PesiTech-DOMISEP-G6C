@@ -205,7 +205,7 @@ DROP TABLE IF EXISTS `codeAdmin`;
 CREATE TABLE IF NOT EXISTS `codeAdmin` (
   `id_Code` int(11) NOT NULL AUTO_INCREMENT,
   `code` varchar(8) NOT NULL,
-  `utilisé` boolean NOT NULL DEFAULT 0,
+  `utilise` boolean NOT NULL DEFAULT 0,
   `id_client` int(11),
   PRIMARY KEY (`id_Code`),
   FOREIGN KEY (`id_client`) REFERENCES utilisateur (`id_utilisateur`) ON DELETE SET NULL ON UPDATE CASCADE
@@ -216,7 +216,7 @@ CREATE TABLE IF NOT EXISTS `codeClient` (
   `id_Code` int(11) NOT NULL AUTO_INCREMENT,
   `code` varchar(8) NOT NULL,
   `id_client` int(11) DEFAULT NULL,
-  `utilisé` boolean NOT NULL DEFAULT 0,
+  `utilise` boolean NOT NULL DEFAULT 0,
   PRIMARY KEY (`id_Code`),
   FOREIGN KEY (`id_client`) REFERENCES utilisateur (`id_utilisateur`) ON DELETE SET NULL ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
