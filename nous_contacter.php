@@ -48,7 +48,7 @@
 	?>-->
 	<!-- Header -->
 	<?php
-	include 'header_accueil.html';
+	include 'header_accueil.php';
 	?>
 
 	<div id="DIYbody">
@@ -134,7 +134,7 @@
 		</div>
 
 
-		
+
 		<?php include "footer.html"; ?>
 
 

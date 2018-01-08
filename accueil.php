@@ -14,7 +14,7 @@
 
 		<!-- Header -->
 		<?php
-		include 'header_accueil.html';
+		include 'header_accueil.php';
 		?>
 
 		<div id='DIYbody' style="top: 125px">

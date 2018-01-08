@@ -23,6 +23,9 @@
 					<a href="acheter.php"> Acheter </a>
         </li>
 
+				<li id="contact">
+					<a href="nous_contacter.php"> Nous contacter </a>
+				</li>
 
 
 			</ul>
