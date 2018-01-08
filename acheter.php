@@ -11,7 +11,7 @@
 
 		<!-- Header -->
 		<?php
-		include 'Header_accueil.html';
+		include 'header_accueil.html';
 		?>
 
 		<div id="DIYbody">
@@ -28,28 +28,7 @@
 				</div>
 			</div>
 		</div>
-		<footer class="DIYfooter">
-			<nav>
-				<div id="barre">
-					<ul>
-						<li class='adminfooter'>
-							<a href="connexion.php"> Interface administrateur </a>
-						</li>
-						<li class='nouscontacterfooter'>
-							<a href="nous_contacter.php"> Nous contacter </a>
-						</li>
-						<li class='DOMISEPfooter'>
-							<a href="domisep.html"> DOMISEP </a>
-						</li>
-					</ul>
-				</div>
-				<div>
-					<p>
-						Developed by PESITech ©
-					</p>
-					<div>
-					</nav>
-
-				</footer>
-			</body>
-		</htlm>
+		
+		<?php include "footer.html"; ?>
+	</body>
+</htlm>

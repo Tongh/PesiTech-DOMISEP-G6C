@@ -8,9 +8,9 @@
   <title> EZ-home - Connexion</title>
 </head>
 
-<body style="margin-top: -18px">
+<body>
 
-  <?php
+  <!--<?php
     require("db_config.php");
 
     $Err = "";
@@ -45,30 +45,13 @@
     }
 
 
-   ?>
+   ?>-->
 
-  <header class="DIYheader">
-    <a href="site-accueil.html"><img src="Image/logo_ez-home-moitie.png" alt="Logo" id="logo"></a>
-    <a href="connexion.php" class='connecterboutton'> <img src="Image/profil.png" alt="Se Connecter" id="imgcn"/></a>
+   <!-- Header -->
+ 	<?php
+ 	include 'header_accueil.html';
+ 	?>
 
-    <nav id="barre">
-      <ul>
-        <div>
-          <li class="qsn">
-            <a href="qui_sommes_nous.html"> Qui sommes-nous? </a>
-          </li>
-
-          <li class="ns">
-            <a href="nos_services.html"> Nos services </a>
-          </li>
-
-          <li class="ach">
-            <a href="acheter.html"> Acheter </a>
-          </li>
-        </div>
-      </ul>
-    </nav>
-  </header>
   <div id='DIYbody'>
     <div class='content'>
       <div id="imgcnx">
@@ -118,29 +101,7 @@
 </div>
 </div>
 </div>
-<footer class="DIYfooter">
-  <nav>
-    <div id="barre">
-      <ul>
-        <li class='adminfooter'>
-          <a href="connexion.php"> Interface administrateur </a>
-        </li>
-        <li class='nouscontacterfooter'>
-          <a href="nous_contacter.php"> Nous contacter </a>
-        </li>
-        <li class='DOMISEPfooter'>
-          <a href="quoi.html"> DOMISEP </a>
-        </li>
-      </ul>
-    </div>
-    <div>
-      <p>
-        Developed by PESITech ©
-      </p>
-      <div>
-      </nav>
-
-    </footer>
+<?php include "footer.html"; ?>
 
 
 

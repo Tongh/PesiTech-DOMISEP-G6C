@@ -186,7 +186,7 @@ CREATE TABLE IF NOT EXISTS `piece` (
 
 DROP TABLE IF EXISTS `utilisateur`;
 CREATE TABLE IF NOT EXISTS `utilisateur` (
-  `id utilisateur` int(11) NOT NULL AUTO_INCREMENT,
+  `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
   `login` varchar(11) NOT NULL,
@@ -198,8 +198,47 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `adresse` varchar(255),
   `complementAdresse` varchar(255),
   `typeUtilisateur`  varchar(255),
-  PRIMARY KEY (`id utilisateur`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id_utilisateur`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `codeAdmin`;
+CREATE TABLE IF NOT EXISTS `codeAdmin` (
+  `id_Code` int(11) NOT NULL AUTO_INCREMENT,
+  `code` varchar(8) NOT NULL,
+  `utilise` boolean NOT NULL DEFAULT 0,
+  `id_client` int(11),
+  PRIMARY KEY (`id_Code`),
+  FOREIGN KEY (`id_client`) REFERENCES utilisateur (`id_utilisateur`) ON DELETE SET NULL ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `codeClient`;
+CREATE TABLE IF NOT EXISTS `codeClient` (
+  `id_Code` int(11) NOT NULL AUTO_INCREMENT,
+  `code` varchar(8) NOT NULL,
+  `id_client` int(11) DEFAULT NULL,
+  `utilise` boolean NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id_Code`),
+  FOREIGN KEY (`id_client`) REFERENCES utilisateur (`id_utilisateur`) ON DELETE SET NULL ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `codeClient` et la table `codeAdmin`
+--
+
+INSERT INTO `codeClient` (`code`) VALUES
+('J8LGXP9S'),
+('7GZSWSSQ'),
+('SJFSQ8JD'),
+('DF9DGHZ3'),
+('87DG8D7G'),
+('KDIGRR83'),
+('HGIDDDUT'),
+('ER77GETS');
+
+INSERT INTO `codeAdmin` (`code`) VALUES 
+('XIZ8TSHG'),
+('OSIGUE8Z');
+
 
 --
 -- Déchargement des données de la table `utilisateur`
