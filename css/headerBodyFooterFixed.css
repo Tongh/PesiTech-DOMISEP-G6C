@@ -80,7 +80,7 @@ body
 #barre li
 {
   float: left;
-  width: 33.333%;
+  width: 25%;
 
 }
 
@@ -104,12 +104,12 @@ body
   padding: 0px 0px 0px 0px;
 
   color:#FEFEFE;
-  width: 33.333%
+  width: 25%
 }
 
 
 #logo
 {
-  margin: 5px 0px 5px 0px;
+  margin: 5px 0px 5px 5px;
   width: 200px
 }

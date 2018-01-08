@@ -1,0 +1,82 @@
+.Header_accueil
+{
+  background-color: #6D071A;
+  margin: 0px;
+  z-index: 5;
+  top: 0;
+  height: 118px;
+  width: 100%;
+  font-family: "trebuchet MS";
+}
+
+.Footer_accueil
+{
+  background-image: #6D071A;
+  margin: 0px;
+  height: 80px;
+  width: 100%;
+  font-family: "trebuchet MS";
+}
+
+
+.connecterboutton,.deconnecterboutton
+{
+  float: right;
+}
+
+#logo
+{
+  margin: 5px 0px 5px 5px; /*marge haut, droit,bas, gauche*/
+  width: 200px
+}
+
+.services,.acheter,.qsn,.contact /*Qui sommes-nous,Nos services,Acheter,Contact*/
+{
+  padding: 0px 0px 0px 0px;
+  color:#BEBEBE;
+  width: 25%
+}
+
+ #menu
+  {
+   display: flex;
+   justify-content: center;
+   flex-wrap: no-wrap;
+ }
+
+ #menu ul
+{
+ list-style-type: none;
+ margin:0;
+ padding: 0;
+ overflow: hidden;
+ width: 100%;
+}
+
+#menu li /*défini l'ordre d'affichage de la liste*/
+{
+  float: left;
+  width: 25%;
+}
+
+#menu a:link,a:visited
+{
+ display: block;
+ font-weight: bold;
+ color:#CC0000;
+ background-color:#BEBEBE;
+ text-align: center;
+ padding: 4px;
+ text-decoration:none;
+}
+
+#menu a:hover, a:active /*case devient blanche lorsque la souris est dessus*/
+{
+ background-color: #FFFFFF;
+}
+
+#license /*copyright centré en blanc*/
+{
+text-align:center;
+color: white
+}

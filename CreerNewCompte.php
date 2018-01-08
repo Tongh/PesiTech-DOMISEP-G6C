@@ -17,17 +17,17 @@
 		color: #00FF66;
 	}
 	section {
-		width: 50%; 
-		border: 1px solid black; 
+		width: 50%;
+		border: 1px solid black;
 		margin-top: 10px;
-		margin-left: auto; 
-		margin-right: auto; 
+		margin-left: auto;
+		margin-right: auto;
 		padding-left: 10px;
 	}
 </style>
 </head>
 <body>
-	<?php include("header_accueil.html"); ?>
+	<?php include("header_accueil.php"); ?>
 	<!--<?php
 		require("db_config.php");
 
@@ -56,7 +56,7 @@
 			}
 
 
-			
+
 			$mdpMD5 = md5($mdp);
 			$conn = mysqli_connect($mysql_server_name, $mysql_username, $mysql_password, $mysql_database);
 
@@ -83,7 +83,7 @@
 				echo "someting wrong comparer login <br>";
 				echo mysqli_error($conn);
 			}
-			
+
 		}
 		?>-->
 
@@ -92,7 +92,7 @@
 
 		<div class="DIYBody">
 
-			
+
 			<section>
 				<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" onsubmit="return validerForm()">
 					<fieldset>
@@ -137,7 +137,7 @@
 		</section>
 
 		<script type="text/javascript">
-			$(function () { $("[data-toggle='popover']").popover(); }); 
+			$(function () { $("[data-toggle='popover']").popover(); });
 		</script>
 		<?php include "footer.html"; ?>
 	</body>
