@@ -23,7 +23,7 @@
 					<a href="acheter.php"> Acheter </a>
         </li>
 
-				
+
 
 			</ul>
 		</nav>

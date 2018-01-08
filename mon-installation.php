@@ -13,7 +13,7 @@
 
 <!-- Header (tableau + image) -->
 <?php
-    include 'header_client.html';
+    include 'header_client.php';
 ?>
 
 <body>
@@ -21,7 +21,7 @@
    <caption> Mes pièces   </caption>
    <form action="ajoutpiece.php">
       <th>
-        <input type="submit" value="+ Ajouter une pièce" /> 
+        <input type="submit" value="+ Ajouter une pièce" />
       </th>
     </form>
   </table>
