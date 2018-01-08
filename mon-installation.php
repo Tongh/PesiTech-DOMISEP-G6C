@@ -17,7 +17,6 @@
 ?>
 
 <body>
-  <div id="DIYbody">
     <table class='pieces'>
      <caption> Mes pièces   </caption>
      <form action="ajoutpiece.php">
@@ -26,9 +25,6 @@
         </th>
       </form>
     </table>
-
-  </div>
-
      <!-- Pour animer la page et ajouter des blocks quand on ajoute une pièce, il faut utiliser JS -->
 
   </body>
