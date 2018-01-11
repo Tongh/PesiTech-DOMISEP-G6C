@@ -34,7 +34,7 @@
 
 			<!-- <li id="forum">
 			<a href="forum.html">Forum</a>
-		</li>
+		</li>-->
 
 
 </ul>
