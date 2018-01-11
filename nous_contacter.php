@@ -72,7 +72,7 @@
 						<textarea name="ameliorer" id="ameliorer"></textarea>
 					</br>
 					<label><span class="txtq"> Renseignez votre email: <span class="txtq"> </label> <input type="email" name="email_client" required />
-						<input type="submit" value="Envoyer" />
+						<!-- <input type="submit" value="Envoyer" /> -->
 					</p>
 					<input type ="submit" value="Envoyer">
 
