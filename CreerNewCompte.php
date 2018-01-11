@@ -28,7 +28,7 @@
 </head>
 <body>
 	<?php include("header_accueil.php"); ?>
-	<!--<?php
+	<?php
 		require("db_config.php");
 
 		function test_input($data) {
@@ -38,7 +38,8 @@
 			return $data;
 		}
 
-		$nom = $prenom = $email = $typeU = $login = $mdp = $mdpC = $tele = "";
+		$nom = $prenom = $email = $typeU = $login = $mdp = $mdpC = $tele = $typeU = $codeV = "";
+		$loginErr = $codeVErr = "";
 
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$nom = test_input($_POST["nom"]);
@@ -48,6 +49,7 @@
 			$mdp = test_input($_POST["mdp"]);
 			$mdpC = test_input($_POST["mdpC"]);
 			$tele = test_input($_POST["tele"]);
+<<<<<<< HEAD
 
 			if (empty($_POST["typeU"])) {
 				$typeUErr = "Type d'Utilisateur est requis";
@@ -57,6 +59,11 @@
 
 
 
+=======
+			$typeU = test_input($_POST["typeU"]);
+			$codeV = test_input($_POST["codeV"]);
+
+>>>>>>> d2434ca087f9274f5e0087bec9632187da3915b3
 			$mdpMD5 = md5($mdp);
 			$conn = mysqli_connect($mysql_server_name, $mysql_username, $mysql_password, $mysql_database);
 
@@ -70,22 +77,57 @@
 				if (mysqli_num_rows($result) == 1) {
 					$loginErr = "Votre login est déjà pris.";
 				} else {
-					$sql = "INSERT INTO utilisateur (nom, prenom, login, password, email, telephone, typeUtilisateur) VALUES ('$nom', '$prenom', '$login', '$mdpMD5', '$email', '$tele', '$typeU')";
-					if (mysqli_query($conn, $sql)) {
-						echo "Success insert to table !";
-						header("Location:finiCreerNewCompte.php");
+					if ($typeU == "admin") {
+						$tblname = "codeAdmin";
 					} else {
-						echo "something wrong <br>";
+						$tblname = "codeClient";
+					}
+					$sql = "SELECT code FROM $tblname WHERE code = '$codeV'";
+					if ($result = mysqli_query($conn, $sql)) {
+						if (mysqli_num_rows($result) == 0) {
+							$codeVErr = "Votre Code est incorrect, merci de le vérifier!";
+						} else {
+							$sql = "SELECT utilise FROM $tblname WHERE code = '$codeV'";
+							if ($result = mysqli_query($conn, $sql)) {
+								$fetchRes = mysqli_fetch_array($result, MYSQLI_NUM);
+								if ($fetchRes[0] == 1) {
+									$codeVErr = "Votre Code est déjà utilisé!";
+								} else {
+									$sql = "INSERT INTO utilisateur (nom, prenom, login, password, email, telephone, typeUtilisateur) VALUES ('$nom', '$prenom', '$login', '$mdpMD5', '$email', '$tele', '$typeU')";
+									if (mysqli_query($conn, $sql)) {
+										echo "Success insert to table !<br>";
+										$id_User = mysqli_insert_id($conn);
+									} else {
+										echo mysqli_error($conn);
+									}
+									$sql = "UPDATE $tblname SET utilise = 1 WHERE code = '$codeV'";
+									if (mysqli_query($conn, $sql)) {
+										echo "Success update to table utlise!<br>";
+									} else {								echo mysqli_error($conn);
+									}
+									$sql = "UPDATE $tblname SET id_client = '$id_User' WHERE code = '$codeV'";
+									if (mysqli_query($conn, $sql)) {
+										echo "Success update to table id utlisatuer!";
+										header("Location:finiCreerNewCompte.php");
+									} else {
+										echo mysqli_error($conn);
+									}
+								}
+							} else {
+								echo mysqli_error($conn);
+							}
+						}
+					}
+					else {
 						echo mysqli_error($conn);
 					}
 				}
 			} else {
-				echo "someting wrong comparer login <br>";
 				echo mysqli_error($conn);
 			}
 
 		}
-		?>-->
+		?>
 
 
 
@@ -105,6 +147,7 @@
 						<br><br>
 						Pseudo : <input type="text" id="pseudo" placeholder="magicJack" name="login" onchange="checkPseudo()">
 						<span id="PseudoErr" class="error"></span><span id="PseudoNP" class="NP"></span>
+						<span class="error"><?php echo $loginErr;?></span>
 						<br><br>
 						Mot de passe : <input type="password" id="mdp" name="mdp" onchange="checkmdp()">
 						<span id="mdpErr" class="error"></span><span id="mdpNP" class="NP"></span>
@@ -123,6 +166,7 @@
 						<input type="text" id="codeV" placeholder="XXXXXXXX" name="codeV" onchange="checkCodeV()">
 						<span><a tabindex="0" class="btn btn-xs btn-info" role="button" data-toggle="popover" data-trigger="focus" data-content="le code que vous avez obtenu quand vous aviez acheté notre produit."><i class="fa fa-question"></i></a></span>
 						<span id="codeVErr" class="error"></span><span id="codeVNP" class="NP"></span>
+						<span class="error"><?php echo $codeVErr;?></span>
 						<br><br>
 						<input type="submit" name="submit" value="Envoyer">
 					</fieldset>
