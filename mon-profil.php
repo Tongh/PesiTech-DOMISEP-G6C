@@ -27,7 +27,7 @@ include 'header_client.php';
       <br/>
       Complément d'adresse : <input type="text" name="cptadresse" />
       <br/>
-      Code Postal : <input type="text" name="codepostal" size="3" />
+      Code Postal : <input type="text" name="codepostal" size="5" />
       <br/>
       <input type="submit" value="Valider" />
     </form>
