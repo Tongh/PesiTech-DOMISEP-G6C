@@ -31,6 +31,29 @@ include 'header_client.php';
              <option value="autre">Autre</option>
          </select>
          <input type="submit" />
+       </br>
+     </br>
+   </br>
+ </br>
+         <table>
+           <tr id="fline">
+             <th><strong>Capteur 1</strong></th>
+             <th colspan="3"><strong>Cuisine</strong></th>
+           </tr>
+           <tr>
+             <td>Type</td>
+             <td>Donnée actuelle</td>
+             <td>Historique </td>
+           </tr>
+           <tr>
+             <td>Température </td>
+             <td>21°C</td>
+             <td><a href="stats.php"><img src="Image\graph_ex.png" ></a></td>
+           </tr>
+
+         </tr>
+       </table>
+
          <?php
          include 'footer_client.php';
          ?>

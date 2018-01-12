@@ -19,3 +19,22 @@
     -webkit-border-radius: 10px;
     border-radius: 10px;
 }
+
+
+table {
+  font-family: arial, sans-serif;
+  width: 50%;
+  border: 1px solid black;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  border: 1px solid black;
+}
+
+th {
+  text-align: center;
+  background-color: #BBBBBB;
+}
