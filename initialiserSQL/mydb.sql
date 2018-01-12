@@ -190,7 +190,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
   `login` varchar(11) NOT NULL,
-  `password` varchar(32) NOT NULL,
+  `password` varchar(60) NOT NULL,
   `email` varchar(255) NOT NULL,
   `telephone` int(11) NOT NULL,
   `ville` varchar(255),

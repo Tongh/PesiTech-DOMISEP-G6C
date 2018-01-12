@@ -41,27 +41,6 @@
 	$nom = $prenom = $email = $typeU = $login = $mdp = $mdpC = $tele = $typeU = $codeV = "";
 	$loginErr = $codeVErr = "";
 
-		if ($_SERVER["REQUEST_METHOD"] == "POST") {
-			$nom = test_input($_POST["nom"]);
-			$prenom = test_input($_POST["prenom"]);
-			$email = test_input($_POST["email"]);
-			$login = test_input($_POST["login"]);
-			$mdp = test_input($_POST["mdp"]);
-			$mdpC = test_input($_POST["mdpC"]);
-			$tele = test_input($_POST["tele"]);
-<<<<<<< HEAD
-
-			if (empty($_POST["typeU"])) {
-				$typeUErr = "Type d'Utilisateur est requis";
-			} else {
-				$typeU = test_input($_POST["typeU"]);
-			}
-
-
-
-			$mdpMD5 = md5($mdp);
-			$conn = mysqli_connect($mysql_server_name, $mysql_username, $mysql_password, $mysql_database);
-=======
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$nom = test_input($_POST["nom"]);
 		$prenom = test_input($_POST["prenom"]);
@@ -70,70 +49,91 @@
 		$mdp = test_input($_POST["mdp"]);
 		$mdpC = test_input($_POST["mdpC"]);
 		$tele = test_input($_POST["tele"]);
-		$typeU = test_input($_POST["typeU"]);
-		$codeV = test_input($_POST["codeV"]);
+
+
+		if (empty($_POST["typeU"])) {
+			$typeUErr = "Type d'Utilisateur est requis";
+		} else {
+			$typeU = test_input($_POST["typeU"]);
+		}
+
+
 
 		$mdpMD5 = md5($mdp);
 		$conn = mysqli_connect($mysql_server_name, $mysql_username, $mysql_password, $mysql_database);
->>>>>>> bafaa393bc420e95e7d54b66fbca4b5e7e3f374a
 
-		if (!$conn) {
-			die('Connet Error (' . mysqli_connect_errno() . ')' . mysqli_connect_error());
-		}
+		if ($_SERVER["REQUEST_METHOD"] == "POST") {
+			$nom = test_input($_POST["nom"]);
+			$prenom = test_input($_POST["prenom"]);
+			$email = test_input($_POST["email"]);
+			$login = test_input($_POST["login"]);
+			$mdp = test_input($_POST["mdp"]);
+			$mdpC = test_input($_POST["mdpC"]);
+			$tele = test_input($_POST["tele"]);
+			$typeU = test_input($_POST["typeU"]);
+			$codeV = test_input($_POST["codeV"]);
+
+			$mdpMD5 = md5($mdp);
+			$conn = mysqli_connect($mysql_server_name, $mysql_username, $mysql_password, $mysql_database);
+
+			if (!$conn) {
+				die('Connet Error (' . mysqli_connect_errno() . ')' . mysqli_connect_error());
+			}
 			//echo "Success..." . mysqli_get_host_info($conn) . "<br>";
-		mysqli_set_charset($conn, "utf8");
-		$sql = "SELECT login FROM utilisateur WHERE login = '$login'";
-		if ($result = mysqli_query($conn, $sql)) {
-			if (mysqli_num_rows($result) == 1) {
-				$loginErr = "Votre login est déjà pris.";
-			} else {
-				if ($typeU == "admin") {
-					$tblname = "codeAdmin";
+			mysqli_set_charset($conn, "utf8");
+			$sql = "SELECT login FROM utilisateur WHERE login = '$login'";
+			if ($result = mysqli_query($conn, $sql)) {
+				if (mysqli_num_rows($result) == 1) {
+					$loginErr = "Votre login est déjà pris.";
 				} else {
-					$tblname = "codeClient";
-				}
-				$sql = "SELECT code FROM $tblname WHERE code = '$codeV'";
-				if ($result = mysqli_query($conn, $sql)) {
-					if (mysqli_num_rows($result) == 0) {
-						$codeVErr = "Votre Code est incorrect, merci de le vérifier!";
+					if ($typeU == "admin") {
+						$tblname = "codeAdmin";
 					} else {
-						$sql = "SELECT utilise FROM $tblname WHERE code = '$codeV'";
-						if ($result = mysqli_query($conn, $sql)) {
-							$fetchRes = mysqli_fetch_array($result, MYSQLI_NUM);
-							if ($fetchRes[0] == 1) {
-								$codeVErr = "Votre Code est déjà utilisé!";
-							} else {
-								$sql = "INSERT INTO utilisateur (nom, prenom, login, password, email, telephone, typeUtilisateur) VALUES ('$nom', '$prenom', '$login', '$mdpMD5', '$email', '$tele', '$typeU')";
-								if (mysqli_query($conn, $sql)) {
-									echo "Success insert to table !<br>";
-									$id_User = mysqli_insert_id($conn);
-								} else {
-									echo mysqli_error($conn);
-								}
-								$sql = "UPDATE $tblname SET utilise = 1 WHERE code = '$codeV'";
-								if (mysqli_query($conn, $sql)) {
-									echo "Success update to table utlise!<br>";
-								} else {								echo mysqli_error($conn);
-								}
-								$sql = "UPDATE $tblname SET id_client = '$id_User' WHERE code = '$codeV'";
-								if (mysqli_query($conn, $sql)) {
-									echo "Success update to table id utlisatuer!";
-									header("Location:finiCreerNewCompte.php");
-								} else {
-									echo mysqli_error($conn);
-								}
-							}
+						$tblname = "codeClient";
+					}
+					$sql = "SELECT code FROM $tblname WHERE code = '$codeV'";
+					if ($result = mysqli_query($conn, $sql)) {
+						if (mysqli_num_rows($result) == 0) {
+							$codeVErr = "Votre Code est incorrect, merci de le vérifier!";
 						} else {
-							echo mysqli_error($conn);
+							$sql = "SELECT utilise FROM $tblname WHERE code = '$codeV'";
+							if ($result = mysqli_query($conn, $sql)) {
+								$fetchRes = mysqli_fetch_array($result, MYSQLI_NUM);
+								if ($fetchRes[0] == 1) {
+									$codeVErr = "Votre Code est déjà utilisé!";
+								} else {
+									$sql = "INSERT INTO utilisateur (nom, prenom, login, password, email, telephone, typeUtilisateur) VALUES ('$nom', '$prenom', '$login', '$mdpMD5', '$email', '$tele', '$typeU')";
+									if (mysqli_query($conn, $sql)) {
+										echo "Success insert to table !<br>";
+										$id_User = mysqli_insert_id($conn);
+									} else {
+										echo mysqli_error($conn);
+									}
+									$sql = "UPDATE $tblname SET utilise = 1 WHERE code = '$codeV'";
+									if (mysqli_query($conn, $sql)) {
+										echo "Success update to table utlise!<br>";
+									} else {								echo mysqli_error($conn);
+									}
+									$sql = "UPDATE $tblname SET id_client = '$id_User' WHERE code = '$codeV'";
+									if (mysqli_query($conn, $sql)) {
+										echo "Success update to table id utlisatuer!";
+										header("Location:finiCreerNewCompte.php");
+									} else {
+										echo mysqli_error($conn);
+									}
+								}
+							} else {
+								echo mysqli_error($conn);
+							}
 						}
 					}
+					else {
+						echo mysqli_error($conn);
+					}
 				}
-				else {
-					echo mysqli_error($conn);
-				}
+			} else {
+				echo mysqli_error($conn);
 			}
-		} else {
-			echo mysqli_error($conn);
 		}
 	}
 	?>

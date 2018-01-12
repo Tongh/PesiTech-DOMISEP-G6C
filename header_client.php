@@ -34,9 +34,6 @@
 				<a href="mon-profil.php">Mon profil</a>
 			</li>
 
-			<!-- <li id="forum">
-			<a href="forum.html">Forum</a>
-		</li>-->
 
 
 </ul>
