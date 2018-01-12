@@ -4,7 +4,6 @@ html /* Pas de marges pour la page entière+couleur*/
   margin:0;
   background-color: #E0E0E0;
   height: 100%;
-  font-family: "trebuchet MS";
 }
 
 .DIYheader
@@ -13,8 +12,9 @@ html /* Pas de marges pour la page entière+couleur*/
   margin: 0px;
   z-index: 5;
   top: 0;
-  height: 116px;
+  height: 118px;
   width: 100%;
+  font-family: "trebuchet MS";
   /*
   text-align: center;
   line-height: 100px;
