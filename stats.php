@@ -17,6 +17,8 @@ include 'header_client.php';
 ?>
 
 <body>
+  <div id="DIYbody">
+
   <form action="" />
      <p>
          <label for="piece">Veuillez sélectionner </br>
@@ -29,11 +31,14 @@ include 'header_client.php';
              <option value="autre">Autre</option>
          </select>
          <input type="submit" />
+         <?php
+         include 'footer_client.php';
+         ?>
 </body>
 
-<footer>
+
   <?php
   include 'footer_client.php';
   ?>
-</footer>
+
 </html>
