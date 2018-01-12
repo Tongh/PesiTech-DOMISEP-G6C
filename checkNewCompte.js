@@ -176,8 +176,9 @@ function checkCodeV() {
 function checkTypeU() {
 	var check = false;
 	var codeV = document.getElementById("codeV").value;
+	alert(codeV);
 	var regle = /^([0-9A-Z]{8})$/; 
-	if ((codeV != "" && !regle.test(codeV)) || codeV == "") {
+	if (codeV != "" && !regle.test(codeV)) {
 		document.getElementById("codeVErr").innerHTML = " × Il faut saisir le Code de DOMISEP!";
 		document.getElementById("codeVNP").innerHTML = "";
 		check = false;

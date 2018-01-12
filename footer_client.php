@@ -1,7 +1,12 @@
-<!DOCTYPE htlm>
+<!DOCTYPE html>
 <html>
-<footer>
-  <div class="block1">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/header_accueil.css"> <!-- renvoi au fichier css header_accueil -->
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<footer class="DIYfooter">
+  <!-- <div class="block1">
     <h1>AIDE & CONTACT</h1>
     <div class="miniblock">
       <a href="qsm.html">Qui sommes-nous?</a>
@@ -35,6 +40,13 @@
     <i class="fa fa-cc-mastercard fa-2x" aria-hidden="true"></i>
     <i class="fa fa-paypal fa-2x" aria-hidden="true"></i>
     <i class="fa fa-btc fa-2x" aria-hidden="true"></i>
-  </div>
+  </div> -->
+  <div>
+    <p>
+      Developed by PESITech ©
+    </p>
+    <div>
 </footer>
+</body>
+
 </html>

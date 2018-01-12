@@ -17,15 +17,14 @@
 ?>
 
 <body>
-  <table class='pieces'>
-   <caption> Mes pièces   </caption>
-   <form action="ajoutpiece.php">
-      <th>
-        <input type="submit" value="+ Ajouter une pièce" />
-      </th>
-    </form>
-  </table>
-
+    <table class='pieces'>
+     <caption> Mes pièces   </caption>
+     <form action="ajoutpiece.php">
+        <th>
+          <input type="submit" value="+ Ajouter une pièce" />
+        </th>
+      </form>
+    </table>
      <!-- Pour animer la page et ajouter des blocks quand on ajoute une pièce, il faut utiliser JS -->
 
   </body>

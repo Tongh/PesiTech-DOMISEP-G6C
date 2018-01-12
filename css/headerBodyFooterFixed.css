@@ -8,8 +8,7 @@ html /* Pas de marges pour la page entière+couleur*/
 
 .DIYheader
 {
-  background-image: url(../Image/nav_bgImage.jpg);
-  /*background-color: #9B002F;*/
+  background-color: #6D071A;
   margin: 0px;
   z-index: 5;
   top: 0;
@@ -20,6 +19,9 @@ html /* Pas de marges pour la page entière+couleur*/
   line-height: 100px;
   */
 }
+
+/* CSS Header client*/
+
 
 body
 {
@@ -80,7 +82,7 @@ body
 #barre li
 {
   float: left;
-  width: 33.333%;
+  width: 25%;
 
 }
 
@@ -91,7 +93,7 @@ body
   color:#FFFFFF;
   background-color:#bebebe;
   text-align: center;
-  padding: 4px;
+  padding: 6px;
   text-decoration:none;
 }
 
@@ -104,12 +106,12 @@ body
   padding: 0px 0px 0px 0px;
 
   color:#FEFEFE;
-  width: 33.333%
+  width: 25%
 }
 
 
 #logo
 {
-  margin: 5px 0px 5px 0px;
+  margin: 5px 0px 5px 5px;
   width: 200px
 }
