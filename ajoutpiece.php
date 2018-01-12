@@ -19,27 +19,15 @@
   <table class='pieces'>
    <caption> Mes pièces   </caption>
       <th>
-          + Ajouter une pièce
+        <form method="POST" action="gestion_capteurs.php">
+          <label>  Nombre de capteur à ajouter:  </label>   </br>
+           <input type="text" name="nbpiece"/>
+          <input type="submit" value="Envoyer" />
+        </form>
       </th>
-      <th>
-      <?php
-          echo " Ma pièce 1";
-      ?>
-      <form action="" />
-         <p>
-             <label for="piece">Veuillez sélectionner </br>
-             le type de pièce à ajouter:<br /> </label><br />
-             <select name="pays" id="pays">
-                 <option value="cuisine">Cuisine</option>
-                 <option value="Salon">Salon</option>
-                 <option value="chambre">Chambre </option>
-                 <option value="salle">Salle de bain</option>
-                 <option value="autre">Autre</option>
-             </select>
-             <input type="submit" />
-         </p>
-              </form>
-              </th>
+
+
+
   </table>
 
 
