@@ -59,7 +59,6 @@
 
 
 
-		$mdpMD5 = md5($mdp);
 		$conn = mysqli_connect($mysql_server_name, $mysql_username, $mysql_password, $mysql_database);
 
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
