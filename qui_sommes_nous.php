@@ -49,6 +49,6 @@
 </div>
 
 
-<?php include "footer.html"; ?>
+<?php include "footer_client.php"; ?>
 			</body>
 </htlm>

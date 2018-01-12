@@ -98,7 +98,7 @@
 	</div>
 </div>
 </div>
-<?php include "footer.html"; ?>
+<?php include "footer_client.php"; ?>
 
 
 </div>
