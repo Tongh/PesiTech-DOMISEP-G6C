@@ -39,7 +39,7 @@
 	}
 
 	$nom = $prenom = $email = $typeU = $login = $mdp = $mdpC = $tele = $typeU = $codeV = "";
-	$loginErr = $codeVErr = "";
+	$loginErr = $codeVErr = $mdpBC = "";
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$nom = test_input($_POST["nom"]);
@@ -73,7 +73,7 @@
 			$typeU = test_input($_POST["typeU"]);
 			$codeV = test_input($_POST["codeV"]);
 
-			$mdpMD5 = md5($mdp);
+			$mdpBC = password_hash($mdp, PASSWORD_DEFAULT);
 			$conn = mysqli_connect($mysql_server_name, $mysql_username, $mysql_password, $mysql_database);
 
 			if (!$conn) {
@@ -102,7 +102,7 @@
 								if ($fetchRes[0] == 1) {
 									$codeVErr = "Votre Code est déjà utilisé!";
 								} else {
-									$sql = "INSERT INTO utilisateur (nom, prenom, login, password, email, telephone, typeUtilisateur) VALUES ('$nom', '$prenom', '$login', '$mdpMD5', '$email', '$tele', '$typeU')";
+									$sql = "INSERT INTO utilisateur (nom, prenom, login, password, email, telephone, typeUtilisateur) VALUES ('$nom', '$prenom', '$login', '$mdpBC', '$email', '$tele', '$typeU')";
 									if (mysqli_query($conn, $sql)) {
 										echo "Success insert to table !<br>";
 										$id_User = mysqli_insert_id($conn);
