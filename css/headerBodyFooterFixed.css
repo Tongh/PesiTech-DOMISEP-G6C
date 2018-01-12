@@ -4,6 +4,7 @@ html /* Pas de marges pour la page entière+couleur*/
   margin:0;
   background-color: #E0E0E0;
   height: 100%;
+  font-family: "trebuchet MS";
 }
 
 .DIYheader
