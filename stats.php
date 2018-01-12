@@ -54,6 +54,24 @@ include 'header_client.php';
          </tr>
        </table>
 
+       <!-- <table>
+         <tr id="fline">
+           <th><strong>Capteur 2</strong></th>
+           <th colspan="3"><strong>Cuisine</strong></th>
+         </tr>
+         <tr>
+           <td>Type</td>
+           <td>Donnée actuelle</td>
+           <td>Historique </td>
+         </tr>
+         <tr>
+           <td>Luminosité </td>
+           <td>30%</td>
+           <td><a href="stats.php"><img src="Image\graph_ex.png" ></a></td>
+         </tr>
+       </tr>
+     </table> -->
+
          <?php
          include 'footer_client.php';
          ?>
