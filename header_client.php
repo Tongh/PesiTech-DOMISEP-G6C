@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/headerBodyFooterFixedcss"> <!-- renvoi au fichier css header_accueil -->
+	<link rel="stylesheet" type="text/css" href="css/headerBodyFooterFixed.css"> <!-- renvoi au fichier css header_accueil -->
 
 </head>
 
