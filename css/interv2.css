@@ -68,7 +68,7 @@ h1 {
 
 /* Degrade */
 
-body {
+/* body {
 color:black;
 background: rgba(143,2,34,1);
 background: -moz-linear-gradient(left, rgba(143,2,34,1) 0%, rgba(109,0,25,0.77) 46%, rgba(109,0,25,0.5) 100%);
@@ -81,7 +81,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f0222', end
 background-repeat:repeat;
 height:100%;
 margin:0;
-}
+} */
 
 /* Pas de supertexte */
 

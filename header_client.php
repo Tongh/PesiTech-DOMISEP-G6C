@@ -2,13 +2,9 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/header-clientv2.css"> <!-- renvoi au fichier css header_accueil -->
-
 </head>
 
 <header class="header_accueil">
-
-	<!-- <a href="accueil.php"><img src="Image/logo_ez-home-moitie.png" alt="Logo" id="logo"></a> -->
-	<!-- <a href="connexion.php" class='connecterboutton'> <img src="Image/profil.png" alt="Se Connecter" id="imgcn"/> </a> -->
 
 	<!-- logo qui renvoi à la page d'accueil client -->
 	<a href="mon-installation.php"><img src="Image/logo_ez-home-moitie.png" alt="Logo" id="logo"></a>
@@ -32,12 +28,7 @@
 			<li id="profil">
 				<a href="mon-profil.php">Mon profil</a>
 			</li>
-
-
-
-</ul>
-
-</nav>
-
+		</ul>
+	</nav>
 </header>
 </html>

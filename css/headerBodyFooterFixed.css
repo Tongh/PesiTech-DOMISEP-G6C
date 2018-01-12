@@ -56,9 +56,6 @@ body
   opacity: 1;
 }
 
-
-
-
 .DIYfooter p {
   text-align: center !important;
 }
@@ -94,7 +91,7 @@ body
   color:#FFFFFF;
   background-color:#bebebe;
   text-align: center;
-  padding: 6px;
+  padding: 6px 0px 6px;
   text-decoration:none;
 }
 
@@ -105,14 +102,12 @@ body
 .ns,.ach,.qsn,.nouscontatcterfooter,.adminfooter,.DOMISEPfooter
 {
   padding: 0px 0px 0px 0px;
-
   color:#FEFEFE;
-  width: 25%
+  width: 25%;
 }
-
 
 #logo
 {
   margin: 5px 0px 5px 5px;
-  width: 200px
+  width: 200px;
 }
