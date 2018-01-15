@@ -3,6 +3,29 @@
 // On démarre la session
 session_start();
 
+?>
+
+<! DOCTYPE html>
+<html>
+<title>
+  EZ-Home
+</title>
+<head>
+  <meta charset="utf-8"/>
+  <!--dossier css-->
+  <link href="css/interv2.css" rel="stylesheet">
+  <link href="css/profil.css" rel="stylesheet">
+  <script src="https://use.fontawesome.com/e3c7c95da8.js"></script>
+</head>
+
+<!-- Header (tableau + image) -->
+<?php
+    include 'header_client.php';
+?>
+
+<body>
+
+<?php
 // On crée quelques variables de session dans $_SESSION
 $_SESSION['nom'] = 'ESSAI';
 $_SESSION["id_utilisateur"] = 789;
@@ -46,7 +69,7 @@ try { //On essaie d'insérer les données utilisateur relatives aux pièces dans
     'id_utilisateur'=>$_SESSION["id_utilisateur"]
                                       ));
   $insertion_type_piece->closeCursor();
-  echo "Info enregistrés";
+  echo "</br> Vos pièces et capteurs ont bien été enregistrés";
 }
 
 catch (\Exception $e)
@@ -97,3 +120,11 @@ catch (\Exception $e)
 
 
 ?>
+
+</body>
+
+<?php
+include 'footer_client.php';
+?>
+
+</html>
