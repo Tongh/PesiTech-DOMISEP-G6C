@@ -192,6 +192,6 @@
 	<script type="text/javascript">
 		$(function () { $("[data-toggle='popover']").popover(); });
 	</script>
-	<?php include "footer.html"; ?>
+	<?php include "footer_client.php"; ?>
 </body>
 </html>
