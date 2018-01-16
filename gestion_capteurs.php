@@ -1,3 +1,13 @@
+<?php
+
+// On démarre la session
+session_start();
+$_SESSION["nbpiece"]=$_POST["nbpiece"];
+
+?>
+
+<!DOCTYPE html>
+
 <html>
 <title>
   EZ-Home
@@ -30,16 +40,21 @@
         <th> Ma pièce <?php echo $i ?> : </br>
           <form action="ajout_capteurs_bdd.php" method="POST" />
            <p>
+             <label for="piece"> Veuillez nommer votre pièce (facultatif) :</label><br /><br />
+             <input type="text" name="label_piece_<?php echo $i?>" />
+         </p>
+
+         <p>
                <label for="piece">Veuillez sélectionner </br>
-               le type de pièce et le capteur associé:<br /> </label><br />
-               <select name="type_piece" id="type_piece">
+               le type de pièce : <br /> </label><br />
+               <select name="type_piece_<?php echo $i?>" id="type_piece">
                    <option value="cuisine">Cuisine</option>
                    <option value="Salon">Salon</option>
                    <option value="chambre">Chambre </option>
                    <option value="salle">Salle de bain</option>
                    <option value="autre">Autre</option>
                </select>
-               <select name="type_capteur" id="capteur">
+              <!--<select name="type_capteur" id="capteur">
                    <option value="presence">Capteur de Présence</option>
                    <option value="fumee">Capteur de Fumée</option>
                    <option value="ouverture">Capteur d'Ouverture </option>
@@ -48,9 +63,20 @@
                    <option value="fumee">Capteur d'Humidité</option>
                    <option value="ouverture">Capteur de Température </option>
                    <option value="autre">Autre</option>
-               </select>
-             </br>
-               <label> Superficie de la pièce : <input type="text" name="superficie"/>
+               </select> -->
+             </br><br />
+           </p>
+
+           <p>
+               <label> Superficie de la pièce :<br /><br />
+                 <select name="superficie_<?php echo $i?>" id="capteur">
+                      <option value="5"> 5 m² </option>
+                      <option value="10">10 m²</option>
+                      <option value="15">15 m²</option>
+                      <option value="20">20 m² </option>
+                      <option value="25+">Plus de 25m²</option>
+
+                  </select>
           </th>
 
     <?php
