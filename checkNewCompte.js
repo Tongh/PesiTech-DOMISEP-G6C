@@ -117,7 +117,7 @@ function checkmdpC() {
 function checkMail() {
 	var check = false;
 	var mail = document.getElementById("mail").value;
-	var regle = /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/; 
+	var regle = /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/;
 	if (mail != "" && !regle.test(mail)) {
 		document.getElementById("mailErr").innerHTML = " × Le format de votre Email est invalide!";
 		document.getElementById("mailNP").innerHTML = "";
@@ -156,7 +156,7 @@ function checkCodeV() {
 			radiocheck = radioList[i].value;
 		}
 	}
-	var regle = /^([0-9A-Z]{8})$/; 
+	var regle = /^([0-9A-Z]{8})$/;
 	if (codeV != "" && !regle.test(codeV)) {
 		document.getElementById("codeVErr").innerHTML = " × Le format de Code de DOMISEP est incorrect!";
 		document.getElementById("codeVNP").innerHTML = "";
@@ -176,7 +176,7 @@ function checkCodeV() {
 function checkTypeU() {
 	var check = false;
 	var codeV = document.getElementById("codeV").value;
-	var regle = /^([0-9A-Z]{8})$/; 
+	var regle = /^([0-9A-Z]{8})$/;
 	if (codeV != "" && !regle.test(codeV) || codeV == "") {
 		document.getElementById("codeVErr").innerHTML = " × Il faut saisir le Code de DOMISEP!";
 		document.getElementById("codeVNP").innerHTML = "";
@@ -189,3 +189,81 @@ function checkTypeU() {
 	return check;
 }
 
+function checkVille() {
+	var check = false;
+	var ville = document.getElementById("ville").value;
+	var regle = /^[a-z A-Z_-]*$/;
+	var vide = ville.replace(/\s+/g, "");
+	if (vide.length == 0) {
+		document.getElementById("villeErr").innerHTML = " × Ville est requis";
+		document.getElementById("villeNP").innerHTML = "";
+		check = false;
+	} else if (ville != "" && !regle.test(ville)) {
+		document.getElementById("villeErr").innerHTML = " × Les caractères autorisés: les lettres, l'espace, -' et '_'!";
+		document.getElementById("villeNP").innerHTML = "";
+		check = false;
+	} else {
+		document.getElementById("villeErr").innerHTML = "";
+		document.getElementById("villeNP").innerHTML = " √ ";
+		check = true;
+	}
+	return check;
+}
+
+function checkAdresse() {
+	var check = false;
+	var adresse = document.getElementById("adresse").value;
+	var regle = /^[a-z A-Z_-]*$/;
+	var vide = adresse.replace(/\s+/g, "");
+	if (vide.length == 0) {
+		document.getElementById("adresseErr").innerHTML = " × Adresse est requis";
+		document.getElementById("adresseNP").innerHTML = "";
+		check = false;
+	} else if (adresse != "" && !regle.test(adresse)) {
+		document.getElementById("adresseErr").innerHTML = " × Les caractères autorisés: les lettres, l'espace, -' et '_'!";
+		document.getElementById("adresseNP").innerHTML = "";
+		check = false;
+	} else {
+		document.getElementById("adresseErr").innerHTML = "";
+		document.getElementById("adresseNP").innerHTML = " √ ";
+		check = true;
+	}
+	return check;
+}
+
+function checkCptadresse() {
+	var check = false;
+	var cptadresse = document.getElementById("cptadresse").value;
+	var regle = /^[a-z A-Z_-]*$/;
+	var vide = cptadresse.replace(/\s+/g, "");
+	if (vide.length == 0) {
+		document.getElementById("cptadresseErr").innerHTML = " × cptadresse est requis";
+		document.getElementById("cptadresseNP").innerHTML = "";
+		check = false;
+	} else if (cptadresse != "" && !regle.test(cptadresse)) {
+		document.getElementById("cptadresseErr").innerHTML = " × Les caractères autorisés: les lettres, l'espace, -' et '_'!";
+		document.getElementById("cptadresseNP").innerHTML = "";
+		check = false;
+	} else {
+		document.getElementById("cptadresseErr").innerHTML = "";
+		document.getElementById("cptadresseNP").innerHTML = " √ ";
+		check = true;
+	}
+	return check;
+}
+
+function checkCodepostal() {
+	var check = false;
+	var codepostal = document.getElementById("codepostal").value;
+	var regle = /^(0[1-68])(?:[ _.-]?(\d{2})){4}$/;
+	if (codepostal != "" && !regle.test(codepostal)) {
+		document.getElementById("codepostalErr").innerHTML = " × Le format de votre numéro téléphone est invalide!";
+		document.getElementById("codepostalNP").innerHTML = "";
+		check = false;
+	} else {
+		document.getElementById("codepostalErr").innerHTML = "";
+		document.getElementById("codepostalNP").innerHTML = " √ ";
+		check = true;
+	}
+	return check;
+}

@@ -49,6 +49,10 @@
 		$mdp = test_input($_POST["mdp"]);
 		$mdpC = test_input($_POST["mdpC"]);
 		$tele = test_input($_POST["tele"]);
+		$ville = test_input($_POST["ville"]);
+		$adresse = test_input($_POST["adresse"]);
+		$cptadresse = test_input($_POST["cptadresse"]);
+		$codepostal = test_input($_POST["codepostal"]);
 
 
 		if (empty($_POST["typeU"])) {
@@ -71,6 +75,10 @@
 			$tele = test_input($_POST["tele"]);
 			$typeU = test_input($_POST["typeU"]);
 			$codeV = test_input($_POST["codeV"]);
+			$ville = test_input($_POST["ville"]);
+			$adresse = test_input($_POST["adresse"]);
+			$cptadresse = test_input($_POST["cptadresse"]);
+			$codepostal = test_input($_POST["codepostal"]);
 
 			$mdpBC = password_hash($mdp, PASSWORD_DEFAULT);
 			$conn = mysqli_connect($mysql_server_name, $mysql_username, $mysql_password, $mysql_database);
@@ -101,7 +109,7 @@
 								if ($fetchRes[0] == 1) {
 									$codeVErr = "Votre Code est déjà utilisé!";
 								} else {
-									$sql = "INSERT INTO utilisateur (nom, prenom, login, password, email, telephone, typeUtilisateur) VALUES ('$nom', '$prenom', '$login', '$mdpBC', '$email', '$tele', '$typeU')";
+									$sql = "INSERT INTO utilisateur (nom, prenom, login, password, email, telephone, ville, codePostal, adresse, complementAdresse, typeUtilisateur) VALUES ('$nom', '$prenom', '$login', '$mdpBC', '$email', '$tele','$ville','$codepostal', '$adresse', '$cptadresse', '$typeU')";
 									if (mysqli_query($conn, $sql)) {
 										echo "Success insert to table !<br>";
 										$id_User = mysqli_insert_id($conn);
@@ -145,15 +153,15 @@
 
 		<section>
 			<fieldset>
-				<legend> <strong>  Pour vous inscrire, renseignez les coordonnées suivantes:  </strong> </legend>
+				<legend> <strong>  Pour vous inscrire, renseignez les informations suivantes:  </strong> </legend>
 				<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" onsubmit="return validerForm()">
-					Nom   : <input type="text" id="nom" placeholder="Potter" name="nom" onchange="checkNom()">
+					Nom   : <input type="text" id="nom" placeholder=" Potter" name="nom" onchange="checkNom()">
 					<span id="NomErr" class="error"></span><span id="NomNP" class="NP"></span>
 					<br><br>
-					Prénom: <input type="text" id="prenom" name="prenom" placeholder="Harry" onchange="checkPrenom()">
+					Prénom: <input type="text" id="prenom" name="prenom" placeholder=" Harry" onchange="checkPrenom()">
 					<span id="PrenomErr" class="error"></span><span id="PrenomNP" class="NP"></span>
 					<br><br>
-					Pseudo : <input type="text" id="pseudo" placeholder="magicJack" name="login" onchange="checkPseudo()">
+					Pseudo : <input type="text" id="pseudo" placeholder=" magicJack" name="login" onchange="checkPseudo()">
 					<span id="PseudoErr" class="error"></span><span id="PseudoNP" class="NP"></span>
 					<span class="error"><?php echo $loginErr;?></span>
 					<br><br>
@@ -163,21 +171,39 @@
 					Confirmation mot de passe : <input type="password" id="mdpC" name="mdpC" onchange="checkmdpC()">
 					<span id="mdpCErr" class="error"></span><span id="mdpCNP" class="NP"></span>
 					<br><br>
-					E-mail: <input type="text" id="mail" placeholder="xxxxxxxxx@gmail.com" name="email" onchange="checkMail()">
+					E-mail: <input type="text" id="mail" placeholder=" xxxxxxxxx@gmail.com" name="email" onchange="checkMail()">
 					<span id="mailErr" class="error"></span><span id="mailNP" class="NP"></span>
 					<br><br>
-					Téléphone: <input type="text" id="tele" placeholder="06 00 00 00 00" name="tele" onchange="checkTele()">
+					Téléphone: <input type="text" id="tele" placeholder=" 06 00 00 00 00" name="tele" onchange="checkTele()">
 					<span id="teleErr" class="error"></span><span id="teleNP" class="NP"></span>
 					<br><br>
 					Type: <input type="radio" name="typeU" value="client" onclick="checkTypeU()"> Client
 					<input type="radio" name="typeU" value="admin" onclick="checkTypeU()"> Administrateur
-					<input type="text" id="codeV" placeholder="XXXXXXXX" name="codeV" onchange="checkCodeV()">
+					<input type="text" id="codeV" placeholder=" XXXXXXXX" name="codeV" onchange="checkCodeV()">
 					<span><a tabindex="0" class="btn btn-xs btn-info" role="button" data-toggle="popover" data-trigger="focus" data-content="le code que vous avez obtenu quand vous aviez acheté notre produit."><i class="fa fa-question"></i></a></span>
 					<span id="codeVErr" class="error"></span><span id="codeVNP" class="NP"></span>
 					<span class="error"><?php echo $codeVErr;?></span>
+					<br><br><br>
+
+					<legend> <strong>  Pour finir, veillez entrer les informations de votre domicile:  </strong> </legend>
+					Habitation: <input type="radio" name="typeH" value="maison" onclick="checkTypeM()"> Maison
+					<input type="radio" name="typeH" value="appart" onclick="checkTypeA()"> Appartement
+					<span id="habitErr" class="error"></span><span id="habitNP" class="NP"></span>
+					<br><br>
+					Ville : <input type="text" id="ville" placeholder=" Langres" name="ville" size="20" onchange="checkVille()"/>
+					<span id="villeErr" class="error"></span><span id="villeNP" class="NP"></span>
+					<br><br>
+					Adresse : <input type="text" id="adresse" placeholder=" 21 Rue Saint-Antoine" name="adresse" onchange="checkAdresse()" />
+					<span id="adresseErr" class="error"></span><span id="adresseNP" class="NP"></span>
+					<br><br>
+					Complément d'adresse : <input type="text" id="cptadresse" placeholder=" Batiment B" name="cptadresse" onchange="checkCptadresse()" />
+					<span id="cptadresseErr" class="error"></span><span id="cptadresseNP" class="NP"></span>
+					<br><br>
+					Code Postal : <input type="text" id="codepostal" placeholder=" 75004" name="codepostal" size="5" onchange="checkCodepostal()"/>
+					<span id="codepostalErr" class="error"></span><span id="codepostalNP" class="NP"></span>
 					<br><br>
 					<input type="submit" name="submit" value="Envoyer">
-
+					<br><br>
 				</form>
 			</fieldset>
 		</div>

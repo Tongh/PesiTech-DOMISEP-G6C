@@ -9,6 +9,8 @@
   <link href="css/client.css" rel="stylesheet">
   <link href="css/profil.css" rel="stylesheet">
   <script src="https://use.fontawesome.com/e3c7c95da8.js"></script>
+  <script type="text/javascript" src="checkNewCompte.js"></script>
+
 </head>
 
 <!-- Header (tableau + image) -->
@@ -18,19 +20,55 @@ include 'header_client.php';
 
 <body>
   <div class="profil">
-    <form action="mon-profil.php" method="post">
-      <p>Première Connexion !</p>
-      <p>Veuillez saisir vos coordonnées :</p>
-      Ville : <input type="text" name="ville" size="20" />
-      <br/>
-      Adresse : <input type="text" name="adresse" />
-      <br/>
-      Complément d'adresse : <input type="text" name="cptadresse" />
-      <br/>
-      Code Postal : <input type="text" name="codepostal" size="5" />
-      <br/>
-      <input type="submit" value="Valider" />
-    </form>
+    <!-- <form action="mon-profil.php" method="post"> -->
+      <section>
+  			<fieldset>
+  				<legend> <strong>  Configuration du compte  </strong> </legend>
+  				<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" onsubmit="return validerForm()">
+            <br>
+            <p><strong>Informations Personnels</strong></p>
+            Nom   : <input type="text" id="nom" value=" Potter" name="nom" onchange="checkNom()">
+  					<span id="NomErr" class="error"></span><span id="NomNP" class="NP"></span>
+  					<br><br>
+  					Prénom: <input type="text" id="prenom" name="prenom" value=" Harry" onchange="checkPrenom()">
+  					<span id="PrenomErr" class="error"></span><span id="PrenomNP" class="NP"></span>
+  					<br><br>
+  					Pseudo : <input type="text" id="pseudo" value=" magicJack" name="login" onchange="checkPseudo()">
+  					<span id="PseudoErr" class="error"></span><span id="PseudoNP" class="NP"></span>
+  					<br><br>
+  					Mot de passe : <input type="password" id="mdp" name="mdp" onchange="checkmdp()">
+  					<span id="mdpErr" class="error"></span><span id="mdpNP" class="NP"></span>
+  					<br><br>
+  					Confirmation mot de passe : <input type="password" id="mdpC" name="mdpC" onchange="checkmdpC()">
+  					<span id="mdpCErr" class="error"></span><span id="mdpCNP" class="NP"></span>
+  					<br><br>
+  					E-mail: <input type="text" id="mail" value=" xxxxxxxxx@gmail.com" name="email" onchange="checkMail()">
+  					<span id="mailErr" class="error"></span><span id="mailNP" class="NP"></span>
+  					<br><br>
+  					Téléphone: <input type="text" id="tele" value=" 06 00 00 00 00" name="tele" onchange="checkTele()">
+  					<span id="teleErr" class="error"></span><span id="teleNP" class="NP"></span>
+  					<br><br><br>
+  					<p><strong>Informations sur l'Habitation</strong></p>
+  					Habitation: <input type="radio" name="typeH" value="maison" onclick="checkTypeM()"> Maison
+  					<input type="radio" name="typeH" value="appart" onclick="checkTypeA()"> Appartement
+  					<span id="habitErr" class="error"></span><span id="habitNP" class="NP"></span>
+  					<br><br>
+  					Ville : <input type="text" id="ville" value=" Langres" name="ville" size="20" onchange="checkVille()"/>
+  					<span id="villeErr" class="error"></span><span id="villeNP" class="NP"></span>
+  					<br><br>
+  					Adresse : <input type="text" id="adresse" value=" 21 Rue Saint-Antoine" name="adresse" onchange="checkAdresse()" />
+  					<span id="adresseErr" class="error"></span><span id="adresseNP" class="NP"></span>
+  					<br><br>
+  					Complément d'adresse : <input type="text" id="cptadresse" value=" Batiment B" name="cptadresse" onchange="checkCptadresse()" />
+  					<span id="cptadresseErr" class="error"></span><span id="cptadresseNP" class="NP"></span>
+  					<br><br>
+  					Code Postal : <input type="text" id="codepostal" value=" 75004" name="codepostal" size="5" onchange="checkCodepostal()"/>
+  					<span id="cpErr" class="error"></span><span id="cpNP" class="NP"></span>
+  					<br><br><br>
+  					<input type="submit" name="submit" value="Valider les modifications">
+
+  				</form>
+  			</fieldset>
   </div>
 
 </body>
@@ -42,20 +80,20 @@ include 'footer_client.php';
 </html>
 
 <?php
-require("db_config.php");
-$conn = mysqli_connect($mysql_server_name, $mysql_username, $mysql_password, $mysql_database);
-if (!$conn) {
-  die('Connet Error (' . mysqli_connect_errno() . ')' . mysqli_connect_error());
-}
-if (isset($_POST['ville']))
-{
-  if (isset($_POST['adresse']))
-  {
-    if (isset($_POST['codepostal']))
-    {
-      $req='UPDATE utilisateur set ville ='.$_POST['ville'].' and adresse = '.$_POST['adresse'].' and codePostal  = ' . $_POST['codepostal'].'where id utilisateur =';
-    }
-  }
-}
+// require("db_config.php");
+// $conn = mysqli_connect($mysql_server_name, $mysql_username, $mysql_password, $mysql_database);
+// if (!$conn) {
+//   die('Connet Error (' . mysqli_connect_errno() . ')' . mysqli_connect_error());
+// }
+// if (isset($_POST['ville']))
+// {
+//   if (isset($_POST['adresse']))
+//   {
+//     if (isset($_POST['codepostal']))
+//     {
+//       $req='UPDATE utilisateur set ville ='.$_POST['ville'].' and adresse = '.$_POST['adresse'].' and codePostal  = ' . $_POST['codepostal'].'where id utilisateur =';
+//     }
+//   }
+// }
 
 ?>
