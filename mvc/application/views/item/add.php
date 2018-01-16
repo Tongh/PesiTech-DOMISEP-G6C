@@ -1,0 +1,1 @@
+<a class="big" href="../item/">Ajouter avec sussès! Clicker pour revenir.</a>

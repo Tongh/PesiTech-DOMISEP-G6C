@@ -1,0 +1,1 @@
+<a href="../../item/">Supprimer avec Succès! Clicker pour revenir.</a>
