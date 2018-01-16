@@ -20,7 +20,7 @@
    <caption> Mes pièces   </caption>
       <th>
         <form method="POST" action="gestion_capteurs.php">
-          <label>  Nombre de capteur à ajouter:  </label>   </br>
+          <label>  Nombre de pièce à ajouter:  </label>   </br>
            <input type="text" name="nbpiece"/>
           <input type="submit" value="Envoyer" />
         </form>
