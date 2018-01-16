@@ -3,6 +3,7 @@
 // On démarre la session
 session_start();
 
+
 ?>
 
 <! DOCTYPE html>
@@ -27,11 +28,11 @@ session_start();
 
 <?php
 // On crée quelques variables de session dans $_SESSION
-$_SESSION['nom'] = 'ESSAI';
-$_SESSION["id_utilisateur"] = 789;
+$_SESSION['nom'] = 'réussite';
+$_SESSION["id_utilisateur"] = 123456;
 $_SESSION["id_piece"] = 1;
 $_SESSION["id_logement"]= 1 ;
-
+$nb_piece=$_POST["nbpiece"];
 /*
 $_SESSION["actionneur"];
 $_SESSION["prix"];
@@ -61,15 +62,20 @@ $insertion_type_piece=$bdd->prepare('INSERT INTO piece(`Superficie`,`Nom`,`Type 
 
 
 try { //On essaie d'insérer les données utilisateur relatives aux pièces dans la table piece
+  for ($i=1; $i <=$nb_piece ; $i++) {
 
-  $insertion_type_piece->execute(array(
-    'superficie' => $_POST["superficie"],
-    'type_piece'=>$_POST["type_piece"],
-    'nom'=>$_SESSION["nom"],
-    'id_utilisateur'=>$_SESSION["id_utilisateur"]
-                                      ));
-  $insertion_type_piece->closeCursor();
-  echo "</br> Vos pièces et capteurs ont bien été enregistrés";
+    $sup= 'superficie_'.$i;
+    $type_piece='type_piece_'.$i;
+
+    $insertion_type_piece->execute(array(
+      'superficie' => $_POST[$sup],
+      'type_piece'=>$_POST[$type_piece],
+      'nom'=>$_SESSION["nom"],
+      'id_utilisateur'=>$_SESSION["id_utilisateur"]
+                                        ));
+    $insertion_type_piece->closeCursor();
+    echo "</br> Vos pièces et capteurs ont bien été enregistrés";
+                                    }
 }
 
 catch (\Exception $e)
