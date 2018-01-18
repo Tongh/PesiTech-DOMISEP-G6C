@@ -186,11 +186,11 @@
 			</fieldset>
 		</div>
 
-		<!--<div id="boutonretour">
+		<div id="boutonretour">
 			<form action="connexion.php">
 				<input type="submit" value="Retournez vers la page de connexion">
 			</form>
-		</div>-->
+		</div>
 	</section>
 
 	<script type="text/javascript">

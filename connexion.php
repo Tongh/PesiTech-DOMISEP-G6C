@@ -37,7 +37,13 @@
         if (mysqli_num_rows($result) == 1) {
           $mdpBC = mysqli_fetch_array($result, MYSQLI_NUM)[0];
           if (password_verify($mdp, $mdpBC)) {
-            header("Location:mon-profil.php");
+          $typeU="SELECT typeUtilisateur FROM Utilisateur WHERE login = '$login'";
+            if ($typeU == "client") {
+              header("Location:finiCreerNewCompte.php");
+            } else {
+              header("Location:administrateur.php");
+            }
+
           } else {
             $Err = "Votre mot de passe incorrect! ";
           }
