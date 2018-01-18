@@ -33,16 +33,6 @@ $_SESSION["id_utilisateur"] = 123456;
 $_SESSION["id_piece"] = 1;
 $_SESSION["id_logement"]= 1 ;
 
-/*
-$_SESSION["actionneur"];
-$_SESSION["prix"];
-$_SESSION["unite"];
-$_SESSION["temps"];
-$_SESSION["valeur"];
-$_SESSION["statut"];
-$_SESSION["id_piece"];
-$_SESSION["id_piece"];
-*/
 
 // Connexion bdd
 
@@ -78,7 +68,9 @@ try { //On essaie d'insérer les données utilisateur relatives aux pièces dans
     $insertion_type_piece->closeCursor();
 
                                     }
-    echo "</br> Vos pièces ont bien été enregistrés";
+    echo "</br> Vos pièces ont bien été enregistrés"."</br>
+    <form method='' action='mon-installation.php'>
+    <input type='submit' value='Retourner vers mon installation'/></form> ";
 }
 
 catch (\Exception $e)
@@ -86,35 +78,33 @@ catch (\Exception $e)
   die('Erreur: '.$e->getMessage());
 }
 
+
+
+
+
+
+
 //Insertion des données relatives aux capteurs fournies par l'utilisateur
-$insertion_type_piece=$bdd->prepare('INSERT INTO capteurs(`type_capteur`,`nom`,`Actionneur`,`prix`,`unite`,`temps`,`valeur`,`statut`,`piece_ID piece`,`piece_logement_utilisateur_id utilisateur`) VALUES (:type_piece,:nom,`NULL`,`NULL`,`NULL`,`NULL`,`NULL`,`NULL`,:id_piece,:id_logement);');
-//Requete qui marche dans phpmyadmin: INSERT INTO capteurs(`type_capteur`,`nom`,`Actionneur`,`prix`,`unite`,`temps`,`valeur`,`statut`,`piece_ID piece`,`piece_logement_utilisateur_id utilisateur`) VALUES ('camera','dridi','ok',50,1,250,100,'ok',1,2); NULL: pas possible!
+$insertion_type_piece=$bdd->prepare('INSERT INTO capteurs(`type_capteur`,`nom`,`piece_ID piece`,`piece_logement_utilisateur_id utilisateur`) VALUES (:type_piece,:nom,:id_piece,:id_logement);');
+//Requete qui marche dans phpmyadmin: INSERT INTO capteurs(`type_capteur`,`nom`,`piece_ID piece`,`piece_logement_utilisateur_id utilisateur`) VALUES ('camera','dridi',1,2);
+
 
 try
 { //On essaie d'insérer les données utilisateur  relatives aux capteurs dans la table capteurs
-  $insertion_type_piece->execute(array(
-    'type_piece'=>$_POST["type_piece"],
-    'nom'=>$_SESSION["nom"],
-    'id_piece'=>$_SESSION["id_piece"],
-    'id_logement'=>$_SESSION["id_piece"]
 
-    /*
+  for ($i=1; $i <=$_SESSION["nbpiece"] ; $i++) {
+
+    $type_capteur='type_capteur_'.$i;
+
     $insertion_type_piece->execute(array(
-      'type_capteur'=>$_POST["type_capteur"],
+      'type_capteur'=>$_POST[$type_capteur],
       'nom'=>$_SESSION["nom"],
-      'actionneur' => $_POST["actionneur"],
-      'prix' => $_POST["prix"],
-      'unite' => $_POST["unite"],
-      'temps' => $_POST["temps"],
-      'valeur' => $_POST["valeur"],
-      'statut' => $_POST["statut"],
       'id_piece'=>$_SESSION["id_piece"],
       'id_logement'=>$_SESSION["id_piece"]
                                         ));
-    */
 
+}
 
-  ));
   $insertion_type_piece->closeCursor();
 
  }
