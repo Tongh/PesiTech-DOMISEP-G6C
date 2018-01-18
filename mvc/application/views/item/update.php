@@ -1,1 +1,0 @@
-<a class="big" href="../item/index/">Modification avec sussès! Clicker pour revenir</a>
