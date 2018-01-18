@@ -1,4 +1,4 @@
-<<?php
+<?php
 // On démarre la session AVANT d'écrire du code HTML
 session_start();
  ?>
@@ -43,6 +43,7 @@ session_start();
           $mdpBC = mysqli_fetch_array($result, MYSQLI_NUM)[0];
           if (password_verify($mdp, $mdpBC)) {
             header("Location:mon-installation.php");
+            //Récupération dans $_SESSION du login quand la connexion se fait
             $_SESSION['login'] = $login;
           } else {
             $Err = "Votre mot de passe incorrect! ";
