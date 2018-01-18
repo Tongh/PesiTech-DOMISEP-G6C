@@ -13,7 +13,7 @@
 </head>
 
 <header>
-	  <a href="espaceclientv2.html"><img src="Image\logo_ez-home-moitie.png" class="logo"> </a>
+	  <img src="Image\logo_ez-home-moitie.png" class="logo"> </a>
 	</header>
 
 <div class="partieInfo">
@@ -30,8 +30,8 @@
 			<br/>
 			</br>
 			<div id="boutonretour_milieu">
-			<form action="espaceclientv2.html">
-						<input type="submit" value="Retournez vers mon espace client">
+			<form action="mon-installation.php">
+						<input type="submit" value="Retournez vers mon espace client" >
 			</form>
 			</div>
 		</fieldset>

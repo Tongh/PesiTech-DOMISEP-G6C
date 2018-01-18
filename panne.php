@@ -72,7 +72,7 @@ include 'header_client.php';
   					Vous pouvez nous contacter directement:
   					<ul>
   						<li> par courrier à l'adresse: 75011, Paris </li>
-  						<li> au travers de notre service client 24/24h au: +331·47·54·87·88</li></ul>
+  						<li> au travers de notre service client 24/24h au: +331·00·00·00·00</li></ul>
   					</ul>·
   				</p>
   			</div>
