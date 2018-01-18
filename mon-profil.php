@@ -1,6 +1,11 @@
-<<?php
+<?php
 // On démarre la session AVANT d'écrire du code HTML
 session_start();
+$login = $_SESSION['login'];
+
+//Use limit 1 to save exec time
+// $sql = "SELECT id_utilisateur FROM Utilisateur WHERE login='$login' limit 1";
+
  ?>
 
 <!DOCTYPE htlm>
@@ -18,12 +23,29 @@ session_start();
 
 </head>
 
-<!-- Header (tableau + image) -->
+<!-- Header + php -->
 <?php
 include 'header_client.php';
 ?>
 
+
+
 <body>
+  <?php
+  require("db_config.php");
+  $conn = mysqli_connect($mysql_server_name, $mysql_username, $mysql_password, $mysql_database);
+
+  $user_id = mysqli_query($conn, "SELECT id_utilisateur	 FROM utilisateur WHERE login= '$login'");
+  // echo $user_id;
+  // $nom = "SELECT nom FROM utilisateur WHERE id_utilisateur = '$user_id'";
+  // $prenom = "SELECT prenom FROM utilisateur WHERE id_utilisateur = '$user_id'";
+  //
+  // $reponse = $conn->query('SELECT * FROM utilisateur WHERE id_utilisateur ="$user_id"');
+
+
+  // On affiche chaque entrée une à une
+  // ($donnees = $reponse->fetch_assoc())
+  ?>
   <div class="profil">
     <!-- <form action="mon-profil.php" method="post"> -->
       <section>
@@ -32,19 +54,19 @@ include 'header_client.php';
   				<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" onsubmit="return validerForm()">
             <br>
             <p><strong>Informations Personnels</strong></p>
-            Nom   : <input type="text" id="nom" value=" Potter" name="nom" onchange="checkNom()">
+            Nom   : <input type="text" id="nom" value= <?php echo $donnees['nom'] ?> name="nom" onchange="checkNom()">
   					<span id="NomErr" class="error"></span><span id="NomNP" class="NP"></span>
   					<br><br>
-  					Prénom: <input type="text" id="prenom" name="prenom" value=" Harry" onchange="checkPrenom()">
+  					Prénom: <input type="text" id="prenom" name="prenom" value= <?php echo $prenom ?> onchange="checkPrenom()">
   					<span id="PrenomErr" class="error"></span><span id="PrenomNP" class="NP"></span>
   					<br><br>
   					Pseudo : <input type="text" id="pseudo" value=" magicJack" name="login" onchange="checkPseudo()">
   					<span id="PseudoErr" class="error"></span><span id="PseudoNP" class="NP"></span>
   					<br><br>
-  					Mot de passe : <input type="password" id="mdp" name="mdp" onchange="checkmdp()">
+  					Mot de passe : <input type="password" id="mdp" placeholder=" ********" name="mdp" onchange="checkmdp()">
   					<span id="mdpErr" class="error"></span><span id="mdpNP" class="NP"></span>
   					<br><br>
-  					Confirmation mot de passe : <input type="password" id="mdpC" name="mdpC" onchange="checkmdpC()">
+  					Confirmation mot de passe : <input type="password" id="mdpC" placeholder=" ********" name="mdpC" onchange="checkmdpC()">
   					<span id="mdpCErr" class="error"></span><span id="mdpCNP" class="NP"></span>
   					<br><br>
   					E-mail: <input type="text" id="mail" value=" xxxxxxxxx@gmail.com" name="email" onchange="checkMail()">
@@ -74,8 +96,6 @@ include 'header_client.php';
 
   				</form>
   			</fieldset>
-  </div>
-
 </body>
 
 <?php

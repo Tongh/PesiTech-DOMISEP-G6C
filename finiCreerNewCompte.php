@@ -31,11 +31,7 @@
 			</br>
 			<div id="boutonretour_milieu">
 			<form action="mon-installation.php">
-<<<<<<< HEAD
 						<input type="submit" value="Retournez vers mon espace client">
-=======
-						<input type="submit" value="Retournez vers mon espace client" >
->>>>>>> 1a475186b67f9470d4f56fe8102918947a361b15
 			</form>
 			</div>
 		</fieldset>

@@ -213,14 +213,14 @@ function checkVille() {
 function checkAdresse() {
 	var check = false;
 	var adresse = document.getElementById("adresse").value;
-	var regle = /^[a-z A-Z_-]*$/;
+	var regle = /^[0-9 a-z A-Z_-]*$/;
 	var vide = adresse.replace(/\s+/g, "");
 	if (vide.length == 0) {
 		document.getElementById("adresseErr").innerHTML = " × Adresse est requis";
 		document.getElementById("adresseNP").innerHTML = "";
 		check = false;
 	} else if (adresse != "" && !regle.test(adresse)) {
-		document.getElementById("adresseErr").innerHTML = " × Les caractères autorisés: les lettres, l'espace, -' et '_'!";
+		document.getElementById("adresseErr").innerHTML = " × Les caractères autorisés: les lettres, les chiffres, l'espace, -' et '_'!";
 		document.getElementById("adresseNP").innerHTML = "";
 		check = false;
 	} else {
@@ -234,14 +234,14 @@ function checkAdresse() {
 function checkCptadresse() {
 	var check = false;
 	var cptadresse = document.getElementById("cptadresse").value;
-	var regle = /^[a-z A-Z_-]*$/;
+	var regle = /^[0-9 a-z A-Z_-]*$/;
 	var vide = cptadresse.replace(/\s+/g, "");
 	if (vide.length == 0) {
 		document.getElementById("cptadresseErr").innerHTML = " × cptadresse est requis";
 		document.getElementById("cptadresseNP").innerHTML = "";
 		check = false;
 	} else if (cptadresse != "" && !regle.test(cptadresse)) {
-		document.getElementById("cptadresseErr").innerHTML = " × Les caractères autorisés: les lettres, l'espace, -' et '_'!";
+		document.getElementById("cptadresseErr").innerHTML = " × Les caractères autorisés: les lettres, les chiffres, l'espace, -' et '_'!";
 		document.getElementById("cptadresseNP").innerHTML = "";
 		check = false;
 	} else {
@@ -257,7 +257,7 @@ function checkCodepostal() {
 	var codepostal = document.getElementById("codepostal").value;
 	var regle = /^(0[1-68])(?:[ _.-]?(\d{2})){4}$/;
 	if (codepostal != "" && !regle.test(codepostal)) {
-		document.getElementById("codepostalErr").innerHTML = " × Le format de votre numéro téléphone est invalide!";
+		document.getElementById("codepostalErr").innerHTML = " × Le format de votre code Postal est invalide!";
 		document.getElementById("codepostalNP").innerHTML = "";
 		check = false;
 	} else {

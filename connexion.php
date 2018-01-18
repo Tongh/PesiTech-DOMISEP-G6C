@@ -44,14 +44,13 @@ session_start();
           if (password_verify($mdp, $mdpBC)) {
           $typeU="SELECT typeUtilisateur FROM Utilisateur WHERE login = '$login'";
             if ($typeU == "client") {
-              header("Location:finiCreerNewCompte.php");
+            header("Location:mon-installation.php");
+            //Récupération dans $_SESSION du login quand la connexion se fait
+            $_SESSION['login'] = $login;
             } else {
               header("Location:administrateur.php");
             }
 
-            header("Location:mon-installation.php");
-            //Récupération dans $_SESSION du login quand la connexion se fait
-            $_SESSION['login'] = $login;
           } else {
             $Err = "Votre mot de passe incorrect! ";
           }
