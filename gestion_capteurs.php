@@ -6,8 +6,6 @@ $_SESSION["nbpiece"]=$_POST["nbpiece"];
 
 ?>
 
-<!DOCTYPE html>
-
 <html>
 <title>
   EZ-Home
@@ -16,8 +14,8 @@ $_SESSION["nbpiece"]=$_POST["nbpiece"];
   <meta charset="utf-8"/>
   <!--dossier css-->
   <link href="css/interv2.css" rel="stylesheet">
-  <!-- <link href="css/profil.css" rel="stylesheet"> -->
-  <!-- <script src="https://use.fontawesome.com/e3c7c95da8.js"></script> -->
+  <link href="css/profil.css" rel="stylesheet">
+  <script src="https://use.fontawesome.com/e3c7c95da8.js"></script>
 </head>
 
 <!-- Header (tableau + image) -->
@@ -68,14 +66,13 @@ $_SESSION["nbpiece"]=$_POST["nbpiece"];
            </p>
 
            <p>
-               <label> Superficie de la pièce :<br /><br />
+               <label> Superficie de la pièce :<br /><br /></label>
                  <select name="superficie_<?php echo $i?>" id="capteur">
                       <option value="5"> 5 m² </option>
                       <option value="10">10 m²</option>
                       <option value="15">15 m²</option>
                       <option value="20">20 m² </option>
-                      <option value="25+">Plus de 25m²</option>
-
+                      <option value="21">Plus de 20m²</option>
                   </select>
           </th>
 
