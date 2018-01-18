@@ -1,3 +1,8 @@
+<<?php
+// On démarre la session AVANT d'écrire du code HTML
+session_start();
+ ?>
+
 <!DOCTYPE htlm>
 <html>
 <title>
@@ -23,7 +28,7 @@ include 'header_client.php';
     <!-- <form action="mon-profil.php" method="post"> -->
       <section>
   			<fieldset>
-  				<legend> <strong>  Configuration du compte  </strong> </legend>
+  				<legend> <strong>  Configuration du compte : <?php echo $_SESSION['login'] ?>  </strong> </legend>
   				<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" onsubmit="return validerForm()">
             <br>
             <p><strong>Informations Personnels</strong></p>
