@@ -124,7 +124,11 @@
 									$sql = "UPDATE $tblname SET id_client = '$id_User' WHERE code = '$codeV'";
 									if (mysqli_query($conn, $sql)) {
 										echo "Success update to table id utlisatuer!";
-										header("Location:finiCreerNewCompte.php");
+										if ($tblname == "codeClient") {
+											header("Location:finiCreerNewCompte.php");
+										} else {
+											header("Location:administrateur.php");
+										}
 									} else {
 										echo mysqli_error($conn);
 									}
@@ -179,8 +183,13 @@
 					<br><br>
 					Type: <input type="radio" name="typeU" value="client" onclick="checkTypeU()"> Client
 					<input type="radio" name="typeU" value="admin" onclick="checkTypeU()"> Administrateur
+<<<<<<< HEAD
 					<input type="text" id="codeV" placeholder=" XXXXXXXX" name="codeV" onchange="checkCodeV()">
 					<span><a tabindex="0" class="btn btn-xs btn-info" role="button" data-toggle="popover" data-trigger="focus" data-content="le code que vous avez obtenu quand vous aviez acheté notre produit."><i class="fa fa-question"></i></a></span>
+=======
+					<input type="text" id="codeV" placeholder="XXXXXXXX" name="codeV" onchange="checkCodeV()">
+					<span><a tabindex="0" class="btn btn-xs btn-info" role="button" data-toggle="popover" data-trigger="focus" data-content="le code qui vous a été envoyé par mail lors de votre souscription à nos service. si vous ne le retouvez pas, contacter l'assistance."><i class="fa fa-question"></i></a></span>
+>>>>>>> 1a475186b67f9470d4f56fe8102918947a361b15
 					<span id="codeVErr" class="error"></span><span id="codeVNP" class="NP"></span>
 					<span class="error"><?php echo $codeVErr;?></span>
 					<br><br><br>
@@ -210,7 +219,7 @@
 
 		<div id="boutonretour">
 			<form action="connexion.php">
-				<input type="submit" value="Retournez vers mon espace client">
+				<input type="submit" value="Retournez vers la page de connexion">
 			</form>
 		</div>
 	</section>

@@ -42,6 +42,13 @@ session_start();
         if (mysqli_num_rows($result) == 1) {
           $mdpBC = mysqli_fetch_array($result, MYSQLI_NUM)[0];
           if (password_verify($mdp, $mdpBC)) {
+          $typeU="SELECT typeUtilisateur FROM Utilisateur WHERE login = '$login'";
+            if ($typeU == "client") {
+              header("Location:finiCreerNewCompte.php");
+            } else {
+              header("Location:administrateur.php");
+            }
+
             header("Location:mon-installation.php");
             //Récupération dans $_SESSION du login quand la connexion se fait
             $_SESSION['login'] = $login;
