@@ -36,8 +36,7 @@ session_start();
         </th>
       </form>
     </table>
-     <!-- Pour animer la page et ajouter des blocks quand on ajoute une pièce, il faut utiliser JS -->
-
+    
   </body>
 
   <?php
