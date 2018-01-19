@@ -3,6 +3,31 @@ function validerForm() {
 	return check;
 }
 
+window.onload=function() {
+
+  document.getElementById("DomInfo").style.display="none";
+
+  //  attach the click event handler to the radio buttons
+  var radios = document.forms[0].elements["typeU"];
+  for (var i = [0]; i < radios.length; i++)
+    radios[i].onclick=radioClicked;
+}
+//
+// function showHideDomInfo() {
+// 	if(document.getElementById('typeAdmin').checked = true;)
+// 	doc.getElementById('DomInfo').style.display="none";
+// } else {
+// 	document.getElementById('DomInfo').style.display="block";
+// }
+
+function radioClicked() {
+   if (this.value == "client") {
+    document.getElementById("DomInfo").style.display="block";
+   } else {
+    document.getElementById("DomInfo").style.display="none";
+   }
+}
+
 function checkNom() {
 	var check = false;
 	var nom = document.getElementById("nom").value;
@@ -255,7 +280,7 @@ function checkCptadresse() {
 function checkCodepostal() {
 	var check = false;
 	var codepostal = document.getElementById("codepostal").value;
-	var regle = /^[1-9]*$/;
+	var regle = /^([0-9]{5}|[a-zA-Z][a-zA-Z ]{0,49})$/;
 	if (codepostal != "" && !regle.test(codepostal)) {
 		document.getElementById("codepostalErr").innerHTML = " × Le format de votre code Postal est invalide!";
 		document.getElementById("codepostalNP").innerHTML = "";

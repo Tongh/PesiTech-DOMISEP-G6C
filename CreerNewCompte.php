@@ -28,6 +28,19 @@
 </head>
 <body>
 	<?php include("header_accueil.php"); ?>
+	<script> window.onload=function() {
+
+	  document.getElementById("DomInfo").style.display="none";
+
+	  //  attach the click event handler to the radio buttons
+	  var radios = document.forms[0].elements["typeU"];
+	  for (var i = [0]; i < radios.length; i++)
+	    radios[i].onclick=radioClicked;
+	}
+
+</script>
+
+
 	<?php
 	require("db_config.php");
 
@@ -181,14 +194,16 @@
 					Téléphone: <input type="text" id="tele" placeholder=" 06 00 00 00 00" name="tele" onchange="checkTele()">
 					<span id="teleErr" class="error"></span><span id="teleNP" class="NP"></span>
 					<br><br>
-					Type: <input type="radio" name="typeU" value="client" onclick="checkTypeU()"> Client
-					<input type="radio" name="typeU" value="admin" onclick="checkTypeU()"> Administrateur
+
+					Type: <input type="radio" id ="typeClient" name="typeU" value="client"  onclick="checkTypeU()"> Client
+					<input type="radio" id ="typeAdmin" name="typeU" value="admin"  onclick="checkTypeU(); showHideDomInfo();"> Administrateur
 					<input type="text" id="codeV" placeholder="XXXXXXXX" name="codeV" onchange="checkCodeV()">
 					<span><a tabindex="0" class="btn btn-xs btn-info" role="button" data-toggle="popover" data-trigger="focus" data-content="le code qui vous a été envoyé par mail lors de votre souscription à nos service. si vous ne le retouvez pas, contacter l'assistance."><i class="fa fa-question"></i></a></span>
 					<span id="codeVErr" class="error"></span><span id="codeVNP" class="NP"></span>
 					<span class="error"><?php echo $codeVErr;?></span>
 					<br><br><br>
-
+					</fieldset>
+					<fieldset id="DomInfo">
 					<legend> <strong>  Pour finir, veillez entrer les informations de votre domicile:  </strong> </legend>
 					Habitation: <input type="radio" name="typeH" value="maison" onclick="checkTypeM()"> Maison
 					<input type="radio" name="typeH" value="appart" onclick="checkTypeA()"> Appartement
@@ -206,10 +221,11 @@
 					Code Postal : <input type="text" id="codepostal" placeholder=" 75004" name="codepostal" size="5" onchange="checkCodepostal()"/>
 					<span id="codepostalErr" class="error"></span><span id="codepostalNP" class="NP"></span>
 					<br><br>
-					<input type="submit" name="submit" value="Envoyer">
+					
 					<br><br>
 				</form>
 			</fieldset>
+			<input type="submit" name="submit" value="Envoyer">
 		</div>
 
 		<div id="boutonretour">

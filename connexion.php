@@ -42,13 +42,19 @@ session_start();
         if (mysqli_num_rows($result) == 1) {
           $mdpBC = mysqli_fetch_array($result, MYSQLI_NUM)[0];
           if (password_verify($mdp, $mdpBC)) {
-          $typeU="SELECT typeUtilisateur FROM Utilisateur WHERE login = '$login'";
-            if ($typeU == "client") {
-            header("Location:mon-installation.php");
+          $sql="SELECT typeUtilisateur FROM utilisateur WHERE login = '$login'";
+          if ($result = mysqli_query($conn, $sql)) {
+          $typeU = mysqli_fetch_array($result, MYSQLI_NUM)[0];
+        } else {
+        echo mysqli_error($conn);
+      }
+            if ($typeU == "admin") {
+            header("Location:administrateur.php");
             //Récupération dans $_SESSION du login quand la connexion se fait
             $_SESSION['login'] = $login;
             } else {
-              header("Location:administrateur.php");
+              header("Location:mon-installation.php");
+              $_SESSION['login'] = $login;
             }
 
           } else {
