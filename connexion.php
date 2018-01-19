@@ -54,6 +54,7 @@ session_start();
             $_SESSION['login'] = $login;
             } else {
               header("Location:mon-installation.php");
+              $_SESSION['login'] = $login;
             }
 
           } else {
