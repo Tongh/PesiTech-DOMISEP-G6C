@@ -112,9 +112,7 @@ session_start();
   </form>
 
   <p>
-    <a id="co" href="">Mot de passe oublié ? </a>
-    <br/>
-    <a id="co" href="">J'ai perdu mon identifiant</a>
+    <a id="co" href="recuperation_mdp.php">Mot de passe oublié ? </br> Identifiant perdu ? </a>
     <br/>
     <a id="co" href="CreerNewCompte.php">Première connexion!</a>
   </p>
