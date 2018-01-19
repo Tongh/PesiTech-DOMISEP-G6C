@@ -16,6 +16,8 @@ catch (\Exception $e)
   die('Erreur:'.$e->getMessage());
 }
 
+
+//Recupération de l'id de l'utilisateur dans une variable $_SESSION
 $req_id_utilisateur=$bdd->prepare('SELECT `id_utilisateur`FROM utilisateur WHERE login=?;');
 $req_id_utilisateur->execute(array($login));
 $id_utilisateur=$req_id_utilisateur->fetch();
