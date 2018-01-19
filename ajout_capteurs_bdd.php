@@ -28,10 +28,9 @@ session_start();
 
 <?php
 // On crée quelques variables de session dans $_SESSION
-$_SESSION['nom'] = 'réussite';
-$_SESSION["id_utilisateur"] = 123456;
-$_SESSION["id_piece"] = 1;
-$_SESSION["id_logement"]= 1 ;
+
+
+$_SESSION["id_logement"]= 3 ;
 
 
 // Connexion bdd
@@ -69,7 +68,7 @@ try { //On essaie d'insérer les données utilisateur relatives aux pièces dans
 
                                     }
     echo "</br> Vos pièces ont bien été enregistrés"."</br>
-    <form method='' action='mon-installation.php'>
+    <form method='' action='ajoutpiece.php'>
     <input type='submit' value='Retourner vers mon installation'/></form> ";
 }
 
