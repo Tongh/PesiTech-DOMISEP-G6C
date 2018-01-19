@@ -1,5 +1,5 @@
 function validerForm() {
-	var check = checkNom() && checkPrenom() && checkPseudo() && checkmdp() && checkmdpC() && checkMail() && checkTele() && checkCodeV() && checkTypeU();
+	var check = checkNom() && checkPrenom() && checkPseudo() && checkmdp() && checkmdpC() && checkMail() && checkTele() && checkCodeV() && checkTypeU() && checkVille() && checkAdresse() && checkCptadresse() && checkCodepostal();
 	return check;
 }
 
@@ -255,7 +255,7 @@ function checkCptadresse() {
 function checkCodepostal() {
 	var check = false;
 	var codepostal = document.getElementById("codepostal").value;
-	var regle = /^(0[1-68])(?:[ _.-]?(\d{2})){4}$/;
+	var regle = /^[1-9]*$/;
 	if (codepostal != "" && !regle.test(codepostal)) {
 		document.getElementById("codepostalErr").innerHTML = " × Le format de votre code Postal est invalide!";
 		document.getElementById("codepostalNP").innerHTML = "";
