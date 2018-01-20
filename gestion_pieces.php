@@ -36,7 +36,7 @@ $_SESSION["nbpiece"]=$_POST["nbpiece"];
         ?>
 
         <th> Ma pièce <?php echo $i ?> : </br>
-          <form action="ajout_capteurs_bdd.php" method="POST" />
+          <form action="ajout_pieces_bdd.php" method="POST" />
            <p>
              <label for="piece"> Veuillez nommer votre pièce (facultatif) :</label><br /><br />
              <input type="text" name="label_piece_<?php echo $i?>" />

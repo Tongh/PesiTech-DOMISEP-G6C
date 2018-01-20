@@ -71,7 +71,7 @@ if (isset($nbpiece_utilisateur) AND ($nbpiece_utilisateur==0) )
   "<table class='pieces'>
    <caption> Mes pièces   </caption>
       <th>
-        <form method='POST' action='gestion_capteurs.php'>
+        <form method='POST' action='gestion_pieces.php'>
           <label>  Nombre de pièce à ajouter:  </label>   </br>
            <input type='text' name='nbpiece'/>
           <input type='submit' value='Envoyer' />

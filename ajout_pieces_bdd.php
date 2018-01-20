@@ -83,39 +83,6 @@ catch (\Exception $e)
 
 
 
-//Insertion des données relatives aux capteurs fournies par l'utilisateur
-$insertion_type_piece=$bdd->prepare('INSERT INTO capteurs(`type_capteur`,`nom`,`piece_ID piece`,`piece_logement_utilisateur_id utilisateur`) VALUES (:type_piece,:nom,:id_piece,:id_logement);');
-//Requete qui marche dans phpmyadmin: INSERT INTO capteurs(`type_capteur`,`nom`,`piece_ID piece`,`piece_logement_utilisateur_id utilisateur`) VALUES ('camera','dridi',1,2);
-
-
-try
-{ //On essaie d'insérer les données utilisateur  relatives aux capteurs dans la table capteurs
-
-  for ($i=1; $i <=$_SESSION["nbpiece"] ; $i++) {
-
-    $type_capteur='type_capteur_'.$i;
-
-    $insertion_type_piece->execute(array(
-      'type_capteur'=>$_POST[$type_capteur],
-      'nom'=>$_SESSION["nom"],
-      'id_piece'=>$_SESSION["id_piece"],
-      'id_logement'=>$_SESSION["id_piece"]
-                                        ));
-
-}
-
-  $insertion_type_piece->closeCursor();
-
- }
-
-catch (\Exception $e)
-{ //Sinon, on affiche un message d'erreur
-    die('Erreur: '.$e->getMessage());
-}
-
-
-
-
 
 ?>
 
