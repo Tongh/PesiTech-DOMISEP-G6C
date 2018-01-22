@@ -53,7 +53,7 @@ session_start();
             //Récupération dans $_SESSION du login quand la connexion se fait
             $_SESSION['login'] = $login;
             } else {
-              header("Location:mon-installation.php");
+              header("Location:ajoutpiece.php");
               $_SESSION['login'] = $login;
             }
 

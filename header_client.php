@@ -7,14 +7,14 @@
 <header class="header_accueil">
 
 	<!-- logo qui renvoi à la page d'accueil client -->
-	<a href="mon-installation.php"><img src="Image/logo_ez-home-moitie.png" alt="Logo" id="logo"></a>
+	<a href="ajoutpiece.php"><img src="Image/logo_ez-home-moitie.png" alt="Logo" id="logo"></a>
 	<!--bouton deconnexion renvoi à la page d'accueil -->
 	<a href="connexion.php" class='deconnecterboutton'><img src="Image/Logout80x80.png" alt="Se Deconnecter" id="imgdecn"/></a>
 
 	<nav id="menu"> <!--menu navigationel -->
 		<ul>
 			<li id="instal">
-				<a href="mon-installation.php">Mon installation</a>
+				<a href="ajoutpiece.php">Mon installation</a>
 			</li>
 
 			<li id="stat">
