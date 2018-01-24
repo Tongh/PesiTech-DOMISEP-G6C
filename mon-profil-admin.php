@@ -1,9 +1,9 @@
 <?php
 // On démarre la session AVANT d'écrire du code HTML
 session_start();
-  $login = $_SESSION['id_client'];
+  $login = $_SESSION['login'];
     // echo $login;
-echo "You have selected :" .$_SESSION['id_client']; 
+echo "You have selected :" .$_SESSION['login'];
 //Use limit 1 to save exec time
 // $sql = "SELECT id_utilisateur FROM Utilisateur WHERE login='$login' limit 1";
 

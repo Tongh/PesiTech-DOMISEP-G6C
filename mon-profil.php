@@ -49,7 +49,6 @@ include 'header_client.php';
     if ($result->num_rows > 0) {
       // output data of each row
       while($row = $result->fetch_assoc()) {
-        // echo "id: " . $row["id_utilisateur"]. " - Name: " . $row["prenom"]. " " . $row["nom"]. "<br>";
         ?>
         <div class="profil">
           <section>
