@@ -49,7 +49,6 @@ include 'header_client.php';
     if ($result->num_rows > 0) {
       // output data of each row
       while($row = $result->fetch_assoc()) {
-        // echo "id: " . $row["id_utilisateur"]. " - Name: " . $row["prenom"]. " " . $row["nom"]. "<br>";
         ?>
         <div class="profil">
           <section>
@@ -58,7 +57,7 @@ include 'header_client.php';
               <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" onsubmit="return validerForm()">
                 <br>
                 <p><strong>Informations Personnels</strong></p>
-                Nom   : <input type="text" id="nom" value= <?php echo $row["nom"]; ?> name="nom" onchange="checkNom()">
+                <!-- Nom   : <input type="text" id="nom" value= <?php echo $row["nom"]; ?> name="nom" onchange="checkNom()">
                 <span id="NomErr" class="error"></span><span id="NomNP" class="NP"></span>
                 <br><br>
                 Prénom: <input type="text" id="prenom" name="prenom" value= <?php echo $row["prenom"]; ?> onchange="checkPrenom()">
@@ -66,8 +65,8 @@ include 'header_client.php';
                 <br><br>
                 Pseudo : <input type="text" id="pseudo" value=" <?php echo $row["login"]; ?>" name="login" onchange="checkPseudo()">
                 <span id="PseudoErr" class="error"></span><span id="PseudoNP" class="NP"></span>
-                <br><br>
-                Mot de passe : <input type="password" id="mdp" placeholder=" ********" name="mdp" onchange="checkmdp()">
+                <br><br> -->
+                Nouveau mot de passe : <input type="password" id="mdp" placeholder=" ********" name="mdp" onchange="checkmdp()">
                 <span id="mdpErr" class="error"></span><span id="mdpNP" class="NP"></span>
                 <br><br>
                 Confirmation mot de passe : <input type="password" id="mdpC" placeholder=" ********" name="mdpC" onchange="checkmdpC()">
@@ -79,7 +78,7 @@ include 'header_client.php';
                 Téléphone: <input type="text" id="tele" value= <?php echo $row["telephone"]; ?> name="tele" onchange="checkTele()">
                 <span id="teleErr" class="error"></span><span id="teleNP" class="NP"></span>
                 <br><br><br>
-                <p><strong>Informations sur l'Habitation</strong></p>
+                <!-- <p><strong>Informations sur l'Habitation</strong></p>
                 Habitation: <input type="radio" name="typeH" value="maison" onclick="checkTypeM()"> Maison
                 <input type="radio" name="typeH" value="appart" onclick="checkTypeA()"> Appartement
                 <span id="habitErr" class="error"></span><span id="habitNP" class="NP"></span>
@@ -95,7 +94,7 @@ include 'header_client.php';
                 <br><br>
                 Code Postal : <input type="text" id="codepostal" value= <?php echo $row["codePostal"]; ?> name="codepostal" size="5" onchange="checkCodepostal()"/>
                 <span id="cpErr" class="error"></span><span id="cpNP" class="NP"></span>
-                <br><br><br>
+                <br><br><br> -->
                 <input type="submit" name="submit" value="Valider les modifications">
 
               </form>
