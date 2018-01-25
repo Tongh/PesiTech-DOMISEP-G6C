@@ -111,8 +111,6 @@ include 'header_client.php';
       ?>
     </body>
 
-    <?php
-    include 'footer_client.php';
-    ?>
+    
 
 </html>

@@ -5,16 +5,7 @@ session_start();
 
   $login = $_SESSION['login'];
 // Connexion bdd
-
-try
-{
-  $bdd= new PDO('mysql:host=localhost;dbname=mydb;charset=utf8','root','');
-}
-
-catch (\Exception $e)
-{
-  die('Erreur:'.$e->getMessage());
-}
+include 'connexionbdd.php';
 
 
 //Recupération de l'id de l'utilisateur dans une variable $_SESSION
@@ -34,7 +25,7 @@ $nbpiece_utilisateur=$req_nb_pieces->fetch();
 
 $req_nb_pieces->closeCursor();
 
-$req_piece=$bdd->prepare('SELECT `label_piece`,`Type de piece` AS type_piece FROM piece WHERE `logement_utilisateur_id utilisateur`=?;');
+$req_piece=$bdd->prepare('SELECT `label_piece`,`id_piece`,`Type de piece` AS type_piece FROM piece WHERE `logement_utilisateur_id utilisateur`=?;');
 /*$req_piece->execute(array($_SESSION['id_logement']));*/
 $req_piece->execute(array($id_utilisateur[0]));
 // On recupére les infos sur les pieces deja enregistrés par l'utilisateur
@@ -52,8 +43,9 @@ $req_piece->execute(array($id_utilisateur[0]));
   <meta charset="utf-8"/>
   <!--dossier css-->
   <link href="css/interv2.css" rel="stylesheet">
-  <link href="css/profil.css" rel="stylesheet">
+
   <script src="https://use.fontawesome.com/e3c7c95da8.js"></script>
+  <script src="ajout_capteurs.js"></script>
 </head>
 
 <!-- Header (tableau + image) -->
@@ -62,17 +54,21 @@ $req_piece->execute(array($id_utilisateur[0]));
 ?>
 
 <body>
-  <table id='tab_pieces'>
+
+
+
+
 
 <?php
 
-if (isset($nbpiece_utilisateur) AND ($nbpiece_utilisateur==0) )
+// On affiche ici le form d'ajout de piece multiples si l'utilisateur n'a pas ajouter de piece et/ou s'il a appuyer sur "ajouter une nouvelle piece" du form dans la dèrniere case
+if (($nbpiece_utilisateur==0) OR ((isset($_POST["ajoutpiece"]) AND ($_POST['ajoutpiece']=='Ajouter une pièce'))))
 { echo
   "<table class='pieces'>
    <caption> Mes pièces   </caption>
       <th>
         <form method='POST' action='gestion_pieces.php'>
-          <label>  Nombre de pièce à ajouter:  </label>   </br>
+          <label>  Veuillez ajouter des pieces en indiquant leurs nombres:  </label>   </br></br>
            <input type='text' name='nbpiece'/>
           <input type='submit' value='Envoyer' />
         </form>
@@ -81,14 +77,25 @@ if (isset($nbpiece_utilisateur) AND ($nbpiece_utilisateur==0) )
 }
 
 
+
 else {
+  $compteur1=0;
+
+  // Sinon on affiche les pieces déja ajoutés
+
+  echo "<table id='tab_pieces' style='position: absolute;
+  bottom: 50px;
+  width:100%'>";
 
   while ($piece=$req_piece->fetch())
-  { ?>
-
+  {
+    $_SESSION["id_piece"]=$piece['id_piece'];
+    $compteur1++;
+    $_SESSION["compteur1"]=$compteur1;
+  ?>
 
     <th>
-      <form><input type="submit" value="X" id="bouton_suppression" /> </form>
+      <form method="POST" action="supprimerpiece.php"><input type="submit" value="X" id="bouton_suppression" /> </form>
       <p> Ma pièce : <?php echo $piece['label_piece']?>  </p>
 
       <p><i> <?php echo $piece['type_piece']?> </i> </br><p/>
@@ -104,12 +111,12 @@ else {
       </p>
 
 
-      <p>
+      <!--<p>
           <div class="sectionIcone">
             Volets : <i class="fa fa-columns fa-2x fa-fw" aria-hidden="true"></i>
           </div>
-          <?php include "bouton.php" ?>
-      </p>
+          <?php // include "bouton.php" ?>
+      </p> -->
 
       <p>
           <div class="sectionIcone">
@@ -120,48 +127,59 @@ else {
       </p>
 
 
-      <p>
-      <form action="ajoutpiece.php" method="POST" />
-      <label> Ajouter un nouveau capteur: </label> </br>
-      <input type="submit" value="Ajouter"/>
+
+      <p> Ajouter un nouveau capteur: </p> </br>
 
 
-      <!--<label for="piece">Veuillez sélectionner </br>
-      le type de capteur à ajouter : <br /> </label><br />
 
-      <p>
-            <select name="type_capteur" id="capteur">
-                <option value="presence">Capteur de Présence</option>
-                <option value="fumee">Capteur de Fumée</option>
-                <option value="ouverture">Capteur d'Ouverture </option>
-                <option value="camera">Caméra</option>
-                <option value="luminosite">Capteur de Luminosité</option>
-                <option value="fumee">Capteur d'Humidité</option>
-                <option value="ouverture">Capteur de Température </option>
-                <option value="autre">Autre</option>
-            </select>
+      <div id="a_masquer_<?php echo $compteur1 ?>" style="display:none">
 
-          </br><br />-->
 
-        </p>
+
+          <form action="ajout_capteurs.php" method="POST" >
+
+          <label for="piece">Veuillez sélectionner </br>
+          le type de capteur à ajouter : <br /> </label><br />
+
+          <p>
+                <select name="type_capteur" id="capteur">
+                    <option value="presence">Capteur de Présence</option>
+                    <option value="fumee">Capteur de Fumée</option>
+                    <option value="ouverture">Capteur d'Ouverture </option>
+                    <option value="camera">Caméra</option>
+                    <option value="luminosite">Capteur de Luminosité</option>
+                    <option value="humidite">Capteur d'Humidité</option>
+                    <option value="temperature">Capteur de Température </option>
+                    <option value="autre">Autre</option>
+                </select>
+            </p>
+              <input type="submit" value="Enregistrer le capteur"/>
+          </form>
+
+
+          </div>
+      <input type="button" value="+" onclick="masquer_div('a_masquer_<?php echo $compteur1 ?>');" />
+
 
       </th>
-<?php  } ?>
+      <?php  } ?>
+
+
       <th>
-         <form method="POST" action="mon-installation.php">
-           <label> Ajouter une nouvelle pièce </label>
-         </br>
-           <input type="submit" value="Ajouter"/>
+         <form method="POST" action="ajoutpiece.php">
+           <input type="submit" name="ajoutpiece" id="capteur" value="Ajouter une pièce">
          </form>
+       </br>
+       <form method="POST" action="supprimerpiece.php">
+             <input type="submit" value="Supprimer une pièce"/>
+       </form>
        </th>
 
-<?php
-}
-
+<?php  }
 
 ?>
-
 </table>
+
 
 
 
@@ -169,8 +187,6 @@ else {
 
   </body>
 
-  <?php
-  include 'footer_client.php';
-  ?>
+
 
 </html>

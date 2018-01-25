@@ -35,15 +35,7 @@ $_SESSION["id_logement"]= 3 ;
 
 // Connexion bdd
 
-try
-{
-  $bdd= new PDO('mysql:host=localhost;dbname=mydb;charset=utf8','root','');
-}
-
-catch (\Exception $e)
-{
-  die('Erreur:'.$e->getMessage());
-}
+include 'connexionbdd.php';
 
 //Insertion des données relatives aux pièces fournies par l'utilisateur
 

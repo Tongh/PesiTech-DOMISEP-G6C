@@ -4,6 +4,15 @@
 session_start();
 $_SESSION["nbpiece"]=$_POST["nbpiece"];
 
+for ($i=0; $i <$_POST["nbpiece"] ; $i++)
+{/* Ici on effectue les requetes pour ajouter les capteurs par défaut pour chaque pièce :
+  $temp_par_def=$bdd->prepare('INSERT INTO `capteurs`(`type_capteur`, `nom`, `piece_ID piece`, `piece_logement_utilisateur_id utilisateur`) VALUES (temperature,?,avoirenfnctiondelaméthodepourajoutcapteurdanspiece,pareilpourcetid)'
+  $temp_par_def->execute(?,?,?);
+
+  $lum_par_def=$bdd->prepare('INSERT INTO `capteurs`(`type_capteur`, `nom`, `piece_ID piece`, `piece_logement_utilisateur_id utilisateur`) VALUES (luminosite,?,avoirenfnctiondelaméthodepourajoutcapteurdanspiece,pareilpourcetid)'
+  $lum_par_def->execute(?,?,?);
+*/
+}
 ?>
 
 <html>
