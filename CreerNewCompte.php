@@ -62,10 +62,10 @@
 		$mdp = test_input($_POST["mdp"]);
 		$mdpC = test_input($_POST["mdpC"]);
 		$tele = test_input($_POST["tele"]);
-		$ville = test_input($_POST["ville"]);
-		$adresse = test_input($_POST["adresse"]);
-		$cptadresse = test_input($_POST["cptadresse"]);
-		$codepostal = test_input($_POST["codepostal"]);
+		//$ville = test_input($_POST["ville"]);
+		//$adresse = test_input($_POST["adresse"]);
+		//$cptadresse = test_input($_POST["cptadresse"]);
+		//$codepostal = test_input($_POST["codepostal"]);
 
 
 		if (empty($_POST["typeU"])) {
@@ -88,10 +88,10 @@
 			$tele = test_input($_POST["tele"]);
 			$typeU = test_input($_POST["typeU"]);
 			$codeV = test_input($_POST["codeV"]);
-			$ville = test_input($_POST["ville"]);
-			$adresse = test_input($_POST["adresse"]);
-			$cptadresse = test_input($_POST["cptadresse"]);
-			$codepostal = test_input($_POST["codepostal"]);
+			//$ville = test_input($_POST["ville"]);
+			//$adresse = test_input($_POST["adresse"]);
+			//$cptadresse = test_input($_POST["cptadresse"]);
+			//$codepostal = test_input($_POST["codepostal"]);
 
 			$mdpBC = password_hash($mdp, PASSWORD_DEFAULT);
 			$conn = mysqli_connect($mysql_server_name, $mysql_username, $mysql_password, $mysql_database);
@@ -122,7 +122,8 @@
 								if ($fetchRes[0] == 1) {
 									$codeVErr = "Votre Code est déjà utilisé!";
 								} else {
-									$sql = "INSERT INTO utilisateur (nom, prenom, login, password, email, telephone, ville, codePostal, adresse, complementAdresse, typeUtilisateur) VALUES ('$nom', '$prenom', '$login', '$mdpBC', '$email', '$tele','$ville','$codepostal', '$adresse', '$cptadresse', '$typeU')";
+									//$sql = "INSERT INTO utilisateur (nom, prenom, login, password, email, telephone, ville, codePostal, adresse, complementAdresse, typeUtilisateur) VALUES ('$nom', '$prenom', '$login', '$mdpBC', '$email', '$tele','$ville','$codepostal', '$adresse', '$cptadresse', '$typeU')";
+									$sql = "INSERT INTO utilisateur (nom, prenom, login, password, email, telephone, typeUtilisateur) VALUES ('$nom', '$prenom', '$login', '$mdpBC', '$email', '$tele', '$typeU')";
 									if (mysqli_query($conn, $sql)) {
 										echo "Success insert to table !<br>";
 										$id_User = mysqli_insert_id($conn);
