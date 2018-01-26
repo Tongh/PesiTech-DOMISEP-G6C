@@ -5,27 +5,27 @@
 				<div class="swiper-wrapper" style="transform: translate3d(-7680px, 0px, 0px); transition-duration: 0ms;">
 					<div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="2"">
 						<a href="javascript:;">
-							<img style="width: 100%; height: 720px" src="swiper_3D_maison.jpg" alt="Image_3D_maison">
+							<img style="width: 100%; height: 720px" src="Image/swiper_3D_maison.jpg" alt="Image_3D_maison">
 						</a>
 					</div>
 					<div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0">
 						<a href="javascript:;">
-							<img style="width: 100%; height: 720px" src="img-accueil.jpg" alt="Domotique"/>
+							<img style="width: 100%; height: 720px" src="Image/img-accueil.jpg" alt="Domotique"/>
 						</a>
 					</div>
 					<div class="swiper-slide" data-swiper-slide-index="1">
 						<a href="javascript:;">
-							<img style="width: 100%; height: 720px" src="swiper_maison.jpg" alt="Image_maison">
+							<img style="width: 100%; height: 720px" src="Image/swiper_maison.jpg" alt="Image_maison">
 						</a>
 					</div>
 					<div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="2">
 						<a href="javascript:;">
-							<img style="width: 100%; height: 720px" src="swiper_3D_maison.jpg" alt="Image_3D_maison">
+							<img style="width: 100%; height: 720px" src="Image/swiper_3D_maison.jpg" alt="Image_3D_maison">
 						</a>
 					</div>
 					<div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0">
 						<a href="javascript:;">
-							<img style="width: 100%; height: 720px" src="img-accueil.jpg" alt="Domotique"/>
+							<img style="width: 100%; height: 720px" src="Image/img-accueil.jpg" alt="Domotique"/>
 						</a>
 					</div>
 				</div>
