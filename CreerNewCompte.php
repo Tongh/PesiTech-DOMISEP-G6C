@@ -28,7 +28,7 @@
 </head>
 <body>
 	<?php include("header_accueil.php"); ?>
-	<script> window.onload=function() {
+	<!--<script> window.onload=function() {
 
 	  document.getElementById("DomInfo").style.display="none";
 
@@ -38,7 +38,7 @@
 	    radios[i].onclick=radioClicked;
 	}
 
-</script>
+</script>-->
 
 
 	<?php
@@ -202,8 +202,9 @@
 					<span id="codeVErr" class="error"></span><span id="codeVNP" class="NP"></span>
 					<span class="error"><?php echo $codeVErr;?></span>
 					<br><br><br>
+					<input type="submit" name="submit" value="Envoyer">
 					</fieldset>
-					<fieldset id="DomInfo">
+					<!--<fieldset id="DomInfo">
 					<legend> <strong>  Pour finir, veillez entrer les informations de votre domicile:  </strong> </legend>
 					Habitation: <input type="radio" name="typeH" value="maison" onclick="checkTypeM()"> Maison
 					<input type="radio" name="typeH" value="appart" onclick="checkTypeA()"> Appartement
@@ -224,7 +225,7 @@
 					
 					<br><br>
 				</form>
-			</fieldset>
+			</fieldset>-->
 			<input type="submit" name="submit" value="Envoyer">
 		</div>
 
