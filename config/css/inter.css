@@ -1,0 +1,187 @@
+.mainImg {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+
+.tst
+{
+  padding: 0px 10px 0px 10px;
+}
+
+
+
+
+.cnxn /* Carré de connexion placé et encadré*/
+{
+  border:2px solid black;
+  margin-top: 15px;
+  padding: 20px 50px 50px 50px;
+  width: 500px;
+  height:500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+
+#imgcnx
+{
+  margin-top:50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#imgcn
+{
+  margin: 15px 15px 0px 0px;
+
+}
+
+label
+{
+  font-size: 25px;
+  margin: 10;
+
+}
+
+
+a /*On change la couleur bleue des liens et on ne les souligne plus  */
+{
+  color: #FEFEFE;
+  text-decoration: none;
+}
+
+a:hover
+{
+  color: black;
+}
+
+#co{
+  color: black;
+}
+
+#admin
+{
+  color:black;
+}
+
+
+.icone
+{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin:20px 20px 20px 20px;
+}
+
+.sectionIcone img
+{
+  width: 80px;
+  height: 80px;
+}
+
+.sectionIcone
+{
+  width:150px;
+  margin:0 30px 0 30px;
+  padding: 15px;
+  text-align: center;
+}
+
+
+h4
+{
+  display: flex;
+  justify-content: space-around;
+}
+
+#qui_sommes_nous
+{
+  display: flex;
+  justify-content: space-around;
+  margin: 25px 25px 25px 25px;
+  text-align: justify;
+}
+
+#qui
+{
+  width: 40%;
+  padding-right: 50px;
+  margin-bottom:- 550px;
+
+}
+
+#info_contact
+{
+  width: 50%;
+  margin-top: 50px;
+  margin-left: 50px;
+
+}
+
+#nos_services_page
+{
+  text-align: justify;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+#nos_services
+{
+  width: 50%;
+  margin-left: 45px;
+}
+.txtq
+{ font-size: 0.6em;
+  font-weight: none;
+}
+
+figure
+{
+  width: 45%
+  margin-bottom: 50 px;
+
+}
+
+textarea
+{
+  width: 400px;
+  height: 100px;
+}
+
+#page_contact
+{
+  display: flex;
+  justify-content: space-around;
+
+}
+
+i
+{
+  
+  margin-right: 10px;
+  text-align: justify;
+}
+
+#txtreseau
+{
+  margin-left: 15px;
+  margin-bottom: 5px;
+
+}
+
+#reseau
+{
+  display:flex;
+  justify-content: space-around;
+  
+}
+
+#europe
+{
+  margin-left: -100px
+}

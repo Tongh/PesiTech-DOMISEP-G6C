@@ -1,0 +1,160 @@
+.Header_accueil
+{
+  background-color: #6D071A;
+  margin: 0px;
+  z-index: 5;
+  top: 0;
+  height: 118px;
+  width: 100%;
+  font-family: "trebuchet MS";
+}
+
+
+
+
+#menu
+ {
+   display: flex;
+   justify-content: center;
+   flex-wrap: no-wrap;
+ }
+
+#menu ul
+{
+ list-style-type: none;
+ margin:0;
+ padding: 0;
+ overflow: hidden;
+ width: 100%;
+}
+
+#menu li /*défini l'ordre d'affichage de la liste*/
+{
+  float: left;
+  width: 25%;
+}
+
+
+#menu a:hover, a:active /*case devient blanche lorsque la souris est dessus*/
+{
+ background-color: #cc0000;
+}
+
+#license /*copyright centré en blanc*/
+{
+text-align:center;
+color: white
+}
+
+html /* Pas de marges pour la page entière+couleur*/
+{
+  padding:0;
+  margin:0;
+  background-color: #E0E0E0;
+  height: 100%;
+}
+
+.DIYheader
+{
+  background-color: #6D071A;
+  margin: 0px;
+  z-index: 5;
+  top: 0;
+  height: 118px;
+  width: 100%;
+  /*
+  text-align: center;
+  line-height: 100px;
+  */
+}
+
+/* CSS Header client*/
+
+body
+{
+  margin: 0px; /* marge nul pour le corps de page */
+  padding: 0px;
+  height: 100%;
+}
+
+
+#DIYbody 
+{
+  background: #FEFEFE;
+  width:100%;
+  overflow: auto;
+  top:130px;
+  position: absolute;
+  z-index: 10;
+  bottom: 80px;
+}
+
+.content {
+  width: 100%;
+  margin: 0;
+}
+
+
+#barre {
+  width: 100%;
+}
+
+#barre ul
+{
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+#barre li
+{
+  float: left;
+  width: 25%;
+
+}
+
+#menu a:link,a:visited
+{
+  display: block;
+  font-weight: bold;
+  color:#FFFFFF;
+  background-color:#bebebe;
+  text-align: center;
+  padding: 5.5px;
+  text-decoration:none;
+}
+
+
+/* CSS Footer*/
+
+.DIYfooter p {
+  text-align: center !important;
+}
+
+.DIYfooter {
+  height: 100px;
+  /*line-height: 100px;*/
+  width: 100%;
+  position: absolute;
+  z-index: 200;
+  bottom: 0;
+  opacity: 1;
+}
+
+/* CSS Boutton*/
+
+.connecterboutton,.deconnecterboutton
+{
+  float: right;
+}
+
+/* CSS LOGO*/
+
+#logo
+{
+  margin: 5px 0px 17px 5px; /*marge haut, droit,bas, gauche*/
+  width: 200px
+}
+

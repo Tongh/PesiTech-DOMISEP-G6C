@@ -1,0 +1,40 @@
+.profil {
+    position:absolute;
+    left:35%;
+    top:40%;
+    font-family: 'trebuchet ms';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1;
+    color:black;
+    background-color: rgba(153, 153, 153, 0.7);
+    background-size:;
+    letter-spacing: normal;
+    text-transform: none;
+    padding-top:40px;
+    padding-left:50px;
+    padding-right:50px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Styles pour l'exemple de présentation des "Relevés et Stats" des capteurs*/
+table {
+  font-family: arial, sans-serif;
+  width: 50%;
+  border: 1px solid black;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  border: 1px solid black;
+}
+
+th {
+  text-align: center;
+  background-color: #BBBBBB;
+}
