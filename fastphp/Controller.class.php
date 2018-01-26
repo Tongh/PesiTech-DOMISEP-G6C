@@ -15,7 +15,7 @@ class Controller {
 		$this -> _view -> set($name, $value);
 	}
 
-	function __destruct() {
+	function render() {
 		$this -> _view -> render();
 	}
 }

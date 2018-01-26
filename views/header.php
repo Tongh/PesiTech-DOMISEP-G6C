@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="config/css/headerBodyFooterFixed.css"/> <!-- renvoi au fichier css header_accueil -->
 	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="config/css/headerBodyFooterFixed.css"/> <!-- renvoi au fichier css header_accueil -->
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/inter.css"/>
+	<script type="text/javascript" src="swiper.min.js"></script>
+	<script type="text/javascript" src="https://use.fontawesome.com/e3c7c95da8.js"></script>
 </head>
 <body>
 	<header class="DIYheader">
