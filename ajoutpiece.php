@@ -20,7 +20,7 @@ $req_nom_utilisateur->execute(array($login));
 $nom_utilisateur=$req_nom_utilisateur->fetch();
 $_SESSION["nom"]=$nom_utilisateur[0];
 $req_nom_utilisateur->closeCursor();
-echo $_SESSION["nom"];
+
 
 
 // On compte le nombre de pieces deja ajouté par l'utilisateur
