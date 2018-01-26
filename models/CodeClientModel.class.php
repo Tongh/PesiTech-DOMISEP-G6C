@@ -1,6 +1,6 @@
 <?php 
-require_once "Error.class.php";
-require_once "Model.class.php";
+require_once __DIR__ . "/../fastphp/Error.class.php";
+require_once __DIR__ . "/../fastphp/Model.class.php";
 
 class CodeClientModel extends Model {
 	function add($value) {

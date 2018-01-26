@@ -7,7 +7,7 @@ class G6C_Error{
 
 	function __construct($message) {
 		$this -> _mark = date("Y-m-d H:i:s");
-		$this -> _file = "../log/log-" . date("Y-m-d");
+		$this -> _file = __DIR__ . "/../log/log-" . date("Y-m-d");
 		$this -> _message = $this -> _mark . " " . $message . "\n";
 	}
 

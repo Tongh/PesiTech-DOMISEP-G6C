@@ -1,6 +1,6 @@
 <?php 
-require_once "../config/db_config.php";
-require_once "Error.class.php";
+require_once __DIR__ . "/../config/db_config.php";
+require_once __DIR__ . "/Error.class.php";
 
 class Database {
 	protected $_mysql_server_name = "localhost";

@@ -3,11 +3,11 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require_once "Error.class.php";
-require_once 'Plugins/PHPMailer/vendor/phpmailer/phpmailer/src/Exception.php';
-require_once 'Plugins/PHPMailer/vendor/phpmailer/phpmailer/src/PHPMailer.php';
-require_once 'Plugins/PHPMailer/vendor/phpmailer/phpmailer/src/SMTP.php';
-require_once 'Plugins/PHPMailer/vendor/autoload.php';
+require_once __DIR__ . "/Error.class.php";
+require_once __DIR__ . '/Plugins/PHPMailer/vendor/phpmailer/phpmailer/src/Exception.php';
+require_once __DIR__ . '/Plugins/PHPMailer/vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require_once __DIR__ . '/Plugins/PHPMailer/vendor/phpmailer/phpmailer/src/SMTP.php';
+require_once __DIR__ . '/Plugins/PHPMailer/vendor/autoload.php';
 
 class G6C_Mail {
 	protected $_title;

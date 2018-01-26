@@ -1,7 +1,5 @@
 <?php 
 
-require_once "../models/Error.class.php";
-
 class Controller {
 	protected $_controller;
 	protected $_action;

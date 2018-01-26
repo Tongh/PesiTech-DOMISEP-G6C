@@ -1,6 +1,6 @@
 <?php 
-require_once "Error.class.php";
-require_once "Database.class.php";
+require_once __DIR__ . "/Error.class.php";
+require_once __DIR__ . "/Database.class.php";
 
 class Model extends Database {
 	protected $_model;

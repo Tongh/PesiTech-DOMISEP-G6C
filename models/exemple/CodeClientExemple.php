@@ -1,7 +1,7 @@
 <?php 
-require_once "CodeClientModel.class.php";
+require_once __DIR__ . "/../CodeClientModel.class.php";
 
-$codes = "YTUR894O";
+$codes = "HFIT7EJ6";
 $modelE = new CodeClientModel();
 $modelE -> add($codes);
 echo "hello";
