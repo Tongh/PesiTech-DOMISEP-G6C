@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<htlm>
+<html>
 	<head>
 		<title>EZ-Home</title>
 		<meta charset="utf-8" />

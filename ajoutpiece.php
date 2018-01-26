@@ -7,15 +7,21 @@ session_start();
 // Connexion bdd
 include 'connexionbdd.php';
 
-
 //Recupération de l'id de l'utilisateur dans une variable $_SESSION
 $req_id_utilisateur=$bdd->prepare('SELECT `id_utilisateur`FROM utilisateur WHERE login=?;');
 $req_id_utilisateur->execute(array($login));
 $id_utilisateur=$req_id_utilisateur->fetch();
 $_SESSION["id_utilisateur"]=$id_utilisateur[0];
-
-
 $req_id_utilisateur->closeCursor();
+
+//Recupération du nom de l'utilisateur dans une variable $_SESSION
+$req_nom_utilisateur=$bdd->prepare('SELECT `nom`FROM utilisateur WHERE login=?;');
+$req_nom_utilisateur->execute(array($login));
+$nom_utilisateur=$req_nom_utilisateur->fetch();
+$_SESSION["nom"]=$nom_utilisateur[0];
+$req_nom_utilisateur->closeCursor();
+echo $_SESSION["nom"];
+
 
 // On compte le nombre de pieces deja ajouté par l'utilisateur
 $req_nb_pieces=$bdd->prepare('SELECT COUNT(*)  FROM piece WHERE `logement_utilisateur_id utilisateur`=? GROUP BY `logement_utilisateur_id utilisateur`;');
@@ -84,7 +90,7 @@ else {
   // Sinon on affiche les pieces déja ajoutés
 
   echo "<table id='tab_pieces' style='position: absolute;
-  bottom: 50px;
+  bottom: 115px;
   width:100%'>";
 
   while ($piece=$req_piece->fetch())
@@ -122,7 +128,7 @@ else {
           <div class="sectionIcone">
           Température : <i class="fa fa-thermometer-three-quarters fa-2x fa-fw" aria-hidden="true"></i>
           </div>
-          <?php include "bouton.php" ?>
+          <form><input type="number" value="21"/></form>
       </div>
       </p>
 

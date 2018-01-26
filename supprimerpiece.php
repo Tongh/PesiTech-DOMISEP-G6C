@@ -61,7 +61,7 @@ else {
 
 <h3>Veuillez choisir la piece que vous voulez supprimer : <br /> </h3>
 <?php echo "<table id='tab_pieces' style='position: absolute;
-bottom: 50%;
+bottom: 35%;
 width:100%'>";?>
 <?php for ($i=1; $i <$compteur+1 ; $i++) {?>
     <th>
