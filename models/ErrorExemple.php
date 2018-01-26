@@ -13,6 +13,9 @@
 		$error -> saveLog();
 	}
 	set_error_handler("customError");
+
+	echo $test;
+	echo "hello";
 	?>
 </body>
 </html>
