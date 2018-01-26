@@ -13,3 +13,14 @@
 2018-01-26 00:31:40 Error: [8] Undefined variable: test
 2018-01-26 01:03:48 Message has been sent
 2018-01-26 01:44:24 Message has been sent
+2018-01-26 04:16:34 Connet Error (1045)Access denied for user 'root'@'localhost' (using password: NO)
+2018-01-26 04:19:23 Connet Error (1045)Access denied for user 'root'@'localhost' (using password: NO)
+2018-01-26 04:20:31 Connet Error (1045)Access denied for user 'root'@'localhost' (using password: NO)
+2018-01-26 04:29:13 Connet Error (1045)Access denied for user 'root'@'localhost' (using password: NO)
+2018-01-26 04:31:59 Connet Error (1045)Access denied for user 'root'@'localhost' (using password: NO)
+2018-01-26 04:32:00 Connet Error (1045)Access denied for user 'root'@'localhost' (using password: NO)
+2018-01-26 04:32:00 Connet Error (1045)Access denied for user 'root'@'localhost' (using password: NO)
+2018-01-26 04:32:01 Connet Error (1045)Access denied for user 'root'@'localhost' (using password: NO)
+2018-01-26 04:32:05 Connet Error (1045)Access denied for user 'root'@'localhost' (using password: NO)
+2018-01-26 04:32:06 Connet Error (1045)Access denied for user 'root'@'localhost' (using password: NO)
+2018-01-26 04:32:06 Connet Error (1045)Access denied for user 'root'@'localhost' (using password: NO)

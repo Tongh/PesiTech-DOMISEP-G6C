@@ -6,7 +6,7 @@
 <body>
 	<h1>save log</h1>
 	<?php 
-	require "Error.class.php";
+	require_once "Error.class.php";
 	function customError($errno, $errstr) {
 		$message = "Error: [$errno] $errstr";
 		$error = new G6C_Error($message);
