@@ -10,6 +10,8 @@ class Fast {
 	}
 
 	function callHook() {
+		echo $_SERVER['HTTP_HOST'];
+		echo $_SERVER['PHP_SELF'];
 		if (!empty($_GET['url'])) {
 			$url = $_GET['url'];
 			$urlArray = explode("/", $url);
@@ -27,6 +29,7 @@ class Fast {
 		$action = empty($action) ? 'index' : $action;
 		$queryString = empty($queryString) ? array() : $queryString;
 
+		echo $controllerName;
 		$int = new Controller($controllerName, $action);
 
 		if ((int)method_exists($controller, $action)) {
