@@ -3,33 +3,32 @@ session_start();
 
 // Connexion bdd
 include 'connexionbdd.php';
-?>
-<html>
-<title>
-  EZ-Home
-</title>
-<head>
-  <meta charset="utf-8"/>
-  <!--dossier css-->
-  <link href="css/interv2.css" rel="stylesheet">
+$req_piece=$bdd->prepare('SELECT `id_piece` FROM piece WHERE `logement_utilisateur_id utilisateur`=?;');
+$req_piece->execute(array($_SESSION["id_utilisateur"]));
 
-  <script src="https://use.fontawesome.com/e3c7c95da8.js"></script>
-  <script src="ajout_capteurs.js"></script>
-</head>
+$c=0;
+while ($pieceidf=$req_piece->fetch())
+{
+  $piece_ID[$c]=$pieceidf["id_piece"];
+  $c++;
+}
 
-<!-- Header (tableau + image) -->
-<?php
-    include 'header_client.php';
-?>
-
-<body>
-<?php
-if (isset($_POST['piece_supp']) AND ($_POST['piece_supp']=="ON") AND ($_SESSION["compteur"]!=0))
+if (isset($_POST['piece_supp']) AND ($_POST['piece_supp']=="Supprimer toutes les pièces") AND ($_SESSION["compteur"]!=0))
 {
   $suppression_piece=$bdd->prepare('DELETE FROM piece WHERE `logement_utilisateur_id utilisateur`=?');
   $suppression_piece->execute(array($_SESSION["id_utilisateur"]));
   $suppression_piece->closeCursor();
-  echo "<h4>Vos pièces ont été supprimés.</h4>";
+
+
+
+  for ($i=0; $i <$c ; $i++)
+   {
+     $suppression_capteur=$bdd->prepare('DELETE FROM capteurs WHERE `piece_ID piece`= ? AND `piece_logement_utilisateur_id utilisateur`=?');
+  $suppression_capteur->execute(array($piece_ID[$i],$_SESSION["id_utilisateur"]));
+  $suppression_capteur->closeCursor();
+   }
+
+  header("Location:ajoutpiece.php");
 }
 
 
@@ -42,7 +41,10 @@ $pieceid='piece_'.$_SESSION["pieceid"][$i];
 $suppression_piece=$bdd->prepare('DELETE FROM piece WHERE `logement_utilisateur_id utilisateur`=? AND `id_piece`=?');
 $suppression_piece->execute(array($_SESSION["id_utilisateur"],$_SESSION["pieceid"][$i]));
 $suppression_piece->closeCursor();
-echo "<h4>Votre pièce à été supprimé.</h4>";
+
+header("Location:ajoutpiece.php?msgpiece=Pièce(s) supprimé(s).");
+
 }
 
 }
+?>

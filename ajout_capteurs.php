@@ -31,14 +31,14 @@ for ($i=0; $i <$_SESSION["compteur1"] ; $i++) {
     $insertion_type_piece->execute(array(
       'type_capteur'=>$_POST["type_capteur"],
       'nom'=>$_SESSION["nom"],
-      'id_piece'=>$_SESSION["id_piece"],
+      'id_piece'=>$_POST["id_piece"],
       'id_logement'=>$_SESSION["id_utilisateur"]
                                         ));
 
 
 
   $insertion_type_piece->closeCursor();
-  echo "capteur ajouté";
+  header("Location:ajoutpiece.php");
 
  }
 

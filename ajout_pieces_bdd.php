@@ -6,25 +6,6 @@ session_start();
 
 ?>
 
-<! DOCTYPE html>
-<html>
-<title>
-  EZ-Home
-</title>
-<head>
-  <meta charset="utf-8"/>
-  <!--dossier css-->
-  <link href="css/interv2.css" rel="stylesheet">
-  <link href="css/profil.css" rel="stylesheet">
-  <script src="https://use.fontawesome.com/e3c7c95da8.js"></script>
-</head>
-
-<!-- Header (tableau + image) -->
-<?php
-    include 'header_client.php';
-?>
-
-<body>
 
 <?php
 // On crée quelques variables de session dans $_SESSION
@@ -59,29 +40,10 @@ try { //On essaie d'insérer les données utilisateur relatives aux pièces dans
     $insertion_type_piece->closeCursor();
 
                                     }
-    echo "</br> Vos pièces ont bien été enregistrés"."</br>
-    <form method='' action='ajoutpiece.php'>
-    <input type='submit' value='Retourner vers mon installation'/></form> ";
+    header("Location:ajoutpiece.php");
 }
 
 catch (\Exception $e)
 {   //Sinon, on affiche un message d'erreur
   die('Erreur: '.$e->getMessage());
 }
-
-
-
-
-
-
-
-
-?>
-
-</body>
-
-<?php
-include 'footer_client.php';
-?>
-
-</html>
