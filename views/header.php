@@ -1,34 +1,40 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html>
 <head>
+	<title><?php echo $title ?></title>
 	<meta charset="utf-8"/>
 	<link rel="stylesheet" type="text/css" href="config/css/headerBodyFooterFixed.css"/> <!-- renvoi au fichier css header_accueil -->
-	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
-	<link rel="stylesheet" type="text/css" href="css/inter.css"/>
-	<script type="text/javascript" src="swiper.min.js"></script>
-	<script type="text/javascript" src="https://use.fontawesome.com/e3c7c95da8.js"></script>
+	<link rel="stylesheet" type="text/css" href="config/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="config/css/inter.css"/>
+	<link rel="stylesheet" type="text/css" href="config/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="config/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="config/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+	<script type="text/javascript" src="config/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="config/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="config/js/swiper.min.js"></script>
 </head>
 <body>
 	<header class="DIYheader">
-		<a href="accueil.php"><img src="Image/logo_ez-home-moitie.png" alt="Logo" id="logo"></a> <!-- logo qui renvoi à la page d'accueil -->
-		<a href="connexion.php" class='connecterboutton'><img src="Image/profil.png" alt="Se Connecter" id="imgcn"/></a> <!--bouton connexion renvoi à la page de connexion -->
+		<a href="index.php?controller=Index"><img src="Image/logo_ez-home-moitie.png" alt="Logo" id="logo"></a> <!-- logo qui renvoi à la page d'accueil -->
+		<a href="index.php?controller=Connexion" class='connecterboutton'><img src="Image/profil.png" alt="Se Connecter" id="imgcn"/></a> <!--bouton connexion renvoi à la page de connexion -->
 
 		<nav id="barre"> <!--menu navigationel -->
 			<ul>
 				<li id="qsn">
-					<a href="qui_sommes_nous.php"> Qui sommes-nous ? </a>
+					<a href="index.php?controller=QuiSommesNous"> Qui sommes-nous ? </a>
 				</li>
 
 				<li id="services">
-					<a href="nos_services.php"> Nos services </a>
+					<a href="index.php?controller=NosServices"> Nos services </a>
 				</li>
 
 				<li id="acheter">
-					<a href="acheter.php"> Acheter </a>
+					<a href="index.php?controller=Acheter"> Acheter </a>
 				</li>
 
 				<li id="contact">
-					<a href="nous_contacter.php"> Nous contacter </a>
+					<a href="index.php?controller=NousContacter"> Nous contacter </a>
 				</li>
 
 

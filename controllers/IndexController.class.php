@@ -3,7 +3,7 @@
 class IndexController extends Controller {
 	function index() {
 		$this -> set('title', 'Accueil');
-        $this -> set('content', '欢迎开发FastPHP!');
+        $this -> set('content', 'Bienvenue sur le site de Pesitech');
         $this -> render();
 	}
 }

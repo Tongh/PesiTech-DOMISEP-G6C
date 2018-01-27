@@ -10,22 +10,24 @@ class Fast {
 	}
 
 	function callHook() {
-		$controllerName = 'Index';
-		$controller = $controllerName . 'Controller';
-        $action = 'index';
-        $queryString = array();
-		if (!empty($_GET['url'])) {
-			$url = $_GET['url'];
-			$urlArray = explode("/", $url);
-
-			$controllerName = ucfirst(empty($urlArray[0]) ? 'Index' : $urlArray[0]);
+		if (isset($_GET['controller']) && !empty($_GET['controller'])) {
+			$controllerName = $_GET['controller'];
 			$controller = $controllerName . 'Controller';
-			
-			array_shift($urlArray);
-			$action = empty($urlArray[0]) ? 'index' : $urlArray[0];
+		} else {
+			$controllerName = 'Index';
+			$controller = $controllerName . 'Controller';
+		}
 
-			array_shift($urlArray);
-			$queryString = empty($urlArray[0]) ? array() : $urlArray;
+		if (isset($_GET['action']) && !empty($_GET['action'])) {
+			$action = $_GET['action'];
+		} else {
+        	$action = 'index';
+		}
+
+		if (isset($_GET['others']) && !empty($_GET['others'])) {
+			$queryString = $_GET['others'];
+		} else {
+        	$queryString = array();
 		}
 
 		$action = empty($action) ? 'index' : $action;
@@ -53,7 +55,9 @@ class Fast {
 	}
 
 	function stripSlashesDeep($value) {
-		$value = is_array($value) ? array_map('stripSlashesDeep', $value) : stripslashes($value);
+		$value = is_array($value) ? array_map('trim', $value) : trim($value);
+		$value = is_array($value) ? array_map('stripslashes', $value) : stripslashes($value);
+		$value = is_array($value) ? array_map('htmlspecialchars', $value) : htmlspecialchars($value);
 		return $value;
 	}
 

@@ -72,6 +72,7 @@ session_start();
 
    <!-- Header -->
  	<?php
+  echo "hello";
  	include 'header_accueil.php';
  	?>
 

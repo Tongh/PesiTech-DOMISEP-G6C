@@ -4,6 +4,7 @@ html /* Pas de marges pour la page entière+couleur*/
   margin:0;
   background-color: #E0E0E0;
   height: 100%;
+  background: #FEFEFE;
 }
 
 .DIYheader
@@ -26,19 +27,36 @@ html /* Pas de marges pour la page entière+couleur*/
 
 body
 {
-  margin: 0px; /* marge nul pour le corps de page */
+  margin: 0px;
   padding: 0px;
   height: 100%;
+  overflow: auto;
 }
 
 #DIYbody {
   background: #FEFEFE;
   width:100%;
-  overflow: auto;
-  top:130px;
+  top:128px;
   position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   z-index: 10;
   bottom: 80px;
+  max-width: 2000px;
+}
+
+#DIYbodyAccueil {
+  background: #FEFEFE;
+  width:100%;
+  top:128px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 10;
+  bottom: 80px;
+  max-width: 1526px;
 }
 
 .content {
@@ -47,13 +65,15 @@ body
 }
 
 .DIYfooter {
-  height: 80px;
-  /*line-height: 100px;*/
+  padding: 0px;
+  margin: 0px;
+  height: 30px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   z-index: 200;
   bottom: 0;
   opacity: 1;
+  background: #bebebe;
 }
 
 .DIYfooter p {

@@ -1,4 +1,4 @@
-<div id='DIYbody' style="top: 125px">
+<div id='DIYbodyAccueil'>
 	<div class='content'>
 		<div class='mainImg'>
 			<div class="swiper-container swiper-container-horizontal">
@@ -10,7 +10,7 @@
 					</div>
 					<div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0">
 						<a href="javascript:;">
-							<img style="width: 100%; height: 720px" src="Image/img-accueil.jpg" alt="Domotique"/>
+							<img style="width: 100%; height: 720px" src="Image/img-accueil-og.jpg" alt="Domotique"/>
 						</a>
 					</div>
 					<div class="swiper-slide" data-swiper-slide-index="1">
@@ -25,7 +25,7 @@
 					</div>
 					<div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0">
 						<a href="javascript:;">
-							<img style="width: 100%; height: 720px" src="Image/img-accueil.jpg" alt="Domotique"/>
+							<img style="width: 100%; height: 720px" src="Image/img-accueil-og.jpg" alt="Domotique"/>
 						</a>
 					</div>
 				</div>
@@ -52,26 +52,26 @@
 
 					<div class="icone">
 						<div class="sectionIcone">
-							<i class="fa fa-lock fa-5x fa-fw" aria-hidden="true"></i>
+							<i class="fa fa-lock fa-5x fa-fw" aria-hidden="true" id="faid"></i>
 						</br>
 						<h4>Assure la sécurité de votre maison</h4>
 					</div>
 
 					<div class="sectionIcone">
-						<i class="fa fa-fire-extinguisher fa-5x fa-fw" aria-hidden="true"></i>
+						<i class="fa fa-fire-extinguisher fa-5x fa-fw" aria-hidden="true" id="faid"></i>
 					</br>
 					<h4>Vous alerte en cas d'incident</h4>
 				</div>
 
 
 				<div class="sectionIcone">
-					<i class="fa fa-thermometer-three-quarters fa-5x fa-fw" aria-hidden="true"></i>
+					<i class="fa fa-cloud fa-5x fa-fw" aria-hidden="true" id="faid"></i>
 					<br>
 					<h4>Contrôle de la température à n'importe quel moment</h4>
 				</div>
 
 				<div class="sectionIcone">
-					<i class="fa fa-laptop fa-5x fa-fw" aria-hidden="true"></i>
+					<i class="fa fa-laptop fa-5x fa-fw" aria-hidden="true" id="faid"></i>
 				</br>
 				<h4>Accès à vos informations en ligne</h4>
 			</div>

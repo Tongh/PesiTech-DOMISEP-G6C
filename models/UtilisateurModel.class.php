@@ -5,6 +5,14 @@ class UtilisateurModel extends Model {
 	function add($value) {
 		
 	}
+
+	function select($login) {
+
+	}
+
+	function update($key, $value) {
+		
+	}
 }
 
  ?>

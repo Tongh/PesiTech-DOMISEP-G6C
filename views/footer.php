@@ -1,9 +1,7 @@
 <footer class="DIYfooter">
-	<div>
-		<p>
-			Developed by PESITech ©
-		</p>
-	</div>
+	<p>
+		Developed by PESITech ©
+	</p>
 </footer>
 </body>
 </html>
