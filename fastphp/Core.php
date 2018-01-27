@@ -55,7 +55,9 @@ class Fast {
 	}
 
 	function stripSlashesDeep($value) {
-		$value = is_array($value) ? array_map('stripSlashesDeep', $value) : stripslashes($value);
+		$value = is_array($value) ? array_map('trim', $value) : trim($value);
+		$value = is_array($value) ? array_map('stripslashes', $value) : stripslashes($value);
+		$value = is_array($value) ? array_map('htmlspecialchars', $value) : htmlspecialchars($value);
 		return $value;
 	}
 

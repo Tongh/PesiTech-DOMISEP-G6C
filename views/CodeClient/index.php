@@ -3,7 +3,3 @@
 	<input type="submit" name="Ajouter">
 </form>
 
-<br><br>
-
-<?php $number=0 ?>
-
