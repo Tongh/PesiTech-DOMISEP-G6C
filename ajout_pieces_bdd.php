@@ -8,11 +8,6 @@ session_start();
 
 
 <?php
-// On crée quelques variables de session dans $_SESSION
-
-
-$_SESSION["id_logement"]= 3 ;
-
 
 // Connexion bdd
 
