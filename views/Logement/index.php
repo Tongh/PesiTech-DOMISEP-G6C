@@ -10,7 +10,7 @@
 	</div>
 	<div class="">
 		<p class="">
-			<input type="button" value="Ajouter" onclick="javascript:window.location.href='index.php?controller=Logement&action=add'">
+			<a href="index.php?controller=Logement&action=add" class="btn btn-primary btn-lg" role="button">Ajouter</a>
 		</p>
 	</div>
 	<div class="table">
@@ -24,17 +24,17 @@
 			<?php if (isset($result) && !empty($result)) {for ($i=0; $i < count($result) ; $i++) { ?>
 			<tr>
 				<td>
-					<button type="button" id="ButtonGo" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">Pièces
+					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">Pièces
 						<?php echo " ( ID : ".$result[$i]['logement']['id_logement']." ) "; ?>
 					</button>
 				</td>
 				<td>
-					<button type="button" id="ButtonGo" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">
+					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">
 						<?php echo "".$result[$i]['logement']['address'].""; ?>
 					</button>
 				</td>
 				<td>
-					<button type="button" id="ButtonGo" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">
+					<button type="button" class="btn btn-info btn-block" disabled="disabled" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">
 						<?php echo " ( ID : ".$result[$i]['logement']['utilisateur_id utilisateur']." ) "; ?>
 					</button>
 				</td>

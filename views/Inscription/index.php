@@ -170,7 +170,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<span id="codeVErr" class="error"></span><span id="codeVNP" class="NP"></span>
 				<br><br><br>
 				<span class="error"><?php if (isset($_GET['Err'])) echo $_GET['Err'];?></span><br><br><br>
-				<button type="submit" id="ButtonGo" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Envoyer</button>
+				<button type="submit" class="btn btn-primary">Inscrire</button>
 
 			</fieldset>
 					<!--<fieldset id="DomInfo">
@@ -199,9 +199,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		</div>
 
 		<div id="boutonretour">
-			<form action="connexion.php">
-				<input type="submit" value="Retournez vers la page de connexion">
-			</form>
+			<a href="index.php?controller=Connexion&action=index" class="btn btn-primary btn-lg" role="button">Retournez vers la page de connexion</a>
 		</div>
 	</section>
 

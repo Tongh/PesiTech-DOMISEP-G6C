@@ -13,6 +13,9 @@
 	<script type="text/javascript" src="config/js/swiper.min.js"></script>
 	<script type="text/javascript" src="config/js/checkNewCompte.js"></script>
 	<script type="text/javascript" src="config/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$('.dropdown-toggle').dropdown();
+	</script>
 </head>
 <body>
 	<header class="DIYheader">
@@ -29,8 +32,17 @@
 				<li id="qsn">
 					<?php if (isset($_SESSION["LoginMode"]) && $_SESSION["LoginMode"] == "OFF") {
 						echo "<a href=\"index.php?controller=QuiSommesNous\"> Qui sommes-nous ? </a>";
-					} else {
-						echo "<a href=\"index.php?controller=Logement\">Mon installation</a>";
+					} else {echo "<a href=\"index.php?controller=Logement\">Mon installation</a>";
+						/*echo "<div class=\"dropdown\">";
+						echo "<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">";
+						echo "Dropdown trigger";
+						echo "<b class=\"caret\"></b>";
+						echo "</a>";
+						echo "<ul class=\"dropdown-menu\" role=\"menu\" aria-labelledby=\"dLabel\">";
+						echo "<li><a href=\"index.php?controller=Logement\">Mes Logement</a></li>";
+						echo "<li><a href=\"index.php?controller=Piece\">Mes Pièces</a></li>";
+						echo "</ul>";
+						echo "</div>";*/
 					} ?>
 				</li>
 

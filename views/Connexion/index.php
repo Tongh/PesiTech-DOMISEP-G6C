@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </p>
 
           <p>
-            <input type="submit" value="Connexion" />
+            <button type="submit" class="btn btn-primary">Connexion</button>
           </p>
 
         </form>
