@@ -7,27 +7,26 @@ class ConnexionController extends Controller {
         $this -> render();
 	}
 
-	function connexion() {
+	function attend() {
 		$login = $_POST['login'];
 		$mdp = $_POST['mdp'];
-		$sql = "SELECT id_utilisateur,login,password,typeUtilisateur FROM utilisateur WHERE login = '$login'";
-		$model = new UtilisateurModel;
-		if ($result = $model -> query($sql)) {
-			if ($model -> getNumRows() == 1) {
-				$mdpBC = $result['utilisateur']['password'];
-				if (password_verify($mdp, $mdpBC)) {
-					$typeU = $result['utilisateur']['typeUtilisateur'];
-					if (typeU == "admin") {
-						//admin
-					} else {
-						//client
-					}
-				}
-			}
+		$model = new ConnexionModel;
+		if ($Err = $model -> connexion($login, $mdp)) {
+			$to = 'Location: index.php?controller=Connexion&Err='.$Err;
+			header($to);
+		} else{
+			$this -> set('title', 'En train de connexion');
+			$this -> set('content', 'En train de connexion');
+			$this -> render();
 		}
+	}
 
-		$this -> set('title', '');
-		$this -> set('content', '');
+	function disconnexion() {
+		$_SESSION["User"] = "";
+		$_SESSION["LoginMode"] = "OFF";
+		$this -> set('title', 'En train de déconnecter');
+		$this -> set('content', 'En train de déconneter');
 		$this -> render();
 	}
+
 }

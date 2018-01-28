@@ -1,5 +1,5 @@
 function validerForm() {
-	var check = checkNom() && checkPrenom() && checkPseudo() && checkmdp() && checkmdpC() && checkMail() && checkTele() && checkCodeV() && checkTypeU() && checkVille() && checkAdresse() && checkCptadresse() && checkCodepostal();
+	var check = checkNom() && checkPrenom() && checkPseudo() && checkmdp() && checkmdpC() && checkMail() && checkTele() && checkCodeV() && checkTypeU() ; //&& checkVille() && checkAdresse() && checkCptadresse() && checkCodepostal()
 	return check;
 }
 
@@ -182,7 +182,7 @@ function checkCodeV() {
 		}
 	}
 	var regle = /^([0-9A-Z]{8})$/;
-	if (codeV != "" && !regle.test(codeV)) {
+	if (codeV != "" && !regle.test(codeV) || codeV == "") {
 		document.getElementById("codeVErr").innerHTML = " × Le format de Code de DOMISEP est incorrect!";
 		document.getElementById("codeVNP").innerHTML = "";
 		check = false;

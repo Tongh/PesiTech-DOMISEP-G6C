@@ -1,6 +1,6 @@
 
 <?php
-require("db_config.php");
+/*require("db_config.php");
 
 $Err = "";
 $login = $mdp = $mdpBC = "";
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 }
 
-
+*/
 ?>
 
 <div id='DIYbody'>
@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="cnxn">
         <h1> Accéder à mon espace personnel </h1><br/>
 
-        <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+        <form method="post" action="<?php echo "index.php?controller=Connexion&action=attend"  ?>">
           <p>
             <label for="pseudo">Mon identifiant:</label></br></br>
             <input type="text" name="login" id="pseudo"  autofocus/>
@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <p>
             <label for="mdp">Mon mot de passe:</label></br></br>
             <input type="password" name="mdp" id="mdp"  required /><br><br>
-            <span class="error"> <?php echo $Err;?></span>
+            <span class="error"> <?php if (isset($_GET['Err'])) echo $_GET['Err'] ?></span>
           </p>
 
           <p>
