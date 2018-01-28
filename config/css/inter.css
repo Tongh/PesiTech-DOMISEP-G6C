@@ -1,3 +1,7 @@
+#ButtonGo {
+  float: right;
+}
+
 .formText {
   text-align: center;
 }
@@ -35,8 +39,14 @@ tbody {
     background-color: #F5F5F5;
 }
 
+td {
+  align: center;
+  vertical-align: center;
+}
+
 tr {
   background-color: #F5F5F5;
+  align: center;
 }
 
 .dataintable {
