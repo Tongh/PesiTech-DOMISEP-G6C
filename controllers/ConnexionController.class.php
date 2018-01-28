@@ -28,4 +28,5 @@ class ConnexionController extends Controller {
 		$this -> set('content', 'En train de déconneter');
 		$this -> render();
 	}
+
 }

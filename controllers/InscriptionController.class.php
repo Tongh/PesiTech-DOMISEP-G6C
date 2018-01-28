@@ -31,7 +31,12 @@ class InscriptionController extends Controller {
 			$this -> set('content', 'En train de inscription!');
 			$this -> render();
 		} 
-		
+	}
+
+	function fin() {
+		$this -> set('title', 'Inscription Réussite');
+        $this -> set('content', 'Ici les informations important!');
+        $this -> render();
 	}
 
 }
