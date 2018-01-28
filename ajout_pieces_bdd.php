@@ -9,6 +9,11 @@ session_start();
 
 <?php
 
+
+
+
+
+
 // Connexion bdd
 
 include 'connexionbdd.php';

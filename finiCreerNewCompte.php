@@ -30,7 +30,7 @@
 			<br/>
 			</br>
 			<div id="boutonretour_milieu">
-			<form action="ajoutpiece.php">
+			<form action="connexion.php">
 						<input type="submit" value="Retournez vers mon espace client">
 			</form>
 			</div>

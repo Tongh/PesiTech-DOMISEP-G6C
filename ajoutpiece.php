@@ -12,6 +12,7 @@
 session_start();
 
 $login = $_SESSION['login'];
+
 // Connexion bdd
 include 'connexionbdd.php';
 
@@ -47,7 +48,6 @@ $req_pieces_ajoutes=$bdd->prepare('SELECT `nom`,`type_capteur`,`piece_ID piece` 
 $req_pieces_ajoutes->execute(array($id_utilisateur[0]));
 
 
-echo $_SESSION["id_utilisateur"];
 
  ?>
 
