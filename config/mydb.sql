@@ -235,9 +235,9 @@ CREATE TABLE IF NOT EXISTS `panne` (
 DROP TABLE IF EXISTS `piece`;
 CREATE TABLE IF NOT EXISTS `piece` (
   `id_piece` int(11) NOT NULL AUTO_INCREMENT,
-  `Superficie` int(11) NOT NULL,
-  `Nom` varchar(255) NOT NULL,
-  `Type de piece` varchar(255) NOT NULL,
+  `superficie` int(11) NOT NULL,
+  `nom` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL,
   `logement_utilisateur_id utilisateur` int(11) NOT NULL,
   `label_piece` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_piece`,`logement_utilisateur_id utilisateur`),
