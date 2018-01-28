@@ -14,4 +14,14 @@ class LogementModel extends Model {
 		} return "Le site rencontre des problème imprévue!";
 	}
 
+	function add($address) {
+		$login = $_SESSION["User"];
+		$sql = 'SELECT id_utilisateur FROM `utilisateur` WHERE login = \'' . $login . '\'';
+		if ($result = $this -> query($sql)) {
+			$id_login = $result[0]['utilisateur']['id_utilisateur'];
+			$sql = 'INSERT INTO `logement` (`address`, `utilisateur_id utilisateur`)  VALUES 	(' . $address . ', ' . $id_login . ')';
+			return $this -> query($sql); 
+		} return "Le site rencontre des problème imprévue!";
+	}
+
 }

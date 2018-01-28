@@ -1,10 +1,18 @@
 <div id='DIYbody'>
-	<h1><?php echo $title ?><h1>
+	<div class="">
+		<h1><?php echo $title ?><h1>
+	</div>
 
-	<p class="alert">
-		<?php if (isset($Err)) echo $Err; if (isset($result)) print_r($result) ?>
-		<input type="button" value="Ajouter" onclick="javascript:window.location.href='index.php?controller=Logement&action=add'">
-	</p>
+	<div class="">
+		<p class="">
+			<?php if (isset($Err)) echo $Err; if (isset($result)) print_r($result); echo "<br/>"?>
+		</p>
+	</div>
+	<div class="">
+		<p class="">
+			<input type="button" value="Ajouter" onclick="javascript:window.location.href='index.php?controller=Logement&action=add'">
+		</p>
+	</div>
 	<div class="table">
 	<table class="dataintable">
 		<thead>

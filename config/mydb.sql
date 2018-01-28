@@ -185,12 +185,11 @@ CREATE TABLE IF NOT EXISTS `faq` (
 
 DROP TABLE IF EXISTS `logement`;
 CREATE TABLE IF NOT EXISTS `logement` (
-  `ID logement` int(11) NOT NULL AUTO_INCREMENT,
-  `Adresse` varchar(255) NOT NULL,
-  `dans_immeuble` tinyint(4) DEFAULT '0',
+  `id_logement` int(11) NOT NULL AUTO_INCREMENT,
+  `adresse` varchar(255) NOT NULL,
   `utilisateur_id utilisateur` int(11) NOT NULL,
   PRIMARY KEY (`utilisateur_id utilisateur`),
-  KEY `ID logement` (`ID logement`)
+  KEY `id_logement` (`id_logement`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

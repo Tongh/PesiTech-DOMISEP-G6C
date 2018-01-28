@@ -11,7 +11,7 @@ class InscriptionModel extends UtilisateurModel {
 				$tblname = "codeAdmin";
 			} else {
 				$tblname = "codeClient";
-			} 
+			}
 			$sql = "SELECT code FROM $tblname WHERE code = '$codeV'";
 			if (!$result = $this -> query($sql)) {
 				return "Votre Code est incorrect, merci de le vérifier!";
@@ -29,7 +29,7 @@ class InscriptionModel extends UtilisateurModel {
 							$sql = "UPDATE $tblname SET utilise = 1 , id_client = $id_User WHERE code = '$codeV'";
 							if ($this -> query($sql)) {
 								return "Update tableau codeV échec!";
-							} 
+							}
 							if ($typeU == "admin") {
 								$_SESSION["AdminMode"] = "ON";
 							} else {
@@ -44,5 +44,4 @@ class InscriptionModel extends UtilisateurModel {
 			}
 		} return "Obtenir les CodeV échec!";
 	}
-} 	
-
+}
