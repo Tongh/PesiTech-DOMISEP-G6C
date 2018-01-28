@@ -24,7 +24,7 @@
 
 .mainImg {
   height: 100%;
-  width: 100%;
+  width: 1526px;
   margin: 0;
 }
 
@@ -99,6 +99,7 @@ a:hover
   flex-wrap: nowrap;
   justify-content: center;
   margin:20px 20px 20px 20px;
+  width: 1526px;
 }
 
 .sectionIcone img
@@ -208,4 +209,9 @@ i
 #europe
 {
   margin-left: -100px
+}
+
+.deconnecterboutton
+{
+  float: right;
 }

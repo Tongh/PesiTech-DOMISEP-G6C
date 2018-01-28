@@ -20,4 +20,12 @@ class ConnexionController extends Controller {
 			$this -> render();
 		}
 	}
+
+	function disconnexion() {
+		$_SESSION["User"] = "";
+		$_SESSION["LoginMode"] = "OFF";
+		$this -> set('title', 'En train de déconnecter');
+		$this -> set('content', 'En train de déconneter');
+		$this -> render();
+	}
 }

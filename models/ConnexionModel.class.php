@@ -7,11 +7,13 @@ class ConnexionModel extends UtilisateurModel {
 			$mdpBC = $result[0]['utilisateur']['password'];
 			if (password_verify($mdp, $mdpBC)) {
 				$typeU = $result[0]['utilisateur']['typeUtilisateur'];
+				$_SESSION["User"] = $login;
+				$_SESSION["LoginMode"] = "ON";
 				if ($typeU == "admin") {
-					//admin
+					$_SESSION["AdminMode"] = "ON";
 					return 0;
 				} else {
-					//client
+					$_SESSION["AdminMode"] = "OFF";
 					return 0;
 				}
 			} else {
