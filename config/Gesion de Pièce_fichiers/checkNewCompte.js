@@ -301,7 +301,7 @@ function getLogementId() {
 $(function() {
     $(".btn").click(function(){
         $(this).button('loading').delay(1000).queue(function() {
-					var str = this.value;
+					var str = document.getElementById("fat-btn").value;
 					var url = 'index.php?controller=Piece&id_logement='+str;
 					setTimeout(function(){window.location.href=url},1000);
 

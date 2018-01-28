@@ -17,6 +17,7 @@
 	<table class="dataintable">
 		<tbody>
 			<tr>
+				<th>#</th>
 				<th>ID Logement</th>
 				<th>Addresse</th>
 				<th>ID Client</th>
@@ -24,8 +25,11 @@
 			<?php if (isset($result) && !empty($result)) {for ($i=0; $i < count($result) ; $i++) { ?>
 			<tr>
 				<td>
-					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece&id_logement=<?php echo $result[$i]['logement']['id_logement'] ?>'">Pièces
-						<?php echo " ( ID Logement : ".$result[$i]['logement']['id_logement']." ) "; ?>
+					<?php echo $i?>
+				</td>
+				<td>
+					<button id="fat-btn" class="btn btn-primary" data-loading-text="Loading..." type="button" value="<?php echo $result[$i]['logement']['id_logement']?>">
+						Pièces<?php echo " ( ID Logement : ".$result[$i]['logement']['id_logement']." ) "?>
 					</button>
 				</td>
 				<td>
@@ -34,7 +38,7 @@
 					</button>
 				</td>
 				<td>
-					<button type="button" class="btn btn-info btn-block" disabled="disabled" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">
+					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece&moyen=client'">
 						<?php echo " ( ID Client : ".$result[$i]['logement']['utilisateur_id utilisateur']." ) "; ?>
 					</button>
 				</td>

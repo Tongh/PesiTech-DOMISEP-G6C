@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Gesion de Pièce</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="Gesion%20de%20Pie%CC%80ce_fichiers/headerBodyFooterFixed.css">
+	<link rel="stylesheet" type="text/css" href="Gesion%20de%20Pie%CC%80ce_fichiers/swiper.css">
+	<link rel="stylesheet" type="text/css" href="Gesion%20de%20Pie%CC%80ce_fichiers/inter.css">
+	<link rel="stylesheet" type="text/css" href="Gesion%20de%20Pie%CC%80ce_fichiers/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="Gesion%20de%20Pie%CC%80ce_fichiers/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="Gesion%20de%20Pie%CC%80ce_fichiers/bootstrap-theme.css">
+	<script type="text/javascript" src="Gesion%20de%20Pie%CC%80ce_fichiers/jquery-3.js"></script>
+	<script type="text/javascript" src="Gesion%20de%20Pie%CC%80ce_fichiers/swiper.js"></script>
+	<script type="text/javascript" src="Gesion%20de%20Pie%CC%80ce_fichiers/checkNewCompte.js"></script>
+	<script type="text/javascript" src="Gesion%20de%20Pie%CC%80ce_fichiers/bootstrap.js"></script>
+	<script type="text/javascript">
+		$('.dropdown-toggle').dropdown();
+	</script>
+<style type="text/css">.vimvixen-console-frame {
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2147483647;
+  border: none;
+  background-color: unset;
+  pointer-events: none; }
+</style><style type="text/css">.vimvixen-hint {
+  background-color: yellow;
+  border: 1px solid gold;
+  font-weight: bold;
+  position: absolute;
+  text-transform: uppercase;
+  z-index: 2147483647;
+  font-size: 12px;
+  color: black;
+}
+</style></head>
+<body>
+	<header class="DIYheader">
+		<a href="http://localhost:8080/PesiTech-DOMISEP-G6C/index.php?controller=Index"><img src="Gesion%20de%20Pie%CC%80ce_fichiers/logo_ez-home-moitie.png" alt="Logo" id="logo"></a>
+		<a href="http://localhost:8080/PesiTech-DOMISEP-G6C/index.php?controller=Connexion&amp;action=disconnexion" class="deconnecterboutton"><img src="Gesion%20de%20Pie%CC%80ce_fichiers/Logout80x80.png" alt="Se Deconnecter" id="imgdecn"></a>		<nav id="barre">
+			<ul>
+				<li id="qsn">
+					<a href="http://localhost:8080/PesiTech-DOMISEP-G6C/index.php?controller=Logement">Mon installation</a>				</li>
+
+				<li id="services">
+					<a href="http://localhost:8080/PesiTech-DOMISEP-G6C/stats.php">Relevés et Statistiques</a>				</li>
+
+				<li id="acheter">
+					<a href="http://localhost:8080/PesiTech-DOMISEP-G6C/panne.php">Panne et Résolution</a>
+				</li>
+
+				<li id="contact">
+					<a href="http://localhost:8080/PesiTech-DOMISEP-G6C/index.php?controller=EspaceClient">Mon profil</a>
+				</li>
+
+
+			</ul>
+		</nav>
+
+	</header>
+<div id="DIYbody">
+	<div class="">
+		<h1>Gesion de Pièce</h1><h1>
+	</h1></div>
+
+	<div class="">
+		<p class="">
+			<br>		</p>
+	</div>
+	<div class="">
+		<p class="">
+			<a href="http://localhost:8080/PesiTech-DOMISEP-G6C/index.php?controller=Piece&amp;action=add" class="btn btn-primary btn-lg" role="button">Ajouter une pièce</a>
+		</p>
+	</div>
+	<div class="table">
+	<table class="dataintable">
+		<tbody>
+			<tr>
+				<th>ID Pièce</th>
+				<th>Superficie</th>
+				<th>Nom</th>
+				<th>Type de pièce</th>
+        <th>ID Logement</th>
+				<th>ID Client</th>
+				<th>Label Pièce</th>
+			</tr>
+						<tr>
+				<td>
+					<button type="button" class="btn btn-info btn-xs" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">Capteurs
+						 ( ID Pièce : 593 ) 					</button>
+				</td>
+				<td>
+					<button type="button" class="btn btn-info btn-xs" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">
+						 ( Superficie : 23 ) 					</button>
+				</td>
+				<td>
+					<button type="button" class="btn btn-info btn-xs" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">
+						 ( Nom : Salon 0 ) 					</button>
+				</td>
+				<td>
+					<button type="button" class="btn btn-info btn-xs" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">
+						 ( Type de Pièce : Salon ) 					</button>
+				</td>
+        <td>
+					<button type="button" class="btn btn-info btn-xs" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">
+						 ( Label Pièce : 1 ) 					</button>
+				</td>
+  			<td>
+  					<button type="button" class="btn btn-info btn-xs" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">
+  						 ( ID Client : 3 )   					</button>
+				</td>
+				<td>
+					<button type="button" class="btn btn-info btn-xs" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">
+						 ( Label Pièce :  ) 					</button>
+				</td>
+			</tr>
+				</tbody>
+	</table>
+	</div>
+</div>
+<footer class="DIYfooter">
+	<p>
+		Developed by PESITech ©
+	</p>
+</footer>
+
+<iframe src="Gesion%20de%20Pie%CC%80ce_fichiers/console.html" id="vimvixen-console-frame" class="vimvixen-console-frame"></iframe></body></html>

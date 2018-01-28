@@ -3,13 +3,24 @@
 class PieceController extends Controller {
 	function index() {
 		$model = new PieceModel;
-		if ($result = $model -> view()) {
-			if (gettype($result) == "string") {
-					$this -> set('Err', $result);
-			} else {
-					$this -> set('result', $result);
+		if (isset($_GET['moyen']) && $_GET['moyen'] == "client") {
+			if ($result = $model -> viewClient()) {
+				if (gettype($result) == "string") {
+						$this -> set('Err', $result);
+				} else {
+						$this -> set('result', $result);
+				}
+			}
+		} else {
+			if ($result = $model -> viewLogement()) {
+				if (gettype($result) == "string") {
+						$this -> set('Err', $result);
+				} else {
+						$this -> set('result', $result);
+				}
 			}
 		}
+		$this -> set('id_logement', $_GET['id_logement']);
 		$this -> set('title', 'Gesion de Pièce');
     $this -> set('content', 'Bienvenue sur votre espace client!');
     $this -> render();
