@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class Database {
 	protected $_dbHandle;
@@ -35,7 +35,7 @@ class Database {
 					array_push($field, $finfo -> name);
 				}
 				while ($row = mysqli_fetch_row($this -> _result)) {
-					for ($i = 0; $i < $numOfFields; ++$i) { 
+					for ($i = 0; $i < $numOfFields; ++$i) {
 						$tempResults[$table[$i]][$field[$i]] = $row[$i];
 					}
 					if ($singleResult == 1) {
@@ -50,8 +50,8 @@ class Database {
 			$erreur -> saveLog();
 			return 0;
 		}
-		
-		
+
+
 	}
 
 	function selectAll() {
