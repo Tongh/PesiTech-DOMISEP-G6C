@@ -5,9 +5,9 @@ class LogementController extends Controller {
 		$model = new LogementModel;
 		if ($result = $model -> view()) {
 			if (gettype($result) == "string") {
-					$this -> set($Err, $result);
+					$this -> set('Err', $result);
 			} else {
-					$this -> set($result, $result);
+					$this -> set('result', $result);
 			}
 		}
 		$this -> set('title', 'Gesion de Logement');
