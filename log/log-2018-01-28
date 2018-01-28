@@ -8,3 +8,11 @@
 2018-01-28 16:15:24 Table 'Mydb.codeClient' doesn't exist
 2018-01-28 16:19:21 Table 'Mydb.codeClient' doesn't exist
 2018-01-28 16:20:38 Table 'Mydb.codeClient' doesn't exist
+2018-01-28 16:26:36 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 3)' at line 1
+2018-01-28 16:28:05 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 3)' at line 1
+2018-01-28 16:33:47 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 3)' at line 1
+2018-01-28 16:35:45 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 3)' at line 1
+2018-01-28 16:36:48 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'rue du Blomet, 3)' at line 1
+2018-01-28 16:39:35 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'rue du Blomet, 3)' at line 1
+2018-01-28 17:30:59 Duplicate entry '3' for key 'PRIMARY'
+2018-01-28 17:31:20 Duplicate entry '3' for key 'PRIMARY'

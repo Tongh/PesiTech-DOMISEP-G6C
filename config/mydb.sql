@@ -186,7 +186,7 @@ CREATE TABLE IF NOT EXISTS `faq` (
 DROP TABLE IF EXISTS `logement`;
 CREATE TABLE IF NOT EXISTS `logement` (
   `id_logement` int(11) NOT NULL AUTO_INCREMENT,
-  `adresse` varchar(255) NOT NULL,
+  `address` varchar(255) NOT NULL,
   `utilisateur_id utilisateur` int(11) NOT NULL,
   PRIMARY KEY (`utilisateur_id utilisateur`),
   KEY `id_logement` (`id_logement`)

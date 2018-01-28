@@ -15,15 +15,19 @@
 	</div>
 	<div class="table">
 	<table class="dataintable">
-		<thead>
+		<tbody>
 			<tr>
 				<th>ID Logement</th>
-				<th>Adresse</th>
-				<th>Dans Immeuble</th>
+				<th>Addresse</th>
 				<th>ID Client</th>
 			</tr>
-		</thead>
-		<tbody>
+			<?php if (isset($result) && !empty($result)) {foreach ($result[0]["logement"] as $value) { ?>
+			<tr>
+				<td><?php echo $value["id_logement"]; ?></td>
+				<td><?php echo $value["address"]; ?></td>
+				<td><?php echo $value["utilisateur_id utilisateur"]; ?></td>
+			</tr>
+		<?php }} ?>
 		</tbody>
 	</table>
 	</div>

@@ -15,17 +15,23 @@ class LogementController extends Controller {
     $this -> render();
 	}
 
-	function add() {
+	function addForm() {
 		$address = $_POST['address'];
 		$model = new LogementModel;
 		if ($result = $model -> add($address)) {
-			$to = 'Location: index.php?controller=Logement&Err='.$result;
+			$to = 'Location: index.php?controller=Logement&action=add&Err='.$result;
 			header($to);
 		} else {
-			$this -> set('title', 'Ajouter un Logement');
-	    $this -> set('content', 'Bienvenue sur votre espace client!');
-	    $this -> render();
+			$this -> set('Err', "Ajouter avec succès!");
+			$to = 'Location: index.php?controller=Logement&action=index';
+			header($to);
 		}
+	}
+
+	function add() {
+		$this -> set('title', 'Ajouter un Logement');
+		$this -> set('content', 'Bienvenue sur votre espace client!');
+		$this -> render();
 	}
 
 }
