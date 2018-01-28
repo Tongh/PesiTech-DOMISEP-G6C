@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `capteurs` (
   `id_capteur` int(11) NOT NULL AUTO_INCREMENT,
   `type_capteur` varchar(45) NOT NULL,
   `nom` varchar(45) NOT NULL,
-  `Actionneur` varchar(45) NOT NULL,
+  `actionneur` varchar(45) NOT NULL,
   `prix` decimal(10,0) NOT NULL,
   `unite` int(10) NOT NULL,
   `temps` varchar(255) NOT NULL,
@@ -169,9 +169,9 @@ CREATE TABLE IF NOT EXISTS `panne` (
 DROP TABLE IF EXISTS `piece`;
 CREATE TABLE IF NOT EXISTS `piece` (
   `id_piece` int(11) NOT NULL AUTO_INCREMENT,
-  `Superficie` int(11) NOT NULL,
-  `Nom` varchar(255) NOT NULL,
-  `Type de piece` varchar(255) NOT NULL,
+  `superficie` int(11) NOT NULL,
+  `nom` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL,
   `logement_utilisateur_id utilisateur` int(11) NOT NULL,
   PRIMARY KEY (`id_piece`,`logement_utilisateur_id utilisateur`),
   KEY `ID pièce` (`id_piece`),

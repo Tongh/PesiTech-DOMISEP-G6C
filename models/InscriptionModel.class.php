@@ -26,10 +26,18 @@ class InscriptionModel extends UtilisateurModel {
 							return "Insert into utlisateur échec!";
 						} else {
 							$id_User = mysqli_insert_id($this -> _dbHandle);
-							$sql = "UPDATE $tblname SET utilise = 1 WHERE code = '$codeV'";
+							$sql = "UPDATE $tblname SET utilise = 1 , id_client = $id_User WHERE code = '$codeV'";
 							if ($this -> query($sql)) {
 								return "Update tableau codeV échec!";
-							} return 0;
+							} 
+							if ($typeU == "admin") {
+								$_SESSION["AdminMode"] = "ON";
+							} else {
+								$_SESSION["AdminMode"] = "OFF";
+							}
+							$_SESSION["User"] = $login;
+							$_SESSION["LoginMode"] = "ON";
+							return 0;
 						}
 					}
 				} return "Obtenir Utilise ou pas échec!";
