@@ -14,4 +14,11 @@ class LogementController extends Controller {
     $this -> set('content', 'Bienvenue sur votre espace client!');
     $this -> render();
 	}
+
+	function add() {
+		$this -> set('title', 'Ajouter un Logement');
+    $this -> set('content', 'Bienvenue sur votre espace client!');
+    $this -> render();
+	}
+
 }

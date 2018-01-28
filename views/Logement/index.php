@@ -1,7 +1,10 @@
 <div id='DIYbody'>
 	<h1><?php echo $title ?><h1>
 
-	<p><?php if (isset($Err)) echo $Err; if (isset($result)) print_r($result) ?></p>
+	<p class="alert">
+		<?php if (isset($Err)) echo $Err; if (isset($result)) print_r($result) ?>
+		<input type="button" value="Ajouter" onclick="javascript:window.location.href='index.php?controller=Logement&action=add'">
+	</p>
 	<div class="table">
 	<table class="dataintable">
 		<thead>
