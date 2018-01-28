@@ -16,3 +16,4 @@
 2018-01-28 16:39:35 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'rue du Blomet, 3)' at line 1
 2018-01-28 17:30:59 Duplicate entry '3' for key 'PRIMARY'
 2018-01-28 17:31:20 Duplicate entry '3' for key 'PRIMARY'
+2018-01-28 17:34:00 Duplicate entry '3' for key 'PRIMARY'

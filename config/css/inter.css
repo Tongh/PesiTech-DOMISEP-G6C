@@ -28,6 +28,9 @@ tbody {
     border: 1px solid #aaa;
 }
 
+.dataintable tr:nth-child(2n) {
+    background-color: #fff;
+}
 .dataintable tr:nth-child(2n+1) {
     background-color: #F5F5F5;
 }

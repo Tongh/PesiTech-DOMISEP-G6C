@@ -188,8 +188,8 @@ CREATE TABLE IF NOT EXISTS `logement` (
   `id_logement` int(11) NOT NULL AUTO_INCREMENT,
   `address` varchar(255) NOT NULL,
   `utilisateur_id utilisateur` int(11) NOT NULL,
-  PRIMARY KEY (`utilisateur_id utilisateur`),
-  KEY `id_logement` (`id_logement`)
+  PRIMARY KEY (`id_logement`),
+  KEY `utilisateur_id utilisateur` (`utilisateur_id utilisateur`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
