@@ -58,8 +58,8 @@ CREATE TABLE IF NOT EXISTS `cemac` (
 -- Structure de la table `codeadmin`
 --
 
-DROP TABLE IF EXISTS `codeadmin`;
-CREATE TABLE IF NOT EXISTS `codeadmin` (
+DROP TABLE IF EXISTS `codeAdmin`;
+CREATE TABLE IF NOT EXISTS `codeAdmin` (
   `id_Code` int(11) NOT NULL AUTO_INCREMENT,
   `code` varchar(8) NOT NULL,
   `utilise` tinyint(1) NOT NULL DEFAULT '0',
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `codeadmin` (
 -- Déchargement des données de la table `codeadmin`
 --
 
-INSERT INTO `codeadmin` (`id_Code`, `code`, `utilise`, `id_client`) VALUES
+INSERT INTO `codeAdmin` (`id_Code`, `code`, `utilise`, `id_client`) VALUES
 (1, 'XIZ8TSHG', 0, NULL),
 (2, 'OSIGUE8Z', 0, NULL);
 
@@ -82,8 +82,8 @@ INSERT INTO `codeadmin` (`id_Code`, `code`, `utilise`, `id_client`) VALUES
 -- Structure de la table `codeclient`
 --
 
-DROP TABLE IF EXISTS `codeclient`;
-CREATE TABLE IF NOT EXISTS `codeclient` (
+DROP TABLE IF EXISTS `codeClient`;
+CREATE TABLE IF NOT EXISTS `codeClient` (
   `id_Code` int(11) NOT NULL AUTO_INCREMENT,
   `code` varchar(8) NOT NULL,
   `id_client` int(11) DEFAULT NULL,
@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `codeclient` (
 -- Déchargement des données de la table `codeclient`
 --
 
-INSERT INTO `codeclient` (`id_Code`, `code`, `id_client`, `utilise`) VALUES
+INSERT INTO `codeClient` (`id_Code`, `code`, `id_client`, `utilise`) VALUES
 (1, 'J8LGXP9S', NULL, 0),
 (2, '7GZSWSSQ', NULL, 0),
 (3, 'SJFSQ8JD', NULL, 0),
@@ -112,8 +112,8 @@ INSERT INTO `codeclient` (`id_Code`, `code`, `id_client`, `utilise`) VALUES
 -- Structure de la table `commande produit`
 --
 
-DROP TABLE IF EXISTS `commande produit`;
-CREATE TABLE IF NOT EXISTS `commande produit` (
+DROP TABLE IF EXISTS `commande_produit`;
+CREATE TABLE IF NOT EXISTS `commande_produit` (
   `ID commande produit` int(11) NOT NULL AUTO_INCREMENT,
   `ID capteur` int(11) NOT NULL,
   `Quantité` int(11) NOT NULL,
@@ -275,14 +275,14 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 --
 -- Contraintes pour la table `codeadmin`
 --
-ALTER TABLE `codeadmin`
-  ADD CONSTRAINT `codeadmin_ibfk_1` FOREIGN KEY (`id_client`) REFERENCES `utilisateur` (`id_utilisateur`) ON DELETE SET NULL ON UPDATE CASCADE;
+ALTER TABLE `codeAdmin`
+  ADD CONSTRAINT `codeAdmin_ibfk_1` FOREIGN KEY (`id_client`) REFERENCES `utilisateur` (`id_utilisateur`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `codeclient`
 --
-ALTER TABLE `codeclient`
-  ADD CONSTRAINT `codeclient_ibfk_1` FOREIGN KEY (`id_client`) REFERENCES `utilisateur` (`id_utilisateur`) ON DELETE SET NULL ON UPDATE CASCADE;
+ALTER TABLE `codeClient`
+  ADD CONSTRAINT `codeClient_ibfk_1` FOREIGN KEY (`id_client`) REFERENCES `utilisateur` (`id_utilisateur`) ON DELETE SET NULL ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

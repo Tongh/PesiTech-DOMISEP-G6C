@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class InscriptionModel extends UtilisateurModel {
 
@@ -12,7 +12,7 @@ class InscriptionModel extends UtilisateurModel {
 			} else {
 				$tblname = "codeClient";
 			}
-			$sql = "SELECT code FROM $tblname WHERE code = '$codeV'";
+			$sql = "SELECT * FROM $tblname WHERE code = '$codeV'";
 			if (!$result = $this -> query($sql)) {
 				return "Votre Code est incorrect, merci de le vérifier!";
 			} else {

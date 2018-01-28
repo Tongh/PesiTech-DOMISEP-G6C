@@ -6,3 +6,5 @@
 2018-01-28 16:07:00 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 6)' at line 1
 2018-01-28 16:15:04 Table 'Mydb.codeClient' doesn't exist
 2018-01-28 16:15:24 Table 'Mydb.codeClient' doesn't exist
+2018-01-28 16:19:21 Table 'Mydb.codeClient' doesn't exist
+2018-01-28 16:20:38 Table 'Mydb.codeClient' doesn't exist
