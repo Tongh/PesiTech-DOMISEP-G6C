@@ -1,3 +1,14 @@
+tr {
+  background-color: #F5F5F5;
+}
+
+.dataintable {
+  margin-top: 15px;
+  border-collapse: collapse;
+  border: 1px solid #aaa;
+  width: 100%;
+}
+
 #attend {
   vertical-align: middle;
   text-align: center;
@@ -10,10 +21,10 @@
 .error {
     color: #FF0000;
   }
-  .NP {
+.NP {
     color: #00FF66;
   }
-  section {
+section {
     width: 50%;
     border: 1px solid black;
     margin-top: 10px;
@@ -187,7 +198,7 @@ textarea
 
 i
 {
-  
+
   margin-right: 10px;
   text-align: justify;
 }
@@ -203,7 +214,7 @@ i
 {
   display:flex;
   justify-content: space-around;
-  
+
 }
 
 #europe
