@@ -30,7 +30,7 @@ class Database {
 				$tempResults = array();
 				$numOfFields = mysqli_field_count($this -> _dbHandle);
 				for ($i = 0; $i < $numOfFields; ++$i) {
-					$finfo = mysqli_fetch_direct($this -> _result, $i);
+					$finfo = mysqli_fetch_field_direct($this -> _result, $i);
 					array_push($table, $finfo -> table);
 					array_push($field, $finfo -> name);
 				}

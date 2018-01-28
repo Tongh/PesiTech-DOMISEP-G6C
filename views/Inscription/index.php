@@ -12,7 +12,7 @@
 
 
 <?php
-require("db_config.php");
+/*require("db_config.php");
 
 function test_input($data) {
 	$data = trim($data);
@@ -130,7 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			echo mysqli_error($conn);
 		}
 	}
-}
+}*/
 ?>
 
 
@@ -140,7 +140,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	<section>
 		<fieldset>
 			<legend> <strong>  Pour vous inscrire, renseignez les informations suivantes:  </strong> </legend>
-			<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" onsubmit="return validerForm()">
+			<form method="post" action="<?php echo "index.php?controller=Inscription&action=attend"  ?>" onsubmit="return validerForm()">
 				Nom   : <input type="text" id="nom" placeholder=" Potter" name="nom" onchange="checkNom()">
 				<span id="NomErr" class="error"></span><span id="NomNP" class="NP"></span>
 				<br><br>
@@ -149,7 +149,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<br><br>
 				Pseudo : <input type="text" id="pseudo" placeholder=" magicJack" name="login" onchange="checkPseudo()">
 				<span id="PseudoErr" class="error"></span><span id="PseudoNP" class="NP"></span>
-				<span class="error"><?php echo $loginErr;?></span>
 				<br><br>
 				Mot de passe : <input type="password" id="mdp" name="mdp" onchange="checkmdp()">
 				<span id="mdpErr" class="error"></span><span id="mdpNP" class="NP"></span>
@@ -168,9 +167,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<input type="radio" id ="typeAdmin" name="typeU" value="admin"  onclick="checkTypeU(); showHideDomInfo();"> Administrateur
 				<input type="text" id="codeV" placeholder="XXXXXXXX" name="codeV" onchange="checkCodeV()">
 				<span><a tabindex="0" class="btn btn-xs btn-info" role="button" data-toggle="popover" data-trigger="focus" data-content="le code qui vous a été envoyé par mail lors de votre souscription à nos service. si vous ne le retouvez pas, contacter l'assistance."><i class="fa fa-question" id="faid"></i></a></span>
-				<span id="codeVErr" class="error"></span><span id="codeVNP" class="NP"></span>
-				<span class="error"><?php echo $codeVErr;?></span>
+				<span id="codeVErr" class="error"></span><span id="codeVNP" class="NP"></span>			
 				<br><br><br>
+				<span class="error"><?php if (isset($_GET['Err'])) echo $_GET['Err'];?></span><br><br><br>
 				<input type="submit" name="submit" value="Envoyer">
 			</fieldset>
 					<!--<fieldset id="DomInfo">
@@ -208,3 +207,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	<script type="text/javascript">
 		$(function () { $("[data-toggle='popover']").popover(); });
 	</script>
+</div>

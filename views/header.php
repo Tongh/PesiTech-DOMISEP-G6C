@@ -11,8 +11,9 @@
 	<link rel="stylesheet" type="text/css" href="config/bootstrap-3.3.7-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="config/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
 	<script type="text/javascript" src="config/js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="config/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="config/js/swiper.min.js"></script>
+	<script type="text/javascript" src="config/js/checkNewCompte.js"></script>
+	<script type="text/javascript" src="config/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<header class="DIYheader">
