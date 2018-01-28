@@ -238,11 +238,12 @@ CREATE TABLE IF NOT EXISTS `piece` (
   `superficie` int(11) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `type` varchar(255) NOT NULL,
-  `logement_utilisateur_id utilisateur` int(11) NOT NULL,
+  `id_logement` int(11) NOT NULL,
+  `id_client` int(11) NOT NULL,
   `label_piece` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id_piece`,`logement_utilisateur_id utilisateur`),
+  PRIMARY KEY (`id_piece`),
   KEY `ID pièce` (`id_piece`),
-  KEY `fk_pièce_logement1_idx` (`logement_utilisateur_id utilisateur`)
+  KEY `fk_pièce_logement1_idx` (`id_client`)
 ) ENGINE=MyISAM AUTO_INCREMENT=593 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

@@ -21,6 +21,7 @@
 				<th>Superficie</th>
 				<th>Nom</th>
 				<th>Type de pièce</th>
+        <th>ID Logement</th>
 				<th>ID Client</th>
 				<th>Label Pièce</th>
 			</tr>
@@ -33,28 +34,33 @@
 				</td>
 				<td>
 					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">Pièces
-						<?php echo " ( ID Logement : ".$result[$i]['piece']['superficie']." ) "; ?>
+						<?php echo " ( Superficie : ".$result[$i]['piece']['superficie']." ) "; ?>
 					</button>
 				</td>
 			  <td>
 				<td>
 					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">Pièces
-						<?php echo " ( ID Logement : ".$result[$i]['piece']['id_piece']." ) "; ?>
+						<?php echo " ( Nom : ".$result[$i]['piece']['nom']." ) "; ?>
 					</button>
 				</td>
 				<td>
 					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">Pièces
-						<?php echo " ( ID Logement : ".$result[$i]['piece']['id_piece']." ) "; ?>
+						<?php echo " ( Type de Pièce : ".$result[$i]['piece']['type']." ) "; ?>
 					</button>
 				</td>
-  				<td>
+        <td>
+					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">Pièces
+						<?php echo " ( Label Pièce : ".$result[$i]['piece']['id_logement']." ) "; ?>
+					</button>
+				</td>
+  			<td>
   					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">Pièces
-  						<?php echo " ( ID Logement : ".$result[$i]['piece']['id_piece']." ) "; ?>
+  						<?php echo " ( ID Client : ".$result[$i]['piece']['logement_utilisateur_id utilisateur']." ) "; ?>
   					</button>
 				</td>
 				<td>
 					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">Pièces
-						<?php echo " ( ID Logement : ".$result[$i]['piece']['id_piece']." ) "; ?>
+						<?php echo " ( Label Pièce : ".$result[$i]['piece']['label_piece']." ) "; ?>
 					</button>
 				</td>
 			</tr>

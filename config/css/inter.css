@@ -1,3 +1,5 @@
+
+
 .formText {
   text-align: center;
 }
@@ -50,6 +52,7 @@ tr {
   border-collapse: collapse;
   border: 1px solid #aaa;
   width: 100%;
+  max-width: 1526px;
 }
 
 #attend {

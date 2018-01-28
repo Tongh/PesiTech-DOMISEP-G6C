@@ -37,7 +37,7 @@ class Fast {
 
 		if (!class_exists($controller)) {
 			exit($controller . " n'existe pas");
-		} 
+		}
 		if (!method_exists($controller, $action)) {
 			exit($controller . "/" . $action . " n'existe pas");
 		}

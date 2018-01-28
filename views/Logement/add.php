@@ -2,7 +2,7 @@
 
   <section>
 		<fieldset>
-			<legend> <strong>  Pour vous inscrire, renseignez les informations suivantes:  </strong> </legend>
+			<legend> <strong>  <?php echo $title ?>  </strong> </legend>
       <div class="mainFont">
         <form method="post" action="<?php echo "index.php?controller=Logement&action=addForm"  ?>" onsubmit="return validerLogement()">
           <div class="formLabel"><div class="formText">Address : <input type="text" placeholder="2 rue du Blomet" name="address"></div></div><br><br>

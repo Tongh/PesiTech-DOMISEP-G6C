@@ -9,10 +9,9 @@
 		</br>
 		</br>  Si vous ne trouvez toujours pas l'email, demandez-nous de vous le renvoyer.";
 		?>
-		<br/>
-	</br>
+		<br/></br>
 	<div id="boutonretour_milieu">
-			<input type="button" value="Retournez vers mon espace client" onclick="javascript:window.location.href='index.php?controller=EspaceClient'">
+		<a href="index.php?controller=EspaceClient" class="btn btn-primary btn-lg" role="button">Retournez vers mon espace client</a>
 	</div>
 </fieldset>
 </div>

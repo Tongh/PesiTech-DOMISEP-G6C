@@ -24,12 +24,12 @@
 			<?php if (isset($result) && !empty($result)) {for ($i=0; $i < count($result) ; $i++) { ?>
 			<tr>
 				<td>
-					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">Pièces
+					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece&id_logement=<?php echo $result[$i]['logement']['id_logement'] ?>'">Pièces
 						<?php echo " ( ID Logement : ".$result[$i]['logement']['id_logement']." ) "; ?>
 					</button>
 				</td>
 				<td>
-					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">
+					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Logement'">
 						<?php echo "".$result[$i]['logement']['address'].""; ?>
 					</button>
 				</td>
