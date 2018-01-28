@@ -10,7 +10,7 @@
 	</div>
 	<div class="">
 		<p class="">
-			<a href="index.php?controller=Logement&action=add" class="btn btn-primary btn-lg" role="button">Ajouter</a>
+			<a href="index.php?controller=Logement&action=add" class="btn btn-primary btn-lg" role="button">Ajouter un logement</a>
 		</p>
 	</div>
 	<div class="table">
@@ -25,7 +25,7 @@
 			<tr>
 				<td>
 					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">Pièces
-						<?php echo " ( ID : ".$result[$i]['logement']['id_logement']." ) "; ?>
+						<?php echo " ( ID Logement : ".$result[$i]['logement']['id_logement']." ) "; ?>
 					</button>
 				</td>
 				<td>
@@ -35,7 +35,7 @@
 				</td>
 				<td>
 					<button type="button" class="btn btn-info btn-block" disabled="disabled" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">
-						<?php echo " ( ID : ".$result[$i]['logement']['utilisateur_id utilisateur']." ) "; ?>
+						<?php echo " ( ID Client : ".$result[$i]['logement']['utilisateur_id utilisateur']." ) "; ?>
 					</button>
 				</td>
 			</tr>
