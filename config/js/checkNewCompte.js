@@ -1,4 +1,4 @@
-function validerForm() {
+function validerNewCompte() {
 	var check = checkNom() && checkPrenom() && checkPseudo() && checkmdp() && checkmdpC() && checkMail() && checkTele() && checkCodeV() && checkTypeU() ; //&& checkVille() && checkAdresse() && checkCptadresse() && checkCodepostal()
 	return check;
 }

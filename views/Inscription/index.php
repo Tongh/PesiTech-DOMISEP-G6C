@@ -140,7 +140,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	<section>
 		<fieldset>
 			<legend> <strong>  Pour vous inscrire, renseignez les informations suivantes:  </strong> </legend>
-			<form method="post" action="<?php echo "index.php?controller=Inscription&action=attend"  ?>" onsubmit="return validerForm()">
+			<form method="post" action="<?php echo "index.php?controller=Inscription&action=attend"  ?>" onsubmit="return validerNewCompte()">
 				Nom   : <input type="text" id="nom" placeholder=" Potter" name="nom" onchange="checkNom()">
 				<span id="NomErr" class="error"></span><span id="NomNP" class="NP"></span>
 				<br><br>
@@ -167,7 +167,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<input type="radio" id ="typeAdmin" name="typeU" value="admin"  onclick="checkTypeU(); showHideDomInfo();"> Administrateur
 				<input type="text" id="codeV" placeholder="XXXXXXXX" name="codeV" onchange="checkCodeV()">
 				<span><a tabindex="0" class="btn btn-xs btn-info" role="button" data-toggle="popover" data-trigger="focus" data-content="le code qui vous a été envoyé par mail lors de votre souscription à nos service. si vous ne le retouvez pas, contacter l'assistance."><i class="fa fa-question" id="faid"></i></a></span>
-				<span id="codeVErr" class="error"></span><span id="codeVNP" class="NP"></span>			
+				<span id="codeVErr" class="error"></span><span id="codeVNP" class="NP"></span>
 				<br><br><br>
 				<span class="error"><?php if (isset($_GET['Err'])) echo $_GET['Err'];?></span><br><br><br>
 				<input type="submit" name="submit" value="Envoyer">
@@ -190,7 +190,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					Code Postal : <input type="text" id="codepostal" placeholder=" 75004" name="codepostal" size="5" onchange="checkCodepostal()"/>
 					<span id="codepostalErr" class="error"></span><span id="codepostalNP" class="NP"></span>
 					<br><br>
-					
+
 					<br><br>
 					<input type="submit" name="submit" value="Envoyer">
 				</form>
