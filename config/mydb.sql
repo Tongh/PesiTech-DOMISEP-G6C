@@ -39,10 +39,13 @@ CREATE TABLE IF NOT EXISTS `capteurs` (
   `temps` varchar(255) NOT NULL,
   `valeur` int(11) NOT NULL,
   `statut` varchar(255) NOT NULL,
-  `id_chambre` int(11) NOT NULL,
+  `piece_ID piece` int(11) NOT NULL,
+  `piece_logement_utilisateur_id utilisateur` int(11) NOT NULL,
   PRIMARY KEY (`id_capteur`),
-  FOREIGN KEY (`id_chambre`) REFERENCES piece (`id_piece`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  UNIQUE KEY `id_capteur` (`id_capteur`),
+  KEY `ID capteur` (`id_capteur`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
 -- --------------------------------------------------------
 
 --
@@ -115,13 +118,13 @@ CREATE TABLE IF NOT EXISTS `faq` (
 
 DROP TABLE IF EXISTS `logement`;
 CREATE TABLE IF NOT EXISTS `logement` (
-  `id_logement` int(11) NOT NULL AUTO_INCREMENT,
-  `adresse` varchar(255) NOT NULL,
+  `ID logement` int(11) NOT NULL AUTO_INCREMENT,
+  `Adresse` varchar(255) NOT NULL,
   `dans_immeuble` tinyint(4) DEFAULT '0',
-  `id_client` int(11) NOT NULL,
-  PRIMARY KEY (`id_logement`),
-  FOREIGN KEY (`id_client`) REFERENCES utilisateur (`id_utilisateur`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `utilisateur_id utilisateur` int(11) NOT NULL,
+  PRIMARY KEY (`utilisateur_id utilisateur`),
+  KEY `ID logement` (`ID logement`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -166,13 +169,14 @@ CREATE TABLE IF NOT EXISTS `panne` (
 DROP TABLE IF EXISTS `piece`;
 CREATE TABLE IF NOT EXISTS `piece` (
   `id_piece` int(11) NOT NULL AUTO_INCREMENT,
-  `superficie` int(11) NOT NULL,
-  `nom` varchar(255) NOT NULL,
-  `type` varchar(255) NOT NULL,
-  `id_immeuble` int(11) NOT NULL,
-  PRIMARY KEY (`id_piece`),
-  FOREIGN KEY (`id_immeuble`) REFERENCES logement (`id_logement`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `Superficie` int(11) NOT NULL,
+  `Nom` varchar(255) NOT NULL,
+  `Type de piece` varchar(255) NOT NULL,
+  `logement_utilisateur_id utilisateur` int(11) NOT NULL,
+  PRIMARY KEY (`id_piece`,`logement_utilisateur_id utilisateur`),
+  KEY `ID pièce` (`id_piece`),
+  KEY `fk_pièce_logement1_idx` (`logement_utilisateur_id utilisateur`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 

@@ -30,7 +30,7 @@
 					<?php if (isset($_SESSION["LoginMode"]) && $_SESSION["LoginMode"] == "OFF") {
 						echo "<a href=\"index.php?controller=QuiSommesNous\"> Qui sommes-nous ? </a>";
 					} else {
-						echo "<a href=\"index.php?controller=Piece\">Pièces</a>";
+						echo "<a href=\"index.php?controller=Logement\">Mon installation</a>";
 					} ?>	
 				</li>
 
