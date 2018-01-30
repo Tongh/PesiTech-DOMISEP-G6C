@@ -6,7 +6,7 @@ class LogementModel extends Model {
 		$sql = 'SELECT * FROM `logement` WHERE 	`utilisateur_id utilisateur` = \'' . $_SESSION["UserID"] . '\'';
 		if ($result = $this -> query($sql)) {
 			return $result;
-		} return "Vous n'avez pas encore inscrire votre Logement tant que vos pièces et vos capteurs, vous pouvez maintenant en inscrire une !";
+		} return "Vous n'avez pas encore enregistré votre logement ainsi que vos pièces et vos capteurs, vous pouvez dès maintenant en enregistrer un !";
 	}
 
 	function add($address) {

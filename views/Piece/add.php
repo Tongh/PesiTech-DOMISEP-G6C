@@ -11,7 +11,7 @@
           <div class="formLabel"><div class="formText">Label Pièce : <input type="text" placeholder="" name="label_piece"></div></div><br><br>
           <!--<div class="formLabel"><div class="formText">Dans Immeuble : <input type="text" placeholder="XXXXXXXX" name="dans_immeuble"></div></div><br><br><br>-->
           <span class="error"><?php if (isset($_GET['Err'])) echo $_GET['Err'];?></span><br><br><br>
-  				<button type="submit" class="btn btn-primary" id="submitButton">Ajouter cette pièce sur mon compte !</button>
+  				<button type="submit" class="btn btn-primary" id="submitButton">Ajouter cette pièce dans mon logement !</button>
         </form>
       </div>
     </fieldset>

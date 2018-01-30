@@ -6,14 +6,14 @@ class PieceModel extends Model {
 		$sql = 'SELECT * FROM `piece` WHERE 	`id_client` = \'' . $_SESSION["UserID"] . '\'';
 		if ($result = $this -> query($sql)) {
 			return $result;
-		} return "Vous n'avez pas encore inscrire vos pièces sur votre compte, vous pouvez maintenant en inscrire une !";
+		} return "Vous n'avez pas encore enregistré de pièces sur votre compte, vous pouvez dès maintenant en enregistrer !";
 	}
 
   function viewLogement() {
 		$sql = 'SELECT * FROM `piece` WHERE 	`id_logement` = \'' . $_SESSION["id_logement"] . '\'';
 		if ($result = $this -> query($sql)) {
 			return $result;
-		} return "Vous n'avez pas encore inscrire vos pièces sur ce logement, vous pouvez maintenant en inscrire une !";
+		} return "Vous n'avez pas encore enregistré de pièces sur ce logement, vous pouvez dès maintenant en enregistrer !";
 	}
 
 

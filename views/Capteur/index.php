@@ -11,7 +11,7 @@
 
   <div class="">
 		<p class="">
-			<a href="index.php?controller=Capteur&action=add" class="btn btn-primary btn-lg" role="button">Ajouter un Capteur</a>
+			<a href="index.php?controller=Capteur&action=add" class="btn btn-primary btn-lg" role="button">Ajouter un capteur</a>
 		</p>
 	</div>
 
@@ -20,7 +20,7 @@
 		<tbody>
 			<tr>
 				<th>ID Capteur</th>
-				<th>Type de Capteur</th>
+				<th>Type de capteur</th>
 				<th>Nom</th>
 				<th>ID Pièce</th>
         <th>ID Client</th>

@@ -6,14 +6,14 @@ class CapteurModel extends Model {
 		$sql = 'SELECT * FROM `capteur` WHERE 	`id_client` = \'' . $_SESSION["UserID"] . '\'';
 		if ($result = $this -> query($sql)) {
 			return $result;
-		} return "Vous n'avez pas encore inscrire vos capteurs sur votre compte, vous pouvez maintenant en inscrire une !";
+		} return "Vous n'avez pas encore enregistré vos capteurs sur ce compte, vous pouvez maintenant en enregistrer un !";
 	}
 
   function viewPiece() {
 		$sql = 'SELECT * FROM `capteur` WHERE 	`piece_ID` = \'' . $_SESSION["id_piece"] . '\'';
 		if ($result = $this -> query($sql)) {
 			return $result;
-		} return "Vous n'avez pas encore inscrire vos capteurs sur cette pièce, vous pouvez maintenant en inscrire une !";
+		} return "Vous n'avez pas encore enregistré vos capteurs dans cete pièce, vous pouvez maintenant en enregistrer une !";
 	}
 
 

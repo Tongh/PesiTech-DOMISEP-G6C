@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class ConnexionController extends Controller {
 	function index() {
@@ -15,8 +15,8 @@ class ConnexionController extends Controller {
 			$to = 'Location: index.php?controller=Connexion&Err='.$Err;
 			header($to);
 		} else{
-			$this -> set('title', 'En train de connexion');
-			$this -> set('content', 'En train de connexion');
+			$this -> set('title', 'Connexion en cours');
+			$this -> set('content', 'Connexion en cours');
 			$this -> render();
 		}
 	}
@@ -24,8 +24,8 @@ class ConnexionController extends Controller {
 	function disconnexion() {
 		$_SESSION["User"] = "";
 		$_SESSION["LoginMode"] = "OFF";
-		$this -> set('title', 'En train de déconnecter');
-		$this -> set('content', 'En train de déconneter');
+		$this -> set('title', 'Déconnexion en cours');
+		$this -> set('content', 'Déconnexion en cours');
 		$this -> render();
 	}
 

@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 class InscriptionController extends Controller {
 	function index() {
-		$this -> set('title', 'Page de l\'Inscription');
+		$this -> set('title', 'Page d\'inscription');
         $this -> set('content', 'Insérez votre information!');
         $this -> render();
 	}
@@ -27,15 +27,15 @@ class InscriptionController extends Controller {
 			$to = 'Location: index.php?controller=Inscription&Err='.$Err;
 			header($to);
 		} else {
-			$this -> set('title', 'En train de connexion');
-			$this -> set('content', 'En train de inscription!');
+			$this -> set('title', 'Connexion en cours');
+			$this -> set('content', 'Inscription en cours!');
 			$this -> render();
-		} 
+		}
 	}
 
 	function fin() {
-		$this -> set('title', 'Inscription Réussite');
-        $this -> set('content', 'Ici les informations important!');
+		$this -> set('title', 'Inscription réussie');
+        $this -> set('content', 'INoter ces informations importantes!');
         $this -> render();
 	}
 

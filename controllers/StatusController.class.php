@@ -1,8 +1,8 @@
 <?php
 class StatusController extends Controller {
   function index() {
-    $this -> set('title', 'Le status de Votre périphérique');
-    $this -> set('content', 'Bienvenue sur votre EspaceClient!');
+    $this -> set('title', 'Statut de votre périphérique');
+    $this -> set('content', 'Bienvenue sur votre Espace Client!');
     $this -> render();
   }
 
@@ -12,8 +12,8 @@ class StatusController extends Controller {
     $this -> set('nom_piece', $capteurModel -> getPieceName($_SESSION["id_capteur"]));
     $this -> set('nom_capteur', $capteurModel -> getCapteurName($_SESSION["id_capteur"]));
     $this -> set('type_capteur', $capteurModel -> getCapteurType($_SESSION["id_capteur"]));
-    $this -> set('title', 'Le status de Votre Capteur');
-    $this -> set('content', 'Bienvenue sur votre EspaceClient!');
+    $this -> set('title', 'Statut de votre capteur');
+    $this -> set('content', 'Bienvenue sur votre Espace Client!');
     $this -> render();
   }
 

@@ -21,7 +21,7 @@ class CapteurController extends Controller {
         }
       }
     }
-		$this -> set('title', 'Gesion des Capteurs');
+		$this -> set('title', 'Gestion des Capteurs');
     $this -> set('content', 'Bienvenue sur votre espace client!');
     $this -> render();
 	}
@@ -41,7 +41,7 @@ class CapteurController extends Controller {
       $to = 'Location: index.php?controller=Capteur&action=add&Err='.$result;
       header($to);
     } else {
-      $this -> set('Err', "Ajouter avec succès!");
+      $this -> set('Err', "Ajouté avec succès!");
       $to = 'Location: index.php?controller=Capteur&action=index';
       header($to);
     }

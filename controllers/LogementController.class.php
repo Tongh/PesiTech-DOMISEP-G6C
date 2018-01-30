@@ -10,7 +10,7 @@ class LogementController extends Controller {
 					$this -> set('result', $result);
 			}
 		}
-		$this -> set('title', 'Gesion de Logement');
+		$this -> set('title', 'Gestion de Logement');
     $this -> set('content', 'Bienvenue sur votre espace client!');
     $this -> render();
 	}
@@ -22,7 +22,7 @@ class LogementController extends Controller {
 			$to = 'Location: index.php?controller=Logement&action=add&Err='.$result;
 			header($to);
 		} else {
-			$this -> set('Err', "Ajouter avec succès!");
+			$this -> set('Err', "Ajouté avec succès!");
 			$to = 'Location: index.php?controller=Logement&action=index';
 			header($to);
 		}

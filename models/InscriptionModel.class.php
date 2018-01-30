@@ -14,12 +14,12 @@ class InscriptionModel extends UtilisateurModel {
 			}
 			$sql = "SELECT * FROM $tblname WHERE code = '$codeV'";
 			if (!$result = $this -> query($sql)) {
-				return "Votre Code est incorrect, merci de le vérifier!";
+				return "Votre code est incorrect, merci de le vérifier!";
 			} else {
 				$sql = "SELECT utilise FROM $tblname WHERE code = '$codeV'";
 				if ($result = $this -> query($sql)) {
 					if ($result[0][$tblname]['utilise'] == 1) {
-						return "Votre Code est déjà utilisé!";
+						return "Votre code est déjà utilisé!";
 					} else {
 						$sql = "INSERT INTO `utilisateur` (`nom`, `prenom`, `login`, `password`, `email`, `telephone`, `typeUtilisateur`) VALUES ('$nom', '$prenom', '$login', '$mdpBC', '$email', '$tele', '$typeU')";
 						if ($this -> query($sql)) {

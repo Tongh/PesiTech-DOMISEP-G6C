@@ -18,7 +18,7 @@
 		<tbody>
 			<tr>
 				<th>ID Logement</th>
-				<th>Addresse</th>
+				<th>Adresse</th>
 				<th>ID Client</th>
 			</tr>
 			<?php if (isset($result) && !empty($result)) {for ($i=0; $i < count($result) ; $i++) { ?>

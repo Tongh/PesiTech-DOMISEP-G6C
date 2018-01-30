@@ -21,7 +21,7 @@ class PieceController extends Controller {
 				}
 			}
 		}
-		$this -> set('title', 'Gesion de Pièce');
+		$this -> set('title', 'Gestion de pièce');
     $this -> set('content', 'Bienvenue sur votre espace client!');
     $this -> render();
 	}
@@ -37,7 +37,7 @@ class PieceController extends Controller {
 			$to = 'Location: index.php?controller=Piece&action=add&Err='.$result;
 			header($to);
 		} else {
-			$this -> set('Err', "Ajouter avec succès!");
+			$this -> set('Err', "Ajouté avec succès!");
 			$to = 'Location: index.php?controller=Piece&action=index';
 			header($to);
 		}
