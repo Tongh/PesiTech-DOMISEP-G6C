@@ -10,26 +10,8 @@
   </div>
 
   <figure id="form_assist">
-    <form method="post" action="assistance.php">
+    <form method="post" action="<?php echo "index.php?controller=NousContacter&action=panneEnvoyer"?>" onclick="return checkMail();">
       <label> <span class="txtq"> <strong> Par mail en remplissant le formulaire ci-dessous : </strong></span> </label>
-
-
-      <fieldset>
-        <legend>Vos coordonnées</legend>
-        <!-- Titre du fieldset -->
-
-        <label for="nom"><span class="txtq">Quel est votre nom ?</span></label>
-        <input type="text" name="nom" id="nom" />
-        <br/>
-
-        <label for="prenom"> <span class="txtq">Quel est votre prénom ? </span></label>
-        <input type="text" name="prenom" id="prenom" />
-        <br/>
-        <label for="email"><span class="txtq">Quel est votre email ?</span></label>
-        <input type="text" name="email" id="email" />
-
-
-      </fieldset>
 
       <fieldset>
         <legend>Votre demande</legend>
@@ -52,7 +34,8 @@
           <label for="ameliorer"> <span class="txtq"> Détaillez ici votre problème en quelques lignes </span></label><br />
           <textarea name="ameliorer2" id="ameliorer"></textarea>
         </p>
-        <input type="submit" value="Envoyer">
+        <span class="error"><?php if (isset($_GET['Err'])) echo $_GET['Err'];?></span><br><br><br>
+        <button type="submit" class="btn btn-primary" id="submitButton">Envoyer</button>
       </fieldset>
 
 

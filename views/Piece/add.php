@@ -4,7 +4,7 @@
 		<fieldset>
 			<legend> <strong>  <?php echo $title ?>  </strong> </legend>
       <div class="mainFont">
-        <form method="post" action="<?php echo "index.php?controller=Piece&action=addForm"  ?>" onsubmit="return validerPiece()">
+        <form method="post" action="<?php echo "index.php?controller=Piece&action=addForm"?>" onsubmit="return validerPiece()">
           <div class="formLabel"><div class="formText">Superficie : <input type="text" placeholder="17" name="superficie"></div></div><br><br>
           <div class="formLabel"><div class="formText">Nom : <input type="text" placeholder="QUOI" name="nom"></div></div><br><br>
           <div class="formLabel"><div class="formText">Type : <input type="text" placeholder="Salon" name="type"></div></div><br><br>

@@ -13,5 +13,11 @@ class NousContacterController extends Controller {
     $this -> render();
 	}
 
+	function panneEnvoyer() {
+		$this -> set('title', 'Votre Panne a déjà envoyé');
+    $this -> set('content', 'Merci de nous Contacter!');
+    $this -> render();
+	}
+
 
 }
