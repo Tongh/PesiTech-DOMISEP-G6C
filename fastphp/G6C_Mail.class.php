@@ -1,9 +1,9 @@
-<?php 
+<?php
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require_once __DIR__ . "/Error.class.php";
+require_once __DIR__ . "/G6C_Error.class.php";
 require_once __DIR__ . '/Plugins/PHPMailer/vendor/phpmailer/phpmailer/src/Exception.php';
 require_once __DIR__ . '/Plugins/PHPMailer/vendor/phpmailer/phpmailer/src/PHPMailer.php';
 require_once __DIR__ . '/Plugins/PHPMailer/vendor/phpmailer/phpmailer/src/SMTP.php';
@@ -22,6 +22,7 @@ class G6C_Mail {
 			//Server settings
 		    //$this -> _mail -> SMTPDebug = 2;                                 // Enable verbose debug output
 		    $this -> _mail -> isSMTP();                                      // Set mailer to use SMTP
+				$mail -> Charset='UTF-8';
 		    $this -> _mail -> Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 		    $this -> _mail -> SMTPAuth = true;                               // Enable SMTP authentication
 		    $this -> _mail -> Username = 'wenxiao0015@gmail.com';                 // SMTP username
@@ -49,10 +50,10 @@ class G6C_Mail {
 	function setTo($to = 'Wenxiao0015@icloud.com', $name = null) {
 		if ($name == null) {
 			$this -> _to[$to] = $to;
-			$this -> _mail -> addAddress($to); 
+			$this -> _mail -> addAddress($to);
 		} else {
 			$this -> _to[$to] = $name;
-			$this -> _mail -> addAddress($to, $name); 
+			$this -> _mail -> addAddress($to, $name);
 		}
 	}
 
@@ -63,13 +64,13 @@ class G6C_Mail {
 		} else {
 			$this -> _mail -> addAttachment($filename, $optionalName);    // Optional name
 		}
-		
+
 	}
 
 	//Content
 	function setTitle($title) {
 		$this -> _title = $title;
-		$this -> _mail -> Subject = $title;
+		$this -> _mail -> Subject = "=?utf-8?B?" . base64_encode($title) . "?=";
 	}
 
 	function setBody($body) {
@@ -87,14 +88,16 @@ class G6C_Mail {
 			$this -> _mail->send();
 			$error = new G6C_Error('Message has been sent');
 			$error -> saveLog();
+			return 1;
 		} catch (Exception $e) {
 			$error = new G6C_Error($this -> _mail -> ErrorInfo);
 			$error -> saveLog();
+			return 0;
 		}
 	}
 
 	function easyRemplir() {
-		$this -> setTo('wenxiao0015@icloud.com', 'Client'); 
+		$this -> setTo('wenxiao0015@icloud.com', 'Client');
 		$this -> setTitle('Here is the subject');
 		$this -> setBody('This is the HTML message body <b>in bold!</b>');
 		$this -> setAltBody('This is the body in plain text for non-HTML mail clients');

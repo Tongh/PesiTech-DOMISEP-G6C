@@ -219,10 +219,11 @@ CREATE TABLE IF NOT EXISTS `ordre` (
 
 DROP TABLE IF EXISTS `panne`;
 CREATE TABLE IF NOT EXISTS `panne` (
-  `ID panne` int(11) NOT NULL AUTO_INCREMENT,
-  `Date de début` date NOT NULL,
-  `Date de fin` date NOT NULL,
-  `ID capteur` int(11) NOT NULL,
+  `id_panne` int(11) NOT NULL AUTO_INCREMENT,
+  `date_de_début` date NOT NULL,
+  `date_de_fin` date NOT NULL,
+  `id_client` int(11) NOT NULL,
+  `description` int(11) NOT NULL,
   KEY `ID panne` (`ID panne`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 

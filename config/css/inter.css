@@ -1,4 +1,6 @@
-
+.myradiofont {
+  font-size: 50%;
+}
 
 .formText {
   text-align: center;
@@ -40,6 +42,8 @@ tbody {
 td {
   align: center;
   vertical-align: center;
+  overflow: auto;
+  width: 100px;
 }
 
 tr {

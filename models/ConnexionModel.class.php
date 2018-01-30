@@ -12,6 +12,8 @@ class ConnexionModel extends UtilisateurModel {
 				$_SESSION["LoginMode"] = "ON";
 				$_SESSION["EMAIL"] = $result[0]['utilisateur']['email'];
 				$_SESSION["Telephone"] = $result[0]['utilisateur']['telephone'];
+				$_SESSION["NomUser"] = $result[0]['utilisateur']['nom'];
+				$_SESSION["PrenomUser"] = $result[0]['utilisateur']['prenom'];
 				if ($typeU == "admin") {
 					$_SESSION["AdminMode"] = "ON";
 					return 0;

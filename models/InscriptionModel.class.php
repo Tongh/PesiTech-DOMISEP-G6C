@@ -40,6 +40,8 @@ class InscriptionModel extends UtilisateurModel {
 							$_SESSION["LoginMode"] = "ON";
 							$_SESSION["EMAIL"] = $email;
 							$_SESSION["Telephone"] = $tele;
+							$_SESSION["NomUser"] = $nom;
+							$_SESSION["PrenomUser"] = $prenom;
 							return 0;
 						}
 					}

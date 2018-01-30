@@ -1,5 +1,5 @@
 <div id="DIYbody">
-  <div id="info_contact">
+  <div id="">
     <p>
       <h3> Un problème avec le service ou votre matériel ?</h3> Vous pouvez nous contacter directement:
       <ul>
@@ -10,7 +10,7 @@
   </div>
 
   <figure id="form_assist">
-    <form method="post" action="<?php echo "index.php?controller=NousContacter&action=panneEnvoyer"?>" onclick="return checkMail();">
+    <form method="post" action="<?php echo " index.php?controller=NousContacter&action=panneEnvoyer"?>" onclick="return checkMail();" id="panneForm">
       <label> <span class="txtq"> <strong> Par mail en remplissant le formulaire ci-dessous : </strong></span> </label>
 
       <fieldset>
@@ -19,20 +19,43 @@
 
         <p>
           Précisez le type d'assistance que vous désirez :
-          <br/>
-          <input type="radio" name="categorie" value="infos" id="infos" />
-          <label for="infos"> <span class="txtq"> Informations sur nos services  </span> </label>
-          <br/>
-          <input type="radio" name="categorie" value="technique" id="technique" /> <label for="technique">  <span class="txtq"> Assistance technique </span></label>
-          <br/>
-          <input type="radio" name="categorie" value="depannage" id="depannage" /> <label for="depannage">  <span class="txtq">Dépannage </span></label>
-          <br/>
-          <input type="radio" name="categorie" value="autre" id="autre" /> <label for="autre"> <span class="txtq">Autre... </span></label>
+          <div class="radio">
+            <label>
+              <input type="radio" name="categorie" id="infos" value="infos" checked>
+              <div class="myradiofont">
+                Informations sur nos services
+              </div>
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="categorie" id="technique" value="technique">
+              <div class="myradiofont">
+                Assistance technique
+              </div>
+            </label>
+          </div>
+          <div class="radio disabled">
+            <label>
+              <input type="radio" name="categorie" id="depannage" value="depannage">
+              <div class="myradiofont">
+                Dépannage
+              </div>
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="categorie" id="autre" value="autre">
+              <div class="myradiofont">
+                Autre...
+              </div>
+            </label>
+          </div>
         </p>
 
         <p>
           <label for="ameliorer"> <span class="txtq"> Détaillez ici votre problème en quelques lignes </span></label><br />
-          <textarea name="ameliorer2" id="ameliorer"></textarea>
+          <textarea name="description" id="description" class="form-control" form="panneForm" placeholder="Je ne sais pas comment installer mes capteurs..." maxlength="255"></textarea>
         </p>
         <span class="error"><?php if (isset($_GET['Err'])) echo $_GET['Err'];?></span><br><br><br>
         <button type="submit" class="btn btn-primary" id="submitButton">Envoyer</button>
