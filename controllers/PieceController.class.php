@@ -30,9 +30,7 @@ class PieceController extends Controller {
 		$superficie = $_POST['superficie'];
 		$nom = $_POST['nom'];
 		$type = $_POST['type'];
-		if (isset($_POST['label_piece']) && !empty($_POST['label_piece'])) $label_piece = $_POST['label_piece'];
 		$model = new PieceModel;
-		//if ($result = (isset($_POST['label_piece']) && !empty($_POST['label_piece'])) ? $model -> add($superficie, $nom, $type, $label_piece) : $model -> add($superficie, $nom, $type )) {
 		if ($result = $model -> add($superficie, $nom, $type)) {
 			$to = 'Location: index.php?controller=Piece&action=add&Err='.$result;
 			header($to);

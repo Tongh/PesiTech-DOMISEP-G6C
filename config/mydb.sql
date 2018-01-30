@@ -241,7 +241,6 @@ CREATE TABLE IF NOT EXISTS `piece` (
   `type` varchar(255) NOT NULL,
   `id_logement` int(11) NOT NULL,
   `id_client` int(11) NOT NULL,
-  `label_piece` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_piece`),
   KEY `ID pièce` (`id_piece`),
   KEY `fk_pièce_logement1_idx` (`id_client`)
