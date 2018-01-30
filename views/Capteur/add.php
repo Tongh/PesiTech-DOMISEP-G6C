@@ -21,11 +21,14 @@
             <label class="control-label col-sm-3" for="inputGroupSuccess2">Type</label>
             <div class="col-sm-9">
               <select name="type" class="form-control" form="addPieceForm">
-                <option value="Salon">Salon</option>
-                <option value="Cuisine">Cuisine</option>
-                <option value="Chambre">Chambre</option>
-                <option value="Salle">Salle</option>
-                <option value="Autre">Autre</option>
+                <option value="Capteur de Présence">Capteur de Présence</option>
+                <option value="Capteur de Fumée">Capteur de Fumée</option>
+                <option value="Capteur d'Ouverture">Capteur d'Ouverture</option>
+                <option value="Caméra">Caméra</option>
+                <option value="Capteur de Luminosité">Capteur de Luminosité</option>
+                <option value="Capteur d'Humidité">Capteur d'Humidité</option>
+                <option value="Capteur de Température">Capteur de Température</option>
+                <option value="Autre type de capteur">Autre type de capteur</option>
               </select>
             </div>
           </div>
