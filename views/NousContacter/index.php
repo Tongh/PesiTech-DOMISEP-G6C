@@ -57,25 +57,24 @@
 						Précisez le type d'assistance que vous désirez :
 						<br/>
 						<input type="radio" name="categorie" value="infos" id="infos" /> <label for="infos">
-							<span class="txtq"> Informations sur nos services  </span> </label>
-							<br/>
-							<input type="radio" name="categorie" value="technique" id="technique" /> <label for="technique">  <span class="txtq"> Assistance technique </span></label>
-							<br/>
-							<input type="radio" name="categorie" value="depannage" id="depannage" /> <label for="depannage">  <span class="txtq">Dépannage </span></label>
-							<br/>
-							<input type="radio" name="categorie" value="autre" id="autre" /> <label for="autre"> <span class="txtq">Autre... </span></label>
-						</p>
+						<span class="txtq"> Informations sur nos services  </span> </label>
+						<br/>
+						<input type="radio" name="categorie" value="technique" id="technique" /> <label for="technique">  <span class="txtq"> Assistance technique </span></label>
+						<br/>
+						<input type="radio" name="categorie" value="depannage" id="depannage" /> <label for="depannage">  <span class="txtq">Dépannage </span></label>
+						<br/>
+						<input type="radio" name="categorie" value="autre" id="autre" /> <label for="autre"> <span class="txtq">Autre... </span></label>
+					</p>
 
-						<p>
-							<label for="ameliorer"> <span class="txtq"> Détaillez ici votre problème en quelques lignes </span></label><br />
-							<textarea name="ameliorer2" id="ameliorer"></textarea>
-						</p>
-						<input type ="submit" value="Envoyer">
-					</fieldset>
+					<p>
+						<label for="ameliorer"> <span class="txtq"> Détaillez ici votre problème en quelques lignes </span></label><br />
+						<textarea name="ameliorer2" id="ameliorer"></textarea>
+					</p>
+					<input type ="submit" value="Envoyer">
+				</fieldset>
 
-				</form>
-			</figure>
-		</div>
-
+			</form>
+		</figure>
 	</div>
+
 </div>

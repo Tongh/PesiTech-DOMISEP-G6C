@@ -5,6 +5,7 @@ class CapteurController extends Controller {
     $model = new CapteurModel;
     if (isset($_GET['id_piece']) && !empty($_GET['id_piece'])) $_SESSION["id_piece"] = $_GET['id_piece'];
     if (isset($_GET['moyen']) && $_GET['moyen'] == "client") {
+			$_GET['moyen'] == null;
       if ($result = $model -> viewClient()) {
         if (gettype($result) == "string") {
             $this -> set('Err', $result);

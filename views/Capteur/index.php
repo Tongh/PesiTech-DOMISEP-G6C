@@ -19,6 +19,7 @@
 	<table class="dataintable">
 		<tbody>
 			<tr>
+				<th class="withButton"></th>
 				<th>ID Capteur</th>
 				<th>Type de capteur</th>
 				<th>Nom</th>
@@ -27,30 +28,25 @@
 			</tr>
 			<?php if (isset($result) && !empty($result)) {for ($i=0; $i < count($result) ; $i++) { ?>
 			<tr>
-				<td>
+				<td class="withButton">
 					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" value="index.php?controller=Status&action=viewCapteur&id_capteur=<?php echo $result[$i]['capteur']['id_capteur']?>">
-						<?php echo " ( ID Capteur : ".$result[$i]['capteur']['id_capteur']." ) "; ?>
+						Voir les détails
 					</button>
 				</td>
 				<td>
-					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Capteur'">
-						<?php echo " ( Type : ".$result[$i]['capteur']['type_capteur']." ) "; ?>
-					</button>
+					<?php echo "".$result[$i]['capteur']['id_capteur'].""; ?>
 				</td>
 				<td>
-					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Capteur'">
-						<?php echo " ( Nom : ".$result[$i]['capteur']['nom']." ) "; ?>
-					</button>
+					<?php echo "".$result[$i]['capteur']['type_capteur'].""; ?>
 				</td>
 				<td>
-					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Capteur'">
-						<?php echo " ( ID Pièce : ".$result[$i]['capteur']['piece_ID']." ) "; ?>
-					</button>
+					<?php echo "".$result[$i]['capteur']['nom'].""; ?>
 				</td>
 				<td>
-					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Capteur'">
-						<?php echo " ( ID Client : ".$result[$i]['capteur']['utilisateur_id']." ) "; ?>
-					</button>
+					<?php echo "".$result[$i]['capteur']['piece_ID'].""; ?>
+				</td>
+				<td>
+					<?php echo "".$result[$i]['capteur']['utilisateur_id'].""; ?>
 				</td>
 			</tr>
 		<?php }} ?>

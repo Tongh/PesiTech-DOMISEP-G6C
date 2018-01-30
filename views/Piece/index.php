@@ -17,50 +17,38 @@
 	<table class="dataintable">
 		<tbody>
 			<tr>
+				<th class="withButton"></th>
 				<th>ID Pièce</th>
 				<th>Superficie</th>
 				<th>Nom</th>
 				<th>Type de pièce</th>
         <th>ID Logement</th>
 				<th>ID Client</th>
-				<th>Label Pièce</th>
 			</tr>
 			<?php if (isset($result) && !empty($result)) {for ($i=0; $i < count($result) ; $i++) { ?>
 			<tr>
-				<td>
+				<td class="withButton">
 					<button type="button" class="btn btn-info btn-block" data-toggle="button" value="index.php?controller=Capteur&id_piece=<?php echo $result[$i]['piece']['id_piece']?>">
-						Capteurs<?php echo " ( ID Pièce : ".$result[$i]['piece']['id_piece']." ) "; ?>
+						Voir les détails
 					</button>
 				</td>
 				<td>
-					<button type="button" class="btn btn-info btn-block" data-toggle="button" onclick="javascript:window.location.href='index.php?controller=Piece'">
-						<?php echo " ( Superficie : ".$result[$i]['piece']['superficie']." ) "; ?>
-					</button>
+					<?php echo "".$result[$i]['piece']['id_piece'].""; ?>
 				</td>
 				<td>
-					<button type="button" class="btn btn-info btn-block" data-toggle="button" onclick="javascript:window.location.href='index.php?controller=Piece'">
-						<?php echo " ( Nom : ".$result[$i]['piece']['nom']." ) "; ?>
-					</button>
+					<?php echo "".$result[$i]['piece']['superficie'].""; ?>
 				</td>
 				<td>
-					<button type="button" class="btn btn-info btn-block" data-toggle="button" onclick="javascript:window.location.href='index.php?controller=Piece'">
-						<?php echo " ( Type de Pièce : ".$result[$i]['piece']['type']." ) "; ?>
-					</button>
+					<?php echo "".$result[$i]['piece']['nom'].""; ?>
+				</td>
+				<td>
+					<?php echo "".$result[$i]['piece']['type'].""; ?>
 				</td>
         <td>
-					<button type="button" class="btn btn-info btn-block" data-toggle="button" onclick="javascript:window.location.href='index.php?controller=Piece'">
-						<?php echo " ( Label Pièce : ".$result[$i]['piece']['id_logement']." ) "; ?>
-					</button>
+					<?php echo "".$result[$i]['piece']['id_logement'].""; ?>
 				</td>
   			<td>
-  					<button type="button" class="btn btn-info btn-block" data-toggle="button" onclick="javascript:window.location.href='index.php?controller=Piece'">
-  						<?php echo " ( ID Client : ".$result[$i]['piece']['id_client']." ) "; ?>
-  					</button>
-				</td>
-				<td>
-					<button type="button" class="btn btn-info btn-block" data-toggle="button" onclick="javascript:window.location.href='index.php?controller=Piece'">
-						<?php echo " ( Label Pièce : ".$result[$i]['piece']['label_piece']." ) "; ?>
-					</button>
+  				<?php echo "".$result[$i]['piece']['id_client'].""; ?>
 				</td>
 			</tr>
 		<?php }} ?>
