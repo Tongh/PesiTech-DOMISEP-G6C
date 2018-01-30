@@ -17,16 +17,12 @@
 	<table class="dataintable">
 		<tbody>
 			<tr>
-				<th>#</th>
 				<th>ID Logement</th>
 				<th>Addresse</th>
 				<th>ID Client</th>
 			</tr>
 			<?php if (isset($result) && !empty($result)) {for ($i=0; $i < count($result) ; $i++) { ?>
 			<tr>
-				<td>
-					<?php echo $i?>
-				</td>
 				<td>
 					<button id="fat-btn" class="btn btn-primary" data-loading-text="Loading..." type="button" value="<?php echo $result[$i]['logement']['id_logement']?>">
 						Pièces<?php echo " ( ID Logement : ".$result[$i]['logement']['id_logement']." ) "?>

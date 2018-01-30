@@ -3,6 +3,7 @@
 class PieceController extends Controller {
 	function index() {
 		$model = new PieceModel;
+		if (isset($_GET['id_logement']) && !empty($_GET['id_logement'])) $_SESSION["id_logement"] = $_GET['id_logement'];
 		if (isset($_GET['moyen']) && $_GET['moyen'] == "client") {
 			if ($result = $model -> viewClient()) {
 				if (gettype($result) == "string") {
@@ -20,7 +21,6 @@ class PieceController extends Controller {
 				}
 			}
 		}
-		$this -> set('id_logement', $_GET['id_logement']);
 		$this -> set('title', 'Gesion de Pièce');
     $this -> set('content', 'Bienvenue sur votre espace client!');
     $this -> render();

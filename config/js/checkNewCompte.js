@@ -303,7 +303,7 @@ $(function() {
         $(this).button('loading').delay(1000).queue(function() {
 					var str = this.value;
 					var url = 'index.php?controller=Piece&id_logement='+str;
-					setTimeout(function(){window.location.href=url},1000);
+					setTimeout(function(){window.location.href=url},100);
 
         	// $(this).dequeue();
         });

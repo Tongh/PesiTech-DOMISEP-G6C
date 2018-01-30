@@ -33,8 +33,8 @@ CREATE TABLE IF NOT EXISTS `capteurs` (
   `id_capteur` int(11) NOT NULL AUTO_INCREMENT,
   `type_capteur` varchar(45) NOT NULL,
   `nom` varchar(45) DEFAULT NULL,
-  `piece_ID piece` int(11) NOT NULL,
-  `piece_logement_utilisateur_id utilisateur` int(11) NOT NULL,
+  `piece_ID` int(11) NOT NULL,
+  `utilisateur_id` int(11) NOT NULL,
   PRIMARY KEY (`id_capteur`),
   UNIQUE KEY `id_capteur` (`id_capteur`),
   KEY `ID capteur` (`id_capteur`)

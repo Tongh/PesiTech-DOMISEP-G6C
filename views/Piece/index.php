@@ -28,7 +28,7 @@
 			<?php if (isset($result) && !empty($result)) {for ($i=0; $i < count($result) ; $i++) { ?>
 			<tr>
 				<td>
-					<button type="button" class="btn btn-info btn-xs" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">Capteurs
+					<button type="button" class="btn btn-info btn-xs" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Capteur'">Capteurs
 						<?php echo " ( ID Pièce : ".$result[$i]['piece']['id_piece']." ) "; ?>
 					</button>
 				</td>
