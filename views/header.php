@@ -50,7 +50,7 @@
 					<?php if (isset($_SESSION["LoginMode"]) && $_SESSION["LoginMode"] == "OFF") {
 						echo "<a href=\"index.php?controller=NosServices\"> Nos services </a>";
 					} else {
-						echo "<a href=\"stats.php\">Relevés et Statistiques</a>";
+						echo "<a href=\"index.php?controller=Status\">Relevés et Statistiques</a>";
 					} ?>
 				</li>
 
@@ -58,7 +58,7 @@
 					<?php if (isset($_SESSION["LoginMode"]) && $_SESSION["LoginMode"] == "OFF") {
 						echo "<a href=\"index.php?controller=Acheter\"> Acheter </a>";
 					} else {
-						echo "<a href=\"panne.php\">Panne et Résolution</a>";
+						echo "<a href=\"index.php?controller=NousContacter&action=panne\">Panne et Résolution</a>";
 					} ?>
 
 				</li>

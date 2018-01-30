@@ -2,9 +2,9 @@ html /* Pas de marges pour la page entière+couleur*/
 {
   padding:0;
   margin:0;
-  background-color: #E0E0E0;
+  background-color: #E0F8F7;
   height: 100%;
-  background: #FEFEFE;
+  background: #E0F8F7;
 }
 
 .DIYheader
