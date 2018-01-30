@@ -10,9 +10,9 @@
 
   <div class="mainTable">
     <table class="dataintable">
-      <tr id="fline">
-        <th><strong>Capteur 1</strong></th>
-        <th colspan="3"><strong>Cuisine</strong></th>
+      <tr>
+        <th><strong><?php echo $nom_capteur ?></strong></th>
+        <th colspan="3"><strong><?php echo $nom_piece ?></strong></th>
       </tr>
       <tr>
         <td>Type</td>
@@ -20,7 +20,7 @@
         <td colspan="2">Historique</td>
       </tr>
       <tr>
-        <td>Température </td>
+        <td><?php echo $type_capteur ?></td>
         <td>21°C</td>
         <td colspan="2"><a href="stats.php"><img src="Image\graph_ex.png" ></a></td>
       </tr>

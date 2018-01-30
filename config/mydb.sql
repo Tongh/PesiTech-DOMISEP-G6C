@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 -- Structure de la table `capteurs`
 --
 
-DROP TABLE IF EXISTS `capteurs`;
+DROP TABLE IF EXISTS `capteur`;
 CREATE TABLE IF NOT EXISTS `capteur` (
   `id_capteur` int(11) NOT NULL AUTO_INCREMENT,
   `type_capteur` varchar(45) NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `capteur` (
   PRIMARY KEY (`id_capteur`),
   UNIQUE KEY `id_capteur` (`id_capteur`),
   KEY `ID capteur` (`id_capteur`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `codeAdmin` (
   `id_client` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_Code`),
   KEY `id_client` (`id_client`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `codeadmin`
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `codeClient` (
   `utilise` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_Code`),
   KEY `id_client` (`id_client`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `codeclient`
@@ -120,7 +120,7 @@ CREATE TABLE IF NOT EXISTS `commande_produit` (
   `utilisateur_id utilisateur` int(11) NOT NULL,
   PRIMARY KEY (`ID commande produit`,`utilisateur_id utilisateur`),
   KEY `ID commande produit` (`ID commande produit`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `domisep` (
   `ID immeuble` int(11) NOT NULL AUTO_INCREMENT,
   `DOMISEPcol` varchar(45) DEFAULT NULL,
   KEY `ID immeuble` (`ID immeuble`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -154,16 +154,16 @@ CREATE TABLE IF NOT EXISTS `domisep` (
 
 DROP TABLE IF EXISTS `donnees_capteurs`;
 CREATE TABLE IF NOT EXISTS `donnees_capteurs` (
-  `id_donnees_capteurs` int(11) NOT NULL AUTO_INCREMENT,
+  `id_capteur` int(11) NOT NULL AUTO_INCREMENT,
   `actionneur` varchar(45) NOT NULL,
   `prix` decimal(10,0) NOT NULL,
   `unite` int(10) NOT NULL,
   `temps` varchar(255) NOT NULL,
   `valeur` int(11) NOT NULL,
   `statut` varchar(255) NOT NULL,
-  `id_capteur` int(11) NOT NULL,
-  PRIMARY KEY (`id_donnees_capteurs`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `consommation` int(11) NOT NULL,
+  PRIMARY KEY (`id_capteur`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -190,7 +190,7 @@ CREATE TABLE IF NOT EXISTS `logement` (
   `utilisateur_id utilisateur` int(11) NOT NULL,
   PRIMARY KEY (`id_logement`),
   KEY `utilisateur_id utilisateur` (`utilisateur_id utilisateur`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -209,7 +209,7 @@ CREATE TABLE IF NOT EXISTS `ordre` (
   `capteurs_piece_logement_utilisateur_id utilisateur` int(11) NOT NULL,
   PRIMARY KEY (`id_ordre`,`capteurs_piece_ID piece`,`capteurs_piece_logement_utilisateur_id utilisateur`),
   KEY `ID ordre` (`id_ordre`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -224,8 +224,8 @@ CREATE TABLE IF NOT EXISTS `panne` (
   `date_de_fin` date NOT NULL,
   `id_client` int(11) NOT NULL,
   `description` int(11) NOT NULL,
-  KEY `ID panne` (`ID panne`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  KEY `id_panne` (`id_panne`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -245,7 +245,7 @@ CREATE TABLE IF NOT EXISTS `piece` (
   PRIMARY KEY (`id_piece`),
   KEY `ID pièce` (`id_piece`),
   KEY `fk_pièce_logement1_idx` (`id_client`)
-) ENGINE=MyISAM AUTO_INCREMENT=593 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=593 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -268,7 +268,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `complementAdresse` varchar(255) DEFAULT NULL,
   `typeUtilisateur` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_utilisateur`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Contraintes pour les tables déchargées
