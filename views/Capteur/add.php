@@ -14,7 +14,7 @@
           <div class="form-group form-group-sm  ">
             <label class="control-label col-sm-3" for="inputGroupSuccess2">Type</label>
             <div class="col-sm-9">
-              <select name="type" class="form-control" form="addPieceForm" name="type_capteur">
+              <select class="form-control" form="addCapteurForm" name="type_capteur">
                 <option value="Capteur de Présence">Capteur de Présence</option>
                 <option value="Capteur de Fumée">Capteur de Fumée</option>
                 <option value="Capteur d'Ouverture">Capteur d'Ouverture</option>

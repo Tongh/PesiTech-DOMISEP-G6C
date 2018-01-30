@@ -37,6 +37,9 @@
 					<?php echo "".$result[$i]['capteur']['id_capteur'].""; ?>
 				</td>
 				<td>
+					<?php echo "".$result[$i]['capteur']['type_capteur'].""; ?>
+				</td>
+				<td>
 					<?php echo "".$result[$i]['capteur']['nom'].""; ?>
 				</td>
 				<td>
