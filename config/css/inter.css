@@ -19,9 +19,6 @@
   text-align: center;
 }
 
-.radio {
-  text-align: center;
-}
 
 #submitButton {
   float: right; margin-bottom: 20px;
@@ -34,6 +31,7 @@
   color: #fff;
   text-align: center;
 }
+
 
 tbody {
   margin: 0;
