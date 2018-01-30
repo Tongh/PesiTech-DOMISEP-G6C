@@ -28,37 +28,37 @@
 			<?php if (isset($result) && !empty($result)) {for ($i=0; $i < count($result) ; $i++) { ?>
 			<tr>
 				<td>
-					<button id="fat-btn" class="btn btn-primary" data-loading-text="Loading..." type="button" value="index.php?controller=Capteur&id_piece=<?php echo $result[$i]['piece']['id_piece']?>">
+					<button type="button" class="btn btn-info btn-block" data-toggle="button" value="index.php?controller=Capteur&id_piece=<?php echo $result[$i]['piece']['id_piece']?>">
 						Capteurs<?php echo " ( ID Pièce : ".$result[$i]['piece']['id_piece']." ) "; ?>
 					</button>
 				</td>
 				<td>
-					<button type="button" class="btn btn-info btn-xs" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">
+					<button type="button" class="btn btn-info btn-block" data-toggle="button" onclick="javascript:window.location.href='index.php?controller=Piece'">
 						<?php echo " ( Superficie : ".$result[$i]['piece']['superficie']." ) "; ?>
 					</button>
 				</td>
 				<td>
-					<button type="button" class="btn btn-info btn-xs" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">
+					<button type="button" class="btn btn-info btn-block" data-toggle="button" onclick="javascript:window.location.href='index.php?controller=Piece'">
 						<?php echo " ( Nom : ".$result[$i]['piece']['nom']." ) "; ?>
 					</button>
 				</td>
 				<td>
-					<button type="button" class="btn btn-info btn-xs" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">
+					<button type="button" class="btn btn-info btn-block" data-toggle="button" onclick="javascript:window.location.href='index.php?controller=Piece'">
 						<?php echo " ( Type de Pièce : ".$result[$i]['piece']['type']." ) "; ?>
 					</button>
 				</td>
         <td>
-					<button type="button" class="btn btn-info btn-xs" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">
+					<button type="button" class="btn btn-info btn-block" data-toggle="button" onclick="javascript:window.location.href='index.php?controller=Piece'">
 						<?php echo " ( Label Pièce : ".$result[$i]['piece']['id_logement']." ) "; ?>
 					</button>
 				</td>
   			<td>
-  					<button type="button" class="btn btn-info btn-xs" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">
+  					<button type="button" class="btn btn-info btn-block" data-toggle="button" onclick="javascript:window.location.href='index.php?controller=Piece'">
   						<?php echo " ( ID Client : ".$result[$i]['piece']['id_client']." ) "; ?>
   					</button>
 				</td>
 				<td>
-					<button type="button" class="btn btn-info btn-xs" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Piece'">
+					<button type="button" class="btn btn-info btn-block" data-toggle="button" onclick="javascript:window.location.href='index.php?controller=Piece'">
 						<?php echo " ( Label Pièce : ".$result[$i]['piece']['label_piece']." ) "; ?>
 					</button>
 				</td>

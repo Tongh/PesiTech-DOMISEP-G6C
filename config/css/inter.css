@@ -18,12 +18,14 @@
   border: 1px solid #3F3F3F;
   text-align: left;
   color: #fff;
+  text-align: center;
 }
 
 tbody {
   margin: 0;
   padding: 0;
   border: 0;
+  text-align: center;
 }
 
 .dataintable td {
@@ -44,19 +46,24 @@ td {
   vertical-align: center;
   overflow: auto;
   width: 100px;
+  padding: 8px;
+  text-align: center;
 }
 
 tr {
   background-color: #F5F5F5;
   align: center;
+  text-align: center;
 }
 
 .dataintable {
+  text-align: center;
   margin-top: 15px;
   border-collapse: collapse;
   border: 1px solid #aaa;
   width: 100%;
   max-width: 1526px;
+  table-layout: fixed;
 }
 
 #attend {

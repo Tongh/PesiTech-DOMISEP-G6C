@@ -6,5 +6,11 @@ class StatusController extends Controller {
     $this -> render();
   }
 
+  function viewCapteur() {
+    $this -> set('title', 'Le status de Votre Capteur');
+    $this -> set('content', 'Bienvenue sur votre EspaceClient!');
+    $this -> render();
+  }
+
 
 }
