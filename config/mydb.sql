@@ -260,7 +260,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `login` varchar(11) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `telephone` int(11) NOT NULL,
+  `telephone` varchar(255) NOT NULL,
   `ville` varchar(255) DEFAULT NULL,
   `codePostal` varchar(255) DEFAULT NULL,
   `adresse` varchar(255) DEFAULT NULL,

@@ -1,7 +1,16 @@
+.espaceClient {
+  font-size: 10px;
+}
+
+.table td,tr,tbody {
+  bgcolor: white;
+}
+
 .label_table {
   font-size: 19px;
 
 }
+
 
 .tableButton {
   float: left;

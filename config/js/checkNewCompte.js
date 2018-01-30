@@ -299,12 +299,17 @@ function getLogementId() {
 }
 
 $(function() {
-    $(".btn").click(function(){
+    $(".buttonLent").click(function(){
         $(this).button('loading').delay(1000).queue(function() {
 					var str = this.value;
 					setTimeout(function(){window.location.href=str},100);
 
         	// $(this).dequeue();
         });
+    });
+
+		$(".buttonVite").click(function(){
+				var str = this.value;
+				window.location.href=str;
     });
 });
