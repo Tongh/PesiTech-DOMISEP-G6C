@@ -24,8 +24,9 @@
 			<?php if (isset($result) && !empty($result)) {for ($i=0; $i < count($result) ; $i++) { ?>
 			<tr>
 				<td>
+					<?php echo "" . $result[$i]['logement']['id_logement'] . ""?>
 					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" value="index.php?controller=Piece&id_logement=<?php echo $result[$i]['logement']['id_logement']?>">
-						Pièces<?php echo " ( ID Logement : ".$result[$i]['logement']['id_logement']." ) "?>
+						Voir le détail
 					</button>
 				</td>
 				<td>
