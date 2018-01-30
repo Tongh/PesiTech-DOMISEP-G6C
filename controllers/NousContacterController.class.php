@@ -14,6 +14,13 @@ class NousContacterController extends Controller {
 	}
 
 	function panneEnvoyer() {
+		$this -> set('title', 'Envoyé avec succès!');
+    $this -> set('content', 'Merci de nous envoyer de Mail!');
+    $this -> render();
+		$this -> sendMail();
+	}
+
+	function sendMail() {
 		$categorie = $_POST["categorie"];
 		$description = $_POST["description"];
 		$email = new G6C_Mail;
@@ -27,8 +34,6 @@ class NousContacterController extends Controller {
 		"Pseudo : " . $_SESSION["User"] . "<br />" .
 		"Catégorie de la demande : " . $categorie . "<br />" .
 		"Description de la demande : " . $description . "<br />";
-		$email -> setTitle($titleMail);
-		$email -> setBody($bodyMail);
 		$altbodyMail = "Jour : " . date("Y-m-d H:i:s") . "\n" .
 		"ID Client : " . $_SESSION["UserID"] . "\n" .
 		"Nom : " . $_SESSION["NomUser"] . "\n" .
@@ -36,16 +41,10 @@ class NousContacterController extends Controller {
 		"Pseudo : " . $_SESSION["User"] . "\n" .
 		"Catégorie de la demande : " . $categorie . "\n" .
 		"Description de la demande : " . $description . "\n";
+		$email -> setTitle($titleMail);
+		$email -> setBody($bodyMail);
 		$email -> setAltBody($altbodyMail);
-		if ($email -> send()) {
-			$this -> set('title', 'Votre Panne a déjà envoyé');
-	    $this -> set('content', 'Merci de nous Contacter!');
-	    $this -> render();
-		} else {
-			$this -> set('title', 'Non prévue, Les messages pas encore envoyer, quelques choses ne marchent pas!');
-	    $this -> set('content', 'Merci de nous Contacter!');
-	    $this -> render();
-		}
+		$email -> send();
 	}
 
 
