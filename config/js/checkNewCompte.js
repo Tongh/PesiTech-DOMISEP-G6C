@@ -302,8 +302,7 @@ $(function() {
     $(".btn").click(function(){
         $(this).button('loading').delay(1000).queue(function() {
 					var str = this.value;
-					var url = 'index.php?controller=Piece&id_logement='+str;
-					setTimeout(function(){window.location.href=url},100);
+					setTimeout(function(){window.location.href=str},100);
 
         	// $(this).dequeue();
         });

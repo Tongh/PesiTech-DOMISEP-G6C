@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 DROP TABLE IF EXISTS `capteurs`;
-CREATE TABLE IF NOT EXISTS `capteurs` (
+CREATE TABLE IF NOT EXISTS `capteur` (
   `id_capteur` int(11) NOT NULL AUTO_INCREMENT,
   `type_capteur` varchar(45) NOT NULL,
   `nom` varchar(45) DEFAULT NULL,

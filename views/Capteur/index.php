@@ -15,4 +15,47 @@
 		</p>
 	</div>
 
+  <div class="table">
+	<table class="dataintable">
+		<tbody>
+			<tr>
+				<th>ID Capteur</th>
+				<th>Type de Capteur</th>
+				<th>Nom</th>
+				<th>ID Pièce</th>
+        <th>ID Client</th>
+			</tr>
+			<?php if (isset($result) && !empty($result)) {for ($i=0; $i < count($result) ; $i++) { ?>
+			<tr>
+				<td>
+					<button id="fat-btn" class="btn btn-primary" data-loading-text="Loading..." type="button" value="index.php?controller=Capteur&id_piece=<?php echo $result[$i]['piece']['id_piece']?>">
+						<?php echo " ( ID Capteur : ".$result[$i]['capteur']['id_capteur']." ) "; ?>
+					</button>
+				</td>
+				<td>
+					<button type="button" class="btn btn-info btn-xs" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Capteur'">
+						<?php echo " ( Type : ".$result[$i]['capteur']['type_capteur']." ) "; ?>
+					</button>
+				</td>
+				<td>
+					<button type="button" class="btn btn-info btn-xs" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Capteur'">
+						<?php echo " ( Nom : ".$result[$i]['capteur']['nom']." ) "; ?>
+					</button>
+				</td>
+				<td>
+					<button type="button" class="btn btn-info btn-xs" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Capteur'">
+						<?php echo " ( ID Pièce : ".$result[$i]['capteur']['piece_ID']." ) "; ?>
+					</button>
+				</td>
+				<td>
+					<button type="button" class="btn btn-info btn-xs" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="javascript:window.location.href='index.php?controller=Capteur'">
+						<?php echo " ( ID Client : ".$result[$i]['capteur']['utilisateur_id']." ) "; ?>
+					</button>
+				</td>
+			</tr>
+		<?php }} ?>
+		</tbody>
+	</table>
+	</div>
+
 </div>

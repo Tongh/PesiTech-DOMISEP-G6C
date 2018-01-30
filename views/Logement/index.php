@@ -24,7 +24,7 @@
 			<?php if (isset($result) && !empty($result)) {for ($i=0; $i < count($result) ; $i++) { ?>
 			<tr>
 				<td>
-					<button id="fat-btn" class="btn btn-primary" data-loading-text="Loading..." type="button" value="<?php echo $result[$i]['logement']['id_logement']?>">
+					<button id="fat-btn" class="btn btn-primary" data-loading-text="Loading..." type="button" value="index.php?controller=Piece&id_logement=<?php echo $result[$i]['logement']['id_logement']?>">
 						Pièces<?php echo " ( ID Logement : ".$result[$i]['logement']['id_logement']." ) "?>
 					</button>
 				</td>
