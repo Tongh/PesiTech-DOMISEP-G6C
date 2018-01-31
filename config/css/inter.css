@@ -67,6 +67,8 @@ tbody {
 .withButton {
   width: 150px;
   table-layout: auto;
+  background-color: #FEFEFE;
+  border: 0px;
 }
 
 td {
@@ -104,7 +106,7 @@ tr {
 .error {
     color: #FF0000;
   }
-  
+
 .NP {
     color: #00FF66;
   }
