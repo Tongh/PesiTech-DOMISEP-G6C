@@ -1,7 +1,6 @@
 <?php
 
 class CapteurModel extends Model {
-
 	function viewClient() {
 		$sql = 'SELECT * FROM `capteur` WHERE 	`id_client` = \'' . $_SESSION["UserID"] . '\'';
 		if ($result = $this -> query($sql)) {
