@@ -68,7 +68,8 @@ tbody {
   width: 150px;
   table-layout: auto;
   background-color: #FEFEFE;
-  border: 0px;
+  border-collapse: none;
+  border: 0px none white;
 }
 
 td {
@@ -86,7 +87,6 @@ tr {
 
 .dataintable {
   text-align: center;
-  border-collapse: collapse;
   border: 1px solid #aaa;
   width: 100%;
   max-width: 1526px;
