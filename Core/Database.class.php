@@ -10,7 +10,7 @@ class Database {
 			$message = 'Connet Error (' . mysqli_connect_errno() . ')' . mysqli_connect_error();
 			$error = new G6C_Error($message);
 			$error -> saveLog();
-			//die($message);
+			
 			return 0;
 		} return 1;
 	}

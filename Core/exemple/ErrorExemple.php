@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>sdfsdfqsdfsdfqsdfqsdfqsdfqsfqsdfqsdfqsdfsqdf</title>
+	<title></title>
 </head>
 <body>
 	<h1>save log</h1>
-	<?php 
+	<?php
 	require_once __DIR__ . "/../Error.class.php";
 	function customError($errno, $errstr) {
 		$message = "Error: [$errno] $errstr";

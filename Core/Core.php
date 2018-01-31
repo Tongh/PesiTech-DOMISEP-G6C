@@ -42,11 +42,7 @@ class Fast {
 			exit($controller . "/" . $action . " n'existe pas");
 		}
 		call_user_func_array(array($dispatch, $action), $queryString);
-		/*if ((int)method_exists($controller, $action)) {
-			call_user_func_array(array($dispatch, $action), $queryString);
-		} else {
-			exit($controller . " n'existe pas");
-		}*/
+		
 	}
 
 	function setReporting() {
