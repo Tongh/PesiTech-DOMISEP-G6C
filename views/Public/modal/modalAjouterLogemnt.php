@@ -7,7 +7,7 @@
 			</div>
 			<div class="modal-body">
 				<div class="mainFont">
-          <form class="form-horizontal" method="post" action="<?php echo "index.php?controller=Logement&action=addForm"  ?>" onsubmit="return validerLogement()" id="logementAjoutForm">
+          <form class="form-horizontal" method="post" action="<?php echo "index.php?controller=Logement&action=addForm"?>" onsubmit="return validerLogement()" id="logementAjoutForm">
 						<div class="form-group form-group-sm">
               <div class="formLabel"><div class="formText"> </div></div><br><br>
 							<div class="formText"><label class="control-label col-sm-3" for="inputSuccess3">Adresse</label></div>

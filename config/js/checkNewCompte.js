@@ -1,3 +1,26 @@
+$(function() {
+    $(".buttonLent").click(function(){
+        $(this).button('loading').delay(1000).queue(function() {
+					var str = this.value;
+					setTimeout(function(){window.location.href=str},100);
+
+        	// $(this).dequeue();
+        });
+    });
+
+		$(".buttonVite").click(function(){
+				var str = this.value;
+				window.location.href=str;
+    });
+
+		$(function () { $("[data-toggle='popover']").popover(); });
+
+		$("#submitButton").click(function()) {
+			$("#modalAjouterLogemnt").modal('hide');
+			changeLogementAffiche();
+		}
+});
+
 function validerNewCompte() {
 	var check = checkNom() && checkPrenom() && checkPseudo() && checkmdp() && checkmdpC() && checkMail() && checkTele() && checkCodeV() && checkTypeU() ; //&& checkVille() && checkAdresse() && checkCptadresse() && checkCodepostal()
 	return check;
@@ -291,33 +314,27 @@ function setCheckErr(checkvalue) {
 	document.getElementById(Ok).style.display = "none";
 }
 
-$(function() {
-    $(".buttonLent").click(function(){
-        $(this).button('loading').delay(1000).queue(function() {
-					var str = this.value;
-					setTimeout(function(){window.location.href=str},100);
-
-        	// $(this).dequeue();
-        });
-    });
-
-		$(".buttonVite").click(function(){
-				var str = this.value;
-				window.location.href=str;
-    });
-
-		$(function () { $("[data-toggle='popover']").popover(); });
-});
-
 function showCode(str) {
 	xmlHttp=GetXmlHttpObject();
 	if (xmlHttp==null) {
 	 alert ("Browser does not support HTTP Request");
 	 return;
 	}
-	alert("run");
 	var url="getCode.php";
 	url=url+"?q="+str;
+	url=url+"&sid="+Math.random();
+	xmlHttp.onreadystatechange=stateChanged;
+	xmlHttp.open("GET",url,true);
+	xmlHttp.send(null);
+}
+
+function changeLogementAffiche() {
+	xmlHttp=GetXmlHttpObject();
+	if (xmlHttp==null) {
+	 alert ("Browser does not support HTTP Request");
+	 return;
+	}
+	var url="changeLogementAffiche.php";
 	url=url+"&sid="+Math.random();
 	xmlHttp.onreadystatechange=stateChanged;
 	xmlHttp.open("GET",url,true);

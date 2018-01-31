@@ -13,7 +13,7 @@
 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSupprimerLogement"> Supprimer un logement </button>
 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalModifierAdrresse"> Modifier l'addresse</button>
 	</div>
-	<div class="table">
+	<div class="table" id="tableCode">
 		<table class="dataintable">
 			<tbody>
 				<tr>
