@@ -20,7 +20,7 @@
       			<?php if (isset($Err)) echo $Err; echo "<br/>"?>
       		</p>
       	</div>
-        <div id="textHint"></div>
+        <div class="table" id="tableCode"></div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal"> Close </button>
           <button type="submit" class="btn btn-primary"> Modifier </button>

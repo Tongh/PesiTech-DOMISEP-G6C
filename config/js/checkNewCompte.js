@@ -311,7 +311,6 @@ $(function() {
 
 function showCode(str) {
 	xmlHttp=GetXmlHttpObject();
-	alert(str);
 	if (xmlHttp==null) {
 	 alert ("Browser does not support HTTP Request");
 	 return;
@@ -321,43 +320,13 @@ function showCode(str) {
 	url=url+"?q="+str;
 	url=url+"&sid="+Math.random();
 	xmlHttp.onreadystatechange=stateChanged;
-	alert("pre");
 	xmlHttp.open("GET",url,true);
-	alert('opened');
 	xmlHttp.send(null);
-	alert("sended");
 }
 
 function stateChanged()  {
-	if (xmlHttp.readyState==0) {
-	 alert("0");
-	}
-
-	if (xmlHttp.readyState==1) {
-	 alert("1");
-	}
-
-	if (xmlHttp.readyState==2) {
-	 alert("2");
-	}
-
-	if (xmlHttp.readyState==3) {
-	 alert("3");
-	}
-
-	if (xmlHttp.readyState==4) {
-	 alert("4");
-	}
-
-	if (xmlHttp.status==200) {
-	 alert("200");
-	}
-	if (xmlHttp.status==404) {
-	 alert("404");
-	}
 	if (xmlHttp.readyState==4 && xmlHttp.status==200) {
-	 document.getElementById("txtHint").innerHTML=xmlHttp.responseText;
-	 alert("imported");
+	 document.getElementById("tableCode").innerHTML=xmlHttp.responseText;
 	}
 }
 
