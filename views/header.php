@@ -32,7 +32,8 @@
 				<li id="qsn">
 					<?php if (isset($_SESSION["LoginMode"]) && $_SESSION["LoginMode"] == "OFF") {
 						echo "<a href=\"index.php?controller=QuiSommesNous\"> Qui sommes-nous ? </a>";
-					} else {echo "<a href=\"index.php?controller=Logement\">Mon installation</a>";
+					} elseif (isset($_SESSION["AdminMode"]) && $_SESSION["AdminMode"] == "OFF") {
+						echo "<a href=\"index.php?controller=Logement\">Mon installation</a>";
 						/*echo "<div class=\"dropdown\">";
 						echo "<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">";
 						echo "Dropdown trigger";
@@ -43,32 +44,44 @@
 						echo "<li><a href=\"index.php?controller=Piece\">Mes Pièces</a></li>";
 						echo "</ul>";
 						echo "</div>";*/
-					} ?>
+					} else {
+						echo "<a href=\"index.php?controller=Admin&action=gestionClient\">Mes clients</a>";
+					}
+					?>
 				</li>
 
 				<li id="services">
 					<?php if (isset($_SESSION["LoginMode"]) && $_SESSION["LoginMode"] == "OFF") {
 						echo "<a href=\"index.php?controller=NosServices\"> Nos services </a>";
-					} else {
+					} elseif (isset($_SESSION["AdminMode"]) && $_SESSION["AdminMode"] == "OFF") {
 						echo "<a href=\"index.php?controller=Status\">Relevés et Statistiques</a>";
-					} ?>
+					} else {
+						echo "<a href=\"index.php?controller=Admin&action=historiques\">Historiques des achats</a>";
+					}
+					?>
 				</li>
 
 				<li id="acheter">
 					<?php if (isset($_SESSION["LoginMode"]) && $_SESSION["LoginMode"] == "OFF") {
 						echo "<a href=\"index.php?controller=Acheter\"> Acheter </a>";
-					} else {
+					} elseif (isset($_SESSION["AdminMode"]) && $_SESSION["AdminMode"] == "OFF") {
 						echo "<a href=\"index.php?controller=NousContacter&action=panne\">Panne et Résolution</a>";
-					} ?>
+					} else {
+						echo "<a href=\"index.php?controller=Admin&action=contacterClient\">Contacter mes clients</a>";
+					}
+					?>
 
 				</li>
 
 				<li id="contact">
 					<?php if (isset($_SESSION["LoginMode"]) && $_SESSION["LoginMode"] == "OFF") {
 						echo "<a href=\"index.php?controller=NousContacter\"> Nous contacter </a>";
-					} else {
+					} elseif (isset($_SESSION["AdminMode"]) && $_SESSION["AdminMode"] == "OFF") {
 						echo "<a href=\"index.php?controller=EspaceClient\">Mon profil</a>";
-					} ?>
+					} else {
+						echo "<a href=\"index.php?controller=Admin\">Mon profil</a>";
+					}
+					?>
 
 				</li>
 

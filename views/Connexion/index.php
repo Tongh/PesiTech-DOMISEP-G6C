@@ -33,5 +33,5 @@
       </div>
     </div>
   </div>
-  <?php include("inscription.php") ?>
+  <?php include(APP_DIR . "views/Public/modalInscription.php") ?>
 </div>

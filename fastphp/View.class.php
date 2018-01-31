@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class View {
 	protected $_variables = array();
@@ -35,4 +35,5 @@ class View {
 			include ($defaultFooter);
 		}
 	}
+
 }

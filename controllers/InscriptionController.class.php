@@ -3,8 +3,8 @@
 class InscriptionController extends Controller {
 	function index() {
 		$this -> set('title', 'Page d\'inscription');
-        $this -> set('content', 'Insérez votre information!');
-        $this -> render();
+    $this -> set('content', 'Insérez votre information!');
+    $this -> render();
 	}
 
 	function attend() {
@@ -35,8 +35,15 @@ class InscriptionController extends Controller {
 
 	function fin() {
 		$this -> set('title', 'Inscription réussie');
-        $this -> set('content', 'INoter ces informations importantes!');
-        $this -> render();
+    $this -> set('content', 'Noter ces informations importantes!');
+    $this -> render();
 	}
+
+	function finAdmin() {
+		$this -> set('title', 'Inscription réussie');
+		$this -> set('content', 'Noter ces informations importantes!');
+		$this -> render();
+	}
+
 
 }

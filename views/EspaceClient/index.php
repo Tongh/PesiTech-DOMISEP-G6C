@@ -44,7 +44,7 @@
 				  </div>
 				</div>
           <p><a class="btn btn-primary btn-lg" role="button">
-           学习更多</a>
+           One button</a>
           </p>
       </div>
   </div>
