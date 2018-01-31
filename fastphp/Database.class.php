@@ -50,8 +50,6 @@ class Database {
 			$erreur -> saveLog();
 			return 0;
 		}
-
-
 	}
 
 	function selectAll() {

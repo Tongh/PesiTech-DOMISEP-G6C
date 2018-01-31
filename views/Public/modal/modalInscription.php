@@ -79,7 +79,7 @@
                     <input type="radio" id ="typeClient" name="typeU" value="client"  onchange="checkTypeU()" checked> Client
                   </label>
                   <label class="btn btn-primary btn-ms">
-                    <input type="radio" id ="typeAdmin" name="typeU" value="admin"  onchange="checkTypeU()"> Administrateur<br>
+                    <input type="radio" id ="typeAdmin" name="typeU" value="admin"  onchange="checkTypeU()"> Administrateur
                   </label>
                 </div>
               </div>

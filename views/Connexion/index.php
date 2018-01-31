@@ -33,5 +33,5 @@
       </div>
     </div>
   </div>
-  <?php import("modal", "Inscription.php") ?>
+  <?php import("modal", "modalInscription.php") ?>
 </div>

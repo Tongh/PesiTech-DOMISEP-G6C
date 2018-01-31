@@ -6,7 +6,7 @@
 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalMdp"> Mot de passe </button>
 		<button type="button" class="btn btn-primary buttonVite" value="index.php?controller=EspaceClient&action=installations"> Mos installations </button>
   </div>
-</div>
+
 
 <div class="">
   <p class="">
@@ -51,3 +51,4 @@
 </div>
 
 <?php import("modal", "modalMdp.php")?>
+</div>
