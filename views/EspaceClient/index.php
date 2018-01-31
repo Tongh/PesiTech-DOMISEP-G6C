@@ -19,7 +19,7 @@
 			</div>
 	<?php } else {?>
 			<div class="btn-group">
-				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Gestion 
+				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Gestion
 					<span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu">
@@ -72,7 +72,7 @@
 				  </div>
 				</div>
           <p><a class="btn btn-primary btn-lg" role="button">
-           One button</a>
+           Modifier</a>
           </p>
       </div>
   </div>
