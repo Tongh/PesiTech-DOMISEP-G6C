@@ -1,6 +1,14 @@
 <?php
 class StatusController extends Controller {
   function index() {
+    $model = new StatusModel;
+    if ($result = $model -> getIDsCapteurs()) {
+      if (gettype($result) == "string") {
+          $this -> set('Err', $result);
+      } else {
+          $this -> set('result', $result);
+      }
+    }
     $this -> set('title', 'Statut de votre périphérique');
     $this -> set('content', 'Bienvenue sur votre Espace Client!');
     $this -> render();
@@ -16,6 +24,7 @@ class StatusController extends Controller {
     $this -> set('content', 'Bienvenue sur votre Espace Client!');
     $this -> render();
   }
+
 
 
 }
