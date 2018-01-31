@@ -28,7 +28,7 @@
 			<?php if (isset($result) && !empty($result)) {for ($i=0; $i < count($result) ; $i++) { ?>
 			<tr>
 				<td class="withButton">
-					<button type="button" class="btn btn-info btn-block" data-toggle="button" value="index.php?controller=Capteur&id_piece=<?php echo $result[$i]['piece']['id_piece']?>">
+					<button type="button" class="btn btn-info btn-block buttonLent" data-toggle="button" value="index.php?controller=Capteur&id_piece=<?php echo $result[$i]['piece']['id_piece']?>">
 						Voir les détails
 					</button>
 				</td>

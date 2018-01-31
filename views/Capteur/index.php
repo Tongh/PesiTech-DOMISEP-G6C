@@ -29,7 +29,7 @@
 			<?php if (isset($result) && !empty($result)) {for ($i=0; $i < count($result) ; $i++) { ?>
 			<tr>
 				<td class="withButton">
-					<button type="button" class="btn btn-info btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" value="index.php?controller=Status&action=viewCapteur&id_capteur=<?php echo $result[$i]['capteur']['id_capteur']?>">
+					<button type="button" class="btn btn-info btn-block buttonLent" data-toggle="button" aria-pressed="false" autocomplete="off" value="index.php?controller=Status&action=viewCapteur&id_capteur=<?php echo $result[$i]['capteur']['id_capteur']?>">
 						Voir les détails
 					</button>
 				</td>
