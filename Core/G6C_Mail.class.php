@@ -1,14 +1,5 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require_once __DIR__ . "/G6C_Error.class.php";
-require_once __DIR__ . '/Plugins/PHPMailer/vendor/phpmailer/phpmailer/src/Exception.php';
-require_once __DIR__ . '/Plugins/PHPMailer/vendor/phpmailer/phpmailer/src/PHPMailer.php';
-require_once __DIR__ . '/Plugins/PHPMailer/vendor/phpmailer/phpmailer/src/SMTP.php';
-require_once __DIR__ . '/Plugins/PHPMailer/vendor/autoload.php';
-
 class G6C_Mail {
 	protected $_title;
 	protected $_message;

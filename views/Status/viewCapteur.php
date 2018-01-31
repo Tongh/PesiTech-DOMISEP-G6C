@@ -22,7 +22,13 @@
       <tr>
         <td><?php echo $type_capteur ?></td>
         <td>21°C</td>
-        <td colspan="2"><a href="stats.php"><img src="Image\graph_ex.png" ></a></td>
+        <td colspan="2">
+            <div class="">
+              <a href="http://localhost:8080/PesiTech-DOMISEP-G6C/views/Public/jpgraph/getgraph.php?>" border=0 alt="http://localhost:8080/PesiTech-DOMISEP-G6C/views/Public/jpgraph/getgraph.php?>" align="left">
+                <img src="http://localhost:8080/PesiTech-DOMISEP-G6C/views/Public/jpgraph/getgraph.php" alt="http://localhost:8080/PesiTech-DOMISEP-G6C/views/Public/jpgraph/getgraph.php"></img>
+              </a>
+            </div>
+        </td>
       </tr>
 
     </tr>
