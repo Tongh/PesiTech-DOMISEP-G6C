@@ -43,3 +43,4 @@
 2018-01-31 19:04:51 Unknown column 'id_client' in 'where clause'
 2018-01-31 19:04:51 Unknown column 'id_client' in 'where clause'
 2018-01-31 19:04:51 Unknown column 'id_client' in 'where clause'
+2018-01-31 21:07:49 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'rue du Daoisme WHERE `id_logement` = 7' at line 1

@@ -14,4 +14,14 @@ class LogementModel extends Model {
 		return $this -> query($sql);
 	}
 
+	function remove($id_logement) {
+		$sql = 'DELETE FROM `logement` WHERE `id_logement` = ' . $id_logement;
+		return $this -> query($sql);
+	}
+
+	function addressChange($id_logement, $address) {
+		$sql = "UPDATE `logement` SET `address` = '" . $address . "' WHERE `id_logement` = '"  . $id_logement . "'";
+		return $this -> query($sql);
+	}
+
 }

@@ -28,6 +28,25 @@ class LogementController extends Controller {
 		}
 	}
 
+	function addressForm() {
+		$address = $_POST['address'];
+		$id_logement = $_POST['id_logement'];
+		$model = new LogementModel;
+		$model -> addressChange($id_logement, $address);
+		$this -> set('title', "Votre modifications a été enregistré!");
+		$to = 'Location: index.php?controller=Logement&action=index&Err='.$result;
+		header($to);
+	}
+
+	function supprimerForm() {
+		$id_logement = $_POST['id_logement'];
+		$model = new LogementModel;
+		$model -> remove($id_logement);
+		$this -> set('title', "Supprimer avec succès!");
+		$to = 'Location: index.php?controller=Logement&action=index&Err='.$result;
+		header($to);
+	}
+
 	function add() {
 		$this -> set('title', 'Ajouter un Logement');
 		$this -> set('content', 'Bienvenue sur votre espace client!');
