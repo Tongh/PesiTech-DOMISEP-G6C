@@ -12,7 +12,7 @@ $graph->SetTheme($theme_class);
 
 $graph->SetMargin(40,40,50,40);
 
-$graph->title->Set('Inverted Y-axis');
+$graph->title->Set('Données de ce capteur');
 $graph->SetBox(false);
 $graph->yaxis->HideLine(false);
 $graph->yaxis->HideTicks(false,false);

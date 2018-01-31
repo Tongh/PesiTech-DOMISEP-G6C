@@ -2,7 +2,7 @@
 
 class CapteurModel extends Model {
 	function viewClient() {
-		$sql = 'SELECT * FROM `capteur` WHERE 	`id_client` = \'' . $_SESSION["UserID"] . '\'';
+		$sql = 'SELECT * FROM `capteur` WHERE 	`utilisateur_id` = \'' . $_SESSION["UserID"] . '\'';
 		if ($result = $this -> query($sql)) {
 			return $result;
 		} return "Vous n'avez pas encore enregistré vos capteurs sur ce compte, vous pouvez maintenant en enregistrer un !";

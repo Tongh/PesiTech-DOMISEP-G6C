@@ -4,10 +4,6 @@
     <h1><?php echo $title ?></h1>
   </div>
 
-  <div class="selection">
-
-  </div>
-
   <div class="mainTable">
     <table class="dataintable">
       <tr>

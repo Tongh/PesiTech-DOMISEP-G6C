@@ -1,20 +1,14 @@
 <?php
 
 class StatusModel extends CapteurModel {
-  protected $_dbDonnees;
 
-  function __construct() {
-    $this -> _dbDonnees = $this -> viewClient();
-  }
 
-  function getIDsCapteurs() {
-    if (isset($this -> _dbDonnees) && !empty($this -> _dbDonnees) && gettype($this -> _dbDonnees) == "string") {
-      return $this -> _dbDonnees;
+  function getIDCapteur() {
+    $res = $this -> viewClient();
+    if (gettype($res) == "string") {
+      return $res;
     } else {
-      $result = array();
-      for ($i=0; $i < count($result) ; $i++) {
-          array_push($result, $this -> _dbDonnees[$i]["capteur"]["id_capteur"]);
-      } return $result;
+      return $res[0]["capteur"]["id_capteur"];
     }
   }
 

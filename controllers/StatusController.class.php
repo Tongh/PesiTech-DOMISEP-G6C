@@ -2,11 +2,15 @@
 class StatusController extends Controller {
   function index() {
     $model = new StatusModel;
-    if ($result = $model -> getIDsCapteurs()) {
-      if (gettype($result) == "string") {
+    if ($result = $model -> getIDCapteur()) {
+      if ($result == "Vous n'avez pas encore enregistré vos capteurs sur ce compte, vous pouvez maintenant en enregistrer un !") {
           $this -> set('Err', $result);
       } else {
-          $this -> set('result', $result);
+        $this -> set('nom_piece', $model -> getPieceName($_SESSION["id_capteur"]));
+        $this -> set('nom_capteur', $model -> getCapteurName($_SESSION["id_capteur"]));
+        $this -> set('type_capteur', $model -> getCapteurType($_SESSION["id_capteur"]));
+        $this -> set('title', 'Statut de votre capteur');
+        $this -> set('content', 'Bienvenue sur votre Espace Client!');
       }
     }
     $this -> set('title', 'Statut de votre périphérique');
