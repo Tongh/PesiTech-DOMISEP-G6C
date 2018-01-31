@@ -112,14 +112,14 @@ INSERT INTO `codeClient` (`code`) VALUES
 -- Structure de la table `commande produit`
 --
 
-DROP TABLE IF EXISTS `commande_produit`;
-CREATE TABLE IF NOT EXISTS `commande_produit` (
-  `ID commande produit` int(11) NOT NULL AUTO_INCREMENT,
-  `ID capteur` int(11) NOT NULL,
-  `Quantité` int(11) NOT NULL,
-  `utilisateur_id utilisateur` int(11) NOT NULL,
-  PRIMARY KEY (`ID commande produit`,`utilisateur_id utilisateur`),
-  KEY `ID commande produit` (`ID commande produit`)
+DROP TABLE IF EXISTS `commandeProduit`;
+CREATE TABLE IF NOT EXISTS `commandeProduit` (
+  `id_commande` int(11) NOT NULL AUTO_INCREMENT,
+  `produit_name` varchar(255) NOT NULL,
+  `quantite` int(11) NOT NULL,
+  `id_client` int(11) NOT NULL,
+  PRIMARY KEY (`id_commande`,`id_client`),
+  KEY `id_commande` (`id_commande`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -153,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `domisep` (
 --
 
 DROP TABLE IF EXISTS `donnees_capteurs`;
-CREATE TABLE IF NOT EXISTS `donnees_capteurs` (
+CREATE TABLE IF NOT EXISTS `donneesCapteur` (
   `id_capteur` int(11) NOT NULL AUTO_INCREMENT,
   `actionneur` varchar(45) NOT NULL,
   `prix` decimal(10,0) NOT NULL,
