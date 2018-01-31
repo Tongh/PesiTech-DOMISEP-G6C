@@ -1,26 +1,3 @@
-$(function() {
-    $(".buttonLent").click(function(){
-        $(this).button('loading').delay(1000).queue(function() {
-					var str = this.value;
-					setTimeout(function(){window.location.href=str},100);
-
-        	// $(this).dequeue();
-        });
-    });
-
-		$(".buttonVite").click(function(){
-				var str = this.value;
-				window.location.href=str;
-    });
-
-		$(function () { $("[data-toggle='popover']").popover(); });
-
-		$("#submitButton").click(function()) {
-			$("#modalAjouterLogemnt").modal('hide');
-			changeLogementAffiche();
-		}
-});
-
 function validerNewCompte() {
 	var check = checkNom() && checkPrenom() && checkPseudo() && checkmdp() && checkmdpC() && checkMail() && checkTele() && checkCodeV() && checkTypeU() ; //&& checkVille() && checkAdresse() && checkCptadresse() && checkCodepostal()
 	return check;
@@ -313,6 +290,30 @@ function setCheckErr(checkvalue) {
 	document.getElementById(Err).style.display = "inline";
 	document.getElementById(Ok).style.display = "none";
 }
+
+$(function() {
+    $(".buttonLent").click(function(){
+        $(this).button('loading').delay(1000).queue(function() {
+					var str = this.value;
+					window.location.href=str;
+
+
+        	// $(this).dequeue();
+        });
+    });
+
+		$(".buttonVite").click(function(){
+				var str = this.value;
+				window.location.href=str;
+    });
+
+		$(function () { $("[data-toggle='popover']").popover(); });
+
+		$("#submitButton").click(function()) {
+			$("#modalAjouterLogemnt").modal('hide');
+			changeLogementAffiche();
+		}
+});
 
 function showCode(str) {
 	xmlHttp=GetXmlHttpObject();

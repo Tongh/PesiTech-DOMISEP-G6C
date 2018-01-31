@@ -15,6 +15,7 @@
 	<script type="text/javascript" src="config/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 		$('.dropdown-toggle').dropdown();
+		aler("run");
 	</script>
 </head>
 <body>
