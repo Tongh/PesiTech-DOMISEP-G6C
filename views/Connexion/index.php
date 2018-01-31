@@ -28,9 +28,10 @@
 
         <p>
           <a id="co" href="recuperation_mdp.php">Mot de passe oublié ? </br> Identifiant perdu ? </a><br/>
-          <a id="co" href="index.php?controller=Inscription">Première connexion!</a>
+          <a id="co" data-toggle="modal" data-target="#modalInscription">Première connexion!</a>
         </p>
       </div>
     </div>
   </div>
+  <?php include("inscription.php") ?>
 </div>

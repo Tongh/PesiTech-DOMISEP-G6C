@@ -3,47 +3,22 @@ function validerNewCompte() {
 	return check;
 }
 
-window.onload=function() {
-
-  document.getElementById("DomInfo").style.display="none";
-
-  //  attach the click event handler to the radio buttons
-  var radios = document.forms[0].elements["typeU"];
-  for (var i = [0]; i < radios.length; i++)
-    radios[i].onclick=radioClicked;
-}
-//
-// function showHideDomInfo() {
-// 	if(document.getElementById('typeAdmin').checked = true;)
-// 	doc.getElementById('DomInfo').style.display="none";
-// } else {
-// 	document.getElementById('DomInfo').style.display="block";
-// }
-
-function radioClicked() {
-   if (this.value == "client") {
-    document.getElementById("DomInfo").style.display="block";
-   } else {
-    document.getElementById("DomInfo").style.display="none";
-   }
-}
-
 function checkNom() {
 	var check = false;
 	var nom = document.getElementById("nom").value;
 	var regle = /^[a-z A-Z_-]*$/;
 	var vide = nom.replace(/\s+/g, "");
 	if (vide.length == 0) {
-		document.getElementById("NomErr").innerHTML = " × Nom est requis";
-		document.getElementById("NomNP").innerHTML = "";
+		document.getElementById("nomErr").innerHTML = "Nom est requis!";
+		setCheckErr("nom");
 		check = false;
 	} else if (nom != "" && !regle.test(nom)) {
-		document.getElementById("NomErr").innerHTML = " × Les caractères autorisés: les lettres, l'espace, -' et '_'!";
-		document.getElementById("NomNP").innerHTML = "";
+		setCheckErr("nom");
+		document.getElementById("nomErr").innerHTML = "Les caractères autorisés: les lettres, l'espace, -' et '_'!";
 		check = false;
 	} else {
-		document.getElementById("NomErr").innerHTML = "";
-		document.getElementById("NomNP").innerHTML = " √ ";
+		setCheckTrue("nom");
+		document.getElementById("nomErr").innerHTML = "";
 		check = true;
 	}
 	return check;
@@ -55,16 +30,17 @@ function checkPrenom() {
 	var regle = /^[a-z A-Z_-]*$/;
 	var vide = prenom.replace(/\s+/g, "");
 	if (vide.length == 0) {
-		document.getElementById("PrenomErr").innerHTML = " × Prénom est requis";
-		document.getElementById("PrenomNP").innerHTML = "";
+		document.getElementById("prenomErr").innerHTML = "Prénom est requis!";
+		setCheckErr("prenom");
 		check = false;
 	} else if (prenom != "" && !regle.test(prenom)) {
-		document.getElementById("PrenomErr").innerHTML = " × Les caractères autorisés: les lettres, l'espace, -' et '_'!";
-		document.getElementById("PrenomNP").innerHTML = "";
+		$("#prenomTest").attr("class", "form-group form-group-sm has-success has-feedback");
+		document.getElementById("prenomErr").innerHTML = "Les caractères autorisés: les lettres, l'espace, -' et '_'!";
+		setCheckErr("prenom");
 		check = false;
 	} else {
-		document.getElementById("PrenomErr").innerHTML = "";
-		document.getElementById("PrenomNP").innerHTML = " √ ";
+		document.getElementById("prenomErr").innerHTML = "";
+		setCheckTrue("prenom");
 		check = true;
 	}
 	return check;
@@ -72,24 +48,24 @@ function checkPrenom() {
 
 function checkPseudo() {
 	var check = false;
-	var pseudo = document.getElementById("pseudo").value;
+	var pseudo = document.getElementById("login").value;
 	var regle = /^[a-zA-Z_-]*$/;
 	var vide = pseudo.replace(/\s+/g, "");
 	if (vide.length == 0) {
-		document.getElementById("PseudoErr").innerHTML = " × Pseudo est requis";
-		document.getElementById("PseudoNP").innerHTML = "";
+		document.getElementById("loginErr").innerHTML = "Pseudo est requis!";
+		setCheckErr("login");
 		check = false;
 	} else if (pseudo.length >= 12) {
-		document.getElementById("PseudoErr").innerHTML = " × Il ne faut pas dépasser 11 caractères!";
-		document.getElementById("PseudoNP").innerHTML = "";
+		document.getElementById("loginErr").innerHTML = "Il ne faut pas dépasser 11 caractères!";
+		setCheckErr("login");
 		check = false;
 	} else if (pseudo != "" && !regle.test(pseudo)) {
-		document.getElementById("PseudoErr").innerHTML = " × Les caractères autorisés: les lettres, -' et '_'!";
-		document.getElementById("PseudoNP").innerHTML = "";
+		document.getElementById("loginErr").innerHTML = "Les caractères autorisés: les lettres, -' et '_'!";
+		setCheckErr("login");
 		check = false;
 	} else {
-		document.getElementById("PseudoErr").innerHTML = "";
-		document.getElementById("PseudoNP").innerHTML = " √ ";
+		document.getElementById("loginErr").innerHTML = "";
+		setCheckTrue("login");
 		check = true;
 	}
 	return check;
@@ -97,27 +73,27 @@ function checkPseudo() {
 
 function checkmdp() {
 	var check = false;
-	var mdp = document.getElementById("mdp").value;
+	var mdp = document.getElementById("mdpID").value;
 	var regle = /^[\S]*$/;
 	if (mdp.length == 0) {
-		document.getElementById("mdpErr").innerHTML = " × Mot de passe est requis";
-		document.getElementById("mdpNP").innerHTML = "";
+		document.getElementById("mdpErr").innerHTML = "Mot de passe est requis!";
+		setCheckErr("mdp");
 		check = false;
 	} else if (mdp.length <= 12) {
-		document.getElementById("mdpErr").innerHTML = " × Il ne faut pas moins de 12 caractères!";
-		document.getElementById("mdpNP").innerHTML = "";
+		document.getElementById("mdpErr").innerHTML = "Il ne faut pas moins de 12 caractères!";
+		setCheckErr("mdp");
 		check = false;
 	} else if (mdp.length >= 33) {
-		document.getElementById("mdpErr").innerHTML = " × Il ne faut pas dépasser 32 caractères!";
-		document.getElementById("mdpNP").innerHTML = "";
+		document.getElementById("mdpErr").innerHTML = "Il ne faut pas dépasser 32 caractères!";
+		setCheckErr("mdp");
 		check = false;
 	} else if (mdp != "" && !regle.test(mdp)) {
-		document.getElementById("mdpErr").innerHTML = " × L'espace n'est pas autorisé!";
-		document.getElementById("mdpNP").innerHTML = "";
+		document.getElementById("mdpErr").innerHTML = "L'espace n'est pas autorisé!";
+		setCheckErr("mdp");
 		check = false;
 	} else {
 		document.getElementById("mdpErr").innerHTML = "";
-		document.getElementById("mdpNP").innerHTML = " √ ";
+		setCheckTrue("mdp");
 		check = true;
 	}
 	return check;
@@ -125,15 +101,15 @@ function checkmdp() {
 
 function checkmdpC() {
 	var check = false;
-	var mdp = document.getElementById("mdp").value;
+	var mdp = document.getElementById("mdpID").value;
 	var mdpC = document.getElementById("mdpC").value;
 	if (mdp != mdpC) {
-		document.getElementById("mdpCErr").innerHTML = " × Les deux mots de passe ne sont pas le même!";
-		document.getElementById("mdpCNP").innerHTML = "";
+		document.getElementById("mdpCErr").innerHTML = "Les deux mots de passe ne sont pas le même!";
+		setCheckErr("mdpC");
 		check = false;
 	} else {
 		document.getElementById("mdpCErr").innerHTML = "";
-		document.getElementById("mdpCNP").innerHTML = " √ ";
+		setCheckTrue("mdpC");
 		check = true;
 	}
 	return check;
@@ -144,12 +120,12 @@ function checkMail() {
 	var mail = document.getElementById("mail").value;
 	var regle = /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/;
 	if (mail != "" && !regle.test(mail)) {
-		document.getElementById("mailErr").innerHTML = " × Le format de votre Email est invalide!";
-		document.getElementById("mailNP").innerHTML = "";
+		document.getElementById("mailErr").innerHTML = "Le format de votre Email est invalide!";
+		setCheckErr("mail");
 		check = false;
 	} else {
 		document.getElementById("mailErr").innerHTML = "";
-		document.getElementById("mailNP").innerHTML = " √ ";
+		setCheckTrue("mail");
 		check = true;
 	}
 	return check;
@@ -160,12 +136,12 @@ function checkTele() {
 	var tele = document.getElementById("tele").value;
 	var regle = /^(0[1-68])(?:[ _.-]?(\d{2})){4}$/;
 	if (tele != "" && !regle.test(tele)) {
-		document.getElementById("teleErr").innerHTML = " × Le format de votre numéro téléphone est invalide!";
-		document.getElementById("teleNP").innerHTML = "";
+		document.getElementById("teleErr").innerHTML = "Le format de votre numéro téléphone est invalide!";
+		setCheckErr("tele");
 		check = false;
 	} else {
 		document.getElementById("teleErr").innerHTML = "";
-		document.getElementById("teleNP").innerHTML = " √ ";
+		setCheckTrue("tele");
 		check = true;
 	}
 	return check;
@@ -183,16 +159,16 @@ function checkCodeV() {
 	}
 	var regle = /^([0-9A-Z]{8})$/;
 	if (codeV != "" && !regle.test(codeV) || codeV == "") {
-		document.getElementById("codeVErr").innerHTML = " × Le format de Code de DOMISEP est incorrect!";
-		document.getElementById("codeVNP").innerHTML = "";
+		$("#codeVTest").attr("class", "form-group form-group-sm has-error has-feedback");
+		document.getElementById("codeVErr").innerHTML = "Le format de Code de DOMISEP est incorrect!";
 		check = false;
 	} else if (radiocheck == 0) {
-		document.getElementById("codeVErr").innerHTML = " × Il faut choisir votre type de Compte!";
-		document.getElementById("codeVNP").innerHTML = "";
+		$("#codeVTest").attr("class", "form-group form-group-sm has-error has-feedback");
+		document.getElementById("codeVErr").innerHTML = "Il faut choisir votre type de Compte!";
 		check = false;
 	} else {
+		$("#codeVTest").attr("class", "form-group form-group-sm has-success has-feedback");
 		document.getElementById("codeVErr").innerHTML = "";
-		document.getElementById("codeVNP").innerHTML = " √ ";
 		check = true;
 	}
 	return check;
@@ -201,14 +177,13 @@ function checkCodeV() {
 function checkTypeU() {
 	var check = false;
 	var codeV = document.getElementById("codeV").value;
+	var typeU = $("input[name='typeU']:checked").val();
 	var regle = /^([0-9A-Z]{8})$/;
 	if (codeV != "" && !regle.test(codeV) || codeV == "") {
-		document.getElementById("codeVErr").innerHTML = " × Il faut saisir le Code de DOMISEP!";
-		document.getElementById("codeVNP").innerHTML = "";
+		document.getElementById("codeVErr").innerHTML = "Il faut saisir le Code de DOMISEP!";
 		check = false;
 	} else {
 		document.getElementById("codeVErr").innerHTML = "";
-		document.getElementById("codeVNP").innerHTML = " √ ";
 		check = true;
 	}
 	return check;
@@ -298,6 +273,24 @@ function getLogementId() {
 	return str.match(/\d+/g);
 }
 
+function setCheckTrue(checkvalue) {
+	var id = "#" + checkvalue + "Test";
+	var Err = checkvalue + "TestErr";
+	var Ok = checkvalue + "TestNP";
+	$(id).attr("class", "form-group form-group-sm has-success has-feedback");
+	document.getElementById(Err).style.display = "none";
+	document.getElementById(Ok).style.display = "inline";
+}
+
+function setCheckErr(checkvalue) {
+	var id = "#" + checkvalue + "Test";
+	var Err = checkvalue + "TestErr";
+	var Ok = checkvalue + "TestNP";
+	$(id).attr("class", "form-group form-group-sm has-error has-feedback");
+	document.getElementById(Err).style.display = "inline";
+	document.getElementById(Ok).style.display = "none";
+}
+
 $(function() {
     $(".buttonLent").click(function(){
         $(this).button('loading').delay(1000).queue(function() {
@@ -312,4 +305,6 @@ $(function() {
 				var str = this.value;
 				window.location.href=str;
     });
+
+		$(function () { $("[data-toggle='popover']").popover(); });
 });

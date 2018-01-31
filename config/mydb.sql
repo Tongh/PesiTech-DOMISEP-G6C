@@ -72,9 +72,9 @@ CREATE TABLE IF NOT EXISTS `codeAdmin` (
 -- Déchargement des données de la table `codeadmin`
 --
 
-INSERT INTO `codeAdmin` (`id_Code`, `code`, `utilise`, `id_client`) VALUES
-(1, 'XIZ8TSHG', 0, NULL),
-(2, 'OSIGUE8Z', 0, NULL);
+INSERT INTO `codeAdmin` (`code`) VALUES
+('XIZ8TSHG'),
+('OSIGUE8Z');
 
 -- --------------------------------------------------------
 
@@ -96,15 +96,15 @@ CREATE TABLE IF NOT EXISTS `codeClient` (
 -- Déchargement des données de la table `codeclient`
 --
 
-INSERT INTO `codeClient` (`id_Code`, `code`, `id_client`, `utilise`) VALUES
-(1, 'J8LGXP9S', NULL, 0),
-(2, '7GZSWSSQ', NULL, 0),
-(3, 'SJFSQ8JD', NULL, 0),
-(4, 'DF9DGHZ3', NULL, 0),
-(5, '87DG8D7G', NULL, 0),
-(6, 'KDIGRR83', NULL, 0),
-(7, 'HGIDDDUT', NULL, 0),
-(8, 'ER77GETS', NULL, 0);
+INSERT INTO `codeClient` (`code`) VALUES
+('J8LGXP9S'),
+('7GZSWSSQ'),
+('SJFSQ8JD'),
+('DF9DGHZ3'),
+('87DG8D7G'),
+('KDIGRR83'),
+('HGIDDDUT'),
+('ER77GETS');
 
 -- --------------------------------------------------------
 

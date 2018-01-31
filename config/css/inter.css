@@ -104,9 +104,11 @@ tr {
 .error {
     color: #FF0000;
   }
+  
 .NP {
     color: #00FF66;
   }
+
 section {
     width: 50%;
     border: 1px solid black;
