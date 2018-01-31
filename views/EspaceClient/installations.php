@@ -11,5 +11,5 @@
 
 
 
-  <?php include ("modalMdp.php")?>
+  <?php import("modal", "modalMdp.php")?>
 </div>
