@@ -3,11 +3,10 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require_once __DIR__ . "/G6C_Error.class.php";
-require_once __DIR__ . '/Plugins/PHPMailer/vendor/phpmailer/phpmailer/src/Exception.php';
-require_once __DIR__ . '/Plugins/PHPMailer/vendor/phpmailer/phpmailer/src/PHPMailer.php';
-require_once __DIR__ . '/Plugins/PHPMailer/vendor/phpmailer/phpmailer/src/SMTP.php';
-require_once __DIR__ . '/Plugins/PHPMailer/vendor/autoload.php';
+require 'PHPMailer/vendor/phpmailer/phpmailer/src/Exception.php';
+require 'PHPMailer/vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require 'PHPMailer/vendor/phpmailer/phpmailer/src/SMTP.php';
+require 'PHPMailer/vendor/autoload.php';
 
 class G6C_Mail {
 	protected $_title;
@@ -22,7 +21,7 @@ class G6C_Mail {
 			//Server settings
 		    //$this -> _mail -> SMTPDebug = 2;                                 // Enable verbose debug output
 		    $this -> _mail -> isSMTP();                                      // Set mailer to use SMTP
-				$mail -> Charset='UTF-8';
+				$this -> _mail -> Charset='UTF-8';
 		    $this -> _mail -> Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 		    $this -> _mail -> SMTPAuth = true;                               // Enable SMTP authentication
 		    $this -> _mail -> Username = 'wenxiao0015@gmail.com';                 // SMTP username

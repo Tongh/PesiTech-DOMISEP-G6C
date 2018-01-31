@@ -152,8 +152,8 @@ CREATE TABLE IF NOT EXISTS `domisep` (
 -- Structure de la table `donnees_capteurs`
 --
 
-DROP TABLE IF EXISTS `donnees_capteurs`;
-CREATE TABLE IF NOT EXISTS `donneesCapteur` (
+DROP TABLE IF EXISTS `status`;
+CREATE TABLE IF NOT EXISTS `status` (
   `id_capteur` int(11) NOT NULL AUTO_INCREMENT,
   `actionneur` varchar(45) NOT NULL,
   `prix` decimal(10,0) NOT NULL,
