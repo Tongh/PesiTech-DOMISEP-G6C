@@ -9,15 +9,6 @@ define('APP_URL', 'http://localhost:8080/PesiTech-DOMISEP-G6C/');
 
 const EXT = '.class.php';
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require CONFIG_PATH . 'PHPMailer/vendor/phpmailer/phpmailer/src/Exception.php';
-require CONFIG_PATH . 'PHPMailer/vendor/phpmailer/phpmailer/src/PHPMailer.php';
-require CONFIG_PATH . 'PHPMailer/vendor/phpmailer/phpmailer/src/SMTP.php';
-require CONFIG_PATH . 'PHPMailer/vendor/autoload.php';
-require CONFIG_PATH . 'jpgraph/src/jpgraph.php';
-require CONFIG_PATH . 'jpgraph/src/jpgraph_line.php';
 require CONFIG_PATH . 'config.php';
 
 require ROOT . 'Core.php';

@@ -1,7 +1,6 @@
 <?php // content="text/plain; charset=utf-8"
 require_once ('jpgraph/jpgraph.php');
 require_once ('jpgraph/jpgraph_line.php');
-
 $datay = array(0,25,12,47,27,27,0);
 
 // Setup the graph

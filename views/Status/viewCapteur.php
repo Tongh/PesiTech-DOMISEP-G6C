@@ -24,8 +24,8 @@
         <td>21°C</td>
         <td colspan="2">
             <div class="">
-              <a href="http://localhost:8080/PesiTech-DOMISEP-G6C/views/Public/jpgraph/getgraph.php?>" border=0 alt="http://localhost:8080/PesiTech-DOMISEP-G6C/views/Public/jpgraph/getgraph.php?>" align="left">
-                <img src="http://localhost:8080/PesiTech-DOMISEP-G6C/views/Public/jpgraph/getgraph.php" alt="http://localhost:8080/PesiTech-DOMISEP-G6C/views/Public/jpgraph/getgraph.php"></img>
+              <a href="<?php echo APP_URL?>views/Public/jpgraph/getgraph.php" border=0 alt="<?php echo APP_URL?>views/Public/jpgraph/getgraph.php" align="left">
+                <img src="<?php echo APP_URL?>views/Public/jpgraph/getgraph.php" alt="<?php echo APP_URL?>views/Public/jpgraph/getgraph.php"></img>
               </a>
             </div>
         </td>
