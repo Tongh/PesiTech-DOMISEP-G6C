@@ -9,3 +9,4 @@
 2018-02-02 14:50:46 UPDATE `utilisateur` SET `email` = '' WHERE `id_utilisateur` = '3'
 2018-02-02 14:51:43 UPDATE `utilisateur` SET `email` = '' WHERE `id_utilisateur` = '3'
 2018-02-02 14:57:10 SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+2018-02-02 15:06:20 Message has been sent

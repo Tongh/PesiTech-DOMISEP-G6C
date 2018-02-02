@@ -29,6 +29,11 @@ class AdminModel extends Model {
     return $this -> _utilisateurModel -> select($_SESSION["User"]);
   }
 
+  function getUserByID($id_client) {
+    return $this -> _utilisateurModel -> selectByID($id_client);
+  }
+
+
   function getClientInfo() {
     $type = "admin";
     $sql = "SELECT * FROM utilisateur WHERE `typeUtilisateur` <> '$type'";
