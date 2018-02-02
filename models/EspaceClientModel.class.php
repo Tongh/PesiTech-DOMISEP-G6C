@@ -29,6 +29,22 @@ class EspaceClientModel extends Model {
     return $this -> _utilisateurModel -> select($_SESSION["User"]);
   }
 
+  function modifierEmail($email) {
+    $sql = "UPDATE `utilisateur` SET `email` = '" . $email . "' WHERE `id_utilisateur` = '"  . $_SESSION["UserID"] . "'";
+		$this -> _utilisateurModel -> query($sql);
+  }
+
+  function modifierTelephone($telephone) {
+    $sql = "UPDATE `utilisateur` SET `telephone` = '" . $telephone . "' WHERE `id_utilisateur` = '"  . $_SESSION["UserID"] . "'";
+		$this -> _utilisateurModel -> query($sql);
+  }
+
+  function modifier($email, $telephone) {
+    $this -> modifierEmail($email);
+    //$this -> modifierTelephone($telephone);
+  }
+
+
 
 
 }

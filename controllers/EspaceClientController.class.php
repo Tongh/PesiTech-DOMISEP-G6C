@@ -26,4 +26,11 @@ class EspaceClientController extends Controller {
 		$this -> set('content', 'Bienvenue sur votre espace client!');
 		$this -> render();
 	}
+
+	function modifierUInfo() {
+		$model = new EspaceClientModel;
+		$model -> modifier($_POST['email'], $_POST['telephone']);
+		$to = 'Location: index.php?controller=EspaceClient&Err='.$Err;
+		header($to);
+	}
 }

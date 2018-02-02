@@ -1,0 +1,11 @@
+2018-02-02 14:38:03 
+2018-02-02 14:38:03 
+2018-02-02 14:43:44 
+2018-02-02 14:43:44 
+2018-02-02 14:48:59 UPDATE `utilisateur` SET `email` = '' WHERE `id_utilisateur` = '3'
+2018-02-02 14:48:59 
+2018-02-02 14:48:59 
+2018-02-02 14:50:25 UPDATE `utilisateur` SET `email` = '' WHERE `id_utilisateur` = '3'
+2018-02-02 14:50:46 UPDATE `utilisateur` SET `email` = '' WHERE `id_utilisateur` = '3'
+2018-02-02 14:51:43 UPDATE `utilisateur` SET `email` = '' WHERE `id_utilisateur` = '3'
+2018-02-02 14:57:10 SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting

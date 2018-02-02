@@ -71,12 +71,12 @@
 						</div>
 				  </div>
 				</div>
-          <p><a class="btn btn-primary btn-lg" role="button">
-           Modifier</a>
+          <p>
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalModifierUinfo"> Modifier </button>
           </p>
       </div>
   </div>
-
+	<?php import("modal", "modalModifierUinfo.php") ?>
 	<?php import("modal", "modalMdp.php")?>
 
 </div>
