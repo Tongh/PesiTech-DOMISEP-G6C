@@ -13,7 +13,7 @@ class AdminController extends Controller {
   			}
   		}
       $this -> set('title', 'Bienvenue sur votre page de l\'administrateur');
-      $this -> set('content', 'L\info de  ' . $result[0]["utilisateur"]["prenom"]. " " . $result[0]["utilisateur"]["nom"]);
+      $this -> set('content', 'Les informations de  ' . $result[0]["utilisateur"]["prenom"]. " " . $result[0]["utilisateur"]["nom"]);
       $this -> render();
     } else {
       $model = new AdminModel;

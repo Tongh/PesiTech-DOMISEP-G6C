@@ -5,6 +5,7 @@ class AdminModel extends Model {
   protected $_logementModel;
   protected $_capteurModel;
   protected $_pieceModel;
+  protected $_clientIDSelected;
 
   function __construct() {
     $this -> _utilisateurModel = new UtilisateurModel;
@@ -30,6 +31,7 @@ class AdminModel extends Model {
   }
 
   function getUserByID($id_client) {
+    //$this -> $_clientIDSelected = $id_client;
     return $this -> _utilisateurModel -> selectByID($id_client);
   }
 
