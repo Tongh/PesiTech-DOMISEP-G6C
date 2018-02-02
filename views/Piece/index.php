@@ -8,6 +8,11 @@
 			<?php if (isset($Err)) echo $Err; echo "<br/>"?>
 		</p>
 	</div>
+	<!--<div class="btn-group">
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAjouterLogemnt"> Ajouter une pièce </button>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSupprimerLogement"> Supprimer une pièce </button>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalModifierAdrresse"> Modifier</button>
+	</div>-->
 	<div class="">
 		<p class="">
 			<a href="index.php?controller=Piece&action=add" class="btn btn-primary btn-lg" role="button">Ajouter une pièce</a>
