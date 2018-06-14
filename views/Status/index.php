@@ -12,7 +12,7 @@
   <div class="selection">
 
   </div>
-  
+
   <div class="mainTable">
     <table class="dataintable">
       <tr>
@@ -38,5 +38,10 @@
 
     </tr>
     </table>
+  </div>
+
+  <div>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalRecu"> Reçu les données </button>
+    <?php import("modal", "modalRecu.php");?>
   </div>
 </div>
