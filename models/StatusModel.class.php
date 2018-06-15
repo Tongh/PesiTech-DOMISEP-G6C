@@ -2,6 +2,7 @@
 
 class StatusModel extends CapteurModel {
 
+  // recevoire les données de la carte qui a envoyé au serveur
   function get_tous_trames() {
     $url = "http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=006C";
     $ch = curl_init();
@@ -16,6 +17,7 @@ class StatusModel extends CapteurModel {
     return $data;
   }
 
+  // diviser les données qu'on viens de recevoir, 33 caractères pour une ligne de trame
   function trames_split($data) {
     $data_tab = str_split($data,33);
   	echo "<br /><br />Tabular Data:<br />";
@@ -25,6 +27,7 @@ class StatusModel extends CapteurModel {
     return $data_tab;
   }
 
+  // mettre les données en variable, on les utilise dans les tableau.
   function get_une_ligne_trames($ligne) {
     $trame = $data_tab[$ligne];
   	echo("<br /><br />$trame<br/>");
