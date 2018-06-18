@@ -29,6 +29,21 @@ class StatusController extends Controller {
     $this -> render();
   }
 
+  function requeteEnvoie() {
+    $this -> set("trame", 1);
+    $this -> set("objet", $_POST["objet"]);
+    $this -> set("req", $_POST["requeteType"]);
+    //echo "<script> alert('{$_POST["capteurType"]}') </script>";
+    $this -> set("type_c", $_POST["capteurType"]);
+    $this -> set("actionneur", $_POST["actionneur"]);
+    $this -> set("valeur", $_POST["valeur"]);
+
+
+    $this -> set('title', 'Statut de requête envoyé');
+    $this -> set('content', 'Envoyé avec succès!');
+    $this -> render();
+  }
+
 
 
 }

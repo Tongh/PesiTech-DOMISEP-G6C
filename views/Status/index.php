@@ -28,11 +28,6 @@
   	</p>
   </div>
 
-  <div class="selection">
-
-  </div>
-
-
   <div class="table"><table class="dataintable">
     <tbody>
       <tr>
