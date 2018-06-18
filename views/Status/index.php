@@ -28,6 +28,10 @@
   	</p>
   </div>
 
+  <div>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEnvoie"> Envoyer d'une requête </button>
+    <?php import("modal", "modalEnvoie.php");?>
+  </div>
   <div class="table"><table class="dataintable">
     <tbody>
       <tr>
@@ -94,8 +98,4 @@
     </table>
   </div>-->
 
-  <div>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEnvoie"> Envoyer d'une requête </button>
-    <?php import("modal", "modalEnvoie.php");?>
-  </div>
 </div>
