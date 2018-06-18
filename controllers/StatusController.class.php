@@ -6,14 +6,14 @@ class StatusController extends Controller {
       if ($result == "Vous n'avez pas encore enregistré vos capteurs sur ce compte, vous pouvez maintenant en enregistrer un !") {
           $this -> set('Err', $result);
       } else {
-        $this -> set('nom_piece', $model -> getPieceName($_SESSION["id_capteur"]));
-        $this -> set('nom_capteur', $model -> getCapteurName($_SESSION["id_capteur"]));
-        $this -> set('type_capteur', $model -> getCapteurType($_SESSION["id_capteur"]));
-        $this -> set('title', 'Statut de votre capteur');
+        $this -> set('nom_piece', $model -> getPieceName($result));
+        $this -> set('nom_capteur', $model -> getCapteurName($result));
+        $this -> set('type_capteur', $model -> getCapteurType($result));
+        $this -> set('title', 'Statut de vos requêtes');
         $this -> set('content', 'Bienvenue sur votre Espace Client!');
       }
     }
-    $this -> set('title', 'Statut de votre périphérique');
+    $this -> set('title', 'Statut de vos requêtes');
     $this -> set('content', 'Bienvenue sur votre Espace Client!');
     $this -> render();
   }
@@ -24,7 +24,7 @@ class StatusController extends Controller {
     $this -> set('nom_piece', $capteurModel -> getPieceName($_SESSION["id_capteur"]));
     $this -> set('nom_capteur', $capteurModel -> getCapteurName($_SESSION["id_capteur"]));
     $this -> set('type_capteur', $capteurModel -> getCapteurType($_SESSION["id_capteur"]));
-    $this -> set('title', 'Statut de votre capteur');
+    $this -> set('title', 'Statut de votre périphérique');
     $this -> set('content', 'Bienvenue sur votre Espace Client!');
     $this -> render();
   }
