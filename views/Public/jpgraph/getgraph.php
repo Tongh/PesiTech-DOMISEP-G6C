@@ -1,13 +1,79 @@
-<?php // content="text/plain; charset=utf-8"
+<?php
 require_once ('jpgraph/jpgraph.php');
 require_once ('jpgraph/jpgraph_line.php');
-$datay = array(0,25,12,47,27,27,0);
+require_once ('jpgraph/jpgraph_utils.inc.php');
+
+$capteur_type = array("1" => "distance modèle 1", "2" => "distance modèle 2", "3" => "température",
+                      "4" => "humidité", "5" => "lumière modèle 1", "6" => "couleur",
+                      "7" => "présence", "8" => "lumière modèle 2", "9" => "mouvement",
+                      "A" => "présence son modèle 1", "B" => "Envoie de la date JJ:MM", "C" => "Envoie de l'année AAAA",
+                      "D" => "Envoi valeur potentiomètre", "H" => "Requête Heure 1", "a" =>"Requête actionneur 1",
+                      "h" => "Requête Heure 2", "p" => "Requête data", "q" => "Requête année");
+$requete_tyep = array("1" => "Requête en écriture", "2" =>"Requête en lecture", "3" => "Requête en lecture/écriture");
+
+$url = "http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=006C";
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_HEADER, FALSE);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+$data = curl_exec($ch);
+curl_close($ch);
+
+$datay = array();
+$datax = array();
+$data_tab = str_split($data,33);
+
+for($i=0, $size=count($data_tab);$i<$size;$i++){
+  $trame = $data_tab[$i];
+  //echo "$trame <br/>";
+
+  list($t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec) = sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
+  list($t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec) = sscanf($trame,"%1d%4s%1s%1s%2x%4s%4s%2s%4d%2d%2d%2d%2d%2d");
+
+  if ($c == "5") {
+    $datay[] = (int)$v;
+    $time = "$year-$month-$day $hour:$min:$sec";
+    $tstamp = strtotime($time);
+    $datax[] = date("", $tstamp);
+  }
+}
+
+$n = 15;
+$dataY = array();
+$dataX = array();
+for ($i=0; $i<$n; ++$i) {
+  $dataX[] = $datax[count($datax)-($n-$i)];
+  $dataY[] = $datay[count($datay)-($n-$i)];
+}
+$graph = new Graph(500,400);
+$graph->clearTheme();
+
+//
+// We use an integer scale on the X-axis since the positions on the X axis
+// are assumed to be UNI timestamps
+$graph->SetScale('intlin');
+$graph->title->Set('Basic example with manual ticks');
+
+//$graph->xaxis->SetTickLabels($dataX);
+
+// Create the plot line
+$p1 = new LinePlot($dataY);
+$p1->SetWeight(2);
+$p1->SetColor('orange:0.9');
+$graph->Add($p1);
+
+// Output graph
+$graph->Stroke();
+
+/*require_once ('jpgraph/jpgraph.php');
+require_once ('jpgraph/jpgraph_line.php');
+// $datay = array(0,25,12,47,27,27,0);
 
 // Setup the graph
-$graph = new Graph(350,250);
-$graph->SetScale("intlin",0,$aYMax=50);
+$graph = new Graph(500,450, 'auto');
+$graph->SetScale("intlin",0,$aYMax=max($datay));
 
-$theme_class= new UniversalTheme;
+$theme_class= new AquaTheme;
 $graph->SetTheme($theme_class);
 
 $graph->SetMargin(40,40,50,40);
@@ -21,11 +87,11 @@ $graph->yaxis->HideTicks(false,false);
 $graph->ygrid->SetFill(true,'#FFFFFF@0.5','#FFFFFF@0.5');
 $graph->SetBackgroundGradient('#FFFFFF', '#00FF7F', GRAD_HOR, BGRAD_PLOT);
 
-$graph->xaxis->SetTickLabels(array('G','F','E','D','C','B','A'));
+$graph->xaxis->SetTickLabels($datax);
 $graph->xaxis->SetLabelMargin(20);
 $graph->yaxis->SetLabelMargin(20);
 
-$graph->SetAxisStyle(AXSTYLE_BOXOUT);
+//$graph->SetAxisStyle(AXSTYLE_BOXOUT);
 $graph->img->SetAngle(180);
 
 // Create the line
@@ -37,5 +103,5 @@ $p1->SetColor('#aadddd');
 
 // Output line
 $graph->Stroke();
-
+*/
 ?>
