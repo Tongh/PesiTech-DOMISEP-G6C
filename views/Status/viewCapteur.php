@@ -87,10 +87,18 @@
       $dataY = array();
       $dataX = array();
       for ($i=0; $i<$n; ++$i) {
-        $dataX[] = $datax[count($datax)-($n-$i)];
-        $dataY[] = $datay[count($datay)-($n-$i)];
+        if (isset($datax[count($datax)-($n-$i)]) && !empty($datax[count($datax)-($n-$i)])) {
+          $dataX[] = $datax[count($datax)-($n-$i)];
+        } else {
+          $dataX[] = 0;
+        }
+        if (isset($datay[count($datay)-($n-$i)]) && !empty($datay[count($datay)-($n-$i)])) {
+          $dataY[] = $datay[count($datay)-($n-$i)];
+        } else {
+          $dataY[] = 0;
+        }
       }
-      for($i=0, $size=15;$i<$size;$i++){
+      for($i=14, $size=-1;$i>$size;$i--){
         echo "<tr>";
         echo("<td>".$dataY[$i]."</td>");
         echo("<td>".$dataX[$i]."</td>");

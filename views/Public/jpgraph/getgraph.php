@@ -42,8 +42,16 @@ $n = 15;
 $dataY = array();
 $dataX = array();
 for ($i=0; $i<$n; ++$i) {
-  $dataX[] = $datax[count($datax)-($n-$i)];
-  $dataY[] = $datay[count($datay)-($n-$i)];
+  if (isset($datax[count($datax)-($n-$i)]) && !empty($datax[count($datax)-($n-$i)])) {
+    $dataX[] = $datax[count($datax)-($n-$i)];
+  } else {
+    $dataX[] = 0;
+  }
+  if (isset($datay[count($datay)-($n-$i)]) && !empty($datay[count($datay)-($n-$i)])) {
+    $dataY[] = $datay[count($datay)-($n-$i)];
+  } else {
+    $dataY[] = 0;
+  }
 }
 $graph = new Graph(500,400);
 $graph->clearTheme();
