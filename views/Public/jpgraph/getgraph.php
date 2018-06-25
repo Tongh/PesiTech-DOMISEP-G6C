@@ -3,6 +3,7 @@ require_once ('jpgraph/jpgraph.php');
 require_once ('jpgraph/jpgraph_line.php');
 require_once ('jpgraph/jpgraph_utils.inc.php');
 
+$type_capteur_num = $_GET['type_capteur'];
 $capteur_type = array("1" => "distance modèle 1", "2" => "distance modèle 2", "3" => "température",
                       "4" => "humidité", "5" => "lumière modèle 1", "6" => "couleur",
                       "7" => "présence", "8" => "lumière modèle 2", "9" => "mouvement",
@@ -30,7 +31,7 @@ for($i=0, $size=count($data_tab);$i<$size;$i++){
   list($t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec) = sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
   list($t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec) = sscanf($trame,"%1d%4s%1s%1s%2x%4s%4s%2s%4d%2d%2d%2d%2d%2d");
 
-  if ($c == "5") {
+  if ($c == $type_capteur_num) {
     $datay[] = (int)$v;
     $time = "$year-$month-$day $hour:$min:$sec";
     $tstamp = strtotime($time);
@@ -42,12 +43,16 @@ $n = 15;
 $dataY = array();
 $dataX = array();
 for ($i=0; $i<$n; ++$i) {
-  if (isset($datax[count($datax)-($n-$i)]) && !empty($datax[count($datax)-($n-$i)])) {
+  if (!isset($datax)) {
+    $dataX[] = 0;
+  } else if (isset($datax[count($datax)-($n-$i)]) && !empty($datax[count($datax)-($n-$i)])) {
     $dataX[] = $datax[count($datax)-($n-$i)];
   } else {
     $dataX[] = 0;
   }
-  if (isset($datay[count($datay)-($n-$i)]) && !empty($datay[count($datay)-($n-$i)])) {
+  if (!isset($datay)){
+    $dataY = 0;
+  } else if (isset($datay[count($datay)-($n-$i)]) && !empty($datay[count($datay)-($n-$i)])) {
     $dataY[] = $datay[count($datay)-($n-$i)];
   } else {
     $dataY[] = 0;

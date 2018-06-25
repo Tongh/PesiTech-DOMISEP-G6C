@@ -16,6 +16,11 @@
   curl_close($ch);
 
   $data_tab = str_split($data,33);
+  if ($type_capteur == "Capteur de Luminosité") {
+    $type_capteur_num = "5";
+  } else if ($type_capteur == "Capteur de distance") {
+    $type_capteur_num = "1";
+  }
 
   $res = "0";
   for($i=0, $size=count($data_tab);$i<$size;$i++){
@@ -24,7 +29,7 @@
 
     list($t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec) = sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
     list($t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec) = sscanf($trame,"%1d%4s%1s%1s%2x%4s%4s%2s%4d%2d%2d%2d%2d%2d");
-    if ($c == "5") {
+    if ($c == $type_capteur_num) {
       $res = (int)$v;
     }
   }
@@ -51,8 +56,8 @@
         <td><?php echo $res;?></td>
         <td colspan="2">
             <div class="">
-              <a href="<?php echo APP_URL?>views/Public/jpgraph/getgraph.php" border=0 alt="<?php echo APP_URL?>views/Public/jpgraph/getgraph.php" align="left">
-                <img src="<?php echo APP_URL?>views/Public/jpgraph/getgraph.php" alt="<?php echo APP_URL?>views/Public/jpgraph/getgraph.php"></img>
+              <a href="<?php echo APP_URL?>views/Public/jpgraph/getgraph.php?type_capteur=<?php echo $type_capteur_num?>" border=0 alt="<?php echo APP_URL?>views/Public/jpgraph/getgraph.php?type_capteur=<?php echo $type_capteur_num?>" align="left">
+                <img src="<?php echo APP_URL?>views/Public/jpgraph/getgraph.php?type_capteur=<?php echo $type_capteur_num?>" alt="<?php echo APP_URL?>views/Public/jpgraph/getgraph.php?type_capteur=<?php echo $type_capteur_num?>"></img>
               </a>
             </div>
         </td>
@@ -75,7 +80,7 @@
         list($t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec) = sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
         list($t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec) = sscanf($trame,"%1d%4s%1s%1s%2x%4s%4s%2s%4d%2d%2d%2d%2d%2d");
 
-        if ($c == "5") {
+        if ($c == $type_capteur_num) {
           $datay[] = (int)$v;
           $time = "$year-$month-$day $hour:$min:$sec";
           $tstamp = strtotime($time);
@@ -87,12 +92,16 @@
       $dataY = array();
       $dataX = array();
       for ($i=0; $i<$n; ++$i) {
-        if (isset($datax[count($datax)-($n-$i)]) && !empty($datax[count($datax)-($n-$i)])) {
+        if (!isset($datax)) {
+          $dataX[] = 0;
+        } else if (isset($datax[count($datax)-($n-$i)]) && !empty($datax[count($datax)-($n-$i)])) {
           $dataX[] = $datax[count($datax)-($n-$i)];
         } else {
           $dataX[] = 0;
         }
-        if (isset($datay[count($datay)-($n-$i)]) && !empty($datay[count($datay)-($n-$i)])) {
+        if (!isset($datay)){
+          $dataY = 0;
+        } else if (isset($datay[count($datay)-($n-$i)]) && !empty($datay[count($datay)-($n-$i)])) {
           $dataY[] = $datay[count($datay)-($n-$i)];
         } else {
           $dataY[] = 0;

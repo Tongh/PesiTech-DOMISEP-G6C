@@ -16,6 +16,7 @@
             <div class="col-sm-9">
               <select class="form-control" form="addCapteurForm" name="type_capteur">
                 <option value="Capteur de Présence">Capteur de Présence</option>
+                <option value="Capteur de distance">Capteur de distance</option>
                 <option value="Capteur de Fumée">Capteur de Fumée</option>
                 <option value="Capteur d'Ouverture">Capteur d'Ouverture</option>
                 <option value="Caméra">Caméra</option>
