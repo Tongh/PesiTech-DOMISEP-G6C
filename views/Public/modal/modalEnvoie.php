@@ -17,7 +17,7 @@
             <div class="form-group form-group-sm has-feedback" id="NumeroObjetTest">
               <div class="formText"><label class="control-label col-sm-3" for="inputSuccess3"> Numéro d'objet </label></div>
               <div class="col-sm-9">
-                <input type="text" class="form-control" id="objet" value="006C" name="objet" onchange="checkObjet()">
+                <input type="text" class="form-control" id="objet" value="0G6C" name="objet" onchange="checkObjet()">
               </div>
             </div>
 

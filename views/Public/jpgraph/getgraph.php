@@ -11,7 +11,7 @@ $capteur_type = array("1" => "distance modèle 1", "2" => "distance modèle 2", 
                       "h" => "Requête Heure 2", "p" => "Requête data", "q" => "Requête année");
 $requete_tyep = array("1" => "Requête en écriture", "2" =>"Requête en lecture", "3" => "Requête en lecture/écriture");
 
-$url = "http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=006C";
+$url = "http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=0G6C";
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
